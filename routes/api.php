@@ -30,6 +30,8 @@ Route::group(['prefix' => 'auth'], function ($router) {
 //     return $request->user();
 // });
 
-// Route::group(['prefix' => '/user'], function() {
-//     Route::get('/', [UserController::class, 'index'])->name('user.index');
-// });
+Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request']], function () {
+    Route::group(['prefix' => '/users'], function() {
+        Route::get('/', [UserController::class, 'index'])->name('user.index');
+    });
+});

@@ -15,7 +15,7 @@ class AuthController extends Controller
 {
     public function login(LoginRequest $request)
     {
-        if (!$token = auth()->attempt($request->only(['email', 'password']))) {
+        if (!auth()->attempt($request->only(['email', 'password']))) {
             return response()->json([
                 'message' => 'Login failed',
                 'errors' => [
@@ -24,13 +24,15 @@ class AuthController extends Controller
             ], 401);
         }
 
+        $token = auth()->user()->createToken('authToken')->plainTextToken;
+
         return $this->respondWithToken($token);
     }
 
     public function register(RegisterRequest $request)
     {
         $user = UserEditor::open(new User)->withDataFromRequest($request)->save();
-        $token = auth()->attempt($request->only(['email', 'password']));
+        $token = $user->createToken('authToken')->plainTextToken;
         return $this->respondWithToken($token);
     }
 
