@@ -26,12 +26,12 @@ Route::group(['prefix' => 'auth'], function ($router) {
     });
 });
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
 Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request']], function () {
     Route::group(['prefix' => '/users'], function() {
         Route::get('/', [UserController::class, 'index'])->name('user.index');
+        Route::post('/', [UserController::class, 'create'])->name('user.create');
+        Route::get('/{user:id}', [UserController::class, 'show'])->name('user.show');
+        Route::post('/{user:id}', [UserController::class, 'edit'])->name('user.edit');
+        Route::delete('/{user:id}', [UserController::class, 'delete'])->name('user.delete');
     });
 });
