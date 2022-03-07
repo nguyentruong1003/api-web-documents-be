@@ -19,11 +19,11 @@ use App\Http\Controllers\API\AuthController;
 Route::group(['prefix' => 'auth'], function ($router) {
     Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/register', [AuthController::class, 'register'])->name('register');
-    // Route::group(['middleware' => ['auth:sanctum']], function () {
-    //     Route::post('/logout', [AuthController::class, 'logout']);
-    //     Route::get('/current-user', [AuthController::class, 'getUser']);
-    //     Route::post('/change-password', [AuthController::class, 'changePassword']);
-    // });
+    Route::group(['middleware' => ['auth:sanctum']], function () {
+        Route::post('/logout', [AuthController::class, 'logout']);
+        Route::get('/current-user', [AuthController::class, 'getUser']);
+        Route::post('/change-password', [AuthController::class, 'changePassword']);
+    });
 });
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

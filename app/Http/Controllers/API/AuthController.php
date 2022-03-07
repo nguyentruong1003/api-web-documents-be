@@ -40,15 +40,15 @@ class AuthController extends Controller
     {
     }
 
-    // public function changePassword(ChangePasswordRequest $request)
-    // {
-    //     $user = auth()->user();
-    //     $user->update([
-    //         'password' => bcrypt($request->input('new_password'))
-    //     ]);
+    public function changePassword(ChangePasswordRequest $request)
+    {
+        $user = auth()->user();
+        $user->update([
+            'password' => bcrypt($request->input('new_password'))
+        ]);
 
-    //     return (new UserResource($user))->withMessage(__('auth.changed_password'));
-    // }
+        return (new UserResource($user))->withMessage(__('auth.changed_password'));
+    }
 
     private function respondWithToken($token)
     {
@@ -60,14 +60,14 @@ class AuthController extends Controller
         ]);
     }
 
-    // public function getUser()
-    // {
-    //     return new UserResource(auth()->user()->load('permissions'));
-    // }
+    public function getUser()
+    {
+        return new UserResource(auth()->user()->load('permissions'));
+    }
 
-    // public function logout()
-    // {
-    //     auth()->logout();
-    //     return response()->json(['message' => __('auth.logged_out')]);
-    // }
+    public function logout()
+    {
+        auth()->logout();
+        return response()->json(['message' => __('auth.logged_out')]);
+    }
 }
