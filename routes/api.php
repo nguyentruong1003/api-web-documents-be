@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\RoleController;
+use App\Http\Controllers\API\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +35,21 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::get('/{user:id}', [UserController::class, 'show'])->name('user.show');
         Route::post('/{user:id}', [UserController::class, 'edit'])->name('user.edit');
         Route::delete('/{user:id}', [UserController::class, 'delete'])->name('user.delete');
+    });
+
+    Route::group(['prefix' => '/roles'], function () {
+        Route::get('/', [RoleController::class, 'index'])->name('role.index');
+        Route::post('/', [RoleController::class, 'create'])->name('role.create');
+        Route::get('/{role:id}', [RoleController::class, 'show'])->name('role.show');
+        Route::post('/{role:id}', [RoleController::class, 'edit'])->name('role.edit');
+        Route::delete('/{role:id}', [RoleController::class, 'delete'])->name('role.delete');
+    });
+
+    Route::group(['prefix' => '/permissions'], function () {
+        Route::get('/', [PermissionController::class, 'index'])->name('permission.index');
+        Route::post('/', [PermissionController::class, 'create'])->name('permission.create');
+        Route::get('/{permission:id}', [PermissionController::class, 'show'])->name('permission.show');
+        Route::post('/{permission:id}', [PermissionController::class, 'edit'])->name('permission.edit');
+        Route::delete('/{permission:id}', [PermissionController::class, 'delete'])->name('permission.delete');
     });
 });
