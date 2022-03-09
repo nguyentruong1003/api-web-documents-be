@@ -7,6 +7,7 @@ use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\RoleController;
 use App\Http\Controllers\API\PermissionController;
 use App\Http\Controllers\API\MasterDataController;
+use App\Http\Controllers\API\AuditController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,5 +61,9 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::get('/{masterdata:id}', [MasterDataController::class, 'show'])->name('master-data.show');
         Route::post('/{masterdata:id}', [MasterDataController::class, 'edit'])->name('master-data.edit');
         Route::delete('/{masterdata:id}', [MasterDataController::class, 'delete'])->name('master-data.delete');
+    });
+
+    Route::group(['prefix' => '/audits'], function() {
+        Route::get('/', [AuditController::class, 'index'])->name('audit.index');
     });
 });
