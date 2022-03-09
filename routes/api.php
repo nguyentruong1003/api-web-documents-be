@@ -6,6 +6,7 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\RoleController;
 use App\Http\Controllers\API\PermissionController;
+use App\Http\Controllers\API\MasterDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,5 +52,13 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::get('/{permission:id}', [PermissionController::class, 'show'])->name('permission.show');
         Route::post('/{permission:id}', [PermissionController::class, 'edit'])->name('permission.edit');
         Route::delete('/{permission:id}', [PermissionController::class, 'delete'])->name('permission.delete');
+    });
+
+    Route::group(['prefix' => '/master-data'], function () {
+        Route::get('/', [MasterDataController::class, 'index'])->name('master-data.index');
+        Route::post('/', [MasterDataController::class, 'create'])->name('master-data.create');
+        Route::get('/{masterdata:id}', [MasterDataController::class, 'show'])->name('master-data.show');
+        Route::post('/{masterdata:id}', [MasterDataController::class, 'edit'])->name('master-data.edit');
+        Route::delete('/{masterdata:id}', [MasterDataController::class, 'delete'])->name('master-data.delete');
     });
 });

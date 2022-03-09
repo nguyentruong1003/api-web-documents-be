@@ -21,4 +21,13 @@ return [
         'name' => 'Name',
         'guard_name' => 'Guard name'
     ],
+    'master_data' => [
+        'v_key' => 'Data type name',
+        'v_value' =>  'Data of type',
+        'order_number' => 'Order Number',
+        'type' => 'Type',
+        'parent_id' => 'Parent ID',
+        'v_content' => 'Content',
+        'note' => 'Note',
+    ],
 ];
