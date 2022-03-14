@@ -84,6 +84,4 @@
     
 </script>
 
-{{-- select2 --}}
 <script src="{{asset('plugins/select2/js/select2.min.js')}}"></script>
-{{-- <script src="{{asset('js/helper.js')}}"></script> --}}

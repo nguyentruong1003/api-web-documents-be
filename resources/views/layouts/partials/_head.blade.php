@@ -7,7 +7,7 @@
 <!-- jQuery UI 1.11.4 -->
 <!-- <script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script> -->
 
-  <script src="{{ asset('js/chart.js') }}"></script>
+  {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -37,7 +37,7 @@
 
   <link rel="stylesheet" href="{{ asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}"> -->
   <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
-  <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
     @livewireStyles
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>

@@ -11,7 +11,7 @@ return [
     'notification' => [
         'success' => [
             'create' => 'Create record successfully',
-            'edit' => 'Edit record successfully',
+            'update' => 'Update record successfully',
             'delete' => 'Delete record successfully',
             'upload' => 'Upload files successfully'
         ]
