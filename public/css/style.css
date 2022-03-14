@@ -1,0 +1,54 @@
+.custom-input-control{
+    height: 32px!important;
+}
+.dataTables_info, .dataTables_paginate {
+    display: none;
+}
+
+.filter-pagination {
+    color: #B0B7C3;
+    font-size: 12px;
+}
+
+.filter-pagination select {
+
+
+ }
+ .pagination .next.active {
+    background: #377DFF;
+    color: white;
+ }
+ .filter-pagination {
+    color: #B0B7C3;
+    font-size: 12px;
+ }
+ .filter-pagination select{
+
+    width: 75px;
+    display: inline;
+    background: #F3F3F3;
+    border: none!important;
+    margin: 0px 8px;
+    color: #4E5D78;
+
+}
+.pagination .prev,.pagination .next{
+
+    background: #F3F3F3;
+    border-radius: 10px;
+    padding: 3px 16px!important;
+    font-size: 27px!important;
+    line-height: 27px!important;
+
+}
+
+.modal {
+    overflow: auto;
+}
+
+.del-img{
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
