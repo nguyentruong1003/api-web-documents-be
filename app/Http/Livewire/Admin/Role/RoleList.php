@@ -30,7 +30,9 @@ class RoleList extends BaseLive
     }
 
     public function create() {
+        $this->resetInputFields();
         $this->checkEdit = false;
+        $this->emit('set-permissions', $this->permission);
     }
 
     public function edit($id) {

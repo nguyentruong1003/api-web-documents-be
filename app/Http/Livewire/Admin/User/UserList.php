@@ -29,6 +29,7 @@ class UserList extends BaseLive
     }
 
     public function create() {
+        $this->resetInputFields();
         $this->checkEdit = false;
     }
 

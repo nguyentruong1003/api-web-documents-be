@@ -15,7 +15,7 @@
                 
                 <div>
                     <div class="input-group">
-                        <a href="#" data-toggle="modal" data-target="#create-update-modal" wire:click="resetInputFields()" id="create-button">
+                        <a href="#" data-toggle="modal" data-target="#create-update-modal" id="create-button" wire:click="create">
                             <div class="btn-sm btn-primary">
                                 <i class="fa fa-plus"></i> TẠO MỚI
                             </div>
