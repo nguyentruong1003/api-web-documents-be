@@ -22,5 +22,11 @@ Route::get('/', function () {
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
-
+    Route::group(['prefix' => '/users'], function() {
+        Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('admin.user.index');
+        // Route::post('/', [App\Http\Controllers\UserController::class, 'create'])->name('user.create');
+        // Route::get('/{user:id}', [App\Http\Controllers\UserController::class, 'show'])->name('user.show');
+        // Route::post('/{user:id}', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
+        // Route::delete('/{user:id}', [App\Http\Controllers\UserController::class, 'delete'])->name('user.delete');
+    });
 });

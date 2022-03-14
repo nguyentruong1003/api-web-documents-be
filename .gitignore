@@ -1,10 +1,18 @@
 /node_modules
 /public/hot
 /public/storage
+/storage/
 /storage/*.key
+/storage/log/*
+/config/oracle.php
+/storage/framework/views/
 /vendor
+/bootstrap/cache/services.php
+/bootstrap/cache/*
+/.scannerwork/*
+/public/.scannerwork/*
 .env
-.env.backup
+.idea/*
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
@@ -13,3 +21,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+*.log
+sftp-config.json

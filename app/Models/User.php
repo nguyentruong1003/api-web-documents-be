@@ -68,4 +68,9 @@ class User extends Authenticatable implements Auditable
         return [];
     }
 
+    public function roles()
+    {
+        return $this->morphToMany(Role::class, 'model', 'model_has_roles');
+    }
+
 }

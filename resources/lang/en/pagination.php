@@ -15,5 +15,8 @@ return [
 
     'previous' => '&laquo; Previous',
     'next' => 'Next &raquo;',
-
+    'show' => 'SHOW',
+    'record' => 'RECORD',
+    'page' => 'PAGE',
+    'total_record' => 'Show records from :start to :end of :total records'
 ];

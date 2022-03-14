@@ -15,15 +15,17 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Carbon;
+use SebastianBergmann\Environment\Console;
 
 function setActive($path)
 {
-    return \Request::is($path . '*') ? ' class=active' : '';
+    return \Request::is('*' . $path . '*') ? ' active' : '';
 }
 
 function setOpen($path)
 {
-    return \Request::is($path . '*') ? ' class=open' : '';
+    // dd($path);
+    return \Request::is('*' . $path . '*') ? ' menu-is-opening menu-open' : '';
 }
 
 function reFormatDate($datetime, $format = null)
@@ -69,6 +71,11 @@ function checkRoutePermission($action) {
     $arr[count($arr) - 1] = $action;
     $permission = join('.', $arr);
     return checkPermission($permission);
+}
+
+function boldTextSearch($text, $searchTerm)
+{
+    return str_replace($searchTerm, '<b>' . $searchTerm . '</b>', $text);
 }
 
 function boldTextSearchV2($text, $searchTerm){
