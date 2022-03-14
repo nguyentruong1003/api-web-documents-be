@@ -29,8 +29,6 @@
                     <tr>
                         <th>STT</th>
                         <th>Tên</th>
-                        <th>Email</th>
-                        <th>Vai trò</th>
                         <th>Ngày tạo</th>
                         <th>Hành động</th>
                     </tr>
@@ -40,21 +38,11 @@
                         <tr>
                             <td>{{ ($data->currentPage() - 1) * $data->perPage() + $loop->iteration }}</td>
                             <td>{!! boldTextSearch($row->name, $searchTerm) !!}</td>
-                            <td>{{ $row->email }}</td>
-                            <td>
-                                @foreach($row->roles as $role)
-                                    <span>{{ $role->name }}</span><br>
-                                @endforeach
-                            </td>
                             <td>{{ ReFormatDate($row->created_at,'d-m-Y') }}</td>
                             <td>
-                                <a href="#" data-toggle="modal" data-target="#role-modal" wire:click="edit({{ $row->id }})"
-                                    class="btn-sm border-0 bg-transparent">
-                                    <img src="/images/Duplicate.svg" alt="Edit" title="Phân quyền">
-                                </a>
                                 <a href="#" data-toggle="modal" data-target="#create-update-modal" wire:click="edit({{ $row->id }})"
                                         class="btn-sm border-0 bg-transparent">
-                                        <img src="/images/pent2.svg" alt="Edit" title="Chỉnh sửa">
+                                        <img src="/images/pent2.svg" alt="Edit">
                                 </a>
                                 @include('livewire.common.buttons._delete')
                             </td>
@@ -92,63 +80,13 @@
                                 <input type="text" class="form-control" wire:model.lazy="name">
                                 @error('name')<div class="text-danger mt-1">{{$message}}</div>@enderror
                             </div>
-    
-                            <div class="form-group">
-                                <label>Email<span class="text-danger"> *</span></label>
-                                <input type="text" class="form-control" wire:model.lazy="email">
-                                @error('email')<div class="text-danger mt-1">{{$message}}</div>@enderror
-                            </div>
-    
-                            <div class="form-group">
-                                <label>@if(!$checkEdit) Mật khẩu @else Mật khẩu mới @endif<span class="text-danger"> *</span></label>
-                                <input type="password" class="form-control" wire:model.lazy="password">
-                                @error('password')<div class="text-danger mt-1">{{$message}}</div>@enderror
-                            </div>
 
                             <div class="form-group">
-                                <label>Xác nhận mật khẩu<span class="text-danger"> *</span></label>
-                                <input type="password" class="form-control" wire:model.lazy="password_confirmation">
-                                @error('password_confirmation')<div class="text-danger mt-1">{{$message}}</div>@enderror
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="close-modal-create-update" wire:click.prevent="resetInputFields"
-                            class="btn btn-secondary close-btn" data-dismiss="modal">Đóng
-                    </button>
-                    <button type="button" wire:click="save" class="btn btn-primary close-modal">Lưu</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div wire:ignore.self class="modal fade" id="role-modal" role="dialog" >
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Phân quyền
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true close-btn">×</span>
-                    </button>
-                </div>
-                <div class="modal-body container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Tên</label>
-                                <input type="text" class="form-control" wire:model.lazy="name" disabled>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Vai trò</label>
+                                <label>Quyền</label>
                                 <div wire:ignore>
-                                    <select class="form-control select2" multiple style="width: 100%" wire:model.lazy="role">
-                                        @foreach ($roles as $role)
-                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                    <select class="form-control select2" multiple style="width: 100%" wire:model.lazy="permission">
+                                        @foreach ($permissions as $permission)
+                                            <option value="{{ $permission->id }}">{{ $permission->name }}</option>
                                         @endforeach
                                     </select>
                                 </div> 
@@ -158,33 +96,28 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="close-modal-role" wire:click.prevent="resetInputFields"
+                    <button type="button" id="close-modal" wire:click.prevent="resetInputFields"
                             class="btn btn-secondary close-btn" data-dismiss="modal">Đóng
                     </button>
-                    <button type="button" wire:click="updateRole" class="btn btn-primary close-modal">Lưu</button>
+                    <button type="button" wire:click="save" class="btn btn-primary close-modal">Lưu</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        window.livewire.on('close-modal-create-update', () => {
-            $('#close-modal-create-update').click();
+        window.livewire.on('close-modal', () => {
+            $('#close-modal').click();
         });
-
-        window.livewire.on('close-modal-role', () => {
-            $('#close-modal-role').click();
-        });
-
         $(document).ready(function () {
             $('.select2').select2({
-                placeholder: "Chọn vai trò ..."
+                placeholder: "Chọn quyền ..."
             });
             $('.select2').on('change', function (e) {
                 let data = $(this).val();
-                @this.set('role', data);
+                 @this.set('permission', data);
             });
-            window.livewire.on('set-roles', () => {
+            window.livewire.on('set-permissions', () => {
                 $('.select2').select2();
             });
         });

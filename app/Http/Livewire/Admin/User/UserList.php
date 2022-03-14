@@ -58,11 +58,19 @@ class UserList extends BaseLive
         $user->email = $this->email;
         $user->password = bcrypt($this->password);
         $user->save();
-        $this->emit('close-modal');
+        $this->emit('close-modal-create-update');
         if ($this->checkEdit) {
             $this->dispatchBrowserEvent('show-toast', ["type" => "success", "message" => __('view.notification.success.update')] );
         } else
             $this->dispatchBrowserEvent('show-toast', ["type" => "success", "message" => __('view.notification.success.create')] );
+        $this->resetInputFields();
+    }
+
+    public function updateRole() {
+        $user = User::findorfail($this->Id);
+        $user->syncRoles($this->role);
+        $this->emit('close-modal-role');
+        $this->dispatchBrowserEvent('show-toast', ["type" => "success", "message" => __('view.notification.success.update')] );
         $this->resetInputFields();
     }
 
