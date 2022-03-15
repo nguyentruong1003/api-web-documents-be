@@ -51,7 +51,6 @@
                         {{-- <th>URL</th> --}}
                         <th>Địa chỉ IP</th>
                         {{-- <th>Tác nhân</th> --}}
-                        {{-- <th>Ghi chú</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -88,7 +87,6 @@
                             {{-- <td class="text-left">
                                 <p class="mb-1 content-audit-data">{!! boldTextSearch($row['user_agent'], $searchTerm) !!}</p>
                             </td> --}}
-                            {{-- <td class="text-left">{!! boldTextSearch($row['note'], $searchTerm) !!}</td> --}}
                         </tr>
                     @empty
                         <td colspan='12' class='text-center'>Không tìm thấy dữ liệu</td>

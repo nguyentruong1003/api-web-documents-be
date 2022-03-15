@@ -83,14 +83,6 @@
                         </div>
                     </div>
                 </div><hr>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-upper">Ghi chú</label>
-                        <div class="text-left"> 
-                            {{$row['note']}}
-                        </div>
-                    </div>
-                </div><hr>
             </div>
         </div>
     </div>

@@ -34,9 +34,7 @@ class ListData extends BaseLive
                     ->orWhereRaw('lower(new_values) like ? ', ['%' . trim(mb_strtolower($searchTerm, 'UTF-8')) . '%'])
                     ->orWhereRaw('lower(url) like ? ', ['%' . trim(mb_strtolower($searchTerm, 'UTF-8')) . '%'])
                     ->orWhereRaw('lower(ip_address) like ? ', ['%' . trim(mb_strtolower($searchTerm, 'UTF-8')) . '%'])
-                    ->orWhereRaw('lower(user_agent) like ? ', ['%' . trim(mb_strtolower($searchTerm, 'UTF-8')) . '%'])
-                    ->orWhereRaw('lower(tags) like ? ', ['%' . trim(mb_strtolower($searchTerm, 'UTF-8')) . '%'])
-                    ->orWhereRaw('lower(note) like ? ', ['%' . trim(mb_strtolower($searchTerm, 'UTF-8')) . '%']);
+                    ->orWhereRaw('lower(user_agent) like ? ', ['%' . trim(mb_strtolower($searchTerm, 'UTF-8')) . '%']);
             });
         }
         if (!empty($this->searchUser)) {
@@ -80,11 +78,22 @@ class ListData extends BaseLive
                 'url' => $item->url,
                 'ip_address' => $item->ip_address,
                 'user_agent' => $item->user_agent,
-                'note' => $item->note,
                 'created_at' => Carbon::parse($item->created_at),
             ];
         });
         $data->setCollection($tmp);
         return $data;
+    }
+
+    public function updatingSearchUser() {
+        $this->resetPage();
+    }
+
+    public function updatingFrom_date() {
+        $this->resetPage();
+    }
+
+    public function updatingTo_date() {
+        $this->resetPage();
     }
 }
