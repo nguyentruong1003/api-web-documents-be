@@ -15,5 +15,8 @@ return [
             'delete' => 'Delete record successfully',
             'upload' => 'Upload files successfully'
         ]
+    ],
+    'validation' => [
+        'required' => 'This field is required',
     ]
 ];

@@ -29,4 +29,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => '/roles'], function() {
         Route::get('/', [App\Http\Controllers\RoleController::class, 'index'])->name('admin.role.index');
     });
+
+    Route::group(['prefix' => '/master-data'], function() {
+        Route::get('/', [App\Http\Controllers\MasterDataController::class, 'index'])->name('admin.master-data.index');
+    });
 });

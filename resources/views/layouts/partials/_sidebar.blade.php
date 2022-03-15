@@ -49,18 +49,28 @@
             </ul>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item {{ setOpen('master-data') }}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Master Data</p>
+              <i class="nav-icon far fa-file"></i>
+              <p>
+                Quản lý cấu hình
+                <i class="fas fa-angle-left right"></i>
+              </p>
             </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Audit Data</p>
-            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin.master-data.index') }}" class="nav-link {{ setActive('master-data') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Master Data</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Audit Data</p>
+                </a>
+              </li>
+            </ul>
           </li>
           
           
