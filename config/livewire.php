@@ -54,7 +54,11 @@ return [
     |
     */
 
+    // here for localhost
     'asset_url' => null,
+
+    // here for heroku
+    // 'asset_url' => 'public',
 
     /*
     |--------------------------------------------------------------------------

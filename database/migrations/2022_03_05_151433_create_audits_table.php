@@ -24,6 +24,7 @@ class CreateAuditsTable extends Migration
             $table->text('url')->nullable();
             $table->ipAddress('ip_address')->nullable();
             $table->string('user_agent', 1023)->nullable();
+            $table->string('tags')->nullable();
             $table->timestamps();
         });
     }
