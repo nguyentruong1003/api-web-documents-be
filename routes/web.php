@@ -33,4 +33,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => '/master-data'], function() {
         Route::get('/', [App\Http\Controllers\MasterDataController::class, 'index'])->name('admin.master-data.index');
     });
+
+    Route::group(['prefix' => '/audits'], function() {
+        Route::get('/', [App\Http\Controllers\AuditController::class, 'index'])->name('admin.audit.index');
+    });
 });

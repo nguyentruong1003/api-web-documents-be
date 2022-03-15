@@ -49,7 +49,7 @@
             </ul>
           </li>
 
-          <li class="nav-item {{ setOpen('master-data') }}">
+          <li class="nav-item {{ setOpen('master-data') }} {{ setOpen('audit') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-file"></i>
               <p>
@@ -65,9 +65,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.audit.index') }}" class="nav-link {{ setActive('audit') }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Audit Data</p>
+                  <p>Audit Log</p>
                 </a>
               </li>
             </ul>
