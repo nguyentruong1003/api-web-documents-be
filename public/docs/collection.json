@@ -1,0 +1,1041 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "8bc8b61c-b7cd-4cae-a093-27542bcdf4e1",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/auth\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"aaprcawkbwzcfbbapxvbbdjoxcmypnctvdsanmohsvqkdurehswlgwxubogfytixfcwalsafwjuzirfxkijqsreiixctfphwkvkxfknzdgemeohfilzamqtwlbmnoitwhiuilzhhanuwjqjobrdrmuxrgqutkdugmchc\",\"password\":\"magnam\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/auth\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"czjxsdrqnprgcsnxdcjkirmboiuajsdmtgovedaptkcheurmapbrxttwjbexmvgwyvbtqskjfh\",\"email\":\"rayitvjiqndixtckdoaioihnekncyszfgrxemchqppznsasjaovbdlfscpjybbhruurqqnbimyaicvxunbdbkztrmuqeaejwzbvlfyayqcptcqtfutbtazsykbdgduunqnhlcxbtfjgkyaifeujdnyhmxiwgjcircxfcfdfmbcdacnbrcgdfejnudliheimzinqdjjugxojekhvvdqhkgltejk\",\"password\":\"reiagp\",\"password_confirmation\":\"quaerat\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/auth\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/auth\/current-user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/current-user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/current-user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/auth\/change-password",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/change-password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/change-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"old_password\":\"bhgxmsizjpdrzkzllpktdfwqanfvddjpvmomewznrwjdmkzqrocyjdlpcyhrnzujategbuglhpxeuacogenunktnyrqihbwpgnxkjzocljbfjufnkcmtonzevaoyrbwnkzolemmmjsfkzdftigtcvkfrpwvpvtwumckeqwiffjcpvnzzom\",\"new_password\":\"pweqyrenvwwkyceucwhoncjpefrukeadjsng\",\"new_password_confirmation\":\"atque\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/users",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/audits",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/audits",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/audits"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"llgfjcwhujlhdgyeiwghwuvsneexzlchccxhmvowizcdawnbiethpjdygxlbirrllurdoxdszgkchozxcyisrxtrpihsllkknrnbyxvxvssjzhlqgmqadczvu\",\"email\":\"aypcwzpepuqcxcilayprroqtqqxzgzsyrhypchcpfjjusnldhlailcmolixhunsiqqolcycdbgcgivipxcfkozcyulbgcccozmgannkefmcjokj\",\"password\":\"lo\",\"roles\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "4",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "5",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"xtdctngdtmyxrnmbedczppakwiwqybbtacakhobbiqxkpqefnneznqtuaxsnmqkcpopcohpygxpzfifzsok\",\"email\":\"owzluskkffwftoshuqgypibiyubipkdbskjayfvuuxcelftfm\",\"password\":\"tvyfmb\",\"roles\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "7",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get roles",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"facelizhmqzellntloxelepfcglqganamnykhrmmjgvowgncpdsqvrshciycniqnvwqqrfqvlvxbahkkvw\",\"permissions\":[null],\"users\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                            "variable": [
+                                {
+                                    "id": "role_id",
+                                    "key": "role_id",
+                                    "value": "7",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                            "variable": [
+                                {
+                                    "id": "role_id",
+                                    "key": "role_id",
+                                    "value": "16",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"vlajempfixlmwctxufduffkdgrgncqbmmxxkwzckarhmrdlywtqnispceyoqbbejscyixzbmafhebmtxvqwqozjzsaajbpystlzoilfmkfkhitffizzc\",\"permissions\":[null],\"users\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                            "variable": [
+                                {
+                                    "id": "role_id",
+                                    "key": "role_id",
+                                    "value": "12",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get permissions",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/permissions"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create permission",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/permissions"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"oohfyvpdteldnehrjochobwivtkxqvjhpgaqcftdqqyksgzeqsuyrqdllomvanhxfyzqfojbbnxtkycqvoetgpyfcciztiwczmzxcxkklqpdjetxpafcjsgwneahztvlpqmodpfwcfcplhzkqczwr\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show permission",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/:permission_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
+                            "variable": [
+                                {
+                                    "id": "permission_id",
+                                    "key": "permission_id",
+                                    "value": "dolores",
+                                    "description": "The ID of the permission."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit permission",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/:permission_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
+                            "variable": [
+                                {
+                                    "id": "permission_id",
+                                    "key": "permission_id",
+                                    "value": "eligendi",
+                                    "description": "The ID of the permission."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"sycaqpqmvhxzwiflguqlgmvjllqeonbnnynfrwctrvwvuspjqkgwrufqzcovhwimvddbyatmgnrxsrrlypsljvvefkpnhfaeimqogwuwobjsoomvyeoolcupgozhqviytltkczxdesrhuwyjatroarterznvrzjvbgonhgjtnjckadikrqvxdbgmwmqmkhczzhulpneboothiiodjvvzjrvfm\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete permission",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/:permission_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
+                            "variable": [
+                                {
+                                    "id": "permission_id",
+                                    "key": "permission_id",
+                                    "value": "asperiores",
+                                    "description": "The ID of the permission."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get or search masterdatas",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master-data",
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "quo",
+                                    "description": "Search by name",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/master-data?name=quo"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create masterdata",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/master-data"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"v_key\":\"ylevhkcmvfmkadrzgjyxqyhsrpuvkbehlfyffustxybwtveuklmanjvtsylngrlkirlfdlmkboxeovfufvykdjhpqlprxrlsbhiumlsaowlphusqdlcssongnqhdzuhtzawwxxnhzjlfkywnfcfygeuoefgdkyjlmxps\",\"v_value\":\"amwzuqdtqnkiytztfxlmjndzzqgwcfdqbciybcedqkpgnejkvgcncmdxhstaslsancxzjjtbtqgsjzpnjfknvfnpzziwrhheenffidfdbtiuxjimptaqgehjwentxizoaiapiuttaatzaunvswywtjhwwmmxzfqjrcfljqgucbxegszkemraylmmlvsydrdslvyeeknqyc\",\"order_number\":0,\"type\":\"wsgdgq\",\"parent_id\":1158109.2015,\"v_content\":\"ugebw\",\"note\":\"mmvlwrgwfgpwenebeykuqslhmvalxchratmflgimaobseubofufjuvgzfqfwgctkcczskttihemqlsmcu\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show masterdata",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master-data\/:masterdata_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
+                            "variable": [
+                                {
+                                    "id": "masterdata_id",
+                                    "key": "masterdata_id",
+                                    "value": "tempore",
+                                    "description": "The ID of the masterdata."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit masterdata",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master-data\/:masterdata_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
+                            "variable": [
+                                {
+                                    "id": "masterdata_id",
+                                    "key": "masterdata_id",
+                                    "value": "voluptate",
+                                    "description": "The ID of the masterdata."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"v_key\":\"aabhpejtnxqyinmpjzsdbmrhdaybdfsivxazqbmvyecosmzeaocipttnkqmiajouhdohpcscljvkgtrwprtzxqyzrgjveolqgtdnxkwztnolzycfpgptnmoesgcalutymurqugxqfkjjlbupqsuvdwgikqixcuporyoyuqekogoyzijctjvnxirtbpvgwzyorjsuxjnikgulhdrqklx\",\"v_value\":\"thmbzzrtandevtqgteadnfknqaszujhfobcgelyiojgyeukbudhkmtdstwsfvuvevlqbgfollhbgjkyznnrnbvxxvfwhpmpppffkgnpprnhjiufsxclkdbrwnaojhwtsiledyimgrczucedntdlmbdbqpxtbyeho\",\"order_number\":0,\"type\":\"pguqbmdceh\",\"parent_id\":0.1885997,\"v_content\":\"krbxrrkpspnbvalpltapplowqnkohwqhvqburjnpqqbmmpjeiczowvhrfcmnumpjmpodzzzjfvomeyfyfrqhmwutaqryncpzyxoldknlifmhzkzgrgqcleelguzuhzuyqewhkviprvbzfzvyzzuwoxyhvpwqadsuvltpwfpy\",\"note\":\"kdseqviaqhunjbkujjmdgtlctmqtgvzavwgfkehkdnlkwldezjageubocrymeycczawniwwpyhzxaawhbgtabgt\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete masterdata",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master-data\/:masterdata_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
+                            "variable": [
+                                {
+                                    "id": "masterdata_id",
+                                    "key": "masterdata_id",
+                                    "value": "omnis",
+                                    "description": "The ID of the masterdata."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
