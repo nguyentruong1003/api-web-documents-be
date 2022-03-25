@@ -13,7 +13,7 @@ class EMenu
             'role.index' => 'Quản lý vai trò',
             'permission.index' => 'Quản lý phân quyền',
             'master-data.index' => 'Quản lý cấu hình',
-            'audit.index' => 'Audit log',
+            'audit.index' => 'Audit log'
         ];
     }
 }
