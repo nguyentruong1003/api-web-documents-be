@@ -82,14 +82,54 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Quyền</label>
-                                <div wire:ignore>
-                                    <select class="form-control select2" multiple style="width: 100%" wire:model.lazy="permission">
-                                        @foreach ($permissions as $permission)
-                                            <option value="{{ $permission->id }}">{{ $permission->name }}</option>
+                                <label> Danh sách module chức năng </label>
+                                <table class="table table-bordered table-hover dataTable dtr-inline">
+                                    <thead class="">
+                                        <tr class="border-radius">
+                                            <th rowspan="2" scope="col" class="border-radius-left">Chức năng</th>
+                                            <th scope="col" class="text-center"><img src="/images/eye.svg" alt="view"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/add.svg" alt="add"></th>
+                                            <th scope="col" class="text-center"><img src="/images/pent2.svg" alt="edit"/> </th>
+                                            <th scope="col" class="text-center"><img src="/images/trash.svg" alt="delete"></th>
+                                            <th scope="col" class="text-center"><img src="/images/eye.svg" alt="show"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/Import.svg" alt="upload"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/Export.svg" alt="download"/></th>
+                                        </tr>
+                                        <tr class="border-radius">
+                                            <th scope="col" class="text-center">Danh sách</th>
+                                            <th scope="col" class="text-center">Thêm</th>
+                                            <th scope="col" class="text-center">Sửa</th>
+                                            <th scope="col" class="text-center">Xóa</th>
+                                            <th scope="col" class="text-center">Chi tiết</th>
+                                            <th scope="col" class="text-center">Upload</th>
+                                            <th scope="col" class="text-center">Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($permissions as $routeName => $features)
+                                            @foreach ($features as $featureName => $grants)
+                                                <tr id="{{ $routeName }}">
+                                                    <td>
+                                                        {!! $listNameMenu[$featureName] ?? $featureName !!}
+                                                        <div class="text-right">
+                                                            <button class="btn btn-light btn-sm mr-2" type="button" onclick="selectAllInModule('{{ $routeName }}')">Chọn tất cả</button>
+                                                            <button class="btn btn-light btn-sm" type="button" onclick="unselectAllInModule('{{ $routeName }}')">Bỏ chọn tất cả</button>
+                                                        </div>
+                                                    </td>
+                                                    @foreach ($grants as $grant)
+                                                    <td class="text-center" style="display: float-right">
+                                                        
+                                                            <div class="toggle">
+                                                                <input type="checkbox" class="toggle-checkbox grant" id="grant-{{ $grant['id'] ?? 0 }}" value="{{ $grant['id'] ?? 0 }}" @if (in_array($grant['id'] ?? 0, $selectedPermissions)) checked @endif>
+                                                            </div>
+                                                        
+                                                    </td>
+                                                    @endforeach
+                                                </tr>
+                                            @endforeach
                                         @endforeach
-                                    </select>
-                                </div> 
+                                    </tbody>
+                                </table>
                             </div>
 
                         </div>
@@ -109,17 +149,27 @@
         window.livewire.on('close-modal', () => {
             $('#close-modal').click();
         });
-        $(document).ready(function () {
-            $('.select2').select2({
-                placeholder: "Chọn quyền ..."
+
+        function selectAllInModule(routeName) {
+            $("#" + routeName).find('.toggle-checkbox').each(function() {
+                this.checked = true;
             });
-            $('.select2').on('change', function (e) {
-                let data = $(this).val();
-                 @this.set('permission', data);
+        }
+    
+        function unselectAllInModule(routeName) {
+            $("#" + routeName).find('.toggle-checkbox').each(function() {
+                this.checked = false;
             });
-            window.livewire.on('set-permissions', () => {
-                $('.select2').select2();
+        }
+    
+        function submit() {
+            let selectedPermissions = [];
+            $('.grant:checked').each(function() {
+                selectedPermissions.push(this.value);
             });
-        });
+            @this.selectedPermissions = selectedPermissions;
+            
+            @this.save();
+        }
     </script>
 </div>

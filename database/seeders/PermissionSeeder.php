@@ -15,13 +15,28 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
+        $actions = ['index', 'create', 'edit', 'delete', 'show', 'upload', 'download'];
+
         $routes = Route::getRoutes()->getRoutes();
+
         foreach ($routes as $route) {
-            $action = $route->action;
-            if (!isset($action['middleware'])) continue;
-            if (isset($action['excluded_middleware']) && in_array('check-permission', $action['excluded_middleware'])) continue;
-            if (!in_array('check-permission', $action['middleware'])) continue;
-            Permission::findOrCreate($action['as'] ?? 'no-name');
+            if (!isset($route->action['middleware'])) continue;
+            if (isset($route->action['excluded_middleware']) && in_array('check-permission', $route->action['excluded_middleware'])) continue;
+            if (!in_array('check-permission', $route->action['middleware'])) continue;
+            
+            $routeName = $route->action['as'] ?? 'route-name';
+            if (strpos($routeName, '.index') > 0) {
+                $arr = explode('.', $routeName);
+                array_pop($arr);
+                foreach ($actions as $action) {
+                    Permission::query()->firstOrCreate([
+                        'alias' => join('-', $arr),
+                        'code' => join('.', $arr) . '.index',
+                        'name' => join('.', $arr) . '.' . $action,
+                        'action' => $action,
+                    ]);
+                }
+            }
         }
     }
 }
