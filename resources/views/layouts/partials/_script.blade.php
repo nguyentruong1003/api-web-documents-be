@@ -12,7 +12,7 @@
 <script src="{{asset('plugins/select2/js/select2.min.js')}}"></script>
 
 <script>
-  window.addEventListener('show-toast', event => {
+    window.addEventListener('show-toast', event => {
         if (event.detail.type == "success") {
             toastr.success(event.detail.message);
         } else if (event.detail.type == "error") {
