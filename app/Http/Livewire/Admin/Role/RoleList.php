@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin\Role;
 
+use App\Enums\EMenu;
 use App\Http\Livewire\Base\BaseLive;
 use Spatie\Permission\Models\Role;
 use App\Models\RoleHasPermisson;
@@ -12,9 +13,13 @@ class RoleList extends BaseLive
 
     public $Id, $name;
     public $permissions, $permission;
+    public $selectedPermissions = [];
 
     public function mount() {
-        $this->permissions = Permission::all();
+        $this->permissions = Permission::query()->get()->groupBy('alias')->map(function ($item) {
+            return $item->groupBy('code');
+        })->toArray();
+        $this->listNameMenu = EMenu::listNameMenu();
     }
 
     public function render() {
@@ -32,16 +37,15 @@ class RoleList extends BaseLive
     public function create() {
         $this->resetInputFields();
         $this->checkEdit = false;
-        $this->emit('set-permissions', $this->permission);
     }
 
     public function edit($id) {
+        $this->resetInputFields();
         $this->checkEdit = true;
         $this->Id = $id;
         $role = Role::findorfail($id);
         $this->name = $role->name;
-        $this->permission = $this->getRolePermissions($id);
-        $this->emit('set-permissions', $this->permission);
+        $this->selectedPermissions = $role->permissions->pluck('id')->toArray();
     }
 
     public function save() {
@@ -55,7 +59,7 @@ class RoleList extends BaseLive
             $role->guard_name = 'api';
         }
         $role->name = $this->name;
-        $role->syncPermissions($this->permission);
+        $role->syncPermissions($this->selectedPermissions);
         $role->save();
         $this->emit('close-modal');
         if ($this->checkEdit) {
@@ -66,7 +70,7 @@ class RoleList extends BaseLive
     }
 
     public function resetInputFields() {
-        $this->reset(['Id','name','permission']);
+        $this->reset(['Id','name','permission', 'selectedPermissions']);
         $this->resetValidation();
     }
 
@@ -85,7 +89,6 @@ class RoleList extends BaseLive
         foreach ($rolePermissions as $permission) {
             $dataPermission[] = $permission;
         }
-
         return $dataPermission;
     }
 }
