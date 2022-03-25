@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\Admin\Role;
 
-use App\Enums\EMenu;
 use App\Http\Livewire\Base\BaseLive;
 use Spatie\Permission\Models\Role;
 use App\Models\RoleHasPermisson;
@@ -15,11 +14,22 @@ class RoleList extends BaseLive
     public $permissions, $permission;
     public $selectedPermissions = [];
 
+    public static function listNameMenu()
+    {
+        return [
+            'user.index' => 'Quản lý người dùng',
+            'role.index' => 'Quản lý vai trò',
+            'permission.index' => 'Quản lý phân quyền',
+            'master-data.index' => 'Quản lý cấu hình',
+            'audit.index' => 'Audit log',
+        ];
+    }
+
     public function mount() {
         $this->permissions = Permission::query()->get()->groupBy('alias')->map(function ($item) {
             return $item->groupBy('code');
         })->toArray();
-        $this->listNameMenu = EMenu::listNameMenu();
+        $this->listNameMenu = $this->listNameMenu();
     }
 
     public function render() {
