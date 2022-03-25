@@ -63,9 +63,9 @@ php artisan storage:link
 php artisan serve
 ```
 
-## Admin Account
+## Account
 ```bash
-Username: admin@test.com
+Username: guest@test.com
 Password: 12345678
 ```
 

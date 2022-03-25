@@ -81,8 +81,11 @@ class UserList extends BaseLive
     }
 
     public function delete() {
-        $user = User::findOrFail($this->deleteId);
-        $user->delete();
-        $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => __('view.notification.success.delete')]);
+        if ($this->deleteId == 1) {
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'error', 'message' => 'Bạn không thể xóa tài khoản admin']);
+        } else {
+            User::findOrFail($this->deleteId)->delete();
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => __('view.notification.success.delete')]);
+        }
     }
 }

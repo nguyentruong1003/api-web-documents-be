@@ -25,6 +25,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+          @if (checkPermission('user.index') || checkPermission('role.index'))
           <li class="nav-item {{ setOpen('user') }} {{ setOpen('role') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-user"></i>
@@ -34,21 +35,26 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              @if (checkPermission('user.index'))
               <li class="nav-item">
                 <a href="{{ route('admin.user.index') }}" class="nav-link {{ setActive('user') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách người dùng</p>
                 </a>
               </li>
+              @endif
+              @if (checkPermission('role.index'))
               <li class="nav-item">
                 <a href="{{ route('admin.role.index') }}" class="nav-link {{ setActive('role') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách vai trò</p>
                 </a>
               </li>
+              @endif
             </ul>
           </li>
-
+          @endif
+          @if (checkPermission('master-data.index') || checkPermission('audit.index'))
           <li class="nav-item {{ setOpen('master-data') }} {{ setOpen('audit') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-file"></i>
@@ -58,20 +64,25 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              @if (checkPermission('master-data.index'))
               <li class="nav-item">
                 <a href="{{ route('admin.master-data.index') }}" class="nav-link {{ setActive('master-data') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Master Data</p>
                 </a>
               </li>
+              @endif
+              @if (checkPermission('audit.index'))
               <li class="nav-item">
                 <a href="{{ route('admin.audit.index') }}" class="nav-link {{ setActive('audit') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Audit Log</p>
                 </a>
               </li>
+              @endif
             </ul>
           </li>
+          @endif
           
           
         </ul>

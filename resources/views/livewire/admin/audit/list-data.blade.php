@@ -58,9 +58,11 @@
                         <tr>
                             <td class="text-left">{!! boldTextSearch($row['perfomer'], $searchTerm) !!}</td>
                             <td class="text-left">{!! boldTextSearch($row['event'], $searchTerm) !!}<br>
+                                @if (checkRoutePermission('show'))
                                 <a href="" data-toggle="modal" data-target="{{'#show' . $row['id']}}">
                                     Chi tiết ...
                                 </a>
+                                @endif
                                 @include('livewire.admin.audit._detailModal')
                             </td>
                             <td class="text-left">{!! boldTextSearch($row['audittable_type'], $searchTerm) !!}</td>

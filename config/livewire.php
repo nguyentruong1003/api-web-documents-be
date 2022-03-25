@@ -55,10 +55,10 @@ return [
     */
 
     // here for localhost
-    'asset_url' => null,
+    // 'asset_url' => null,
 
     // here for heroku
-    // 'asset_url' => 'public',
+    'asset_url' => 'public',
 
     /*
     |--------------------------------------------------------------------------
