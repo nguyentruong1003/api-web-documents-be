@@ -15,13 +15,20 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::query()->firstOrCreate([
+        $admin = User::query()->firstOrCreate([
             'name' => 'Admin',
-            'email' => 'admin@test.com'
-        ], [
+            'email' => 'admin@test.com',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        ]);
+
+        $admin->assignRole('administrator');
+
+        $user = User::query()->firstOrCreate([
+            'name' => 'Guest',
+            'email' => 'guest@test.com',
             'password' => bcrypt('12345678')
         ]);
 
-        $user->assignRole('administrator');
+        $user->assignRole('guest');
     }
 }

@@ -85,9 +85,12 @@ class RoleList extends BaseLive
     }
 
     public function delete() {
-        $user = Role::findOrFail($this->deleteId);
-        $user->delete();
-        $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => __('view.notification.success.delete')]);
+        if ($this->deleteId == 1) {
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'error', 'message' => 'Bạn không thể xóa vai trò admin']);
+        } else {
+            Role::findOrFail($this->deleteId)->delete();
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => __('view.notification.success.delete')]);
+        }
     }
 
     function getRolePermissions ($idRole) {

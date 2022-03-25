@@ -26,6 +26,7 @@
                 </div>
                 
                 <div>
+                    @if (checkRoutePermission('create'))
                     <div class="input-group">
                         <a href="#" data-toggle="modal" data-target="#create-update-modal" id="create-button" wire:click="create">
                             <div class="btn-sm btn-primary">
@@ -33,6 +34,7 @@
                             </div>
                         </a>
                     </div>
+                    @endif
                 </div>
             </div>
             <div wire:loading class="loader"></div>
@@ -47,7 +49,9 @@
                         <th>Giá trị cha</th>
                         <th>Nội dung</th>
                         <th>Ghi chú</th>
+                        @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                         <th>Hành động</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -61,13 +65,19 @@
                             <td>{!! boldTextSearch($row->parent_id, $searchTerm) !!}</td>
                             <td>{!! boldTextSearch($row->v_content, $searchTerm) !!}</td>
                             <td>{!! boldTextSearch($row->note, $searchTerm) !!}</td>
+                            @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
+                                @if (checkRoutePermission('edit'))
                                 <a href="#" data-toggle="modal" data-target="#create-update-modal" wire:click="edit({{ $row->id }})"
                                         class="btn-sm border-0 bg-transparent">
                                         <img src="/images/pent2.svg" alt="Edit">
                                 </a>
+                                @endif
+                                @if (checkRoutePermission('delete'))
                                 @include('livewire.common.buttons._delete')
+                                @endif
                             </td>
+                            @endif
                         </tr>
                     @empty
                         <td colspan='12' class='text-center'>Không tìm thấy dữ liệu</td>

@@ -67,8 +67,14 @@ function checkButtonCanView($action)
 
 function checkRoutePermission($action) {
     $routerName = Route::getCurrentRoute()->getName();
+    if ($routerName == 'livewire.message') {
+        $routerName = Route::getCurrentRoute()->name;
+    }
     $arr = explode('.', $routerName);
     $arr[count($arr) - 1] = $action;
+    if ($arr[0] == 'admin') {
+        unset($arr[0]);
+    }
     $permission = join('.', $arr);
     return checkPermission($permission);
 }
