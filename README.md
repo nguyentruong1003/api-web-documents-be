@@ -40,7 +40,15 @@ npm install
 ```bash
 cp .env.example .env
 ```
-Go to mysql workbech or adminer to create a new database and update your env file
+Go to mysql workbech or adminer to create a database named documents. Then update your env file as follows:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=documents
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
 - Generate a key for the project
 ```bash
