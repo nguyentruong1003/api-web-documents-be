@@ -18,7 +18,7 @@ class UserResource extends APIResource
             'name' => $this->name,
             'email' => $this->email,
             'permissions' => $this->whenLoaded('permissions', function() {
-                return ($this->hasRole('administrator')) ? ['administrator'] : $this->getAllPermissions()->pluck('name');
+                return ($this->hasRole('administrator')) ? ['administrator'] : $this->roles()->pluck('name');
             })
         ];
 

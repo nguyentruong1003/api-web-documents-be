@@ -12,9 +12,24 @@ class RoleList extends BaseLive
 
     public $Id, $name;
     public $permissions, $permission;
+    public $selectedPermissions = [];
+
+    public static function listNameMenu()
+    {
+        return [
+            'user.index' => 'Quản lý người dùng',
+            'role.index' => 'Quản lý vai trò',
+            'permission.index' => 'Quản lý phân quyền',
+            'master-data.index' => 'Quản lý cấu hình',
+            'audit.index' => 'Audit log',
+        ];
+    }
 
     public function mount() {
-        $this->permissions = Permission::all();
+        $this->permissions = Permission::query()->get()->groupBy('alias')->map(function ($item) {
+            return $item->groupBy('code');
+        })->toArray();
+        $this->listNameMenu = $this->listNameMenu();
     }
 
     public function render() {
@@ -32,16 +47,15 @@ class RoleList extends BaseLive
     public function create() {
         $this->resetInputFields();
         $this->checkEdit = false;
-        $this->emit('set-permissions', $this->permission);
     }
 
     public function edit($id) {
+        $this->resetInputFields();
         $this->checkEdit = true;
         $this->Id = $id;
         $role = Role::findorfail($id);
         $this->name = $role->name;
-        $this->permission = $this->getRolePermissions($id);
-        $this->emit('set-permissions', $this->permission);
+        $this->selectedPermissions = $role->permissions->pluck('id')->toArray();
     }
 
     public function save() {
@@ -55,7 +69,7 @@ class RoleList extends BaseLive
             $role->guard_name = 'api';
         }
         $role->name = $this->name;
-        $role->syncPermissions($this->permission);
+        $role->syncPermissions($this->selectedPermissions);
         $role->save();
         $this->emit('close-modal');
         if ($this->checkEdit) {
@@ -66,14 +80,17 @@ class RoleList extends BaseLive
     }
 
     public function resetInputFields() {
-        $this->reset(['Id','name','permission']);
+        $this->reset(['Id','name','permission', 'selectedPermissions']);
         $this->resetValidation();
     }
 
     public function delete() {
-        $user = Role::findOrFail($this->deleteId);
-        $user->delete();
-        $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => __('view.notification.success.delete')]);
+        if ($this->deleteId == 1) {
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'error', 'message' => 'Bạn không thể xóa vai trò admin']);
+        } else {
+            Role::findOrFail($this->deleteId)->delete();
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => __('view.notification.success.delete')]);
+        }
     }
 
     function getRolePermissions ($idRole) {
@@ -85,7 +102,6 @@ class RoleList extends BaseLive
         foreach ($rolePermissions as $permission) {
             $dataPermission[] = $permission;
         }
-
         return $dataPermission;
     }
 }

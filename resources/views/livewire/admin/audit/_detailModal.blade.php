@@ -1,5 +1,5 @@
 <div wire:ignore class="modal fade" id="{{'show'. $row['id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="text-upper">Chi tiết</h5>
@@ -27,13 +27,13 @@
                 </div><hr>
                 <div class="row">
                     <div class="col">
-                        <label class="text-upper">Loại bảng Audit</label>
+                        <label class="text-upper">Bảng tác động</label>
                         <div class="text-left"> 
                             {{$row['audittable_type']}}
                         </div>
                     </div>
                     <div class="col">
-                        <label class="text-upper">ID bảng Audit</label>
+                        <label class="text-upper">ID giá trị tác động</label>
                         <div class="text-left"> 
                             {{$row['audittable_id']}}
                         </div>
@@ -45,7 +45,7 @@
                         <div class="text-left">
                             @if(!empty($row['old_values']) && count($row['old_values']) > 0)
                                 @foreach($row['old_values'] as $index => $item)
-                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item), $searchTerm) !!}</p>
+                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item, JSON_UNESCAPED_UNICODE), $searchTerm) !!}</p>
                                 @endforeach
                             @endif
                         </div>
@@ -55,7 +55,7 @@
                         <div class="text-left">
                             @if(!empty($row['new_values']) && count($row['new_values']) > 0)
                                 @foreach($row['new_values'] as $index => $item)
-                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item), $searchTerm) !!}</p>
+                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item, JSON_UNESCAPED_UNICODE), $searchTerm) !!}</p>
                                 @endforeach
                             @endif
                         </div>

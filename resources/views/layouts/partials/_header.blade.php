@@ -1,7 +1,4 @@
-<!-- Preloader -->
-<div class="flex-column justify-content-center align-items-center">
-  <img class="animation__shake" src="/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-</div>
+
 
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -11,10 +8,12 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="index3.html" class="nav-link">Home</a>
+      <a href="{{ url('/') }}" class="nav-link">Home</a>
     </li>
-    <li class="nav-item d-none d-sm-inline-block">
-      <a href="#" class="nav-link">Contact</a>
+    <li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{ url('/docs') }}" class="nav-link" target="_blank">API Documents</a>
+      </li>
     </li>
   </ul>
 
@@ -22,9 +21,9 @@
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
     <li class="nav-item">
-      <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+      {{-- <a class="nav-link" data-widget="navbar-search" href="#" role="button">
         <i class="fas fa-search"></i>
-      </a>
+      </a> --}}
       <div class="navbar-search-block">
         <form class="form-inline">
           <div class="input-group input-group-sm">
@@ -132,11 +131,11 @@
         <i class="fas fa-expand-arrows-alt"></i>
       </a>
     </li>
-    <li class="nav-item">
+    {{-- <li class="nav-item">
       <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
         <i class="fas fa-th-large"></i>
       </a>
-    </li>
+    </li> --}}
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{ Auth::user()->name }}

@@ -39,4 +39,9 @@ abstract class BaseLive extends Component
     public function updatingPerPage() {
         $this->resetPage();
     }
+
+    public function resetInputFields() {
+        $this->resetPage();
+        $this->resetValidation();
+    }
 }

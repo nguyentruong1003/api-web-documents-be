@@ -33,7 +33,7 @@ class AuthController extends Controller
     {
         $user = UserEditor::open(new User)->withDataFromRequest($request)->save();
         $token = $user->createToken('authToken')->plainTextToken;
-        return $this->respondWithToken($token);
+        return $this->respondWithToken($token, $user);
     }
 
     public function forgotPassword()
@@ -50,12 +50,13 @@ class AuthController extends Controller
         return (new UserResource($user))->withMessage(__('auth.changed_password'));
     }
 
-    private function respondWithToken($token)
+    private function respondWithToken($token, $user = null)
     {
+        if ($user == null) $user = auth()->user();
         return response()->json([
             'type' => 'Bearer',
             'token' => $token,
-            'data' => new UserResource(auth()->user()->load('permissions')),
+            'data' => new UserResource($user->load('permissions')),
             'message' => 'Logged in'
         ]);
     }

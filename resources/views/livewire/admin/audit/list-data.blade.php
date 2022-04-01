@@ -37,13 +37,13 @@
                     </div>
                 </div>
             </div>
-            
+            <div wire:loading class="loader"></div>
             <table class="table table-bordered table-hover dataTable dtr-inline">
                 <thead class="">
                     <tr>
                         <th>Người tác động</th>
                         <th>Thao tác</th>
-                        <th>Loại bảng Audit</th>
+                        <th>Bảng tác động</th>
                         {{-- <th>ID bảng Audit</th> --}}
                         {{-- <th>Giá trị cũ</th> --}}
                         {{-- <th>Giá trị mới</th> --}}
@@ -58,9 +58,11 @@
                         <tr>
                             <td class="text-left">{!! boldTextSearch($row['perfomer'], $searchTerm) !!}</td>
                             <td class="text-left">{!! boldTextSearch($row['event'], $searchTerm) !!}<br>
+                                @if (checkRoutePermission('show'))
                                 <a href="" data-toggle="modal" data-target="{{'#show' . $row['id']}}">
                                     Chi tiết ...
                                 </a>
+                                @endif
                                 @include('livewire.admin.audit._detailModal')
                             </td>
                             <td class="text-left">{!! boldTextSearch($row['audittable_type'], $searchTerm) !!}</td>

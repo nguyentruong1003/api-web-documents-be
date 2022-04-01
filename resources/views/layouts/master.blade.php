@@ -2,7 +2,7 @@
 <html lang="en">
 @include('layouts.partials._head')
 @yield('css')
-<body>
+<body  class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- #section:basics/navbar.layout -->
         @include('layouts.partials._header')

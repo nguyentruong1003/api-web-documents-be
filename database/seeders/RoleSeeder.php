@@ -19,5 +19,9 @@ class RoleSeeder extends Seeder
         $permissions = Permission::all();
 
         $role->syncPermissions($permissions);
+
+        $role2 = Role::findOrCreate('guest');
+        $role2->syncPermissions(Permission::where('action', 'index')->pluck('id')->toArray());
+    
     }
 }

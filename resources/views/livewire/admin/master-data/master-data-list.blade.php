@@ -27,15 +27,11 @@
                 
                 <div>
                     <div class="input-group">
-                        <a href="#" data-toggle="modal" data-target="#create-update-modal" id="create-button" wire:click="create">
-                            <div class="btn-sm btn-primary">
-                                <i class="fa fa-plus"></i> TẠO MỚI
-                            </div>
-                        </a>
+                        @include('livewire.common.buttons._create')
                     </div>
                 </div>
             </div>
-            
+            <div wire:loading class="loader"></div>
             <table class="table table-bordered table-hover dataTable dtr-inline">
                 <thead class="">
                     <tr>
@@ -47,7 +43,9 @@
                         <th>Giá trị cha</th>
                         <th>Nội dung</th>
                         <th>Ghi chú</th>
+                        @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                         <th>Hành động</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -61,13 +59,12 @@
                             <td>{!! boldTextSearch($row->parent_id, $searchTerm) !!}</td>
                             <td>{!! boldTextSearch($row->v_content, $searchTerm) !!}</td>
                             <td>{!! boldTextSearch($row->note, $searchTerm) !!}</td>
+                            @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
-                                <a href="#" data-toggle="modal" data-target="#create-update-modal" wire:click="edit({{ $row->id }})"
-                                        class="btn-sm border-0 bg-transparent">
-                                        <img src="/images/pent2.svg" alt="Edit">
-                                </a>
+                                @include('livewire.common.buttons._edit')
                                 @include('livewire.common.buttons._delete')
                             </td>
+                            @endif
                         </tr>
                     @empty
                         <td colspan='12' class='text-center'>Không tìm thấy dữ liệu</td>
@@ -79,7 +76,7 @@
             {{ $data->links() }}
         @endif
     </div>
-    @include('livewire.common._modalDelete')
+    @include('livewire.common.modal._modalDelete')
 
     <div wire:ignore.self class="modal fade" id="create-update-modal" role="dialog" >
         <div class="modal-dialog modal-lg" role="document">
@@ -100,43 +97,43 @@
                             <div class="form-group">
                                 <label>Từ khóa<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="v_key">
-                                @error('v_key')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('v_key')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
                                 <label>Giá trị<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="v_value">
-                                @error('v_value')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('v_value')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
                                 <label>Thể loại<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="type">
-                                @error('type')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('type')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
                                 <label>Thứ tự ưu tiên</label>
                                 <input type="text" class="form-control" wire:model.lazy="order_number">
-                                @error('order_number')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('order_number')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
                                 <label>Giá trị cha</label>
                                 <input type="text" class="form-control" wire:model.lazy="parent_id">
-                                @error('parent_id')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('parent_id')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
                                 <label>Nội dung</label>
                                 <input type="text" class="form-control" wire:model.lazy="v_content">
-                                @error('v_content')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('v_content')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
                                 <label>Ghi chú</label>
                                 <input type="text" class="form-control" wire:model.lazy="note">
-                                @error('note')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('note')@include('layouts.partials.text._error')@enderror
                             </div>
 
                         </div>

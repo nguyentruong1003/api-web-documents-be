@@ -15,22 +15,20 @@
                 
                 <div>
                     <div class="input-group">
-                        <a href="#" data-toggle="modal" data-target="#create-update-modal" id="create-button" wire:click="create">
-                            <div class="btn-sm btn-primary">
-                                <i class="fa fa-plus"></i> TẠO MỚI
-                            </div>
-                        </a>
+                        @include('livewire.common.buttons._create')
                     </div>
                 </div>
             </div>
-            
+            <div wire:loading class="loader"></div>
             <table class="table table-bordered table-hover dataTable dtr-inline">
                 <thead class="">
                     <tr>
                         <th>STT</th>
                         <th>Tên</th>
                         <th>Ngày tạo</th>
+                        @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                         <th>Hành động</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -39,13 +37,12 @@
                             <td>{{ ($data->currentPage() - 1) * $data->perPage() + $loop->iteration }}</td>
                             <td>{!! boldTextSearch($row->name, $searchTerm) !!}</td>
                             <td>{{ ReFormatDate($row->created_at,'d-m-Y') }}</td>
+                            @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
-                                <a href="#" data-toggle="modal" data-target="#create-update-modal" wire:click="edit({{ $row->id }})"
-                                        class="btn-sm border-0 bg-transparent">
-                                        <img src="/images/pent2.svg" alt="Edit">
-                                </a>
+                                @include('livewire.common.buttons._edit')
                                 @include('livewire.common.buttons._delete')
                             </td>
+                            @endif
                         </tr>
                     @empty
                         <td colspan='12' class='text-center'>Không tìm thấy dữ liệu</td>
@@ -57,10 +54,10 @@
             {{ $data->links() }}
         @endif
     </div>
-    @include('livewire.common._modalDelete')
+    @include('livewire.common.modal._modalDelete')
 
     <div wire:ignore.self class="modal fade" id="create-update-modal" role="dialog" >
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
@@ -78,18 +75,58 @@
                             <div class="form-group">
                                 <label>Tên<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="name">
-                                @error('name')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('name')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
-                                <label>Quyền</label>
-                                <div wire:ignore>
-                                    <select class="form-control select2" multiple style="width: 100%" wire:model.lazy="permission">
-                                        @foreach ($permissions as $permission)
-                                            <option value="{{ $permission->id }}">{{ $permission->name }}</option>
+                                <label> Danh sách module chức năng </label>
+                                <table class="table table-bordered table-hover dataTable dtr-inline">
+                                    <thead class="">
+                                        <tr class="border-radius">
+                                            <th rowspan="2" scope="col" class="border-radius-left">Chức năng</th>
+                                            <th scope="col" class="text-center"><img src="/images/eye.svg" alt="view"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/add.svg" alt="add"></th>
+                                            <th scope="col" class="text-center"><img src="/images/pent2.svg" alt="edit"/> </th>
+                                            <th scope="col" class="text-center"><img src="/images/trash.svg" alt="delete"></th>
+                                            <th scope="col" class="text-center"><img src="/images/eye.svg" alt="show"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/Upload.svg" alt="upload"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/Download.svg" alt="download"/></th>
+                                        </tr>
+                                        <tr class="border-radius">
+                                            <th scope="col" class="text-center">Danh sách</th>
+                                            <th scope="col" class="text-center">Thêm</th>
+                                            <th scope="col" class="text-center">Sửa</th>
+                                            <th scope="col" class="text-center">Xóa</th>
+                                            <th scope="col" class="text-center">Chi tiết</th>
+                                            <th scope="col" class="text-center">Upload</th>
+                                            <th scope="col" class="text-center">Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($permissions as $routeName => $features)
+                                            @foreach ($features as $featureName => $grants)
+                                                <tr id="{{ $routeName }}">
+                                                    <td>
+                                                        {!! $listNameMenu[$featureName] ?? $featureName !!}
+                                                        <div class="text-right">
+                                                            <button class="btn btn-light btn-sm mr-2" type="button" onclick="selectAllInModule('{{ $routeName }}')">Chọn tất cả</button>
+                                                            <button class="btn btn-light btn-sm" type="button" onclick="unselectAllInModule('{{ $routeName }}')">Bỏ chọn tất cả</button>
+                                                        </div>
+                                                    </td>
+                                                    @foreach ($grants as $grant)
+                                                    <td class="text-center" style="display: float-right">
+                                                        
+                                                            <div class="toggle">
+                                                                <input type="checkbox" class="toggle-checkbox grant" id="grant-{{ $grant['id'] ?? 0 }}" value="{{ $grant['id'] ?? 0 }}" @if (in_array($grant['id'] ?? 0, $selectedPermissions)) checked @endif>
+                                                            </div>
+                                                        
+                                                    </td>
+                                                    @endforeach
+                                                </tr>
+                                            @endforeach
                                         @endforeach
-                                    </select>
-                                </div> 
+                                    </tbody>
+                                </table>
                             </div>
 
                         </div>
@@ -99,7 +136,7 @@
                     <button type="button" id="close-modal" wire:click.prevent="resetInputFields"
                             class="btn btn-secondary close-btn" data-dismiss="modal">Đóng
                     </button>
-                    <button type="button" wire:click="save" class="btn btn-primary close-modal">Lưu</button>
+                    <button type="button" onclick="submit()" class="btn btn-primary">Lưu</button>
                 </div>
             </div>
         </div>
@@ -109,17 +146,27 @@
         window.livewire.on('close-modal', () => {
             $('#close-modal').click();
         });
-        $(document).ready(function () {
-            $('.select2').select2({
-                placeholder: "Chọn quyền ..."
+
+        function selectAllInModule(routeName) {
+            $("#" + routeName).find('.toggle-checkbox').each(function() {
+                this.checked = true;
             });
-            $('.select2').on('change', function (e) {
-                let data = $(this).val();
-                 @this.set('permission', data);
+        }
+    
+        function unselectAllInModule(routeName) {
+            $("#" + routeName).find('.toggle-checkbox').each(function() {
+                this.checked = false;
             });
-            window.livewire.on('set-permissions', () => {
-                $('.select2').select2();
+        }
+    
+        function submit() {
+            let selectedPermissions = [];
+            $('.grant:checked').each(function() {
+                selectedPermissions.push(this.value);
             });
-        });
+            @this.selectedPermissions = selectedPermissions;
+            
+            @this.save();
+        }
     </script>
 </div>
