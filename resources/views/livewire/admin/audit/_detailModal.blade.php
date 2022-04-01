@@ -45,7 +45,7 @@
                         <div class="text-left">
                             @if(!empty($row['old_values']) && count($row['old_values']) > 0)
                                 @foreach($row['old_values'] as $index => $item)
-                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item), $searchTerm) !!}</p>
+                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item, JSON_UNESCAPED_UNICODE), $searchTerm) !!}</p>
                                 @endforeach
                             @endif
                         </div>
@@ -55,7 +55,7 @@
                         <div class="text-left">
                             @if(!empty($row['new_values']) && count($row['new_values']) > 0)
                                 @foreach($row['new_values'] as $index => $item)
-                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item), $searchTerm) !!}</p>
+                                    <p class="mb-1 content-audit-data" title='{{$index.": ".json_encode($item)}}'><span class="font-weight-bold">{{$index}}</span>: {!! boldTextSearch(json_encode($item, JSON_UNESCAPED_UNICODE), $searchTerm) !!}</p>
                                 @endforeach
                             @endif
                         </div>
