@@ -14,15 +14,9 @@
                 </div>
                 
                 <div>
-                    @if (checkRoutePermission('create'))
                     <div class="input-group">
-                        <a href="#" data-toggle="modal" data-target="#create-update-modal" id="create-button" wire:click="create">
-                            <div class="btn-sm btn-primary">
-                                <i class="fa fa-plus"></i> TẠO MỚI
-                            </div>
-                        </a>
+                        @include('livewire.common.buttons._create')
                     </div>
-                    @endif
                 </div>
             </div>
             <div wire:loading class="loader"></div>
@@ -45,15 +39,8 @@
                             <td>{{ ReFormatDate($row->created_at,'d-m-Y') }}</td>
                             @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
-                                @if (checkRoutePermission('edit'))
-                                <a href="#" data-toggle="modal" data-target="#create-update-modal" wire:click="edit({{ $row->id }})"
-                                        class="btn-sm border-0 bg-transparent">
-                                        <img src="/images/pent2.svg" alt="Edit">
-                                </a>
-                                @endif
-                                @if (checkRoutePermission('delete'))
+                                @include('livewire.common.buttons._edit')
                                 @include('livewire.common.buttons._delete')
-                                @endif
                             </td>
                             @endif
                         </tr>
@@ -67,10 +54,10 @@
             {{ $data->links() }}
         @endif
     </div>
-    @include('livewire.common._modalDelete')
+    @include('livewire.common.modal._modalDelete')
 
     <div wire:ignore.self class="modal fade" id="create-update-modal" role="dialog" >
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
@@ -88,7 +75,7 @@
                             <div class="form-group">
                                 <label>Tên<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="name">
-                                @error('name')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('name')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
@@ -102,8 +89,8 @@
                                             <th scope="col" class="text-center"><img src="/images/pent2.svg" alt="edit"/> </th>
                                             <th scope="col" class="text-center"><img src="/images/trash.svg" alt="delete"></th>
                                             <th scope="col" class="text-center"><img src="/images/eye.svg" alt="show"/></th>
-                                            <th scope="col" class="text-center"><img src="/images/Import.svg" alt="upload"/></th>
-                                            <th scope="col" class="text-center"><img src="/images/Export.svg" alt="download"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/Upload.svg" alt="upload"/></th>
+                                            <th scope="col" class="text-center"><img src="/images/Download.svg" alt="download"/></th>
                                         </tr>
                                         <tr class="border-radius">
                                             <th scope="col" class="text-center">Danh sách</th>

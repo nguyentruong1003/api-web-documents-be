@@ -43,7 +43,7 @@
                     <tr>
                         <th>Người tác động</th>
                         <th>Thao tác</th>
-                        <th>Loại bảng Audit</th>
+                        <th>Bảng tác động</th>
                         {{-- <th>ID bảng Audit</th> --}}
                         {{-- <th>Giá trị cũ</th> --}}
                         {{-- <th>Giá trị mới</th> --}}

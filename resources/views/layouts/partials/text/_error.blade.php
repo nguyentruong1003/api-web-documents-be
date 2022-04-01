@@ -1,3 +1,1 @@
-<span style="color:red">
-    <strong>{{ $message }}</strong>
-</span>
+<div class="text-danger mt-1">{{$message}}</div>

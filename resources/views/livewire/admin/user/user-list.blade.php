@@ -14,15 +14,9 @@
                 </div>
                 
                 <div>
-                    @if (checkRoutePermission('create'))
                     <div class="input-group">
-                        <a href="#" data-toggle="modal" data-target="#create-update-modal" id="create-button" wire:click="create">
-                            <div class="btn-sm btn-primary">
-                                <i class="fa fa-plus"></i> TẠO MỚI
-                            </div>
-                        </a>
+                        @include('livewire.common.buttons._create')
                     </div>
-                    @endif
                 </div>
             </div>
             <div wire:loading class="loader"></div>
@@ -58,14 +52,9 @@
                                     class="btn-sm border-0 bg-transparent">
                                     <img src="/images/Duplicate.svg" alt="Edit" title="Phân quyền">
                                 </a>
-                                <a href="#" data-toggle="modal" data-target="#create-update-modal" wire:click="edit({{ $row->id }})"
-                                        class="btn-sm border-0 bg-transparent">
-                                        <img src="/images/pent2.svg" alt="Edit" title="Chỉnh sửa">
-                                </a>
                                 @endif
-                                @if (checkRoutePermission('delete'))
+                                @include('livewire.common.buttons._edit')
                                 @include('livewire.common.buttons._delete')
-                                @endif
                             </td>
                             @endif
                         </tr>
@@ -79,7 +68,7 @@
             {{ $data->links() }}
         @endif
     </div>
-    @include('livewire.common._modalDelete')
+    @include('livewire.common.modal._modalDelete')
 
     <div wire:ignore.self class="modal fade" id="create-update-modal" role="dialog" >
         <div class="modal-dialog modal-lg" role="document">
@@ -100,25 +89,25 @@
                             <div class="form-group">
                                 <label>Tên<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="name">
-                                @error('name')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('name')@include('layouts.partials.text._error')@enderror
                             </div>
     
                             <div class="form-group">
                                 <label>Email<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="email">
-                                @error('email')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('email')@include('layouts.partials.text._error')@enderror
                             </div>
     
                             <div class="form-group">
                                 <label>@if(!$checkEdit) Mật khẩu @else Mật khẩu mới @endif<span class="text-danger"> *</span></label>
                                 <input type="password" class="form-control" wire:model.lazy="password">
-                                @error('password')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('password')@include('layouts.partials.text._error')@enderror
                             </div>
 
                             <div class="form-group">
                                 <label>Xác nhận mật khẩu<span class="text-danger"> *</span></label>
                                 <input type="password" class="form-control" wire:model.lazy="password_confirmation">
-                                @error('password_confirmation')<div class="text-danger mt-1">{{$message}}</div>@enderror
+                                @error('password_confirmation')@include('layouts.partials.text._error')@enderror
                             </div>
 
                         </div>

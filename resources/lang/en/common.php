@@ -14,7 +14,7 @@ return [
         'close' => 'Close',
     ],
     'confirm_message' => [
-        'confirm_title'=>'Confimation',
+        'confirm_title'=>'Confirmation',
         'are_you_sure_delete' => 'Do you want to delete this request from the system?',
         'are_you_sure_unassign' => 'Are you sure you want to unassigned?',
         'confirm_to_delete' => 'Confirm',
