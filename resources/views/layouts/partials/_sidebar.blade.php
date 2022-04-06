@@ -83,6 +83,28 @@
             </ul>
           </li>
           @endif
+
+          {{-- @if (checkPermission('master-data.index') || checkPermission('audit.index')) --}}
+          <li class="nav-item {{ setOpen('post') }}">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file"></i>
+              <p>
+                Quản lý bài viết
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              {{-- @if (checkPermission('master-data.index')) --}}
+              <li class="nav-item">
+                <a href="{{ route('admin.post.index') }}" class="nav-link {{ setActive('post') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách bài viết</p>
+                </a>
+              </li>
+              {{-- @endif --}}
+            </ul>
+          </li>
+          {{-- @endif --}}
           
           
         </ul>

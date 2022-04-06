@@ -38,4 +38,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => '/audits'], function() {
         Route::get('/', [App\Http\Controllers\AuditController::class, 'index'])->name('admin.audit.index');
     });
+
+    Route::group(['prefix' => '/posts'], function() {
+        Route::get('/', [App\Http\Controllers\PostController::class, 'index'])->name('admin.post.index');
+    });
 });
