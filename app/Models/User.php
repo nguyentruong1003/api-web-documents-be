@@ -73,4 +73,19 @@ class User extends Authenticatable implements Auditable
         return $this->morphToMany(Role::class, 'model', 'model_has_roles');
     }
 
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function reports() {
+        return $this->hasMany(PostReport::class);
+    }
+
+    public function likes() {
+        return $this->belongsToMany(Post::class, 'post_like', 'user_id', 'post_id');
+    }
 }
