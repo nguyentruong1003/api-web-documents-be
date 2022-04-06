@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title')->comment('Tiêu đề');
-            $table->string('description')->comment('Mô tả');
+            $table->string('description')->nullable()->comment('Mô tả');
             $table->longtext('content')->nullable()->comment('Nội dung');
             $table->foreignId('post_type_id')->nullable()->comment('Map voi post_type')->constrained('post_type');
             $table->string('link_pdf')->nullable()->comment('File đính kèm');

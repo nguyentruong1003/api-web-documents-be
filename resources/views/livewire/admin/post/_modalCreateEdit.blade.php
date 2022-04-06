@@ -23,19 +23,22 @@
                         <div class="form-group">
                             <label>Mô tả</label>
                             <input type="text" class="form-control" wire:model.lazy="description">
-                            @error('description')@include('layouts.partials.text._error')@enderror
                         </div>
 
                         <div class="form-group">
                             <label>Thể loại<span class="text-danger"> *</span></label>
-                            <input type="text" class="form-control" wire:model.lazy="post_type_id">
+                            <select wire:model.lazy="post_type_id" class="form-control-sm form-control custom-input-control article-type">
+                                @foreach ($types as $item)
+                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                @endforeach
+                            </select>
                             @error('post_type_id')@include('layouts.partials.text._error')@enderror
                         </div>
 
                         <div class="form-group">
                             <label>Nội dung</label>
                             <div class="form-group" wire:ignore>
-                                <textarea id="content" name="content" wire:model.lazy="content" class="textarea form-control" id="somenote"></textarea>
+                                <textarea id="content" name="content" rows="3" wire:model.lazy="content" class="textarea form-control" id="somenote"></textarea>
                             </div>
                         </div>
 
@@ -75,6 +78,10 @@
 
 <script>
     $(document).ready(function() {
+        window.livewire.on('set-content', (content) => {
+            $('#content').summernote('code', content);
+            console.log(content);
+        });
         $('#content').summernote({
             callbacks: {
                 onChange: function(contents, $editable) {

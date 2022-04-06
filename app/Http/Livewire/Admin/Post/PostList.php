@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Post;
 
 use App\Http\Livewire\Base\BaseLive;
 use App\Models\Post;
+use App\Models\PostType;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -13,6 +14,10 @@ class PostList extends BaseLive
     public $searchType;
     public $editId, $title, $content, $description, $post_type_id, $link_pdf;
     public $file, $file_name;
+
+    public function mount() {
+        $this->types = PostType::all()->pluck('id', 'name');
+    }
 
     public function render() {
         $query = Post::query();
@@ -34,6 +39,7 @@ class PostList extends BaseLive
     public function create() {
         $this->resetInputFields();
         $this->checkEdit = false;
+        $this->emit('set-content', null);
     }
 
     public function edit($id) {
@@ -44,6 +50,7 @@ class PostList extends BaseLive
         $this->description = $item->description;
         $this->content = $item->content;
         $this->post_type_id = $item->post_type_id;
+        $this->emit('set-content', $item->content);
         
     }
 
@@ -52,7 +59,6 @@ class PostList extends BaseLive
         // ], [
             
         // ]);
-        // dd ($this);
         if ($this->checkEdit) {
             $item = Post::findorfail($this->editId);
         } else {
@@ -62,6 +68,7 @@ class PostList extends BaseLive
         $item->description = $this->description;
         $item->content = $this->content;
         $item->post_type_id = $this->post_type_id;
+        $item->link_pdf = ($this->file) ? $this->file->store('public') : null;
         $item->save();
         $this->emit('close-modal');
         if ($this->checkEdit) {
