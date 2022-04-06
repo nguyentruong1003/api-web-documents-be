@@ -43,24 +43,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label>File</label>
-                            <div class="row">
-                                <div class="col">
-                                    <form>
-                                        <div class="input-group form-group">
-                                            <input type="file" wire:model.lazy="file" id="file-upload" name="file-upload">
-                                        </div>
-                                        <label>{{ $file_name }}</label>
-                                    </form>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="text-danger mt-1" style="margin-left: 13px" wire:loading wire:target="file">
-                                            Đang tải tệp lên
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <label>File đính kèm</label>
+                            @livewire('component.files', ['model_name' => $model_name])
                         </div>
 
                     </div>
@@ -80,7 +64,6 @@
     $(document).ready(function() {
         window.livewire.on('set-content', (content) => {
             $('#content').summernote('code', content);
-            console.log(content);
         });
         $('#content').summernote({
             callbacks: {
