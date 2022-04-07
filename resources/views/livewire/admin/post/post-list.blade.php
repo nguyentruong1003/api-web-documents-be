@@ -17,9 +17,9 @@
                             <option value="">
                                 -- Chọn thể loại --
                             </option>
-                            {{-- @foreach (\App\Enums\EMasterData::getListData() as $id => $value)
-                                <option value="{{ $id }}">{{ $value }}</option>
-                            @endforeach --}}
+                            @foreach ($types as $item)
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            @endforeach
                         </select>
                     </div>
 
@@ -49,7 +49,15 @@
                     @forelse($data as $key => $row)
                         <tr>
                             <td>{{ ($data->currentPage() - 1) * $data->perPage() + $loop->iteration }}</td>
-                            <td>{!! boldTextSearch($row->title, $searchTerm) !!}</td>
+                            <td>
+                                @if (checkRoutePermission('show'))
+                                <a href="{{ route('admin.post.show', ['id' => $row->id]) }}" style="color: black">
+                                    {!! boldTextSearch($row->title, $searchTerm) !!}
+                                </a>
+                                @else
+                                    {!! boldTextSearch($row->title, $searchTerm) !!}
+                                @endif
+                            </td>
                             <td>{!! boldTextSearch($row->description, $searchTerm) !!}</td>
                             <td>{{ ($row->types->name ?? '') }}</td>
                             <td>{{ ReFormatDate($row->created_at,'d-m-Y') }}</td>

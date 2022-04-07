@@ -18,7 +18,7 @@ class PostList extends BaseLive
     public $types, $model_name;
 
     public function mount() {
-        $this->types = PostType::all()->pluck('id', 'name');
+        $this->types = PostType::all();
         $this->model_name = Post::class;
     }
 
@@ -31,7 +31,7 @@ class PostList extends BaseLive
         }
 
         if ($this->searchType) {
-            $query->where('type', $this->searchType);
+            $query->where('post_type_id', $this->searchType);
         }
 
         $data = $query->orderBy('created_at','desc')->paginate($this->perPage);
@@ -60,10 +60,11 @@ class PostList extends BaseLive
     }
 
     public function save() {
-        // $this->validate([
-        // ], [
-            
-        // ]);
+        $this->validate([
+            'title' => 'required',
+        ], [
+            'title.required' => 'Tiêu đề bắt buộc'
+        ]);
         if ($this->checkEdit) {
             $item = Post::findorfail($this->editId);
         } else {

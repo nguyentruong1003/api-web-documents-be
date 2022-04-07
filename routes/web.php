@@ -41,5 +41,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::group(['prefix' => '/posts'], function() {
         Route::get('/', [App\Http\Controllers\PostController::class, 'index'])->name('admin.post.index');
+        Route::get('/show/{id}', [App\Http\Controllers\PostController::class, 'show'])->name('admin.post.show');
     });
 });

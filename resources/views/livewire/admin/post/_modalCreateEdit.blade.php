@@ -26,8 +26,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Thể loại<span class="text-danger"> *</span></label>
+                            <label>Thể loại</label>
                             <select wire:model.lazy="post_type_id" class="form-control-sm form-control custom-input-control article-type">
+                                <option value="">-- Chọn --</option>
                                 @foreach ($types as $item)
                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                 @endforeach

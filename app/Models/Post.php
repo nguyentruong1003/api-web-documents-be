@@ -20,6 +20,6 @@ class Post extends Model implements Auditable
     }
 
     public function types() {
-        return $this->belongsTo(PostType::class);
+        return $this->belongsTo(PostType::class, 'post_type_id');
     }
 }
