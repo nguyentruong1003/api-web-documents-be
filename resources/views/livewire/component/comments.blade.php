@@ -18,17 +18,16 @@
                             </div>
                             <div class="flex-grow-1 ms-2 ms-sm-3">
                                 <!-- onkeyup="toggleButton(this,'Responding ');" -->
-                                <textarea id="myTextarea"
+                                <input id="myTextarea" type="text"
                                           class="form-control py-0 px-1 border-1 @error('newComment') is-invalid @enderror"
                                           rows="2" placeholder="Start writing..." style="resize: none;"
                                           wire:model.lazy="newComment">
-                                </textarea>
                                 @error('newComment')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                                 @enderror
-                                <button class="btn btn-sm bg-purple text-white mt-3"  {{--$invalidPostBtn ?'disabled': ''--}}
+                                <button class="btn btn-sm bg-purple text-white mt-3" id="btn-post" {{--$invalidPostBtn ?'disabled': ''--}}
                                 wire:click="postComment">Post
                                 </button>
                             </div>
@@ -170,11 +169,8 @@
                                     @endforeach
                                 </div>
                             </div>
-
                         @empty
                             <div class="text-center">
-                                <img src="/images/illustrations/comment.png" alt="no comments" height="400"
-                                     class="mt-n5"/>
                                 <p class="text-cyan fs-4"> It's so empty out here, go ahead and post some comments</p>
                             </div>
                         @endforelse
@@ -211,6 +207,11 @@
         });
         window.livewire.on('open-modal-delete', () => {
             $('#modal-delete-comment').modal('show');
+        });
+        $('#myTextarea').keypress(function(e) {
+            if(e.which == 13) {
+                $('#btn-post').click();
+            }
         });
     </script>
 </div>

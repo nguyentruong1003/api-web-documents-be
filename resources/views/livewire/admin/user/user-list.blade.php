@@ -40,7 +40,7 @@
                             <td>{{ $row->email }}</td>
                             <td>
                                 @foreach($row->roles as $role)
-                                    <span class="badge @if ($role->name == 'admin') badge-success @else badge-primary @endif">{{ $role->name }}</span><br>
+                                    <span>{{ $role->name }}</span><br>
                                 @endforeach
                             </td>
                             @if (checkRoutePermission('edit') || checkRoutePermission('delete'))

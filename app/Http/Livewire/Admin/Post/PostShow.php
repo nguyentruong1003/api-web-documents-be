@@ -11,6 +11,7 @@ class PostShow extends BaseLive
     {
         # code...
         $this->data = $data;
+        $this->model_name = Post::class;
     }
 
     public function render()

@@ -6,12 +6,16 @@
     </div>
     <div class="card">
         <div class="card-body p-2">
-            <div class="filter d-flex align-items-center justify-content-between mb-2">
+            <div class="filter d-flex align-items-center justify-content-between mb-2 w-100">
                 <div class="container">
                     {!! $data->content !!}
                 </div>
             </div>
-            <div wire:loading class="loader"></div>
+        </div>
+        <div class="card-body p-2">
+            <div class="container">
+                @livewire('component.files', ['model_name' => $model_name, 'disabled' => true, 'name' => "File đính kèm"])
+            </div>
         </div>
         <div class="card-body p-2">
             <div class="container">
