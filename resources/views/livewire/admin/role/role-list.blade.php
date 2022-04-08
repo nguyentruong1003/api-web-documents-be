@@ -25,7 +25,6 @@
                     <tr>
                         <th>STT</th>
                         <th>Tên</th>
-                        <th>Ngày tạo</th>
                         @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                         <th>Hành động</th>
                         @endif
@@ -36,7 +35,6 @@
                         <tr>
                             <td>{{ ($data->currentPage() - 1) * $data->perPage() + $loop->iteration }}</td>
                             <td>{!! boldTextSearch($row->name, $searchTerm) !!}</td>
-                            <td>{{ ReFormatDate($row->created_at,'d-m-Y') }}</td>
                             @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
                                 @include('livewire.common.buttons._edit')

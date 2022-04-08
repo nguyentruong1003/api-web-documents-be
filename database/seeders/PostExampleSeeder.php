@@ -6,7 +6,7 @@ use App\Models\PostType;
 use Illuminate\Database\Seeder;
 use DB;
 
-class PostSeeder extends Seeder
+class PostExampleSeeder extends Seeder
 {
     /**
      * Run the database seeds.

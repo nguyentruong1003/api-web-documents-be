@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class PermissionSeeder extends Seeder
 {
@@ -38,5 +39,13 @@ class PermissionSeeder extends Seeder
                 }
             }
         }
+
+        $role = Role::findOrCreate('administrator');
+        $permissions = Permission::all();
+
+        $role->syncPermissions($permissions);
+
+        $role2 = Role::findOrCreate('guest');
+        $role2->syncPermissions(Permission::where('action', 'index')->pluck('id')->toArray());
     }
 }
