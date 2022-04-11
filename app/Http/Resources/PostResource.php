@@ -15,9 +15,9 @@ class PostResource extends APIResource
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'description' =>  $this->v_value,
+            'description' =>  $this->description,
             'content' => $this->content,
-            'post_type_id' => $this->types->name,
+            'post_type_id' => $this->types->name ?? null,
             'user_id' => $this->user_id,
             'created_at' => $this->created_at,
             'comment' => $this->comments,

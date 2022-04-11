@@ -11,6 +11,15 @@ class Post extends Model implements Auditable
     use HasFactory;
     use \OwenIt\Auditing\Auditable;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'content',
+        'post_type_id',
+        'user_id',
+        'status',
+    ];
+
     public function comments() {
         return $this->hasMany(Comment::class);
     }
