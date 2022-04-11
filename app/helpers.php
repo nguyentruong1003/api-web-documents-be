@@ -110,3 +110,14 @@ function removeFormatNumber($number, $specials = ['.', ','])
     }
     return (int)$number;
 }
+
+function checkShowMode()
+{
+    $name = Route::getCurrentRoute()->getName();
+    $arr = explode(".", $name);
+    $action = end($arr);
+    if ($action == 'show') {
+            return true;
+    }
+    return false;
+}

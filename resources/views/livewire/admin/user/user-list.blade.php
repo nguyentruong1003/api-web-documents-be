@@ -27,7 +27,6 @@
                         <th>Tên</th>
                         <th>Email</th>
                         <th>Vai trò</th>
-                        <th>Ngày tạo</th>
                         @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                         <th>Hành động</th>
                         @endif
@@ -44,7 +43,6 @@
                                     <span>{{ $role->name }}</span><br>
                                 @endforeach
                             </td>
-                            <td>{{ ReFormatDate($row->created_at,'d-m-Y') }}</td>
                             @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
                                 @if (checkRoutePermission('edit'))
