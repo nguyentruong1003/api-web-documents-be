@@ -8,6 +8,7 @@ use App\Http\Controllers\API\RoleController;
 use App\Http\Controllers\API\PermissionController;
 use App\Http\Controllers\API\MasterDataController;
 use App\Http\Controllers\API\AuditController;
+use App\Http\Controllers\API\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,5 +66,9 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
 
     Route::group(['prefix' => '/audits'], function() {
         Route::get('/', [AuditController::class, 'index'])->name('audit.index');
+    });
+
+    Route::group(['prefix' => '/posts'], function() {
+        Route::get('/', [PostController::class, 'index'])->name('post.index');
     });
 });
