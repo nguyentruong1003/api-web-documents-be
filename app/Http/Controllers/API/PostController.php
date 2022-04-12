@@ -11,11 +11,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-        /**
+    /**
      * Get or search posts
      *
      * @group Post management
-     * @authenticated
      * @queryParam name string Search by name
      */
     public function index(Request $request)
@@ -29,7 +28,6 @@ class PostController extends Controller
      * @group Post management
      * @authenticated
      */
-    
     public function create(PostRequest $request)
     {
         $masterdata = PostEditor::open(new Post())->withDataFromRequest($request)->save();
@@ -38,7 +36,7 @@ class PostController extends Controller
 
     /**
      * Edit post
-     *
+     * @bodyParam title string required The title of the post.
      * @group Post management
      * @authenticated
      */
@@ -52,7 +50,6 @@ class PostController extends Controller
      * Show post
      *
      * @group Post management
-     * @authenticated
      */
     public function show(Post $post)
     {

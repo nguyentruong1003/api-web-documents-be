@@ -14,7 +14,7 @@ class MasterDataController extends Controller
         /**
      * Get or search masterdatas
      *
-     * @group User management
+     * @group Master Data management
      * @authenticated
      * @queryParam name string Search by name
      */
@@ -26,7 +26,7 @@ class MasterDataController extends Controller
     /**
      * Create masterdata
      *
-     * @group User management
+     * @group Master Data management
      * @authenticated
      */
     public function create(MasterDataRequest $request)
@@ -38,19 +38,19 @@ class MasterDataController extends Controller
     /**
      * Edit masterdata
      *
-     * @group User management
+     * @group Master Data management
      * @authenticated
      */
     public function edit(MasterDataRequest $request, MasterData $masterdata)
     {
         $masterdata = MasterDataEditor::open($masterdata)->withDataFromRequest($request)->save();
-        return (new MasterDataResource($masterdata))->withMessage(__('view.notification.success.edit'));
+        return (new MasterDataResource($masterdata))->withMessage(__('view.notification.success.update'));
     }
 
     /**
      * Show masterdata
      *
-     * @group User management
+     * @group Master Data management
      * @authenticated
      */
     public function show(MasterData $masterdata)
@@ -61,7 +61,7 @@ class MasterDataController extends Controller
     /**
      * Delete masterdata
      *
-     * @group User management
+     * @group Master Data management
      * @authenticated
      */
     public function delete(MasterData $masterdata)

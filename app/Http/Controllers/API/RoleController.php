@@ -14,7 +14,7 @@ class RoleController extends Controller
     /**
      * Get roles
      *
-     * @group User management
+     * @group Role management
      * @authenticated
      */
     public function index(Request $request)
@@ -25,7 +25,7 @@ class RoleController extends Controller
     /**
      * Create role
      *
-     * @group User management
+     * @group Role management
      * @authenticated
      */
     public function create(RoleRequest $request)
@@ -37,19 +37,19 @@ class RoleController extends Controller
     /**
      * Edit role
      *
-     * @group User management
+     * @group Role management
      * @authenticated
      */
     public function edit(RoleRequest $request, Role $role)
     {
         $role = RoleEditor::open($role)->withDataFromRequest($request)->save();
-        return (new RoleResource($role))->withMessage(__('view.notification.success.edit'));
+        return (new RoleResource($role))->withMessage(__('view.notification.success.update'));
     }
 
     /**
      * Show role
      *
-     * @group User management
+     * @group Role management
      * @authenticated
      */
     public function show(Role $role)
@@ -60,7 +60,7 @@ class RoleController extends Controller
     /**
      * Delete role
      *
-     * @group User management
+     * @group Role management
      * @authenticated
      */
     public function delete(Role $role)
