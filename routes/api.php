@@ -75,4 +75,8 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::post('/{post:id}', [PostController::class, 'edit'])->name('post.edit');
         Route::delete('/{post:id}', [PostController::class, 'delete'])->name('post.delete');
     });
+
+    Route::group(['prefix' => '/post-type'], function() {
+        Route::get('/', [PostTypeController::class, 'index'])->name('post-type.index');
+    });
 });
