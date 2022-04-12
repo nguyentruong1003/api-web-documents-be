@@ -9,6 +9,7 @@ use App\Http\Controllers\API\PermissionController;
 use App\Http\Controllers\API\MasterDataController;
 use App\Http\Controllers\API\AuditController;
 use App\Http\Controllers\API\PostController;
+use App\Http\Controllers\API\PostTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,5 +75,9 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::get('/{post:id}', [PostController::class, 'show'])->name('post.show');
         Route::post('/{post:id}', [PostController::class, 'edit'])->name('post.edit');
         Route::delete('/{post:id}', [PostController::class, 'delete'])->name('post.delete');
+    });
+
+    Route::group(['prefix' => '/post-type'], function() {
+        Route::get('/', [PostTypeController::class, 'index'])->name('post-type.index');
     });
 });
