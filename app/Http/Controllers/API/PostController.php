@@ -6,8 +6,10 @@ use App\Editors\PostEditor;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\PostRequest;
 use App\Http\Resources\PostResource;
+use App\Models\File;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -15,11 +17,21 @@ class PostController extends Controller
      * Get or search posts
      *
      * @group Post management
-     * @queryParam name string Search by name
+     * @queryParam name string Search by title, type, content
      */
     public function index(Request $request)
     {
-        return PostResource::collection(Post::query()->paginate());
+        $query = Post::query();
+        if (isset($request->title)) {
+            $query->where('title', 'like', '%' . trim(removeStringUtf8($request->name)) . '%');
+        }
+        else if (isset($request->type)) {
+            $query->where('post_type_id', 'like', '%' . trim(removeStringUtf8($request->type)) . '%');
+        }
+        else if (isset($request->content)) {
+            $query->where('content', 'like', '%' . trim(removeStringUtf8($request->content)) . '%');
+        }
+        return PostResource::collection($query->paginate(25));
     }
 
     /**
@@ -30,8 +42,26 @@ class PostController extends Controller
      */
     public function create(PostRequest $request)
     {
-        $masterdata = PostEditor::open(new Post())->withDataFromRequest($request)->save();
-        return (new PostResource($masterdata))->withMessage(__('view.notification.success.create'));
+        $files = $request->file('files');
+        $allowedfileExtension=['pdf'];
+        foreach ($files as $file) {
+            $extension = $file->getClientOriginalExtension();
+            if (! in_array($extension, $allowedfileExtension)) {
+                return response()->json(['Invalid file format, only accept file pdf'], 422);
+            }
+        }
+        $post = PostEditor::open(new Post())->withDataFromRequest($request)->save();
+        foreach ($files as $file) {
+            $tmp = File::query()->create([
+                'file_name' => $file->getClientOriginalName(),
+                'size_file' => getFileSize($file),
+                'url' => $file->store('public/files'),
+                'model_name' => Post::class,
+                'model_id' => $post->id,
+                'user_id' => auth()->user()->id
+            ]);
+        }
+        return (new PostResource($post))->withMessage(__('view.notification.success.create'));
     }
 
     /**
