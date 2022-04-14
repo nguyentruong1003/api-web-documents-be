@@ -21,6 +21,7 @@ class PostResource extends APIResource
             'user_id' => $this->user_id,
             'created_at' => $this->created_at,
             'comment' => $this->comments,
+            'files' => $this->files,
         ];
     }
 }
