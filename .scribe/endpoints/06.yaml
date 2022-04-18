@@ -45,7 +45,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: lwbzarmkhxycjqsukcudzxzjlutagbyweigwftdbkpwxqulbewbctdseeydpmpendhdjhpwjinadanjuwetiykbfmxzmtypuvnmo
+        example: ezblnhngfzbakk
         type: string
         custom: []
       permissions:
@@ -83,7 +83,7 @@ endpoints:
         name: role_id
         description: 'The ID of the role.'
         required: true
-        example: 5
+        example: 15
         type: integer
         custom: []
     queryParameters: []
@@ -115,7 +115,7 @@ endpoints:
         name: role_id
         description: 'The ID of the role.'
         required: true
-        example: 8
+        example: 12
         type: integer
         custom: []
     queryParameters: []
@@ -124,7 +124,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kixjxuusltaovgywichbqsyxmoimwskhqthwzsnwjiuqiljqnegrc
+        example: gufqameprgtamgwnhgnkwpskhhmwohpzrdrsbesrjgnwjiwzvxaphbxqcetcougiuukeklqalqlfifpspvngmwjavmfknsyomhgxcxyxiynljvfhtqlotwzbggkmlgcrxmfjahhzhkgdzhcvafucmevxwqxredbsjvimhgljmmfkwpzeuknbqjw
         type: string
         custom: []
       permissions:
@@ -162,7 +162,7 @@ endpoints:
         name: role_id
         description: 'The ID of the role.'
         required: true
-        example: 15
+        example: 11
         type: integer
         custom: []
     queryParameters: []

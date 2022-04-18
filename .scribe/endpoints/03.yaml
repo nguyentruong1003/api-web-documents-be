@@ -45,7 +45,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ctuxuuwswrbascbbglxpbmnlosxyuvcdasgckkihnbeqjeiobkswyqdysuddyerkjdeztdewnlgsrb
+        example: ydldeecmopnalfxjtphuoostmfremarnhglrgtabiwhdjnwdlxlvshhyykqrvxvnogfliuifrxmneqvmkhdtwfywmzw
         type: string
         custom: []
     responses: []
@@ -67,7 +67,7 @@ endpoints:
         name: permission_id
         description: 'The ID of the permission.'
         required: true
-        example: sed
+        example: earum
         type: string
         custom: []
     queryParameters: []
@@ -99,7 +99,7 @@ endpoints:
         name: permission_id
         description: 'The ID of the permission.'
         required: true
-        example: quod
+        example: beatae
         type: string
         custom: []
     queryParameters: []
@@ -108,7 +108,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: iyywwhjxtlfjlpesweytjjdkqjjispmslrzzuxjrzlcooxxqfdzovcfqyymrsxyagqpjigjyjrgefrpzqmzomkekqdzdeqhytdmbobboczm
+        example: pgmsajtbfarlaexdgdrahxrjcpaxutvxxgopjksdpczkvntzn
         type: string
         custom: []
     responses: []
@@ -130,7 +130,7 @@ endpoints:
         name: permission_id
         description: 'The ID of the permission.'
         required: true
-        example: dicta
+        example: et
         type: string
         custom: []
     queryParameters: []

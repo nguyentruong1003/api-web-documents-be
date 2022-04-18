@@ -19,7 +19,7 @@ endpoints:
         name: name
         description: 'Search by title, type, content'
         required: false
-        example: facilis
+        example: qui
         type: string
         custom: []
     bodyParameters: []
@@ -52,7 +52,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 1000 characters.'
         required: true
-        example: wpgzaxzrfceeavqbnktumblrnmjjjvdylksqclmvlcbkjrkqrdasvhqbsnjkysbteivrubwqbnymstwvnxedagvgwosqleailkxodwodwrdscmfkmupdayreztjzgicxcyiazmsfpfzyzkddbvckthwfrhhlskivqfxrvqbufbhqpdqkhujsdtzadidyfovawjttsnovsiicxfdsebhculkmbnulllcwylotuvffpkjkntypuwcsxdwevbdccdlbmtprsyziglvxanmvdolmfrtnkuycvinjtpgopescgkvthgwsslmfqkihyftfoudeozsieptpnaabdxkpyjchuefekdrzjprxgkuwpffqgqvtcmjuiunkwkklztpoibvoeddvfafelbjacwapdkndxmtwgdsdcnjmjinbqrceunblirgwphbwpkhhybehtwyxcqbcqpbbkgqwrogzyxrkwpdxnkltnnfxbruwxxkscdluwitrumkmssiqxfecxxyyqgtwwpisgtfexgjbohdwpcvjsbjkraccdheyfnclomftwzaqheculosxuxpuxyfmdnqkhetsmjiuopauwviaeafiikhfojptyxgswgihfdwxdvzbhptfuhzexxrrurvbtarjzcpwammrkdckwfyfejpkomhhoxyuzsklfbzrjaoyoitsgjtphirchvnaniwtkxbgroqugqddgcbjrvjajovmtfbwpdbhykvnekltdpdptpyitmzzcucdzxcodszyvaddwxrmxqwwvlogoifocynhutvigpghhyintuvqmngrzclhdcvsxhpmzvbzmneyovowwinbfazscehjerrqfrfyehrvarkccpvslkezxqnjbgahkaphvoxtsxnemhenfbxqzlvcdaoqllnwzqnrlkaqty
+        example: pechdrmbkfwpdzfxgzjszfozxawdtwlcopcrlpsodsbkljthxuobeqbldwssjdymxbitvfzdjfebylwkleaqzlwbchbzmkvnyzbghaqddztzsjwlicgsgnlejchwmybwditwyfvvzwarihbkvenunnsvemidpsscljviaevfhqaciviuoidxgrzwgvrcybxpvdwouvtlbtteiefcrjzbfhfiijszfrukrktpkxffioyunjddnqpjpxckunugsnfgqnuzvfhjofbacunythtxxmkipizgmrlwktpbqkbdwwdxtpvsurgknvixldpefvszuuoftsnihoaqwogjwdxifmxcwndxxqxthnmskpnvcvfkhitgqdpzrpyvrdbdmaryfxcvwdgxbudutlgyrxiysphicgoykvcktmilzsicaoofhmnzczecczrdlybcakkqqxwxzzxxtukbqnkvnrsyhalrzkdcqltcsalzlibvnjxajuxzchgepwsstpnolflhnphwkfpjdfsvuxojafbessxljmfvdocgehdhgjmilgbfppovqkrqzsctgtmpulzhsyolagdkvidavqzbxobpdsplyshwrymiyutiiunekurijqbtfudqhpnyxsspynkasjcpswasbdiihmqbuynlopwhbqigogskzkivhkvkqbtwkwrsnindqmvd
         type: string
         custom: []
     responses: []
@@ -74,7 +74,7 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: 12
+        example: 18
         type: integer
         custom: []
     queryParameters: []
@@ -106,7 +106,7 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: 11
+        example: 16
         type: integer
         custom: []
     queryParameters: []
@@ -115,7 +115,7 @@ endpoints:
         name: title
         description: 'The title of the post.'
         required: true
-        example: perspiciatis
+        example: repellat
         type: string
         custom: []
     responses: []
@@ -137,7 +137,7 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: 5
+        example: 18
         type: integer
         custom: []
     queryParameters: []
@@ -147,7 +147,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'api/posts/like/{post_id}'
+    uri: 'api/posts/{post_id}/like'
     metadata:
       title: 'Like post'
       description: ''
@@ -161,8 +161,8 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: porro
-        type: string
+        example: 16
+        type: integer
         custom: []
     queryParameters: []
     bodyParameters: []
@@ -171,7 +171,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'api/posts/report/{post_id}'
+    uri: 'api/posts/{post_id}/report'
     metadata:
       title: 'Report post'
       description: ''
@@ -185,10 +185,17 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: beatae
-        type: string
+        example: 9
+        type: integer
         custom: []
     queryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      description:
+        name: description
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: ndyiyzcxsombrpivjrlyxjkpqopeccxwdguausqchpqnttqsnsvjldpgvkbssrtfbvhrznbyhfvphazwgwjwwutmurfzzpaszbofmccwkutwgjkrszlhhcwchjmglrapcmzvglfidphzfnwgdbozpgjpizovympwr
+        type: string
+        custom: []
     responses: []
     responseFields: []

@@ -20,14 +20,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: udcvfertlbacvbrdqmdovnlwfbcnidvrgctbrkomhxyokpbqfegqdazatrznyhpwtvmgfkobtmoensfnhwaunxkzfporcqlwoesvoixyvwpdigbogvvrqdfduozxcpwenjhbbbczqfyyorpwnortoyvkhfkqeemshaaqmxynuerrmrrzdqgglwfnbzhcifndptrbicieqoshyztswfyoro
+        example: ujfauejdmum
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: repudiandae
+        example: eveniet
         type: string
         custom: []
     responses: []
@@ -51,28 +51,28 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: jwhewkwoeqxzavoxvzjzyrutxewkzxthicccwxuhmzqcxqvyztmuqjodspf
+        example: nfurxbxaebwgrtokbtznfttgmortqxskszwciaspwtbgr
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: buzvllwpqyuqydpbamrdbalpppcihdidavbctvjufxnnrvonkkmutrhmpfjlyimnmuvvwoodhrkyayaiwdrorvmrqwlzkarkhnuxvpdleptlaunouwjpljyctnembfeoiealrwycbltmlxmmivwmfnnvkfpoenvixogknxpdkhr
+        example: olleylxfkqiajjhqpapzkuhoohhjuafcibjbtcnxshyiupdxyacjypemsnkaimzuacbqwgnwpcjqkggoowwrncewdmaobjcpicoghfjonyrvnhxjeoeilwwohres
         type: string
         custom: []
       password:
         name: password
         description: 'Must not be greater than 255 characters. Must be at least 6 characters.'
         required: true
-        example: gkwhxf
+        example: aik
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The value and <code>password</code> must match.'
         required: true
-        example: magnam
+        example: velit
         type: string
         custom: []
     responses: []
@@ -138,21 +138,21 @@ endpoints:
         name: old_password
         description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
         required: true
-        example: clwvliayprjgetqloaxaftzykzsrwcqkkoiznscjqvedgoptmpkchngfncopdcbxtqpqpzihzaxdyfjpbvwxxrbfwizugubwcmjstsmtvxppodrezfvpoppsaaftpqfckdyyrzsjcwlfdxbczbfezpppxagrwvnyiovmywpagiihipnivpyvymhmm
+        example: vzaunqqkjcotpqhprdhvlyyzvxpfsdqgidknweaj
         type: string
         custom: []
       new_password:
         name: new_password
         description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
         required: true
-        example: vstvefxqqyajxodzlgklvtekpbuecfdscmfhzirbcgukaiyxjbcatdamazkrirrjgmgdsjvynyajpuqhddkzugudnsxeklylixnuqllgfgugvswhviebfyimqnxsaflglrgrquvzvppiinpdnpzewkrcyjpzzzplfcyexuwkrvpuujetmzvhqzwppjcksaekzllxpwpocbakrrzpfshbuwckrblwodizgegtuvgiexxefqegd
+        example: kggstveooobihyktegaqbofiariehofjolmtcltaizuigwelasiijeqakmvfaflzgwdrhzmndhslqhdqudqygabthttxoslrwqanwttgoivbmsfgtcmorkkzztzvrkwiagpdcwvxuifidjsmvlpjdjhwhyflbpouvdjmupmyryqfcvljpbfajagopfbijjhvlsmumdjxksgipoebqsdorfqzipxqvkiikkwwcahonbqgtb
         type: string
         custom: []
       new_password_confirmation:
         name: new_password_confirmation
         description: 'The value and <code>new_password</code> must match.'
         required: true
-        example: ut
+        example: architecto
         type: string
         custom: []
     responses: []

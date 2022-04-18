@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: udcvfertlbacvbrdqmdovnlwfbcnidvrgctbrkomhxyokpbqfegqdazatrznyhpwtvmgfkobtmoensfnhwaunxkzfporcqlwoesvoixyvwpdigbogvvrqdfduozxcpwenjhbbbczqfyyorpwnortoyvkhfkqeemshaaqmxynuerrmrrzdqgglwfnbzhcifndptrbicieqoshyztswfyoro
+                  example: ujfauejdmum
                 password:
                   type: string
                   description: ''
-                  example: repudiandae
+                  example: eveniet
               required:
                 - email
                 - password
@@ -114,19 +114,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: jwhewkwoeqxzavoxvzjzyrutxewkzxthicccwxuhmzqcxqvyztmuqjodspf
+                  example: nfurxbxaebwgrtokbtznfttgmortqxskszwciaspwtbgr
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: buzvllwpqyuqydpbamrdbalpppcihdidavbctvjufxnnrvonkkmutrhmpfjlyimnmuvvwoodhrkyayaiwdrorvmrqwlzkarkhnuxvpdleptlaunouwjpljyctnembfeoiealrwycbltmlxmmivwmfnnvkfpoenvixogknxpdkhr
+                  example: olleylxfkqiajjhqpapzkuhoohhjuafcibjbtcnxshyiupdxyacjypemsnkaimzuacbqwgnwpcjqkggoowwrncewdmaobjcpicoghfjonyrvnhxjeoeilwwohres
                 password:
                   type: string
                   description: 'Must not be greater than 255 characters. Must be at least 6 characters.'
-                  example: gkwhxf
+                  example: aik
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: magnam
+                  example: velit
               required:
                 - name
                 - email
@@ -221,15 +221,15 @@ paths:
                 old_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: clwvliayprjgetqloaxaftzykzsrwcqkkoiznscjqvedgoptmpkchngfncopdcbxtqpqpzihzaxdyfjpbvwxxrbfwizugubwcmjstsmtvxppodrezfvpoppsaaftpqfckdyyrzsjcwlfdxbczbfezpppxagrwvnyiovmywpagiihipnivpyvymhmm
+                  example: vzaunqqkjcotpqhprdhvlyyzvxpfsdqgidknweaj
                 new_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: vstvefxqqyajxodzlgklvtekpbuecfdscmfhzirbcgukaiyxjbcatdamazkrirrjgmgdsjvynyajpuqhddkzugudnsxeklylixnuqllgfgugvswhviebfyimqnxsaflglrgrquvzvppiinpdnpzewkrcyjpzzzplfcyexuwkrvpuujetmzvhqzwppjcksaekzllxpwpocbakrrzpfshbuwckrblwodizgegtuvgiexxefqegd
+                  example: kggstveooobihyktegaqbofiariehofjolmtcltaizuigwelasiijeqakmvfaflzgwdrhzmndhslqhdqudqygabthttxoslrwqanwttgoivbmsfgtcmorkkzztzvrkwiagpdcwvxuifidjsmvlpjdjhwhyflbpouvdjmupmyryqfcvljpbfajagopfbijjhvlsmumdjxksgipoebqsdorfqzipxqvkiikkwwcahonbqgtb
                 new_password_confirmation:
                   type: string
                   description: 'The value and <code>new_password</code> must match.'
-                  example: ut
+                  example: architecto
               required:
                 - old_password
                 - new_password
@@ -243,12 +243,12 @@ paths:
           in: query
           name: name
           description: 'Search by name'
-          example: voluptatem
+          example: consequatur
           required: false
           schema:
             type: string
             description: 'Search by name'
-            example: voluptatem
+            example: consequatur
         -
           in: header
           name: Content-Type
@@ -309,11 +309,11 @@ paths:
                 v_key:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: osyroamrmsbrzjacgybrfddhaiwrtexunnfdyrmqtvwyiapttftrbwvcrhiezsbymhwwvtigxvujdgfgfzryqslwsxbfcgeclcomndgjjawttoxzilyzqygcasywixrbirmqxelpoegvxroiglwighqmzlncrmisknhcmarsaqjspvvethvscwjndujiozgcwxrujgvxwlfvyaaonuumvrqcllcohupoxynrjrxitwzpeazeza
+                  example: qqsngdwtsutdgotguzqpuopwgylvsiwtegazgzhsozujbtqsmlntec
                 v_value:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dgaadpwjfprdmecowazpexzwvklrrdpxroulujqsaycbzspktlnczcmmrmtucldivqmbuywrbtirhmxquukbogvsjegikcbyskklrgkvfdjeuwpwkhegquhlgqmmgvbbdrouscnufjgaozebjcchdsfaobqehkfuplezqwt
+                  example: lcxeuodmkaopytynlirxshopotdbpguqmvhkhpsqktyhboxxuqpwdtgfyqpdmhbivcjqbqtsloiitblu
                 order_number:
                   type: number
                   description: 'Must be at least 0.'
@@ -321,19 +321,19 @@ paths:
                 type:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: mb
+                  example: pmujhehhlw
                 parent_id:
                   type: number
                   description: ''
-                  example: 32.01782
+                  example: 346765.254856
                 v_content:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: pzplgjmbvpkygcbwxaxitphzeytyyisvkqkgrgpaqvkyeldowvvxdnsxetxszimuqneielmhrpg
+                  example: ohlrmcadyrnampyvkvxwdnmhzlgncschxtazleppwvwilkczhrncewmmxwjrypdgzfduivarcxlljueaxfzimqeisyuymaotrcgsvsvlzxziocorlxtfadcagryyhdupkobtlqetwcpdpzkstqgebigocimgdudhgicsmqehpwpxsrylkvjsstxdzpdopwatzszgirsvhqdfnvlajqcagfknnotnbnsgxeuclhqmtvptwucps
                 note:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: zetmqhuhykhbgxtjcyqzwcfozfolheoviwndwyzjyfkdoplxmxjaljlikqrjsxlkvvnzwtaqfcezovyhcquapxtahjcvtwtcsdmfjevwgzjpuwxukvwuvvdelavkbsqkonikwgprbjeswsjcfstlxmyrgblzfgexeenrflaeubuymfhuvacolvjghlxfiyhdtjbzhbpqnorlaodckabewnizjoieophuocbqpsvxbrzbiyukwtbuywkucjbigistojbxmtzskknnmn
+                  example: mftdmmygjogbpusbpvcbotsbopfauklcpvszdabjvlksbnrueprdkfycosxm
               required:
                 - v_key
                 - v_value
@@ -404,11 +404,11 @@ paths:
                 v_key:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hpmlhlpzxayrwnamncmbvhiztffvxawgefodrgdceckczarlypkcsdsinyeolqonqipscthtezodi
+                  example: jvxdnzhr
                 v_value:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: knegqydjlifstwpnhuphsvbykfwgatwtoyulghxgwjjtpydseqmfosfwhdnlhxjugblviztbowvfebxoluulggaeq
+                  example: teaynwgxqoidizwphdcmqhkupvvetrwqboshczqknqerdcfrknyposxmlukdhaqvuloydvpsbecpvmqrdrrmssmfzpmsvdzcdyamuotyvohqabnxktvyryftfympqixktpkabhhqd
                 order_number:
                   type: number
                   description: 'Must be at least 0.'
@@ -416,19 +416,19 @@ paths:
                 type:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: kcaoomu
+                  example: tkhtcy
                 parent_id:
                   type: number
                   description: ''
-                  example: 13875600.85457
+                  example: 47262.86561869
                 v_content:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: zjlbczygqjoopumxldwxjtrvnxkohvxocfdyurhjftiwmiplytutuaebgespywivssacloch
+                  example: gvapzyuevvmbnfyjpshgmwbukqhjyjxwgpyinfeavjxvkomyzbmnzijytwrdziqbsbrqzndjhkxkcjrqzrkgfleabulbgbrkepdztstarpqpksdpekrhdbfhrhaidokvhheqrohagkrjqhnxtoiizgukefzmpdeefwgrseitejatdpyvekpqqqahkhdwcwhwabtdwvguwokuycsulpkovfugzkjzaenvnomxswppxhwoklhodvasovynltrdgzxgbnufqytednhrkukboeewknqtrknysjpdfbtcthhsmelkjkxjezperuiaqmjftjbrzqsgtbsipahjdqcakvqpxbioqfdulkvkfkvnnvyhwomknilyqennrzlqyviuebpzzlsheakllsoymahskzjkuvlaxnxjwaygvvobcswjzgfkiklpzxnvqdpvhxsijmdkvkfjndqirlojquoowm
                 note:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: thkwccamztuzsctbtszzzztohxzjxzeuyxpulzbuwjfhkbduyphjuiokarezfrpwsnutimwzpcahovhdcmhbdxvjmzpqakebvywvtbiflodadaaflmcevtfzbfmjahyizsegtoxmweyzoesibqznvwutdpplocvepywtdjqnedjsyoakpujrtfuqrlwtcrytujgrwrurxghrxamayyjdxpidqpnpmizupsuiouvyyxjsilsutphcrbwdtjqzrvswulbcntvttoejawwjbhmogjvrgueipltvtxbbfifgwdoxzmrpaugmawvsenkchynyvhelsusvhxgwypcycmfuigvlpxamktcrmrneupqtemgadkyxeiyjmsyuixlcqrdrdtkpqjnqpkpuhporrkvoqkzgrajmryvcjbcxniwqqvpsroktuxlupastzhkvxoilprhjtdwnxykymiroyrqyeusoujuhfhkdajhhtwioljrmfxgoqynczphgrhevbbntnoifxjjwsaupaxyvfkkqzyypbrwlnlyogeoargutvtadiftsiswkzaqktshudgakbwbydynarusfjdypgivetotovctnbcdouzkotaxjsxivsduzpuwdqlbptpijltkxfiksjkdhecrdvydkvajufnvxilzciivgjunsunomvvjwuwwsaqpmmxlybchkhxgbbgjecehsybnxxcexedzogqvkzpgnkxnsbvedsxtznxyxbcehhbvvcdtlwonppgnkgujbyhomfdiipcanwgisxbytaugovsbopfiagmbgbizkiolvxnljuiggmwrfousitdjkumydcltwfwwzphvtduybmtltvwwtikgzovjulgwmmoomrbpfpkzcoixwmcqwxfyhxffahxyjrieyragrrlftevhybhmdzbjonpwjcckcwzstmwdwxsiuuffgwyknispqhbakafnkvwrdxuwn
+                  example: cbsjokvcvwtupszkkotqvhvbdgmvbizpbptwmyzjkvebxfursfrpqtbrwceqifuggldqtogdqrsgxuxovfcrckxfoymthe
               required:
                 - v_key
                 - v_value
@@ -460,7 +460,7 @@ paths:
         in: path
         name: masterdata_id
         description: 'The ID of the masterdata.'
-        example: corporis
+        example: sunt
         required: true
         schema:
           type: string
@@ -529,7 +529,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ctuxuuwswrbascbbglxpbmnlosxyuvcdasgckkihnbeqjeiobkswyqdysuddyerkjdeztdewnlgsrb
+                  example: ydldeecmopnalfxjtphuoostmfremarnhglrgtabiwhdjnwdlxlvshhyykqrvxvnogfliuifrxmneqvmkhdtwfywmzw
               required:
                 - name
   '/api/permissions/{permission_id}':
@@ -597,7 +597,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: iyywwhjxtlfjlpesweytjjdkqjjispmslrzzuxjrzlcooxxqfdzovcfqyymrsxyagqpjigjyjrgefrpzqmzomkekqdzdeqhytdmbobboczm
+                  example: pgmsajtbfarlaexdgdrahxrjcpaxutvxxgopjksdpczkvntzn
               required:
                 - name
     delete:
@@ -626,7 +626,7 @@ paths:
         in: path
         name: permission_id
         description: 'The ID of the permission.'
-        example: sed
+        example: earum
         required: true
         schema:
           type: string
@@ -639,12 +639,12 @@ paths:
           in: query
           name: name
           description: 'Search by title, type, content'
-          example: facilis
+          example: qui
           required: false
           schema:
             type: string
             description: 'Search by title, type, content'
-            example: facilis
+            example: qui
         -
           in: header
           name: Content-Type
@@ -706,7 +706,7 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: wpgzaxzrfceeavqbnktumblrnmjjjvdylksqclmvlcbkjrkqrdasvhqbsnjkysbteivrubwqbnymstwvnxedagvgwosqleailkxodwodwrdscmfkmupdayreztjzgicxcyiazmsfpfzyzkddbvckthwfrhhlskivqfxrvqbufbhqpdqkhujsdtzadidyfovawjttsnovsiicxfdsebhculkmbnulllcwylotuvffpkjkntypuwcsxdwevbdccdlbmtprsyziglvxanmvdolmfrtnkuycvinjtpgopescgkvthgwsslmfqkihyftfoudeozsieptpnaabdxkpyjchuefekdrzjprxgkuwpffqgqvtcmjuiunkwkklztpoibvoeddvfafelbjacwapdkndxmtwgdsdcnjmjinbqrceunblirgwphbwpkhhybehtwyxcqbcqpbbkgqwrogzyxrkwpdxnkltnnfxbruwxxkscdluwitrumkmssiqxfecxxyyqgtwwpisgtfexgjbohdwpcvjsbjkraccdheyfnclomftwzaqheculosxuxpuxyfmdnqkhetsmjiuopauwviaeafiikhfojptyxgswgihfdwxdvzbhptfuhzexxrrurvbtarjzcpwammrkdckwfyfejpkomhhoxyuzsklfbzrjaoyoitsgjtphirchvnaniwtkxbgroqugqddgcbjrvjajovmtfbwpdbhykvnekltdpdptpyitmzzcucdzxcodszyvaddwxrmxqwwvlogoifocynhutvigpghhyintuvqmngrzclhdcvsxhpmzvbzmneyovowwinbfazscehjerrqfrfyehrvarkccpvslkezxqnjbgahkaphvoxtsxnemhenfbxqzlvcdaoqllnwzqnrlkaqty
+                  example: pechdrmbkfwpdzfxgzjszfozxawdtwlcopcrlpsodsbkljthxuobeqbldwssjdymxbitvfzdjfebylwkleaqzlwbchbzmkvnyzbghaqddztzsjwlicgsgnlejchwmybwditwyfvvzwarihbkvenunnsvemidpsscljviaevfhqaciviuoidxgrzwgvrcybxpvdwouvtlbtteiefcrjzbfhfiijszfrukrktpkxffioyunjddnqpjpxckunugsnfgqnuzvfhjofbacunythtxxmkipizgmrlwktpbqkbdwwdxtpvsurgknvixldpefvszuuoftsnihoaqwogjwdxifmxcwndxxqxthnmskpnvcvfkhitgqdpzrpyvrdbdmaryfxcvwdgxbudutlgyrxiysphicgoykvcktmilzsicaoofhmnzczecczrdlybcakkqqxwxzzxxtukbqnkvnrsyhalrzkdcqltcsalzlibvnjxajuxzchgepwsstpnolflhnphwkfpjdfsvuxojafbessxljmfvdocgehdhgjmilgbfppovqkrqzsctgtmpulzhsyolagdkvidavqzbxobpdsplyshwrymiyutiiunekurijqbtfudqhpnyxsspynkasjcpswasbdiihmqbuynlopwhbqigogskzkivhkvkqbtwkwrsnindqmvd
               required:
                 - title
   '/api/posts/{post_id}':
@@ -775,7 +775,7 @@ paths:
                 title:
                   type: string
                   description: 'The title of the post.'
-                  example: perspiciatis
+                  example: repellat
               required:
                 - title
     delete:
@@ -804,11 +804,11 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 12
+        example: 18
         required: true
         schema:
           type: integer
-  '/api/posts/like/{post_id}':
+  '/api/posts/{post_id}/like':
     post:
       summary: 'Like post'
       description: ''
@@ -835,11 +835,11 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: porro
+        example: 16
         required: true
         schema:
-          type: string
-  '/api/posts/report/{post_id}':
+          type: integer
+  '/api/posts/{post_id}/report':
     post:
       summary: 'Report post'
       description: ''
@@ -861,15 +861,28 @@ paths:
       responses: {  }
       tags:
         - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: ndyiyzcxsombrpivjrlyxjkpqopeccxwdguausqchpqnttqsnsvjldpgvkbssrtfbvhrznbyhfvphazwgwjwwutmurfzzpaszbofmccwkutwgjkrszlhhcwchjmglrapcmzvglfidphzfnwgdbozpgjpizovympwr
+              required:
+                - description
     parameters:
       -
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: beatae
+        example: 9
         required: true
         schema:
-          type: string
+          type: integer
   /api/post-type:
     get:
       summary: 'Get post type'
@@ -936,7 +949,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: khbjptdiqygvuutuwligkmwmsehwhnufveuaxxjcpyddnkewpznhbfqrehgdpyebjnwtkswral
+                  example: fbkaivwkfabtpggixciajlfzjhbblkksepoujppovephrjkvhtighashjpurwnghwknchkrpbqazozznhpugykayewkiwivihtpgfphnnonyqztemeojokgzkyyjowmcssdajkzqwqneubobaxmdnxwovkmfpxudqlaeqtsljfvydgzbtw
               required:
                 - name
   '/api/post-type/{posttype_id}':
@@ -1005,7 +1018,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dblrpmprkkheihkuv
+                  example: wrqtdhltpbkmrsozalebcqstavbxlnmbdoldxdyjsrepjdemnswrbdrzavhsyeztohmxskujjvieutuqtvzovmukunbydowbopdisdpgbghiuoatvtweyzrzcnuhguphgrfzdadjzl
               required:
                 - name
     delete:
@@ -1034,7 +1047,7 @@ paths:
         in: path
         name: posttype_id
         description: 'The ID of the posttype.'
-        example: ipsa
+        example: ut
         required: true
         schema:
           type: string
@@ -1103,7 +1116,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lwbzarmkhxycjqsukcudzxzjlutagbyweigwftdbkpwxqulbewbctdseeydpmpendhdjhpwjinadanjuwetiykbfmxzmtypuvnmo
+                  example: ezblnhngfzbakk
                 permissions:
                   type: array
                   description: ''
@@ -1185,7 +1198,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kixjxuusltaovgywichbqsyxmoimwskhqthwzsnwjiuqiljqnegrc
+                  example: gufqameprgtamgwnhgnkwpskhhmwohpzrdrsbesrjgnwjiwzvxaphbxqcetcougiuukeklqalqlfifpspvngmwjavmfknsyomhgxcxyxiynljvfhtqlotwzbggkmlgcrxmfjahhzhkgdzhcvafucmevxwqxredbsjvimhgljmmfkwpzeuknbqjw
                 permissions:
                   type: array
                   description: ''
@@ -1228,7 +1241,7 @@ paths:
         in: path
         name: role_id
         description: 'The ID of the role.'
-        example: 5
+        example: 15
         required: true
         schema:
           type: integer
@@ -1264,15 +1277,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dvgmrxpmffaqryyxrlrrydpwcajcbvpqnnvnztctpvhwpxhlrmxhhjiozmhdeemxbmzsotqcowmsoqaaqaxrifobwaxhqwlnzzqwjmzjzmqbyxwkozgdnmmqbowtptmdmhzycbkitjbfpdniqkfewrfwkcusjmzbdrzuoqktlmvyhndtnywndxhuodbarxxtdzldrjurzvpysvrfcfczychdksogkdkqqynmvylalzvuaixeelvcjqzfzeegk
+                  example: ujwmhymmpculesxgsfolhjgzgizkaortjortztzemmtczatplzlknbuejrmtuczcprirhdkqrcsxqudzpnkpbluoztumpofgksrgmsjrknwqqeaiiuocotbwlumwhinpyrebnakdhgmbdbpfvvoimupphhdyiaawwx
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: nzvqdjisowccfgltrzoetjatcrophqjszolhotfqghpihkmamidmoxdlplyzvifen
+                  example: lwkjtybseudpotkjkjrwalfropuziaidgfdqmwaqvfnkpinbwhwcvzpitehwyorhuwhwpahzthxeixawwggqhwongikezljjbjvlerpwwbmcbjcgwifgseegreokfrhjzobbsbwhqckulzagjmlbcnmarczkaumdybbwqvsds
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: nr
+                  example: ''
                 roles:
                   type: array
                   description: ''
@@ -1382,15 +1395,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zebzspwipoomfydboylcagctiugntkprcgnuxgrhawmjjbjoqpktmugzcdzrnxgnidpshmhlmowfeaaptlpfqennxqzuhuaktyzmxdnwrayrmwzsimvhqemarykxrnrsjyerltmoctpvsklkjhvwrxkoiiuibaoc
+                  example: bertnyqageirxiwbvqwfr
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: mdequsjplhgfzhjpmkfryvumjhtvbgljvxnsgwdtfjiqrkioogjbzzlosfjwjmwmzyhmjnblewgmvptusidqatjdrypfcyfleinlqzdhwbiaopagkswcdfzlprzsxyawghlsrgpcgcyxwpfpwamuvmtmdxovdgzhbfrxshbeuhufhdlcfhwzrstrnrrzvcgcvnicsfhbrjyyovzcazlbchzvrooovaswkoalhk
+                  example: waxqttilnicvpbtkcvcfwjqxehvzvkiovzvnjgrgohdpreymobbmjxbqfafreigoqnvdftaksdotgafzyuoprxnggkuaihshiyodljtvmdlgsnuqzbqqdugvupmfgddk
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: avf
+                  example: muofz
                 roles:
                   type: array
                   description: ''
@@ -1428,7 +1441,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 12
+        example: 9
         required: true
         schema:
           type: integer

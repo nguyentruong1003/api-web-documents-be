@@ -45,7 +45,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: khbjptdiqygvuutuwligkmwmsehwhnufveuaxxjcpyddnkewpznhbfqrehgdpyebjnwtkswral
+        example: fbkaivwkfabtpggixciajlfzjhbblkksepoujppovephrjkvhtighashjpurwnghwknchkrpbqazozznhpugykayewkiwivihtpgfphnnonyqztemeojokgzkyyjowmcssdajkzqwqneubobaxmdnxwovkmfpxudqlaeqtsljfvydgzbtw
         type: string
         custom: []
     responses: []
@@ -67,7 +67,7 @@ endpoints:
         name: posttype_id
         description: 'The ID of the posttype.'
         required: true
-        example: ipsa
+        example: ut
         type: string
         custom: []
     queryParameters: []
@@ -99,7 +99,7 @@ endpoints:
         name: posttype_id
         description: 'The ID of the posttype.'
         required: true
-        example: est
+        example: quia
         type: string
         custom: []
     queryParameters: []
@@ -108,7 +108,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: dblrpmprkkheihkuv
+        example: wrqtdhltpbkmrsozalebcqstavbxlnmbdoldxdyjsrepjdemnswrbdrzavhsyeztohmxskujjvieutuqtvzovmukunbydowbopdisdpgbghiuoatvtweyzrzcnuhguphgrfzdadjzl
         type: string
         custom: []
     responses: []
@@ -130,7 +130,7 @@ endpoints:
         name: posttype_id
         description: 'The ID of the posttype.'
         required: true
-        example: incidunt
+        example: earum
         type: string
         custom: []
     queryParameters: []
