@@ -85,7 +85,7 @@
           @endif
 
           {{-- @if (checkPermission('master-data.index') || checkPermission('audit.index')) --}}
-          <li class="nav-item {{ setOpen('posts') }} {{ setOpen('post-type') }}">
+          <li class="nav-item {{ setOpen('posts') }} {{ setOpen('post-types') }} {{ setOpen('post-reports') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-file"></i>
               <p>
@@ -104,9 +104,17 @@
               {{-- @endif --}}
               {{-- @if (checkPermission('master-data.index')) --}}
               <li class="nav-item">
-                <a href="{{ route('admin.post-type.index') }}" class="nav-link {{ setActive('post-type') }}">
+                <a href="{{ route('admin.post-type.index') }}" class="nav-link {{ setActive('post-types') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách loại bài viết</p>
+                </a>
+              </li>
+              {{-- @endif --}}
+              {{-- @if (checkPermission('master-data.index')) --}}
+              <li class="nav-item">
+                <a href="{{ route('admin.post-report.index') }}" class="nav-link {{ setActive('post-reports') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách phản hồi</p>
                 </a>
               </li>
               {{-- @endif --}}

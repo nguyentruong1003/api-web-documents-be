@@ -3,7 +3,7 @@
         <div class="card-body p-2">
             <div class="filter d-flex align-items-center justify-content-between mb-2">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group search-expertise">
                             <div class="search-expertise inline-block">
                                 <input type="text" placeholder="Tìm kiếm" name="search"
@@ -12,35 +12,44 @@
                         </div>
                     </div>
                 </div>
-                
-                <div>
-                    <div class="input-group">
-                        @include('livewire.common.buttons._create')
-                    </div>
-                </div>
             </div>
             {{-- <div wire:loading class="loader"></div> --}}
             <table class="table table-bordered table-hover dataTable dtr-inline">
                 <thead class="">
                     <tr>
                         <th>STT</th>
-                        <th>Tên</th>
-                        @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
+                        <th>Bài viết</th>
+                        <th>Người báo cáo</th>
+                        <th>Nội dung</th>
+                        <th>Trạng thái</th>
                         <th>Hành động</th>
-                        @endif
                     </tr>
                 </thead>
                 <tbody>
                     @forelse($data as $key => $row)
                         <tr>
                             <td>{{ ($data->currentPage() - 1) * $data->perPage() + $loop->iteration }}</td>
-                            <td>{!! boldTextSearch($row->name, $searchTerm) !!}</td>
-                            @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
-                                @include('livewire.common.buttons._edit')
-                                @include('livewire.common.buttons._delete')
+                                <a href="{{ route('admin.post.show', ['id' => $row->post_id]) }}" target="_blank" style="color: black">
+                                    {{ $row->post->title ?? '' }}
+                                </a>
                             </td>
-                            @endif
+                            <td>{{ $row->user->name ?? '' }}</td>
+                            <td>{!! boldTextSearch($row->description, $searchTerm) !!}</td>
+                            <td>
+                                @if ($row->resolve == 1)
+                                    <span class="badge badge-warning">Chờ xử lý</span>
+                                @else
+                                    <span class="badge badge-success">Đã xử lý</span>
+                                @endif
+                            </td>
+                            <td>
+                                <button type="button" class="btn-sm border-0 bg-transparent"
+                                    data-toggle="modal" data-target="#confirmModal"
+                                    wire:click="check({{$row->id}})">
+                                    <i class="fas fas fa-check"></i>
+                                </button>
+                            </td>
                         </tr>
                     @empty
                         <td colspan='12' class='text-center'>Không tìm thấy dữ liệu</td>
@@ -53,36 +62,27 @@
         @endif
     </div>
     @include('livewire.common.modal._modalDelete')
-
-    <div wire:ignore.self class="modal fade" id="create-update-modal" role="dialog" >
+    <div wire:ignore.self class="modal fade" id="confirmModal" role="dialog" >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        @if(!$checkEdit) Thêm mới
-                        @else Chỉnh sửa
-                        @endif
-                    </h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true close-btn">×</span>
                     </button>
                 </div>
                 <div class="modal-body container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Tên<span class="text-danger"> *</span></label>
-                                <input type="text" class="form-control" wire:model.lazy="name">
-                                @error('name')@include('layouts.partials.text._error')@enderror
-                            </div>
-                        </div>
-                    </div>
+                    @if ($check)
+                        Bạn có muốn đánh dấu phản hồi này là đã giải quyết hay không?
+                    @else
+                        Bạn có muốn đánh dấu phản hồi này là chưa giải quyết hay không?
+                    @endif
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="close-modal" wire:click.prevent="resetInputFields"
                             class="btn btn-secondary close-btn" data-dismiss="modal">Đóng
                     </button>
-                    <button type="button" wire:click="save" class="btn btn-primary close-modal">Lưu</button>
+                    <button type="button" wire:click="resolve" class="btn btn-primary close-modal">Xác nhận</button>
                 </div>
             </div>
         </div>

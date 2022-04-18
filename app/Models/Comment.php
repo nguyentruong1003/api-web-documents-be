@@ -17,7 +17,7 @@ class Comment extends Model implements Auditable
     }
 
     public function posts() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Post::class);
     }
 
     public function reply(){

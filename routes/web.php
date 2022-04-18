@@ -47,4 +47,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => '/post-types'], function() {
         Route::get('/', [App\Http\Controllers\PostTypeController::class, 'index'])->name('admin.post-type.index');
     });
+
+    Route::group(['prefix' => '/post-reports'], function() {
+        Route::get('/', [App\Http\Controllers\PostReportController::class, 'index'])->name('admin.post-report.index');
+    });
 });
