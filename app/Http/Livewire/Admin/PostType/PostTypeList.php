@@ -42,12 +42,14 @@ class PostTypeList extends BaseLive
             'name.required' => __('view.validation.required'),
         ]);
         if ($this->checkEdit) {
-            $pt = PostType::findorfail($this->editId);
+            PostType::findorfail($this->editId)->update([
+                'name' => $this->name
+            ]);
         } else {
-            $pt = new PostType();
+            PostType::create([
+                'name' => $this->name
+            ]);
         }
-        $pt->name = $this->name;
-        $pt->save();
         $this->emit('close-modal');
         if ($this->checkEdit) {
             $this->dispatchBrowserEvent('show-toast', ["type" => "success", "message" => __('view.notification.success.update')] );

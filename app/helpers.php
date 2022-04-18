@@ -20,13 +20,12 @@ use Illuminate\Http\UploadedFile;
 
 function setActive($path)
 {
-    return \Request::is('*' . $path . '*') ? ' active' : '';
+    return \Request::is($path . '*') ? ' active' : '';
 }
 
 function setOpen($path)
 {
-    // dd($path);
-    return \Request::is('*' . $path . '*') ? ' menu-is-opening menu-open' : '';
+    return \Request::is($path . '*') ? ' menu-is-opening menu-open' : '';
 }
 
 function reFormatDate($datetime, $format = null)
