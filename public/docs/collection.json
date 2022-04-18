@@ -5,239 +5,22 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/localhost"
+            "value": "http:\/\/127.0.0.1:1003"
         }
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "8bc8b61c-b7cd-4cae-a093-27542bcdf4e1",
+        "_postman_id": "a890f749-a086-4aa8-ab03-2b54a2219cea",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Endpoints",
+            "name": "Audit management",
             "description": "",
             "item": [
                 {
-                    "name": "api\/auth\/login",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"aaprcawkbwzcfbbapxvbbdjoxcmypnctvdsanmohsvqkdurehswlgwxubogfytixfcwalsafwjuzirfxkijqsreiixctfphwkvkxfknzdgemeohfilzamqtwlbmnoitwhiuilzhhanuwjqjobrdrmuxrgqutkdugmchc\",\"password\":\"magnam\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/auth\/register",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/register",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/register"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"czjxsdrqnprgcsnxdcjkirmboiuajsdmtgovedaptkcheurmapbrxttwjbexmvgwyvbtqskjfh\",\"email\":\"rayitvjiqndixtckdoaioihnekncyszfgrxemchqppznsasjaovbdlfscpjybbhruurqqnbimyaicvxunbdbkztrmuqeaejwzbvlfyayqcptcqtfutbtazsykbdgduunqnhlcxbtfjgkyaifeujdnyhmxiwgjcircxfcfdfmbcdacnbrcgdfejnudliheimzinqdjjugxojekhvvdqhkgltejk\",\"password\":\"reiagp\",\"password_confirmation\":\"quaerat\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/auth\/logout",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/logout",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/logout"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/auth\/current-user",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/current-user",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/current-user"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/auth\/change-password",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/change-password",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/change-password"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"old_password\":\"bhgxmsizjpdrzkzllpktdfwqanfvddjpvmomewznrwjdmkzqrocyjdlpcyhrnzujategbuglhpxeuacogenunktnyrqihbwpgnxkjzocljbfjufnkcmtonzevaoyrbwnkzolemmmjsfkzdftigtcvkfrpwvpvtwumckeqwiffjcpvnzzom\",\"new_password\":\"pweqyrenvwwkyceucwhoncjpefrukeadjsng\",\"new_password_confirmation\":\"atque\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/users",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/users",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/users"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/audits",
+                    "name": "Get audit",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -257,10 +40,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -287,17 +67,17 @@
             ]
         },
         {
-            "name": "User management",
+            "name": "Auth management",
             "description": "",
             "item": [
                 {
-                    "name": "Create user",
+                    "name": "Login",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/users",
+                            "path": "api\/auth\/login",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/users"
+                            "raw": "{{baseUrl}}\/api\/auth\/login"
                         },
                         "method": "POST",
                         "header": [
@@ -312,26 +92,244 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"llgfjcwhujlhdgyeiwghwuvsneexzlchccxhmvowizcdawnbiethpjdygxlbirrllurdoxdszgkchozxcyisrxtrpihsllkknrnbyxvxvssjzhlqgmqadczvu\",\"email\":\"aypcwzpepuqcxcilayprroqtqqxzgzsyrhypchcpfjjusnldhlailcmolixhunsiqqolcycdbgcgivipxcfkozcyulbgcccozmgannkefmcjokj\",\"password\":\"lo\",\"roles\":[null]}"
+                            "raw": "{\"email\":\"udcvfertlbacvbrdqmdovnlwfbcnidvrgctbrkomhxyokpbqfegqdazatrznyhpwtvmgfkobtmoensfnhwaunxkzfporcqlwoesvoixyvwpdigbogvvrqdfduozxcpwenjhbbbczqfyyorpwnortoyvkhfkqeemshaaqmxynuerrmrrzdqgglwfnbzhcifndptrbicieqoshyztswfyoro\",\"password\":\"repudiandae\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"jwhewkwoeqxzavoxvzjzyrutxewkzxthicccwxuhmzqcxqvyztmuqjodspf\",\"email\":\"buzvllwpqyuqydpbamrdbalpppcihdidavbctvjufxnnrvonkkmutrhmpfjlyimnmuvvwoodhrkyayaiwdrorvmrqwlzkarkhnuxvpdleptlaunouwjpljyctnembfeoiealrwycbltmlxmmivwmfnnvkfpoenvixogknxpdkhr\",\"password\":\"gkwhxf\",\"password_confirmation\":\"magnam\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get current user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/current-user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/current-user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Change password",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/change-password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/change-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"old_password\":\"clwvliayprjgetqloaxaftzykzsrwcqkkoiznscjqvedgoptmpkchngfncopdcbxtqpqpzihzaxdyfjpbvwxxrbfwizugubwcmjstsmtvxppodrezfvpoppsaaftpqfckdyyrzsjcwlfdxbczbfezpppxagrwvnyiovmywpagiihipnivpyvymhmm\",\"new_password\":\"vstvefxqqyajxodzlgklvtekpbuecfdscmfhzirbcgukaiyxjbcatdamazkrirrjgmgdsjvynyajpuqhddkzugudnsxeklylixnuqllgfgugvswhviebfyimqnxsaflglrgrquvzvppiinpdnpzewkrcyjpzzzplfcyexuwkrvpuujetmzvhqzwppjcksaekzllxpwpocbakrrzpfshbuwckrblwodizgegtuvgiexxefqegd\",\"new_password_confirmation\":\"ut\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Master Data management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get or search masterdatas",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master-data",
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "voluptatem",
+                                    "description": "Search by name",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/master-data?name=voluptatem"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create masterdata",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/master-data"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"v_key\":\"osyroamrmsbrzjacgybrfddhaiwrtexunnfdyrmqtvwyiapttftrbwvcrhiezsbymhwwvtigxvujdgfgfzryqslwsxbfcgeclcomndgjjawttoxzilyzqygcasywixrbirmqxelpoegvxroiglwighqmzlncrmisknhcmarsaqjspvvethvscwjndujiozgcwxrujgvxwlfvyaaonuumvrqcllcohupoxynrjrxitwzpeazeza\",\"v_value\":\"dgaadpwjfprdmecowazpexzwvklrrdpxroulujqsaycbzspktlnczcmmrmtucldivqmbuywrbtirhmxquukbogvsjegikcbyskklrgkvfdjeuwpwkhegquhlgqmmgvbbdrouscnufjgaozebjcchdsfaobqehkfuplezqwt\",\"order_number\":0,\"type\":\"mb\",\"parent_id\":32.01782,\"v_content\":\"pzplgjmbvpkygcbwxaxitphzeytyyisvkqkgrgpaqvkyeldowvvxdnsxetxszimuqneielmhrpg\",\"note\":\"zetmqhuhykhbgxtjcyqzwcfozfolheoviwndwyzjyfkdoplxmxjaljlikqrjsxlkvvnzwtaqfcezovyhcquapxtahjcvtwtcsdmfjevwgzjpuwxukvwuvvdelavkbsqkonikwgprbjeswsjcfstlxmyrgblzfgexeenrflaeubuymfhuvacolvjghlxfiyhdtjbzhbpqnorlaodckabewnizjoieophuocbqpsvxbrzbiyukwtbuywkucjbigistojbxmtzskknnmn\"}"
                         },
                         "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Show user",
+                    "name": "Show masterdata",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/users\/:user_id",
+                            "path": "api\/master-data\/:masterdata_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
                             "variable": [
                                 {
-                                    "id": "user_id",
-                                    "key": "user_id",
-                                    "value": "4",
-                                    "description": "The ID of the user."
+                                    "id": "masterdata_id",
+                                    "key": "masterdata_id",
+                                    "value": "corporis",
+                                    "description": "The ID of the masterdata."
                                 }
                             ]
                         },
@@ -372,19 +370,19 @@
                     ]
                 },
                 {
-                    "name": "Edit user",
+                    "name": "Edit masterdata",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/users\/:user_id",
+                            "path": "api\/master-data\/:masterdata_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
                             "variable": [
                                 {
-                                    "id": "user_id",
-                                    "key": "user_id",
-                                    "value": "5",
-                                    "description": "The ID of the user."
+                                    "id": "masterdata_id",
+                                    "key": "masterdata_id",
+                                    "value": "aspernatur",
+                                    "description": "The ID of the masterdata."
                                 }
                             ]
                         },
@@ -401,26 +399,26 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xtdctngdtmyxrnmbedczppakwiwqybbtacakhobbiqxkpqefnneznqtuaxsnmqkcpopcohpygxpzfifzsok\",\"email\":\"owzluskkffwftoshuqgypibiyubipkdbskjayfvuuxcelftfm\",\"password\":\"tvyfmb\",\"roles\":[null]}"
+                            "raw": "{\"v_key\":\"hpmlhlpzxayrwnamncmbvhiztffvxawgefodrgdceckczarlypkcsdsinyeolqonqipscthtezodi\",\"v_value\":\"knegqydjlifstwpnhuphsvbykfwgatwtoyulghxgwjjtpydseqmfosfwhdnlhxjugblviztbowvfebxoluulggaeq\",\"order_number\":0,\"type\":\"kcaoomu\",\"parent_id\":13875600.85457,\"v_content\":\"zjlbczygqjoopumxldwxjtrvnxkohvxocfdyurhjftiwmiplytutuaebgespywivssacloch\",\"note\":\"thkwccamztuzsctbtszzzztohxzjxzeuyxpulzbuwjfhkbduyphjuiokarezfrpwsnutimwzpcahovhdcmhbdxvjmzpqakebvywvtbiflodadaaflmcevtfzbfmjahyizsegtoxmweyzoesibqznvwutdpplocvepywtdjqnedjsyoakpujrtfuqrlwtcrytujgrwrurxghrxamayyjdxpidqpnpmizupsuiouvyyxjsilsutphcrbwdtjqzrvswulbcntvttoejawwjbhmogjvrgueipltvtxbbfifgwdoxzmrpaugmawvsenkchynyvhelsusvhxgwypcycmfuigvlpxamktcrmrneupqtemgadkyxeiyjmsyuixlcqrdrdtkpqjnqpkpuhporrkvoqkzgrajmryvcjbcxniwqqvpsroktuxlupastzhkvxoilprhjtdwnxykymiroyrqyeusoujuhfhkdajhhtwioljrmfxgoqynczphgrhevbbntnoifxjjwsaupaxyvfkkqzyypbrwlnlyogeoargutvtadiftsiswkzaqktshudgakbwbydynarusfjdypgivetotovctnbcdouzkotaxjsxivsduzpuwdqlbptpijltkxfiksjkdhecrdvydkvajufnvxilzciivgjunsunomvvjwuwwsaqpmmxlybchkhxgbbgjecehsybnxxcexedzogqvkzpgnkxnsbvedsxtznxyxbcehhbvvcdtlwonppgnkgujbyhomfdiipcanwgisxbytaugovsbopfiagmbgbizkiolvxnljuiggmwrfousitdjkumydcltwfwwzphvtduybmtltvwwtikgzovjulgwmmoomrbpfpkzcoixwmcqwxfyhxffahxyjrieyragrrlftevhybhmdzbjonpwjcckcwzstmwdwxsiuuffgwyknispqhbakafnkvwrdxuwn\"}"
                         },
                         "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Delete user",
+                    "name": "Delete masterdata",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/users\/:user_id",
+                            "path": "api\/master-data\/:masterdata_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
                             "variable": [
                                 {
-                                    "id": "user_id",
-                                    "key": "user_id",
-                                    "value": "7",
-                                    "description": "The ID of the user."
+                                    "id": "masterdata_id",
+                                    "key": "masterdata_id",
+                                    "value": "sed",
+                                    "description": "The ID of the masterdata."
                                 }
                             ]
                         },
@@ -439,202 +437,13 @@
                         "description": ""
                     },
                     "response": []
-                },
-                {
-                    "name": "Get roles",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Create role",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"facelizhmqzellntloxelepfcglqganamnykhrmmjgvowgncpdsqvrshciycniqnvwqqrfqvlvxbahkkvw\",\"permissions\":[null],\"users\":[null]}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Show role",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles\/:role_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
-                            "variable": [
-                                {
-                                    "id": "role_id",
-                                    "key": "role_id",
-                                    "value": "7",
-                                    "description": "The ID of the role."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Edit role",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles\/:role_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
-                            "variable": [
-                                {
-                                    "id": "role_id",
-                                    "key": "role_id",
-                                    "value": "16",
-                                    "description": "The ID of the role."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"vlajempfixlmwctxufduffkdgrgncqbmmxxkwzckarhmrdlywtqnispceyoqbbejscyixzbmafhebmtxvqwqozjzsaajbpystlzoilfmkfkhitffizzc\",\"permissions\":[null],\"users\":[null]}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Delete role",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles\/:role_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
-                            "variable": [
-                                {
-                                    "id": "role_id",
-                                    "key": "role_id",
-                                    "value": "12",
-                                    "description": "The ID of the role."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
+                }
+            ]
+        },
+        {
+            "name": "Permission management",
+            "description": "",
+            "item": [
                 {
                     "name": "Get permissions",
                     "request": {
@@ -702,7 +511,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"oohfyvpdteldnehrjochobwivtkxqvjhpgaqcftdqqyksgzeqsuyrqdllomvanhxfyzqfojbbnxtkycqvoetgpyfcciztiwczmzxcxkklqpdjetxpafcjsgwneahztvlpqmodpfwcfcplhzkqczwr\"}"
+                            "raw": "{\"name\":\"ctuxuuwswrbascbbglxpbmnlosxyuvcdasgckkihnbeqjeiobkswyqdysuddyerkjdeztdewnlgsrb\"}"
                         },
                         "description": ""
                     },
@@ -720,7 +529,7 @@
                                 {
                                     "id": "permission_id",
                                     "key": "permission_id",
-                                    "value": "dolores",
+                                    "value": "sed",
                                     "description": "The ID of the permission."
                                 }
                             ]
@@ -773,7 +582,7 @@
                                 {
                                     "id": "permission_id",
                                     "key": "permission_id",
-                                    "value": "eligendi",
+                                    "value": "quod",
                                     "description": "The ID of the permission."
                                 }
                             ]
@@ -791,7 +600,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"sycaqpqmvhxzwiflguqlgmvjllqeonbnnynfrwctrvwvuspjqkgwrufqzcovhwimvddbyatmgnrxsrrlypsljvvefkpnhfaeimqogwuwobjsoomvyeoolcupgozhqviytltkczxdesrhuwyjatroarterznvrzjvbgonhgjtnjckadikrqvxdbgmwmqmkhczzhulpneboothiiodjvvzjrvfm\"}"
+                            "raw": "{\"name\":\"iyywwhjxtlfjlpesweytjjdkqjjispmslrzzuxjrzlcooxxqfdzovcfqyymrsxyagqpjigjyjrgefrpzqmzomkekqdzdeqhytdmbobboczm\"}"
                         },
                         "description": ""
                     },
@@ -809,7 +618,7 @@
                                 {
                                     "id": "permission_id",
                                     "key": "permission_id",
-                                    "value": "asperiores",
+                                    "value": "dicta",
                                     "description": "The ID of the permission."
                                 }
                             ]
@@ -829,22 +638,28 @@
                         "description": ""
                     },
                     "response": []
-                },
+                }
+            ]
+        },
+        {
+            "name": "Post management",
+            "description": "",
+            "item": [
                 {
-                    "name": "Get or search masterdatas",
+                    "name": "Get or search posts",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/master-data",
+                            "path": "api\/posts",
                             "query": [
                                 {
                                     "key": "name",
-                                    "value": "quo",
-                                    "description": "Search by name",
+                                    "value": "facilis",
+                                    "description": "Search by title, type, content",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/master-data?name=quo"
+                            "raw": "{{baseUrl}}\/api\/posts?name=facilis"
                         },
                         "method": "GET",
                         "header": [
@@ -858,7 +673,10 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": [
                         {
@@ -883,13 +701,13 @@
                     ]
                 },
                 {
-                    "name": "Create masterdata",
+                    "name": "Create post",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/master-data",
+                            "path": "api\/posts",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/master-data"
+                            "raw": "{{baseUrl}}\/api\/posts"
                         },
                         "method": "POST",
                         "header": [
@@ -904,26 +722,26 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"v_key\":\"ylevhkcmvfmkadrzgjyxqyhsrpuvkbehlfyffustxybwtveuklmanjvtsylngrlkirlfdlmkboxeovfufvykdjhpqlprxrlsbhiumlsaowlphusqdlcssongnqhdzuhtzawwxxnhzjlfkywnfcfygeuoefgdkyjlmxps\",\"v_value\":\"amwzuqdtqnkiytztfxlmjndzzqgwcfdqbciybcedqkpgnejkvgcncmdxhstaslsancxzjjtbtqgsjzpnjfknvfnpzziwrhheenffidfdbtiuxjimptaqgehjwentxizoaiapiuttaatzaunvswywtjhwwmmxzfqjrcfljqgucbxegszkemraylmmlvsydrdslvyeeknqyc\",\"order_number\":0,\"type\":\"wsgdgq\",\"parent_id\":1158109.2015,\"v_content\":\"ugebw\",\"note\":\"mmvlwrgwfgpwenebeykuqslhmvalxchratmflgimaobseubofufjuvgzfqfwgctkcczskttihemqlsmcu\"}"
+                            "raw": "{\"title\":\"wpgzaxzrfceeavqbnktumblrnmjjjvdylksqclmvlcbkjrkqrdasvhqbsnjkysbteivrubwqbnymstwvnxedagvgwosqleailkxodwodwrdscmfkmupdayreztjzgicxcyiazmsfpfzyzkddbvckthwfrhhlskivqfxrvqbufbhqpdqkhujsdtzadidyfovawjttsnovsiicxfdsebhculkmbnulllcwylotuvffpkjkntypuwcsxdwevbdccdlbmtprsyziglvxanmvdolmfrtnkuycvinjtpgopescgkvthgwsslmfqkihyftfoudeozsieptpnaabdxkpyjchuefekdrzjprxgkuwpffqgqvtcmjuiunkwkklztpoibvoeddvfafelbjacwapdkndxmtwgdsdcnjmjinbqrceunblirgwphbwpkhhybehtwyxcqbcqpbbkgqwrogzyxrkwpdxnkltnnfxbruwxxkscdluwitrumkmssiqxfecxxyyqgtwwpisgtfexgjbohdwpcvjsbjkraccdheyfnclomftwzaqheculosxuxpuxyfmdnqkhetsmjiuopauwviaeafiikhfojptyxgswgihfdwxdvzbhptfuhzexxrrurvbtarjzcpwammrkdckwfyfejpkomhhoxyuzsklfbzrjaoyoitsgjtphirchvnaniwtkxbgroqugqddgcbjrvjajovmtfbwpdbhykvnekltdpdptpyitmzzcucdzxcodszyvaddwxrmxqwwvlogoifocynhutvigpghhyintuvqmngrzclhdcvsxhpmzvbzmneyovowwinbfazscehjerrqfrfyehrvarkccpvslkezxqnjbgahkaphvoxtsxnemhenfbxqzlvcdaoqllnwzqnrlkaqty\"}"
                         },
                         "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Show masterdata",
+                    "name": "Show post",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/master-data\/:masterdata_id",
+                            "path": "api\/posts\/:post_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
+                            "raw": "{{baseUrl}}\/api\/posts\/:post_id",
                             "variable": [
                                 {
-                                    "id": "masterdata_id",
-                                    "key": "masterdata_id",
-                                    "value": "tempore",
-                                    "description": "The ID of the masterdata."
+                                    "id": "post_id",
+                                    "key": "post_id",
+                                    "value": "12",
+                                    "description": "The ID of the post."
                                 }
                             ]
                         },
@@ -939,7 +757,10 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": [
                         {
@@ -964,19 +785,19 @@
                     ]
                 },
                 {
-                    "name": "Edit masterdata",
+                    "name": "Edit post",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/master-data\/:masterdata_id",
+                            "path": "api\/posts\/:post_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
+                            "raw": "{{baseUrl}}\/api\/posts\/:post_id",
                             "variable": [
                                 {
-                                    "id": "masterdata_id",
-                                    "key": "masterdata_id",
-                                    "value": "voluptate",
-                                    "description": "The ID of the masterdata."
+                                    "id": "post_id",
+                                    "key": "post_id",
+                                    "value": "11",
+                                    "description": "The ID of the post."
                                 }
                             ]
                         },
@@ -993,26 +814,26 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"v_key\":\"aabhpejtnxqyinmpjzsdbmrhdaybdfsivxazqbmvyecosmzeaocipttnkqmiajouhdohpcscljvkgtrwprtzxqyzrgjveolqgtdnxkwztnolzycfpgptnmoesgcalutymurqugxqfkjjlbupqsuvdwgikqixcuporyoyuqekogoyzijctjvnxirtbpvgwzyorjsuxjnikgulhdrqklx\",\"v_value\":\"thmbzzrtandevtqgteadnfknqaszujhfobcgelyiojgyeukbudhkmtdstwsfvuvevlqbgfollhbgjkyznnrnbvxxvfwhpmpppffkgnpprnhjiufsxclkdbrwnaojhwtsiledyimgrczucedntdlmbdbqpxtbyeho\",\"order_number\":0,\"type\":\"pguqbmdceh\",\"parent_id\":0.1885997,\"v_content\":\"krbxrrkpspnbvalpltapplowqnkohwqhvqburjnpqqbmmpjeiczowvhrfcmnumpjmpodzzzjfvomeyfyfrqhmwutaqryncpzyxoldknlifmhzkzgrgqcleelguzuhzuyqewhkviprvbzfzvyzzuwoxyhvpwqadsuvltpwfpy\",\"note\":\"kdseqviaqhunjbkujjmdgtlctmqtgvzavwgfkehkdnlkwldezjageubocrymeycczawniwwpyhzxaawhbgtabgt\"}"
+                            "raw": "{\"title\":\"perspiciatis\"}"
                         },
                         "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Delete masterdata",
+                    "name": "Delete post",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/master-data\/:masterdata_id",
+                            "path": "api\/posts\/:post_id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/master-data\/:masterdata_id",
+                            "raw": "{{baseUrl}}\/api\/posts\/:post_id",
                             "variable": [
                                 {
-                                    "id": "masterdata_id",
-                                    "key": "masterdata_id",
-                                    "value": "omnis",
-                                    "description": "The ID of the masterdata."
+                                    "id": "post_id",
+                                    "key": "post_id",
+                                    "value": "5",
+                                    "description": "The ID of the post."
                                 }
                             ]
                         },
@@ -1031,6 +852,681 @@
                         "description": ""
                     },
                     "response": []
+                },
+                {
+                    "name": "Like post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts\/like\/:post_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts\/like\/:post_id",
+                            "variable": [
+                                {
+                                    "id": "post_id",
+                                    "key": "post_id",
+                                    "value": "porro",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Report post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts\/report\/:post_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts\/report\/:post_id",
+                            "variable": [
+                                {
+                                    "id": "post_id",
+                                    "key": "post_id",
+                                    "value": "beatae",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Post type management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get post type",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post-type",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post-type"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create post type",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post-type",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post-type"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"khbjptdiqygvuutuwligkmwmsehwhnufveuaxxjcpyddnkewpznhbfqrehgdpyebjnwtkswral\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show post type",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post-type\/:posttype_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post-type\/:posttype_id",
+                            "variable": [
+                                {
+                                    "id": "posttype_id",
+                                    "key": "posttype_id",
+                                    "value": "ipsa",
+                                    "description": "The ID of the posttype."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit post type",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post-type\/:posttype_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post-type\/:posttype_id",
+                            "variable": [
+                                {
+                                    "id": "posttype_id",
+                                    "key": "posttype_id",
+                                    "value": "est",
+                                    "description": "The ID of the posttype."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"dblrpmprkkheihkuv\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete post type",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post-type\/:posttype_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post-type\/:posttype_id",
+                            "variable": [
+                                {
+                                    "id": "posttype_id",
+                                    "key": "posttype_id",
+                                    "value": "incidunt",
+                                    "description": "The ID of the posttype."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Role management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get roles",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"lwbzarmkhxycjqsukcudzxzjlutagbyweigwftdbkpwxqulbewbctdseeydpmpendhdjhpwjinadanjuwetiykbfmxzmtypuvnmo\",\"permissions\":[null],\"users\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                            "variable": [
+                                {
+                                    "id": "role_id",
+                                    "key": "role_id",
+                                    "value": "5",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                            "variable": [
+                                {
+                                    "id": "role_id",
+                                    "key": "role_id",
+                                    "value": "8",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"kixjxuusltaovgywichbqsyxmoimwskhqthwzsnwjiuqiljqnegrc\",\"permissions\":[null],\"users\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete role",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                            "variable": [
+                                {
+                                    "id": "role_id",
+                                    "key": "role_id",
+                                    "value": "15",
+                                    "description": "The ID of the role."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "User management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"dvgmrxpmffaqryyxrlrrydpwcajcbvpqnnvnztctpvhwpxhlrmxhhjiozmhdeemxbmzsotqcowmsoqaaqaxrifobwaxhqwlnzzqwjmzjzmqbyxwkozgdnmmqbowtptmdmhzycbkitjbfpdniqkfewrfwkcusjmzbdrzuoqktlmvyhndtnywndxhuodbarxxtdzldrjurzvpysvrfcfczychdksogkdkqqynmvylalzvuaixeelvcjqzfzeegk\",\"email\":\"nzvqdjisowccfgltrzoetjatcrophqjszolhotfqghpihkmamidmoxdlplyzvifen\",\"password\":\"nr\",\"roles\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "12",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "8",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"zebzspwipoomfydboylcagctiugntkprcgnuxgrhawmjjbjoqpktmugzcdzrnxgnidpshmhlmowfeaaptlpfqennxqzuhuaktyzmxdnwrayrmwzsimvhqemarykxrnrsjyerltmoctpvsklkjhvwrxkoiiuibaoc\",\"email\":\"mdequsjplhgfzhjpmkfryvumjhtvbgljvxnsgwdtfjiqrkioogjbzzlosfjwjmwmzyhmjnblewgmvptusidqatjdrypfcyfleinlqzdhwbiaopagkswcdfzlprzsxyawghlsrgpcgcyxwpfpwamuvmtmdxovdgzhbfrxshbeuhufhdlcfhwzrstrnrrzvcgcvnicsfhbrjyyovzcazlbchzvrooovaswkoalhk\",\"password\":\"avf\",\"roles\":[null]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "16",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get users",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         }

@@ -1,0 +1,194 @@
+name: 'Post management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/posts
+    metadata:
+      title: 'Get or search posts'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters:
+      name:
+        name: name
+        description: 'Search by title, type, content'
+        required: false
+        example: facilis
+        type: string
+        custom: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/posts
+    metadata:
+      title: 'Create post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: wpgzaxzrfceeavqbnktumblrnmjjjvdylksqclmvlcbkjrkqrdasvhqbsnjkysbteivrubwqbnymstwvnxedagvgwosqleailkxodwodwrdscmfkmupdayreztjzgicxcyiazmsfpfzyzkddbvckthwfrhhlskivqfxrvqbufbhqpdqkhujsdtzadidyfovawjttsnovsiicxfdsebhculkmbnulllcwylotuvffpkjkntypuwcsxdwevbdccdlbmtprsyziglvxanmvdolmfrtnkuycvinjtpgopescgkvthgwsslmfqkihyftfoudeozsieptpnaabdxkpyjchuefekdrzjprxgkuwpffqgqvtcmjuiunkwkklztpoibvoeddvfafelbjacwapdkndxmtwgdsdcnjmjinbqrceunblirgwphbwpkhhybehtwyxcqbcqpbbkgqwrogzyxrkwpdxnkltnnfxbruwxxkscdluwitrumkmssiqxfecxxyyqgtwwpisgtfexgjbohdwpcvjsbjkraccdheyfnclomftwzaqheculosxuxpuxyfmdnqkhetsmjiuopauwviaeafiikhfojptyxgswgihfdwxdvzbhptfuhzexxrrurvbtarjzcpwammrkdckwfyfejpkomhhoxyuzsklfbzrjaoyoitsgjtphirchvnaniwtkxbgroqugqddgcbjrvjajovmtfbwpdbhykvnekltdpdptpyitmzzcucdzxcodszyvaddwxrmxqwwvlogoifocynhutvigpghhyintuvqmngrzclhdcvsxhpmzvbzmneyovowwinbfazscehjerrqfrfyehrvarkccpvslkezxqnjbgahkaphvoxtsxnemhenfbxqzlvcdaoqllnwzqnrlkaqty
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/posts/{post_id}'
+    metadata:
+      title: 'Show post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 12
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/posts/{post_id}'
+    metadata:
+      title: 'Edit post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 11
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'The title of the post.'
+        required: true
+        example: perspiciatis
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/posts/{post_id}'
+    metadata:
+      title: 'Delete post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 5
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/posts/like/{post_id}'
+    metadata:
+      title: 'Like post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: porro
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/posts/report/{post_id}'
+    metadata:
+      title: 'Report post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: beatae
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []

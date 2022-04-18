@@ -1,0 +1,183 @@
+name: 'User management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/users
+    metadata:
+      title: 'Create user'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: dvgmrxpmffaqryyxrlrrydpwcajcbvpqnnvnztctpvhwpxhlrmxhhjiozmhdeemxbmzsotqcowmsoqaaqaxrifobwaxhqwlnzzqwjmzjzmqbyxwkozgdnmmqbowtptmdmhzycbkitjbfpdniqkfewrfwkcusjmzbdrzuoqktlmvyhndtnywndxhuodbarxxtdzldrjurzvpysvrfcfczychdksogkdkqqynmvylalzvuaixeelvcjqzfzeegk
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: nzvqdjisowccfgltrzoetjatcrophqjszolhotfqghpihkmamidmoxdlplyzvifen
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 6 characters.'
+        required: true
+        example: nr
+        type: string
+        custom: []
+      roles:
+        name: roles
+        description: ''
+        required: false
+        example:
+          - null
+        type: 'string[]'
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/users/{user_id}'
+    metadata:
+      title: 'Show user'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      user_id:
+        name: user_id
+        description: 'The ID of the user.'
+        required: true
+        example: 12
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/users/{user_id}'
+    metadata:
+      title: 'Edit user'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      user_id:
+        name: user_id
+        description: 'The ID of the user.'
+        required: true
+        example: 8
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: zebzspwipoomfydboylcagctiugntkprcgnuxgrhawmjjbjoqpktmugzcdzrnxgnidpshmhlmowfeaaptlpfqennxqzuhuaktyzmxdnwrayrmwzsimvhqemarykxrnrsjyerltmoctpvsklkjhvwrxkoiiuibaoc
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: mdequsjplhgfzhjpmkfryvumjhtvbgljvxnsgwdtfjiqrkioogjbzzlosfjwjmwmzyhmjnblewgmvptusidqatjdrypfcyfleinlqzdhwbiaopagkswcdfzlprzsxyawghlsrgpcgcyxwpfpwamuvmtmdxovdgzhbfrxshbeuhufhdlcfhwzrstrnrrzvcgcvnicsfhbrjyyovzcazlbchzvrooovaswkoalhk
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 6 characters.'
+        required: true
+        example: avf
+        type: string
+        custom: []
+      roles:
+        name: roles
+        description: ''
+        required: false
+        example:
+          - null
+        type: 'string[]'
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/users/{user_id}'
+    metadata:
+      title: 'Delete user'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      user_id:
+        name: user_id
+        description: 'The ID of the user.'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/users
+    metadata:
+      title: 'Get users'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
