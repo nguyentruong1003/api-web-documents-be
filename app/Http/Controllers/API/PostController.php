@@ -99,4 +99,37 @@ class PostController extends Controller
             'message' => __('view.notification.success.delete')
         ]);
     }
+
+    /**
+     * Like post
+     * @group Post management
+     * @authenticated
+     */
+    public function like(Post $post)
+    {
+        $users = $post->likes->pluck('id')->toArray();
+        if (!in_array(auth()->user()->id, $users)) {
+            $post->likes()->attach(auth()->user()->id);
+            return response()->json([
+                'message' => 'Like'
+            ]);
+        } else {
+            $post->likes()->detach(auth()->user()->id);
+            return response()->json([
+                'message' => 'Unlike'
+            ]);
+        }
+    }
+
+    /**
+     * Report post
+     * @group Post management
+     * @authenticated
+     */
+    public function report(Request $request, Post $post)
+    {
+        return response()->json([
+            'message' => 'Unavailable now, please wait for a future update!'
+        ]);
+    }
 }

@@ -35,4 +35,8 @@ class Post extends Model implements Auditable
     public function files() {
         return $this->hasMany(File::class, 'model_id', 'id')->where('model_name', Post::class);
     }
+
+    public function reports() {
+        return $this->hasMany(PostReport::class);
+    }
 }
