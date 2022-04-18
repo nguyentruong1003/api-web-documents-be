@@ -4,10 +4,12 @@ namespace App\Http\Controllers\api;
 
 use App\Editors\PostEditor;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\API\PostReportRequest;
 use App\Http\Requests\API\PostRequest;
 use App\Http\Resources\PostResource;
 use App\Models\File;
 use App\Models\Post;
+use App\Models\PostReport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -126,10 +128,17 @@ class PostController extends Controller
      * @group Post management
      * @authenticated
      */
-    public function report(Request $request, Post $post)
+    public function report(PostReportRequest $request, Post $post)
     {
+        $report = PostReport::create([
+            'user_id' => auth()->user()->id,
+            'post_id' => $post->id,
+            'description' => $request->description,
+        ]);
+        
         return response()->json([
-            'message' => 'Unavailable now, please wait for a future update!'
+            'data' => $report,
+            'message' => 'Phản hồi thành công'
         ]);
     }
 }
