@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comment;
+use App\Models\Post;
+use App\Models\PostReport;
 use App\Models\PostType;
 use Illuminate\Database\Seeder;
 use DB;
@@ -71,6 +74,44 @@ class PostExampleSeeder extends Seeder
                 'post_type_id' => PostType::pluck('id')->random(),
                 'created_at' => now()
             ], 
+        ]);
+
+        Comment::updateOrCreate([
+            'id' => '1',
+            'comment' => 'Cục trưởng Điều tra chống buôn lậu bị cảnh cáo',
+            'post_id' => '1',
+            'user_id' => '1',
+        ]);
+
+        Comment::updateOrCreate([
+            'id' => '2',
+            'comment' => 'Cục trưởng Điều tra chống buôn lậu bị cảnh cáo',
+            'post_id' => Post::pluck('id')->random(),
+            'user_id' => '1',
+        ]);
+
+        Comment::updateOrCreate([
+            'id' => '3',
+            'comment' => 'Cục trưởng Điều tra chống buôn lậu bị cảnh cáo',
+            'post_id' => Post::pluck('id')->random(),
+            'user_id' => '1',
+        ]);
+
+        Comment::updateOrCreate([
+            'id' => '4',
+            'comment' => 'Cục trưởng Điều tra chống buôn lậu bị cảnh cáo',
+            'post_id' => '1',
+            'user_id' => '1',
+            'parent_id' => '1',
+        ]);
+
+        Post::findorfail(1)->likes()->sync(1);
+
+        PostReport::updateOrCreate([
+            'id' => '1',
+            'post_id' => '1',
+            'user_id' => '1',
+            'description' => 'Lỗi file pdf',
         ]);
     }
 }
