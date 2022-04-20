@@ -54,11 +54,7 @@ return [
     |
     */
 
-    // here for localhost
-    // 'asset_url' => null,
-
-    // here for heroku
-    'asset_url' => '/public',
+    'asset_url' => env('ASSET_URL', '/public'),
 
     /*
     |--------------------------------------------------------------------------
@@ -72,7 +68,7 @@ return [
     |
     */
 
-    'app_url' => null,
+    'app_url' => env('APP_URL', 'http://nvt-base-api.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------

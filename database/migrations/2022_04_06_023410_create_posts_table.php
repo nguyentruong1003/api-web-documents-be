@@ -18,10 +18,10 @@ class CreatePostsTable extends Migration
             $table->string('title')->comment('Tiêu đề');
             $table->string('description')->nullable()->comment('Mô tả');
             $table->longtext('content')->nullable()->comment('Nội dung');
-            $table->foreignId('post_type_id')->nullable()->comment('Map voi post_type')->constrained('post_type');
+            $table->foreignId('post_type_id')->nullable()->comment('Map voi post_type')->constrained('post_type')->onDelete('set null');
             $table->string('link_pdf')->nullable()->comment('File đính kèm');
             $table->tinyInteger('status')->default('1')->comment('Trạng thái: 1 = Public');
-            $table->foreignId('user_id')->nullable()->comment('Người đăng')->constrained('users');
+            $table->foreignId('user_id')->nullable()->comment('Người đăng')->constrained('users')->onDelete('set null');
             $table->timestamps();
         });
     }

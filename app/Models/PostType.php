@@ -12,6 +12,10 @@ class PostType extends Model implements Auditable
     use \OwenIt\Auditing\Auditable;
     protected $table = 'post_type';
 
+    protected $fillable = [
+        'name'
+    ];
+
     public function posts() {
         return $this->hasMany(Post::class);
     }

@@ -5,11 +5,45 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost'
+    url: 'http://127.0.0.1:1003'
 paths:
+  /api/audits:
+    get:
+      summary: 'Get audit'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Audit management'
   /api/auth/login:
     post:
-      summary: ''
+      summary: Login
       description: ''
       parameters:
         -
@@ -28,7 +62,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - 'Auth management'
       requestBody:
         required: true
         content:
@@ -39,18 +73,18 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: aaprcawkbwzcfbbapxvbbdjoxcmypnctvdsanmohsvqkdurehswlgwxubogfytixfcwalsafwjuzirfxkijqsreiixctfphwkvkxfknzdgemeohfilzamqtwlbmnoitwhiuilzhhanuwjqjobrdrmuxrgqutkdugmchc
+                  example: ujfauejdmum
                 password:
                   type: string
                   description: ''
-                  example: magnam
+                  example: eveniet
               required:
                 - email
                 - password
       security: []
   /api/auth/register:
     post:
-      summary: ''
+      summary: Register
       description: ''
       parameters:
         -
@@ -69,7 +103,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - 'Auth management'
       requestBody:
         required: true
         content:
@@ -80,19 +114,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: czjxsdrqnprgcsnxdcjkirmboiuajsdmtgovedaptkcheurmapbrxttwjbexmvgwyvbtqskjfh
+                  example: nfurxbxaebwgrtokbtznfttgmortqxskszwciaspwtbgr
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: rayitvjiqndixtckdoaioihnekncyszfgrxemchqppznsasjaovbdlfscpjybbhruurqqnbimyaicvxunbdbkztrmuqeaejwzbvlfyayqcptcqtfutbtazsykbdgduunqnhlcxbtfjgkyaifeujdnyhmxiwgjcircxfcfdfmbcdacnbrcgdfejnudliheimzinqdjjugxojekhvvdqhkgltejk
+                  example: olleylxfkqiajjhqpapzkuhoohhjuafcibjbtcnxshyiupdxyacjypemsnkaimzuacbqwgnwpcjqkggoowwrncewdmaobjcpicoghfjonyrvnhxjeoeilwwohres
                 password:
                   type: string
                   description: 'Must not be greater than 255 characters. Must be at least 6 characters.'
-                  example: reiagp
+                  example: aik
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: quaerat
+                  example: velit
               required:
                 - name
                 - email
@@ -101,7 +135,7 @@ paths:
       security: []
   /api/auth/logout:
     post:
-      summary: ''
+      summary: Logout
       description: ''
       parameters:
         -
@@ -120,11 +154,10 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
-      security: []
+        - 'Auth management'
   /api/auth/current-user:
     get:
-      summary: ''
+      summary: 'Get current user'
       description: ''
       parameters:
         -
@@ -155,11 +188,10 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
-      security: []
+        - 'Auth management'
   /api/auth/change-password:
     post:
-      summary: ''
+      summary: 'Change password'
       description: ''
       parameters:
         -
@@ -178,7 +210,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - 'Auth management'
       requestBody:
         required: true
         content:
@@ -189,23 +221,127 @@ paths:
                 old_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: bhgxmsizjpdrzkzllpktdfwqanfvddjpvmomewznrwjdmkzqrocyjdlpcyhrnzujategbuglhpxeuacogenunktnyrqihbwpgnxkjzocljbfjufnkcmtonzevaoyrbwnkzolemmmjsfkzdftigtcvkfrpwvpvtwumckeqwiffjcpvnzzom
+                  example: vzaunqqkjcotpqhprdhvlyyzvxpfsdqgidknweaj
                 new_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: pweqyrenvwwkyceucwhoncjpefrukeadjsng
+                  example: kggstveooobihyktegaqbofiariehofjolmtcltaizuigwelasiijeqakmvfaflzgwdrhzmndhslqhdqudqygabthttxoslrwqanwttgoivbmsfgtcmorkkzztzvrkwiagpdcwvxuifidjsmvlpjdjhwhyflbpouvdjmupmyryqfcvljpbfajagopfbijjhvlsmumdjxksgipoebqsdorfqzipxqvkiikkwwcahonbqgtb
                 new_password_confirmation:
                   type: string
                   description: 'The value and <code>new_password</code> must match.'
-                  example: atque
+                  example: architecto
               required:
                 - old_password
                 - new_password
                 - new_password_confirmation
-      security: []
-  /api/users:
+  /api/master-data:
     get:
-      summary: ''
+      summary: 'Get or search masterdatas'
+      description: ''
+      parameters:
+        -
+          in: query
+          name: name
+          description: 'Search by name'
+          example: consequatur
+          required: false
+          schema:
+            type: string
+            description: 'Search by name'
+            example: consequatur
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Master Data management'
+    post:
+      summary: 'Create masterdata'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Master Data management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                v_key:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: qqsngdwtsutdgotguzqpuopwgylvsiwtegazgzhsozujbtqsmlntec
+                v_value:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: lcxeuodmkaopytynlirxshopotdbpguqmvhkhpsqktyhboxxuqpwdtgfyqpdmhbivcjqbqtsloiitblu
+                order_number:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 0
+                type:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: pmujhehhlw
+                parent_id:
+                  type: number
+                  description: ''
+                  example: 346765.254856
+                v_content:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: ohlrmcadyrnampyvkvxwdnmhzlgncschxtazleppwvwilkczhrncewmmxwjrypdgzfduivarcxlljueaxfzimqeisyuymaotrcgsvsvlzxziocorlxtfadcagryyhdupkobtlqetwcpdpzkstqgebigocimgdudhgicsmqehpwpxsrylkvjsstxdzpdopwatzszgirsvhqdfnvlajqcagfknnotnbnsgxeuclhqmtvptwucps
+                note:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: mftdmmygjogbpusbpvcbotsbopfauklcpvszdabjvlksbnrueprdkfycosxm
+              required:
+                - v_key
+                - v_value
+                - order_number
+                - type
+  '/api/master-data/{masterdata_id}':
+    get:
+      summary: 'Show masterdata'
       description: ''
       parameters:
         -
@@ -236,8 +372,880 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Master Data management'
+    post:
+      summary: 'Edit masterdata'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Master Data management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                v_key:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: jvxdnzhr
+                v_value:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: teaynwgxqoidizwphdcmqhkupvvetrwqboshczqknqerdcfrknyposxmlukdhaqvuloydvpsbecpvmqrdrrmssmfzpmsvdzcdyamuotyvohqabnxktvyryftfympqixktpkabhhqd
+                order_number:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 0
+                type:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: tkhtcy
+                parent_id:
+                  type: number
+                  description: ''
+                  example: 47262.86561869
+                v_content:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: gvapzyuevvmbnfyjpshgmwbukqhjyjxwgpyinfeavjxvkomyzbmnzijytwrdziqbsbrqzndjhkxkcjrqzrkgfleabulbgbrkepdztstarpqpksdpekrhdbfhrhaidokvhheqrohagkrjqhnxtoiizgukefzmpdeefwgrseitejatdpyvekpqqqahkhdwcwhwabtdwvguwokuycsulpkovfugzkjzaenvnomxswppxhwoklhodvasovynltrdgzxgbnufqytednhrkukboeewknqtrknysjpdfbtcthhsmelkjkxjezperuiaqmjftjbrzqsgtbsipahjdqcakvqpxbioqfdulkvkfkvnnvyhwomknilyqennrzlqyviuebpzzlsheakllsoymahskzjkuvlaxnxjwaygvvobcswjzgfkiklpzxnvqdpvhxsijmdkvkfjndqirlojquoowm
+                note:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: cbsjokvcvwtupszkkotqvhvbdgmvbizpbptwmyzjkvebxfursfrpqtbrwceqifuggldqtogdqrsgxuxovfcrckxfoymthe
+              required:
+                - v_key
+                - v_value
+                - order_number
+                - type
+    delete:
+      summary: 'Delete masterdata'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Master Data management'
+    parameters:
+      -
+        in: path
+        name: masterdata_id
+        description: 'The ID of the masterdata.'
+        example: sunt
+        required: true
+        schema:
+          type: string
+  /api/permissions:
+    get:
+      summary: 'Get permissions'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Permission management'
+    post:
+      summary: 'Create permission'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Permission management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ydldeecmopnalfxjtphuoostmfremarnhglrgtabiwhdjnwdlxlvshhyykqrvxvnogfliuifrxmneqvmkhdtwfywmzw
+              required:
+                - name
+  '/api/permissions/{permission_id}':
+    get:
+      summary: 'Show permission'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Permission management'
+    post:
+      summary: 'Edit permission'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Permission management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: pgmsajtbfarlaexdgdrahxrjcpaxutvxxgopjksdpczkvntzn
+              required:
+                - name
+    delete:
+      summary: 'Delete permission'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Permission management'
+    parameters:
+      -
+        in: path
+        name: permission_id
+        description: 'The ID of the permission.'
+        example: earum
+        required: true
+        schema:
+          type: string
+  /api/posts:
+    get:
+      summary: 'Get or search posts'
+      description: ''
+      parameters:
+        -
+          in: query
+          name: name
+          description: 'Search by title, type, content'
+          example: qui
+          required: false
+          schema:
+            type: string
+            description: 'Search by title, type, content'
+            example: qui
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post management'
       security: []
+    post:
+      summary: 'Create post'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: pechdrmbkfwpdzfxgzjszfozxawdtwlcopcrlpsodsbkljthxuobeqbldwssjdymxbitvfzdjfebylwkleaqzlwbchbzmkvnyzbghaqddztzsjwlicgsgnlejchwmybwditwyfvvzwarihbkvenunnsvemidpsscljviaevfhqaciviuoidxgrzwgvrcybxpvdwouvtlbtteiefcrjzbfhfiijszfrukrktpkxffioyunjddnqpjpxckunugsnfgqnuzvfhjofbacunythtxxmkipizgmrlwktpbqkbdwwdxtpvsurgknvixldpefvszuuoftsnihoaqwogjwdxifmxcwndxxqxthnmskpnvcvfkhitgqdpzrpyvrdbdmaryfxcvwdgxbudutlgyrxiysphicgoykvcktmilzsicaoofhmnzczecczrdlybcakkqqxwxzzxxtukbqnkvnrsyhalrzkdcqltcsalzlibvnjxajuxzchgepwsstpnolflhnphwkfpjdfsvuxojafbessxljmfvdocgehdhgjmilgbfppovqkrqzsctgtmpulzhsyolagdkvidavqzbxobpdsplyshwrymiyutiiunekurijqbtfudqhpnyxsspynkasjcpswasbdiihmqbuynlopwhbqigogskzkivhkvkqbtwkwrsnindqmvd
+              required:
+                - title
+  '/api/posts/{post_id}':
+    get:
+      summary: 'Show post'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post management'
+      security: []
+    post:
+      summary: 'Edit post'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'The title of the post.'
+                  example: repellat
+              required:
+                - title
+    delete:
+      summary: 'Delete post'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 18
+        required: true
+        schema:
+          type: integer
+  '/api/posts/{post_id}/like':
+    post:
+      summary: 'Like post'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 16
+        required: true
+        schema:
+          type: integer
+  '/api/posts/{post_id}/report':
+    post:
+      summary: 'Report post'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: ndyiyzcxsombrpivjrlyxjkpqopeccxwdguausqchpqnttqsnsvjldpgvkbssrtfbvhrznbyhfvphazwgwjwwutmurfzzpaszbofmccwkutwgjkrszlhhcwchjmglrapcmzvglfidphzfnwgdbozpgjpizovympwr
+              required:
+                - description
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 9
+        required: true
+        schema:
+          type: integer
+  /api/post-type:
+    get:
+      summary: 'Get post type'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post type management'
+      security: []
+    post:
+      summary: 'Create post type'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post type management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: fbkaivwkfabtpggixciajlfzjhbblkksepoujppovephrjkvhtighashjpurwnghwknchkrpbqazozznhpugykayewkiwivihtpgfphnnonyqztemeojokgzkyyjowmcssdajkzqwqneubobaxmdnxwovkmfpxudqlaeqtsljfvydgzbtw
+              required:
+                - name
+  '/api/post-type/{posttype_id}':
+    get:
+      summary: 'Show post type'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post type management'
+      security: []
+    post:
+      summary: 'Edit post type'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post type management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: wrqtdhltpbkmrsozalebcqstavbxlnmbdoldxdyjsrepjdemnswrbdrzavhsyeztohmxskujjvieutuqtvzovmukunbydowbopdisdpgbghiuoatvtweyzrzcnuhguphgrfzdadjzl
+              required:
+                - name
+    delete:
+      summary: 'Delete post type'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post type management'
+    parameters:
+      -
+        in: path
+        name: posttype_id
+        description: 'The ID of the posttype.'
+        example: ut
+        required: true
+        schema:
+          type: string
+  /api/roles:
+    get:
+      summary: 'Get roles'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Role management'
+    post:
+      summary: 'Create role'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Role management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ezblnhngfzbakk
+                permissions:
+                  type: array
+                  description: ''
+                  example:
+                    - null
+                  items:
+                    type: string
+                users:
+                  type: array
+                  description: ''
+                  example:
+                    - null
+                  items:
+                    type: string
+              required:
+                - name
+  '/api/roles/{role_id}':
+    get:
+      summary: 'Show role'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Role management'
+    post:
+      summary: 'Edit role'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Role management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: gufqameprgtamgwnhgnkwpskhhmwohpzrdrsbesrjgnwjiwzvxaphbxqcetcougiuukeklqalqlfifpspvngmwjavmfknsyomhgxcxyxiynljvfhtqlotwzbggkmlgcrxmfjahhzhkgdzhcvafucmevxwqxredbsjvimhgljmmfkwpzeuknbqjw
+                permissions:
+                  type: array
+                  description: ''
+                  example:
+                    - null
+                  items:
+                    type: string
+                users:
+                  type: array
+                  description: ''
+                  example:
+                    - null
+                  items:
+                    type: string
+              required:
+                - name
+    delete:
+      summary: 'Delete role'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Role management'
+    parameters:
+      -
+        in: path
+        name: role_id
+        description: 'The ID of the role.'
+        example: 15
+        required: true
+        schema:
+          type: integer
+  /api/users:
     post:
       summary: 'Create user'
       description: ''
@@ -269,15 +1277,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: llgfjcwhujlhdgyeiwghwuvsneexzlchccxhmvowizcdawnbiethpjdygxlbirrllurdoxdszgkchozxcyisrxtrpihsllkknrnbyxvxvssjzhlqgmqadczvu
+                  example: ujwmhymmpculesxgsfolhjgzgizkaortjortztzemmtczatplzlknbuejrmtuczcprirhdkqrcsxqudzpnkpbluoztumpofgksrgmsjrknwqqeaiiuocotbwlumwhinpyrebnakdhgmbdbpfvvoimupphhdyiaawwx
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: aypcwzpepuqcxcilayprroqtqqxzgzsyrhypchcpfjjusnldhlailcmolixhunsiqqolcycdbgcgivipxcfkozcyulbgcccozmgannkefmcjokj
+                  example: lwkjtybseudpotkjkjrwalfropuziaidgfdqmwaqvfnkpinbwhwcvzpitehwyorhuwhwpahzthxeixawwggqhwongikezljjbjvlerpwwbmcbjcgwifgseegreokfrhjzobbsbwhqckulzagjmlbcnmarczkaumdybbwqvsds
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: lo
+                  example: ''
                 roles:
                   type: array
                   description: ''
@@ -289,9 +1297,8 @@ paths:
                 - name
                 - email
                 - password
-  /api/audits:
     get:
-      summary: ''
+      summary: 'Get users'
       description: ''
       parameters:
         -
@@ -322,8 +1329,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
-      security: []
+        - 'User management'
   '/api/users/{user_id}':
     get:
       summary: 'Show user'
@@ -389,15 +1395,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xtdctngdtmyxrnmbedczppakwiwqybbtacakhobbiqxkpqefnneznqtuaxsnmqkcpopcohpygxpzfifzsok
+                  example: bertnyqageirxiwbvqwfr
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: owzluskkffwftoshuqgypibiyubipkdbskjayfvuuxcelftfm
+                  example: waxqttilnicvpbtkcvcfwjqxehvzvkiovzvnjgrgohdpreymobbmjxbqfafreigoqnvdftaksdotgafzyuoprxnggkuaihshiyodljtvmdlgsnuqzbqqdugvupmfgddk
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: tvyfmb
+                  example: muofz
                 roles:
                   type: array
                   description: ''
@@ -435,603 +1441,31 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 4
+        example: 9
         required: true
         schema:
           type: integer
-  /api/roles:
-    get:
-      summary: 'Get roles'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'User management'
-    post:
-      summary: 'Create role'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: facelizhmqzellntloxelepfcglqganamnykhrmmjgvowgncpdsqvrshciycniqnvwqqrfqvlvxbahkkvw
-                permissions:
-                  type: array
-                  description: ''
-                  example:
-                    - null
-                  items:
-                    type: string
-                users:
-                  type: array
-                  description: ''
-                  example:
-                    - null
-                  items:
-                    type: string
-              required:
-                - name
-  '/api/roles/{role_id}':
-    get:
-      summary: 'Show role'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'User management'
-    post:
-      summary: 'Edit role'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: vlajempfixlmwctxufduffkdgrgncqbmmxxkwzckarhmrdlywtqnispceyoqbbejscyixzbmafhebmtxvqwqozjzsaajbpystlzoilfmkfkhitffizzc
-                permissions:
-                  type: array
-                  description: ''
-                  example:
-                    - null
-                  items:
-                    type: string
-                users:
-                  type: array
-                  description: ''
-                  example:
-                    - null
-                  items:
-                    type: string
-              required:
-                - name
-    delete:
-      summary: 'Delete role'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-    parameters:
-      -
-        in: path
-        name: role_id
-        description: 'The ID of the role.'
-        example: 7
-        required: true
-        schema:
-          type: integer
-  /api/permissions:
-    get:
-      summary: 'Get permissions'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'User management'
-    post:
-      summary: 'Create permission'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: oohfyvpdteldnehrjochobwivtkxqvjhpgaqcftdqqyksgzeqsuyrqdllomvanhxfyzqfojbbnxtkycqvoetgpyfcciztiwczmzxcxkklqpdjetxpafcjsgwneahztvlpqmodpfwcfcplhzkqczwr
-              required:
-                - name
-  '/api/permissions/{permission_id}':
-    get:
-      summary: 'Show permission'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'User management'
-    post:
-      summary: 'Edit permission'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: sycaqpqmvhxzwiflguqlgmvjllqeonbnnynfrwctrvwvuspjqkgwrufqzcovhwimvddbyatmgnrxsrrlypsljvvefkpnhfaeimqogwuwobjsoomvyeoolcupgozhqviytltkczxdesrhuwyjatroarterznvrzjvbgonhgjtnjckadikrqvxdbgmwmqmkhczzhulpneboothiiodjvvzjrvfm
-              required:
-                - name
-    delete:
-      summary: 'Delete permission'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-    parameters:
-      -
-        in: path
-        name: permission_id
-        description: 'The ID of the permission.'
-        example: dolores
-        required: true
-        schema:
-          type: string
-  /api/master-data:
-    get:
-      summary: 'Get or search masterdatas'
-      description: ''
-      parameters:
-        -
-          in: query
-          name: name
-          description: 'Search by name'
-          example: quo
-          required: false
-          schema:
-            type: string
-            description: 'Search by name'
-            example: quo
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'User management'
-    post:
-      summary: 'Create masterdata'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                v_key:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: ylevhkcmvfmkadrzgjyxqyhsrpuvkbehlfyffustxybwtveuklmanjvtsylngrlkirlfdlmkboxeovfufvykdjhpqlprxrlsbhiumlsaowlphusqdlcssongnqhdzuhtzawwxxnhzjlfkywnfcfygeuoefgdkyjlmxps
-                v_value:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: amwzuqdtqnkiytztfxlmjndzzqgwcfdqbciybcedqkpgnejkvgcncmdxhstaslsancxzjjtbtqgsjzpnjfknvfnpzziwrhheenffidfdbtiuxjimptaqgehjwentxizoaiapiuttaatzaunvswywtjhwwmmxzfqjrcfljqgucbxegszkemraylmmlvsydrdslvyeeknqyc
-                order_number:
-                  type: number
-                  description: 'Must be at least 0.'
-                  example: 0
-                type:
-                  type: string
-                  description: 'Must not be greater than 10 characters.'
-                  example: wsgdgq
-                parent_id:
-                  type: number
-                  description: ''
-                  example: 1158109.2015
-                v_content:
-                  type: string
-                  description: 'Must not be greater than 1000 characters.'
-                  example: ugebw
-                note:
-                  type: string
-                  description: 'Must not be greater than 1000 characters.'
-                  example: mmvlwrgwfgpwenebeykuqslhmvalxchratmflgimaobseubofufjuvgzfqfwgctkcczskttihemqlsmcu
-              required:
-                - v_key
-                - v_value
-                - order_number
-                - type
-  '/api/master-data/{masterdata_id}':
-    get:
-      summary: 'Show masterdata'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'User management'
-    post:
-      summary: 'Edit masterdata'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                v_key:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: aabhpejtnxqyinmpjzsdbmrhdaybdfsivxazqbmvyecosmzeaocipttnkqmiajouhdohpcscljvkgtrwprtzxqyzrgjveolqgtdnxkwztnolzycfpgptnmoesgcalutymurqugxqfkjjlbupqsuvdwgikqixcuporyoyuqekogoyzijctjvnxirtbpvgwzyorjsuxjnikgulhdrqklx
-                v_value:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: thmbzzrtandevtqgteadnfknqaszujhfobcgelyiojgyeukbudhkmtdstwsfvuvevlqbgfollhbgjkyznnrnbvxxvfwhpmpppffkgnpprnhjiufsxclkdbrwnaojhwtsiledyimgrczucedntdlmbdbqpxtbyeho
-                order_number:
-                  type: number
-                  description: 'Must be at least 0.'
-                  example: 0
-                type:
-                  type: string
-                  description: 'Must not be greater than 10 characters.'
-                  example: pguqbmdceh
-                parent_id:
-                  type: number
-                  description: ''
-                  example: 0.1885997
-                v_content:
-                  type: string
-                  description: 'Must not be greater than 1000 characters.'
-                  example: krbxrrkpspnbvalpltapplowqnkohwqhvqburjnpqqbmmpjeiczowvhrfcmnumpjmpodzzzjfvomeyfyfrqhmwutaqryncpzyxoldknlifmhzkzgrgqcleelguzuhzuyqewhkviprvbzfzvyzzuwoxyhvpwqadsuvltpwfpy
-                note:
-                  type: string
-                  description: 'Must not be greater than 1000 characters.'
-                  example: kdseqviaqhunjbkujjmdgtlctmqtgvzavwgfkehkdnlkwldezjageubocrymeycczawniwwpyhzxaawhbgtabgt
-              required:
-                - v_key
-                - v_value
-                - order_number
-                - type
-    delete:
-      summary: 'Delete masterdata'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'User management'
-    parameters:
-      -
-        in: path
-        name: masterdata_id
-        description: 'The ID of the masterdata.'
-        example: tempore
-        required: true
-        schema:
-          type: string
 tags:
   -
-    name: Endpoints
+    name: 'Audit management'
+    description: ''
+  -
+    name: 'Auth management'
+    description: ''
+  -
+    name: 'Master Data management'
+    description: ''
+  -
+    name: 'Permission management'
+    description: ''
+  -
+    name: 'Post management'
+    description: ''
+  -
+    name: 'Post type management'
+    description: ''
+  -
+    name: 'Role management'
     description: ''
   -
     name: 'User management'

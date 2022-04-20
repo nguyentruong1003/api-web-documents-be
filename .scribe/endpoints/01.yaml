@@ -1,14 +1,45 @@
-name: 'User management'
+name: 'Auth management'
 description: ''
 endpoints:
   -
     httpMethods:
       - POST
-    uri: api/users
+    uri: api/auth/login
     metadata:
-      title: 'Create user'
+      title: Login
       description: ''
-      authenticated: true
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: ujfauejdmum
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: eveniet
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/register
+    metadata:
+      title: Register
+      description: ''
+      authenticated: false
       custom: []
     headers:
       Content-Type: application/json
@@ -18,140 +49,47 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Must not be greater than 100 characters.'
         required: true
-        example: llgfjcwhujlhdgyeiwghwuvsneexzlchccxhmvowizcdawnbiethpjdygxlbirrllurdoxdszgkchozxcyisrxtrpihsllkknrnbyxvxvssjzhlqgmqadczvu
+        example: nfurxbxaebwgrtokbtznfttgmortqxskszwciaspwtbgr
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: aypcwzpepuqcxcilayprroqtqqxzgzsyrhypchcpfjjusnldhlailcmolixhunsiqqolcycdbgcgivipxcfkozcyulbgcccozmgannkefmcjokj
+        example: olleylxfkqiajjhqpapzkuhoohhjuafcibjbtcnxshyiupdxyacjypemsnkaimzuacbqwgnwpcjqkggoowwrncewdmaobjcpicoghfjonyrvnhxjeoeilwwohres
         type: string
         custom: []
       password:
         name: password
-        description: 'Must be at least 6 characters.'
+        description: 'Must not be greater than 255 characters. Must be at least 6 characters.'
         required: true
-        example: lo
+        example: aik
         type: string
         custom: []
-      roles:
-        name: roles
-        description: ''
-        required: false
-        example:
-          - null
-        type: 'string[]'
+      password_confirmation:
+        name: password_confirmation
+        description: 'The value and <code>password</code> must match.'
+        required: true
+        example: velit
+        type: string
         custom: []
     responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/users/{user_id}'
-    metadata:
-      title: 'Show user'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
-        required: true
-        example: 4
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
     responseFields: []
   -
     httpMethods:
       - POST
-    uri: 'api/users/{user_id}'
+    uri: api/auth/logout
     metadata:
-      title: 'Edit user'
+      title: Logout
       description: ''
       authenticated: true
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
-        required: true
-        example: 5
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: xtdctngdtmyxrnmbedczppakwiwqybbtacakhobbiqxkpqefnneznqtuaxsnmqkcpopcohpygxpzfifzsok
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address. Must not be greater than 255 characters.'
-        required: true
-        example: owzluskkffwftoshuqgypibiyubipkdbskjayfvuuxcelftfm
-        type: string
-        custom: []
-      password:
-        name: password
-        description: 'Must be at least 6 characters.'
-        required: true
-        example: tvyfmb
-        type: string
-        custom: []
-      roles:
-        name: roles
-        description: ''
-        required: false
-        example:
-          - null
-        type: 'string[]'
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/users/{user_id}'
-    metadata:
-      title: 'Delete user'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
-        required: true
-        example: 7
-        type: integer
-        custom: []
+    urlParameters: []
     queryParameters: []
     bodyParameters: []
     responses: []
@@ -159,9 +97,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/roles
+    uri: api/auth/current-user
     metadata:
-      title: 'Get roles'
+      title: 'Get current user'
       description: ''
       authenticated: true
       custom: []
@@ -184,9 +122,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/roles
+    uri: api/auth/change-password
     metadata:
-      title: 'Create role'
+      title: 'Change password'
       description: ''
       authenticated: true
       custom: []
@@ -196,494 +134,26 @@ endpoints:
     urlParameters: []
     queryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
+      old_password:
+        name: old_password
+        description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
         required: true
-        example: facelizhmqzellntloxelepfcglqganamnykhrmmjgvowgncpdsqvrshciycniqnvwqqrfqvlvxbahkkvw
+        example: vzaunqqkjcotpqhprdhvlyyzvxpfsdqgidknweaj
         type: string
         custom: []
-      permissions:
-        name: permissions
-        description: ''
-        required: false
-        example:
-          - null
-        type: 'string[]'
-        custom: []
-      users:
-        name: users
-        description: ''
-        required: false
-        example:
-          - null
-        type: 'string[]'
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/roles/{role_id}'
-    metadata:
-      title: 'Show role'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      role_id:
-        name: role_id
-        description: 'The ID of the role.'
+      new_password:
+        name: new_password
+        description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
         required: true
-        example: 7
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/roles/{role_id}'
-    metadata:
-      title: 'Edit role'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      role_id:
-        name: role_id
-        description: 'The ID of the role.'
-        required: true
-        example: 16
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: vlajempfixlmwctxufduffkdgrgncqbmmxxkwzckarhmrdlywtqnispceyoqbbejscyixzbmafhebmtxvqwqozjzsaajbpystlzoilfmkfkhitffizzc
+        example: kggstveooobihyktegaqbofiariehofjolmtcltaizuigwelasiijeqakmvfaflzgwdrhzmndhslqhdqudqygabthttxoslrwqanwttgoivbmsfgtcmorkkzztzvrkwiagpdcwvxuifidjsmvlpjdjhwhyflbpouvdjmupmyryqfcvljpbfajagopfbijjhvlsmumdjxksgipoebqsdorfqzipxqvkiikkwwcahonbqgtb
         type: string
         custom: []
-      permissions:
-        name: permissions
-        description: ''
-        required: false
-        example:
-          - null
-        type: 'string[]'
-        custom: []
-      users:
-        name: users
-        description: ''
-        required: false
-        example:
-          - null
-        type: 'string[]'
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/roles/{role_id}'
-    metadata:
-      title: 'Delete role'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      role_id:
-        name: role_id
-        description: 'The ID of the role.'
+      new_password_confirmation:
+        name: new_password_confirmation
+        description: 'The value and <code>new_password</code> must match.'
         required: true
-        example: 12
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/permissions
-    metadata:
-      title: 'Get permissions'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/permissions
-    metadata:
-      title: 'Create permission'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: oohfyvpdteldnehrjochobwivtkxqvjhpgaqcftdqqyksgzeqsuyrqdllomvanhxfyzqfojbbnxtkycqvoetgpyfcciztiwczmzxcxkklqpdjetxpafcjsgwneahztvlpqmodpfwcfcplhzkqczwr
+        example: architecto
         type: string
         custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/permissions/{permission_id}'
-    metadata:
-      title: 'Show permission'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      permission_id:
-        name: permission_id
-        description: 'The ID of the permission.'
-        required: true
-        example: dolores
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/permissions/{permission_id}'
-    metadata:
-      title: 'Edit permission'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      permission_id:
-        name: permission_id
-        description: 'The ID of the permission.'
-        required: true
-        example: eligendi
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: sycaqpqmvhxzwiflguqlgmvjllqeonbnnynfrwctrvwvuspjqkgwrufqzcovhwimvddbyatmgnrxsrrlypsljvvefkpnhfaeimqogwuwobjsoomvyeoolcupgozhqviytltkczxdesrhuwyjatroarterznvrzjvbgonhgjtnjckadikrqvxdbgmwmqmkhczzhulpneboothiiodjvvzjrvfm
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/permissions/{permission_id}'
-    metadata:
-      title: 'Delete permission'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      permission_id:
-        name: permission_id
-        description: 'The ID of the permission.'
-        required: true
-        example: asperiores
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/master-data
-    metadata:
-      title: 'Get or search masterdatas'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters:
-      name:
-        name: name
-        description: 'Search by name'
-        required: false
-        example: quo
-        type: string
-        custom: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/master-data
-    metadata:
-      title: 'Create masterdata'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      v_key:
-        name: v_key
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: ylevhkcmvfmkadrzgjyxqyhsrpuvkbehlfyffustxybwtveuklmanjvtsylngrlkirlfdlmkboxeovfufvykdjhpqlprxrlsbhiumlsaowlphusqdlcssongnqhdzuhtzawwxxnhzjlfkywnfcfygeuoefgdkyjlmxps
-        type: string
-        custom: []
-      v_value:
-        name: v_value
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: amwzuqdtqnkiytztfxlmjndzzqgwcfdqbciybcedqkpgnejkvgcncmdxhstaslsancxzjjtbtqgsjzpnjfknvfnpzziwrhheenffidfdbtiuxjimptaqgehjwentxizoaiapiuttaatzaunvswywtjhwwmmxzfqjrcfljqgucbxegszkemraylmmlvsydrdslvyeeknqyc
-        type: string
-        custom: []
-      order_number:
-        name: order_number
-        description: 'Must be at least 0.'
-        required: true
-        example: 0
-        type: number
-        custom: []
-      type:
-        name: type
-        description: 'Must not be greater than 10 characters.'
-        required: true
-        example: wsgdgq
-        type: string
-        custom: []
-      parent_id:
-        name: parent_id
-        description: ''
-        required: false
-        example: 1158109.2015
-        type: number
-        custom: []
-      v_content:
-        name: v_content
-        description: 'Must not be greater than 1000 characters.'
-        required: false
-        example: ugebw
-        type: string
-        custom: []
-      note:
-        name: note
-        description: 'Must not be greater than 1000 characters.'
-        required: false
-        example: mmvlwrgwfgpwenebeykuqslhmvalxchratmflgimaobseubofufjuvgzfqfwgctkcczskttihemqlsmcu
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/master-data/{masterdata_id}'
-    metadata:
-      title: 'Show masterdata'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      masterdata_id:
-        name: masterdata_id
-        description: 'The ID of the masterdata.'
-        required: true
-        example: tempore
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/master-data/{masterdata_id}'
-    metadata:
-      title: 'Edit masterdata'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      masterdata_id:
-        name: masterdata_id
-        description: 'The ID of the masterdata.'
-        required: true
-        example: voluptate
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters:
-      v_key:
-        name: v_key
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: aabhpejtnxqyinmpjzsdbmrhdaybdfsivxazqbmvyecosmzeaocipttnkqmiajouhdohpcscljvkgtrwprtzxqyzrgjveolqgtdnxkwztnolzycfpgptnmoesgcalutymurqugxqfkjjlbupqsuvdwgikqixcuporyoyuqekogoyzijctjvnxirtbpvgwzyorjsuxjnikgulhdrqklx
-        type: string
-        custom: []
-      v_value:
-        name: v_value
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: thmbzzrtandevtqgteadnfknqaszujhfobcgelyiojgyeukbudhkmtdstwsfvuvevlqbgfollhbgjkyznnrnbvxxvfwhpmpppffkgnpprnhjiufsxclkdbrwnaojhwtsiledyimgrczucedntdlmbdbqpxtbyeho
-        type: string
-        custom: []
-      order_number:
-        name: order_number
-        description: 'Must be at least 0.'
-        required: true
-        example: 0
-        type: number
-        custom: []
-      type:
-        name: type
-        description: 'Must not be greater than 10 characters.'
-        required: true
-        example: pguqbmdceh
-        type: string
-        custom: []
-      parent_id:
-        name: parent_id
-        description: ''
-        required: false
-        example: 0.1885997
-        type: number
-        custom: []
-      v_content:
-        name: v_content
-        description: 'Must not be greater than 1000 characters.'
-        required: false
-        example: krbxrrkpspnbvalpltapplowqnkohwqhvqburjnpqqbmmpjeiczowvhrfcmnumpjmpodzzzjfvomeyfyfrqhmwutaqryncpzyxoldknlifmhzkzgrgqcleelguzuhzuyqewhkviprvbzfzvyzzuwoxyhvpwqadsuvltpwfpy
-        type: string
-        custom: []
-      note:
-        name: note
-        description: 'Must not be greater than 1000 characters.'
-        required: false
-        example: kdseqviaqhunjbkujjmdgtlctmqtgvzavwgfkehkdnlkwldezjageubocrymeycczawniwwpyhzxaawhbgtabgt
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/master-data/{masterdata_id}'
-    metadata:
-      title: 'Delete masterdata'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      masterdata_id:
-        name: masterdata_id
-        description: 'The ID of the masterdata.'
-        required: true
-        example: omnis
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
     responses: []
     responseFields: []

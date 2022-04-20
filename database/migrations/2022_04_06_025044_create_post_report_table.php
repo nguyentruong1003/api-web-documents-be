@@ -15,8 +15,8 @@ class CreatePostReportTable extends Migration
     {
         Schema::create('post_report', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('post_id')->nullable()->comment('Map voi posts')->constrained('posts');
-            $table->foreignId('user_id')->nullable()->comment('Map voi users')->constrained('users');
+            $table->foreignId('post_id')->nullable()->comment('Map voi posts')->constrained('posts')->onDelete('set null');
+            $table->foreignId('user_id')->nullable()->comment('Map voi users')->constrained('users')->onDelete('set null');
             $table->string('description')->nullable();
             $table->tinyInteger('resolve')->default(1)->comment('1 => open, 2 => close');
             $table->timestamps();

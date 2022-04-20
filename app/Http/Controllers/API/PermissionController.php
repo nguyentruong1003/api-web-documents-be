@@ -14,7 +14,7 @@ class PermissionController extends Controller
     /**
      * Get permissions
      *
-     * @group User management
+     * @group Permission management
      * @authenticated
      */
     public function index(Request $request)
@@ -25,7 +25,7 @@ class PermissionController extends Controller
     /**
      * Create permission
      *
-     * @group User management
+     * @group Permission management
      * @authenticated
      */
     public function create(PermissionRequest $request)
@@ -37,19 +37,19 @@ class PermissionController extends Controller
     /**
      * Edit permission
      *
-     * @group User management
+     * @group Permission management
      * @authenticated
      */
     public function edit(PermissionRequest $request, Permission $permission)
     {
         $permission = PermissionEditor::open($permission)->withDataFromRequest($request)->save();
-        return (new PermissionResource($permission))->withMessage(__('view.notification.success.edit'));
+        return (new PermissionResource($permission))->withMessage(__('view.notification.success.update'));
     }
 
     /**
      * Show permission
      *
-     * @group User management
+     * @group Permission management
      * @authenticated
      */
     public function show(Permission $permission)
@@ -60,7 +60,7 @@ class PermissionController extends Controller
     /**
      * Delete permission
      *
-     * @group User management
+     * @group Permission management
      * @authenticated
      */
     public function delete(Permission $permission)

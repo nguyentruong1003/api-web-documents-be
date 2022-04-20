@@ -9,7 +9,12 @@ use Illuminate\Http\Request;
 
 class AuditController extends Controller
 {
-    //
+    /**
+     * Get audit
+     *
+     * @group Audit management
+     * @authenticated
+     */
     public function index()
     {
         return AuditResource::collection(Audit::query()->paginate());

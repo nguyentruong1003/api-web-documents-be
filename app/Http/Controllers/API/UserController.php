@@ -11,7 +11,12 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    //
+    /**
+    * Get users
+    *
+    * @group User management
+    * @authenticated
+    */
     public function index()
     {
         return UserResource::collection(User::query()->paginate());
@@ -38,7 +43,7 @@ class UserController extends Controller
     public function edit(UserRequest $request, User $user)
     {
         $user = UserEditor::open($user)->withDataFromRequest($request)->save();
-        return (new UserResource($user))->withMessage(__('view.notification.success.edit'));
+        return (new UserResource($user))->withMessage(__('view.notification.success.update'));
     }
 
     /**

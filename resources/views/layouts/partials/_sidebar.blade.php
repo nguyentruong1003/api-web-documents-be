@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           @if (checkPermission('user.index') || checkPermission('role.index'))
-          <li class="nav-item {{ setOpen('user') }} {{ setOpen('role') }}">
+          <li class="nav-item {{ setOpen('users') }} {{ setOpen('roles') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-user"></i>
               <p>
@@ -37,7 +37,7 @@
             <ul class="nav nav-treeview">
               @if (checkPermission('user.index'))
               <li class="nav-item">
-                <a href="{{ route('admin.user.index') }}" class="nav-link {{ setActive('user') }}">
+                <a href="{{ route('admin.user.index') }}" class="nav-link {{ setActive('users') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách người dùng</p>
                 </a>
@@ -45,7 +45,7 @@
               @endif
               @if (checkPermission('role.index'))
               <li class="nav-item">
-                <a href="{{ route('admin.role.index') }}" class="nav-link {{ setActive('role') }}">
+                <a href="{{ route('admin.role.index') }}" class="nav-link {{ setActive('roles') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách vai trò</p>
                 </a>
@@ -55,7 +55,7 @@
           </li>
           @endif
           @if (checkPermission('master-data.index') || checkPermission('audit.index'))
-          <li class="nav-item {{ setOpen('master-data') }} {{ setOpen('audit') }}">
+          <li class="nav-item {{ setOpen('master-data') }} {{ setOpen('audits') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-file"></i>
               <p>
@@ -74,7 +74,7 @@
               @endif
               @if (checkPermission('audit.index'))
               <li class="nav-item">
-                <a href="{{ route('admin.audit.index') }}" class="nav-link {{ setActive('audit') }}">
+                <a href="{{ route('admin.audit.index') }}" class="nav-link {{ setActive('audits') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Audit Log</p>
                 </a>
@@ -85,7 +85,7 @@
           @endif
 
           {{-- @if (checkPermission('master-data.index') || checkPermission('audit.index')) --}}
-          <li class="nav-item {{ setOpen('post') }}">
+          <li class="nav-item {{ setOpen('posts') }} {{ setOpen('post-types') }} {{ setOpen('post-reports') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-file"></i>
               <p>
@@ -96,9 +96,25 @@
             <ul class="nav nav-treeview">
               {{-- @if (checkPermission('master-data.index')) --}}
               <li class="nav-item">
-                <a href="{{ route('admin.post.index') }}" class="nav-link {{ setActive('post') }}">
+                <a href="{{ route('admin.post.index') }}" class="nav-link {{ setActive('posts') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách bài viết</p>
+                </a>
+              </li>
+              {{-- @endif --}}
+              {{-- @if (checkPermission('master-data.index')) --}}
+              <li class="nav-item">
+                <a href="{{ route('admin.post-type.index') }}" class="nav-link {{ setActive('post-types') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách loại bài viết</p>
+                </a>
+              </li>
+              {{-- @endif --}}
+              {{-- @if (checkPermission('master-data.index')) --}}
+              <li class="nav-item">
+                <a href="{{ route('admin.post-report.index') }}" class="nav-link {{ setActive('post-reports') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách phản hồi</p>
                 </a>
               </li>
               {{-- @endif --}}

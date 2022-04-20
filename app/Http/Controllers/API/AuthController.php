@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+    /**
+     * Login
+     *
+     * @group Auth management
+     */
     public function login(LoginRequest $request)
     {
         if (!auth()->attempt($request->only(['email', 'password']))) {
@@ -29,6 +34,11 @@ class AuthController extends Controller
         return $this->respondWithToken($token);
     }
 
+    /**
+     * Register
+     *
+     * @group Auth management
+     */
     public function register(RegisterRequest $request)
     {
         $user = UserEditor::open(new User)->withDataFromRequest($request)->save();
@@ -36,10 +46,21 @@ class AuthController extends Controller
         return $this->respondWithToken($token, $user);
     }
 
+    /**
+     * Forgot password
+     *
+     * @group Auth management
+     */
     public function forgotPassword()
     {
     }
 
+    /**
+     * Change password
+     *
+     * @group Auth management
+     * @authenticated
+     */
     public function changePassword(ChangePasswordRequest $request)
     {
         $user = auth()->user();
@@ -61,11 +82,23 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * Get current user
+     *
+     * @group Auth management
+     * @authenticated
+     */
     public function getUser()
     {
         return new UserResource(auth()->user()->load('permissions'));
     }
 
+    /**
+     * Logout
+     *
+     * @group Auth management
+     * @authenticated
+     */
     public function logout()
     {
         auth()->logout();

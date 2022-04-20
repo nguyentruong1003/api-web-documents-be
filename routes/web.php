@@ -43,4 +43,12 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', [App\Http\Controllers\PostController::class, 'index'])->name('admin.post.index');
         Route::get('/show/{id}', [App\Http\Controllers\PostController::class, 'show'])->name('admin.post.show');
     });
+
+    Route::group(['prefix' => '/post-types'], function() {
+        Route::get('/', [App\Http\Controllers\PostTypeController::class, 'index'])->name('admin.post-type.index');
+    });
+
+    Route::group(['prefix' => '/post-reports'], function() {
+        Route::get('/', [App\Http\Controllers\PostReportController::class, 'index'])->name('admin.post-report.index');
+    });
 });

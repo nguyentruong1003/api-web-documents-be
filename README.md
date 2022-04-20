@@ -79,11 +79,11 @@ php artisan storage:link
 php artisan serve
 ```
 
-## Account
+## Account Admin
 
 ```bash
-Username: guest@test.com
-Password: 12345678
+Username: admin@test.com
+Password: password
 ```
 
 ## Deploy on Heroku
