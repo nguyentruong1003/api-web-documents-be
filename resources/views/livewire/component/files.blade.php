@@ -21,7 +21,7 @@
             <div class="d-inline-flex mr-2 mb-2 p-2 bg-light align-items-center rounded">
                 <img src="/images/File.svg" alt="file" width="50px">
                 <div>
-                    <a href="{{ $canDownload ? asset('storage/' . substr($val['url'], 7, strlen($val['url']) - 7)) : '#' }}" download>
+                    <a href="javascript:void(0)" wire:click="download({{ $val['id'] }})" download>
                         <span class="d-block mb-0" style="word-break: break-all;">{{ $val['file_name'] }}</span>
                         <small class="kb">{{ $val['size_file'] }}</small>
                     </a>

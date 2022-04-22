@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Component;
 
 use App\Http\Livewire\Base\BaseLive;
 use App\Models\File;
+use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
 
 class Files extends BaseLive
@@ -119,5 +120,12 @@ class Files extends BaseLive
             $bytes /= 1024;
         }
         return round($bytes, 2) . ' ' . $units[$i];
+    }
+
+    public function download($id)
+    {
+        # code...
+        $file = File::findorfail($id);
+        return Storage::download($file->url);
     }
 }
