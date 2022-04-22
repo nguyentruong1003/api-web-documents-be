@@ -23,7 +23,7 @@ class PermissionSeeder extends Seeder
         foreach ($routes as $route) {
             if (!isset($route->action['middleware'])) continue;
             if (isset($route->action['excluded_middleware']) && in_array('check-permission', $route->action['excluded_middleware'])) continue;
-            if (!in_array('check-permission', $route->action['middleware'])) continue;
+            if (!in_array('log-request', $route->action['middleware'])) continue;
             
             $routeName = $route->action['as'] ?? 'route-name';
             if (strpos($routeName, '.index') > 0) {

@@ -70,9 +70,9 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
     });
 
     Route::group(['prefix' => '/posts'], function() {
-        Route::get('/', [PostController::class, 'index'])->name('post.index');
+        // Route::get('/', [PostController::class, 'index'])->name('post.index');
         Route::post('/', [PostController::class, 'create'])->name('post.create');
-        Route::get('/{post:id}', [PostController::class, 'show'])->name('post.show');
+        // Route::get('/{post:id}', [PostController::class, 'show'])->name('post.show');
         Route::post('/{post:id}', [PostController::class, 'edit'])->name('post.edit');
         Route::delete('/{post:id}', [PostController::class, 'delete'])->name('post.delete');
         Route::post('/{post:id}/like', [PostController::class, 'like'])->name('post.like');
@@ -81,9 +81,9 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
     });
 
     Route::group(['prefix' => '/post-type'], function() {
-        Route::get('/', [PostTypeController::class, 'index'])->name('post-type.index');
+        // Route::get('/', [PostTypeController::class, 'index'])->name('post-type.index');
         Route::post('/', [PostTypeController::class, 'create'])->name('post-type.create');
-        Route::get('/{posttype:id}', [PostTypeController::class, 'show'])->name('post-type.show');
+        // Route::get('/{posttype:id}', [PostTypeController::class, 'show'])->name('post-type.show');
         Route::post('/{posttype:id}', [PostTypeController::class, 'edit'])->name('post-type.edit');
         Route::delete('/{posttype:id}', [PostTypeController::class, 'delete'])->name('post-type.delete');
     });
@@ -93,5 +93,17 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::get('/{report:id}', [App\Http\Controllers\API\ReportController::class, 'show'])->name('report.show');
         Route::post('/{report:id}/solve', [App\Http\Controllers\API\ReportController::class, 'solve'])->name('report.solve');
         Route::delete('/{report:id}', [App\Http\Controllers\API\ReportController::class, 'delete'])->name('report.delete');
+    });
+});
+
+Route::group(['middleware' => ['log-request']], function () {
+    Route::group(['prefix' => '/posts'], function() {
+        Route::get('/', [PostController::class, 'index'])->name('post.index');
+        Route::get('/{post:id}', [PostController::class, 'show'])->name('post.show');
+    });
+
+    Route::group(['prefix' => '/post-type'], function() {
+        Route::get('/', [PostTypeController::class, 'index'])->name('post-type.index');
+        Route::get('/{posttype:id}', [PostTypeController::class, 'show'])->name('post-type.show');
     });
 });
