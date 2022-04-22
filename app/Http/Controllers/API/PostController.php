@@ -141,4 +141,9 @@ class PostController extends Controller
             'message' => 'Phản hồi thành công'
         ]);
     }
+
+    public function download(File $file)
+    {
+        return Storage::download($file->url);
+    }
 }

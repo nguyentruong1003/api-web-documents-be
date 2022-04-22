@@ -77,6 +77,7 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::delete('/{post:id}', [PostController::class, 'delete'])->name('post.delete');
         Route::post('/{post:id}/like', [PostController::class, 'like'])->name('post.like');
         Route::post('/{post:id}/report', [PostController::class, 'report'])->name('post.report');
+        Route::get('/file/{file:id}', [PostController::class, 'download'])->name('post.file.download');
     });
 
     Route::group(['prefix' => '/post-type'], function() {
