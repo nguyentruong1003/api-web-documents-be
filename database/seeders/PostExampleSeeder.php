@@ -19,20 +19,20 @@ class PostExampleSeeder extends Seeder
     public function run()
     {
         //
-        PostType::updateOrCreate([
-            'id' => '1',
-            'name' => 'Tin tức',
-        ]);
+        // PostType::updateOrCreate([
+        //     'id' => '1',
+        //     'name' => 'Tin tức',
+        // ]);
 
-        PostType::updateOrCreate([
-            'id' => '2',
-            'name' => 'Sách tham khảo',
-        ]);
+        // PostType::updateOrCreate([
+        //     'id' => '2',
+        //     'name' => 'Sách tham khảo',
+        // ]);
 
-        PostType::updateOrCreate([
-            'id' => '3',
-            'name' => 'Sách giáo khoa',
-        ]);
+        // PostType::updateOrCreate([
+        //     'id' => '3',
+        //     'name' => 'Sách giáo khoa',
+        // ]);
 
         DB::table('posts')->insert([
             [
