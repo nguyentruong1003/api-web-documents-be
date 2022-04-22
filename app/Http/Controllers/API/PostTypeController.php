@@ -18,7 +18,7 @@ class PostTypeController extends Controller
      */
     public function index()
     {
-        return PostTypeResource::collection(PostType::query()->paginate());
+        return PostTypeResource::collection(PostType::query()->where('parent_id', null)->paginate());
     }
     
     /**
@@ -29,8 +29,8 @@ class PostTypeController extends Controller
      */
     public function create(PostTypeRequest $request)
     {
-        $item = PostTypeEditor::open(new PostType())->withDataFromRequest($request)->save();
-        return (new PostTypeResource($item))->withMessage(__('view.notification.success.create'));
+        $posttype = PostTypeEditor::open(new PostType())->withDataFromRequest($request)->save();
+        return (new PostTypeResource($posttype))->withMessage(__('view.notification.success.create'));
     }
 
     /**
@@ -38,10 +38,10 @@ class PostTypeController extends Controller
      * @group Post type management
      * @authenticated
      */
-    public function edit(PostTypeRequest $request, PostType $item)
+    public function edit(PostTypeRequest $request, PostType $posttype)
     {
-        $item = PostTypeEditor::open($item)->withDataFromRequest($request)->save();
-        return (new PostTypeResource($item))->withMessage(__('view.notification.success.update'));
+        $posttype = PostTypeEditor::open($posttype)->withDataFromRequest($request)->save();
+        return (new PostTypeResource($posttype))->withMessage(__('view.notification.success.update'));
     }
 
     /**
@@ -49,9 +49,9 @@ class PostTypeController extends Controller
      *
      * @group Post type management
      */
-    public function show(PostType $item)
+    public function show(PostType $posttype)
     {
-        return new PostTypeResource($item);
+        return new PostTypeResource($posttype);
     }
 
     /**
@@ -60,9 +60,9 @@ class PostTypeController extends Controller
      * @group Post type management
      * @authenticated
      */
-    public function delete(PostType $item)
+    public function delete(PostType $posttype)
     {
-        $item->delete();
+        $posttype->delete();
         return response()->json([
             'message' => __('view.notification.success.delete')
         ]);
