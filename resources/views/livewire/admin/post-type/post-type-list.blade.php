@@ -25,6 +25,8 @@
                     <tr>
                         <th>STT</th>
                         <th>Tên</th>
+                        <th>Danh mục cha</th>
+                        <th>Danh mục con</th>
                         @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                         <th>Hành động</th>
                         @endif
@@ -35,6 +37,14 @@
                         <tr>
                             <td>{{ ($data->currentPage() - 1) * $data->perPage() + $loop->iteration }}</td>
                             <td>{!! boldTextSearch($row->name, $searchTerm) !!}</td>
+                            <td>{{ $row->parent->name ?? '' }}</td>
+                            <td>
+                                @if (isset($row->childen))
+                                @foreach($row->childen as $value)
+                                    <span>{{ $value->name }}</span><br>
+                                @endforeach
+                                @endif
+                            </td>
                             @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
                             <td>
                                 @include('livewire.common.buttons._edit')
