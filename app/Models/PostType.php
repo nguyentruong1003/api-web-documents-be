@@ -13,10 +13,21 @@ class PostType extends Model implements Auditable
     protected $table = 'post_type';
 
     protected $fillable = [
-        'name'
+        'name',
+        'parent_id',
     ];
 
     public function posts() {
         return $this->hasMany(Post::class);
+    }
+
+    public function childen(){
+        return $this->hasMany(PostType::class, 'parent_id', 'id');
+    }
+    
+    public function parent()
+    {
+        # code...
+        return $this->belongsTo(PostType::class, 'parent_id', 'id');
     }
 }
