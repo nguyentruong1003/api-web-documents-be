@@ -87,4 +87,11 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::post('/{posttype:id}', [PostTypeController::class, 'edit'])->name('post-type.edit');
         Route::delete('/{posttype:id}', [PostTypeController::class, 'delete'])->name('post-type.delete');
     });
+    
+    Route::group(['prefix' => '/reports'], function() {
+        Route::get('/', [App\Http\Controllers\API\ReportController::class, 'index'])->name('report.index');
+        Route::get('/{report:id}', [App\Http\Controllers\API\ReportController::class, 'show'])->name('report.show');
+        Route::post('/{report:id}/solve', [App\Http\Controllers\API\ReportController::class, 'solve'])->name('report.solve');
+        Route::delete('/{report:id}', [App\Http\Controllers\API\ReportController::class, 'delete'])->name('report.delete');
+    });
 });
