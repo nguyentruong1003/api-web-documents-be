@@ -60,7 +60,7 @@ class PostController extends Controller
                 'url' => $file->storeAs('/', $file->getFilename(), 'google'),
                 'model_name' => Post::class,
                 'model_id' => $post->id,
-                'user_id' => auth()->user()->id
+                'admin_id' => auth()->user()->id
             ]);
         }
         return (new PostResource($post))->withMessage(__('view.notification.success.create'));
