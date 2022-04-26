@@ -74,7 +74,7 @@ class Files extends BaseLive
 
         // $this->validate();
         $fileUpload = new File();
-        $fileUpload->url = $this->file->storeAs('public/files/' . auth()->id(), $this->file->getFilename());
+        $fileUpload->url = $this->file->storeAs('/', $this->file->getFilename(), 'google');
         $fileUpload->size_file = $this->getFileSize($this->file);
         $fileUpload->file_name = $this->file->getClientOriginalName();
         $fileUpload->model_name = $this->model_name;
@@ -100,10 +100,21 @@ class Files extends BaseLive
     {
         $data = File::find($id);
         if (!empty($data)) {
-            // $path = public_path(). '/storage/'. substr($data->url, 7, strlen($data->url) - 7);
-            // if (file_exists($path)) {
-            //     unlink($path);
-            // }
+            $filename = $data->url;
+            $dir = '/';
+            $recursive = false; //  Có lấy file trong các thư mục con không?
+            $contents = collect(Storage::disk('google')->listContents($dir, $recursive));
+            $file = $contents
+                ->where('type', '=', 'file')
+                ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
+                ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
+                ->first(); // có thể bị trùng tên file với nhau!
+            if (isset($file)) {
+                Storage::disk('google')->delete($file['path']);
+                $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => 'File was deleted from Google Drive']);
+            } else {
+                $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => 'File not found on Google Drive. Deleted file from system']);
+            }
             $data->delete();
         }
     }
@@ -126,6 +137,25 @@ class Files extends BaseLive
     {
         # code...
         $file = File::findorfail($id);
-        return Storage::download($file->url);
+        $dir = '/';
+        $recursive = false; // Có lấy file trong các thư mục con không?
+        $contents = collect(Storage::disk('google')->listContents($dir, $recursive));
+        $filename = $file->url;
+
+        $fileDownload = $contents
+            ->where('type', '=', 'file')
+            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
+            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
+            ->first();
+
+        if (isset($fileDownload)) {
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => 'Download file successfully']);
+            return Storage::disk('google')->download($fileDownload['path']);
+        } else {
+            $this->dispatchBrowserEvent('show-toast', ['type' => 'error', 'message' => 'File not found on Google Drive']);
+        }
+        // return response($rawData, 200)
+        //     ->header('ContentType', $file['mimetype'])
+        //     ->header('Content-Disposition', "attachment; filename='$filename'");
     }
 }

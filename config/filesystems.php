@@ -53,6 +53,15 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
+        // 18021337@vnu.edu.vn
+        'google' => [
+            'driver' => 'google',
+            'clientId' => env('GOOGLE_DRIVE_CLIENT_ID', '941377095745-v95l04pv3lkgob3d12r2201ed1hgs4va.apps.googleusercontent.com'),
+            'clientSecret' => env('GOOGLE_DRIVE_CLIENT_SECRET', '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'),
+            'refreshToken' => env('GOOGLE_DRIVE_REFRESH_TOKEN', '1//04oN9SmAKsWf8CgYIARAAGAQSNwF-L9Ir7RKmYur34nTbKnAFx2NQD1DlZqHyZOrafc6bkVgYIFCoGO7CN70cCo-EcyCObP8z_3I'),
+            'folderId' => env('GOOGLE_DRIVE_FOLDER_ID', '1ULlggi9TfelfSZW4nJLZNn7jSCDUA63Z'),
+        ],
+
     ],
 
     /*

@@ -17,6 +17,7 @@
         "laravel/ui": "^3.4",
         "livewire/livewire": "^2.10",
         "maatwebsite/excel": "^3.1",
+        "nao-pon/flysystem-google-drive": "~1.1",
         "nicolaslopezj/searchable": "^1.13",
         "nwidart/laravel-modules": "^8.2",
         "owen-it/laravel-auditing": "^12.0",
