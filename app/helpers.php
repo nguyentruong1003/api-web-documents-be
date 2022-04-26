@@ -6,7 +6,7 @@
  * @return string
  */
 
-use App\Models\GwApproveResponse;
+use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Arr;
@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Carbon;
 use SebastianBergmann\Environment\Console;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 function setActive($path)
 {
@@ -177,4 +178,17 @@ if (!function_exists('getFileSize')) {
         }
         return round($bytes, 2) . ' ' . $units[$i];
     }
+}
+
+function getFileOnGoogleDriveServer($id) {
+    $file = File::findorfail($id);
+    $dir = '/';
+    $recursive = false; // Có lấy file trong các thư mục con không?
+    $contents = collect(Storage::disk('google')->listContents($dir, $recursive));
+    $filename = $file->url;
+
+    return $contents->where('type', '=', 'file')
+            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
+            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
+            ->first();
 }

@@ -2,7 +2,7 @@
     <div class="file-upload position-relative d-flex justify-content-center align-items-center bg-light py-2 mb-0 border border-light {{ count($files) > 0 ? 'rounded-top' : 'rounded' }}">
         @if ($canUpload && !$disabled)
             <div class="file-input" style="cursor: pointer" onclick="this.children[0].click()">
-                <input type="file" onchange="uploadFile(this, @this)" class="custom-file-input cur_input d-none" multiple>
+                <input type="file" onchange="uploadFile(this, @this)" accept=".pdf" class="custom-file-input cur_input d-none" multiple>
                 <span wire:loading.class="text-muted" class="file">
                     {{ $name }}
                     <img src="/images/Clip.svg" alt="" height="24">

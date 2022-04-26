@@ -72,7 +72,11 @@ class Files extends BaseLive
     public function updatedFile()
     {
 
-        // $this->validate();
+        $this->validate([
+            'file' => 'mimes:pdf',
+        ], [
+            'file.mime' => 'only accept pdf files'
+        ]);
         $fileUpload = new File();
         $fileUpload->url = $this->file->storeAs('/', $this->file->getFilename(), 'google');
         $fileUpload->size_file = $this->getFileSize($this->file);
@@ -100,15 +104,7 @@ class Files extends BaseLive
     {
         $data = File::find($id);
         if (!empty($data)) {
-            $filename = $data->url;
-            $dir = '/';
-            $recursive = false; //  Có lấy file trong các thư mục con không?
-            $contents = collect(Storage::disk('google')->listContents($dir, $recursive));
-            $file = $contents
-                ->where('type', '=', 'file')
-                ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
-                ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
-                ->first(); // có thể bị trùng tên file với nhau!
+            $file = getFileOnGoogleDriveServer($id);
             if (isset($file)) {
                 Storage::disk('google')->delete($file['path']);
                 $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => 'File was deleted from Google Drive']);
@@ -121,7 +117,14 @@ class Files extends BaseLive
 
     public function deleteUnknownFiles()
     {
-        File::query()->where('admin_id', auth()->id())->whereNull('model_id')->delete();
+        $files = File::query()->where('admin_id', auth()->id())->whereNull('model_id')->get();
+        foreach ($files as $data) {
+            $file = getFileOnGoogleDriveServer($data->id);
+            if (isset($file)) {
+                Storage::disk('google')->delete($file['path']);
+            }
+            $data->delete();
+        }
     }
 
     public function getFileSize($file) {
@@ -136,26 +139,12 @@ class Files extends BaseLive
     public function download($id)
     {
         # code...
-        $file = File::findorfail($id);
-        $dir = '/';
-        $recursive = false; // Có lấy file trong các thư mục con không?
-        $contents = collect(Storage::disk('google')->listContents($dir, $recursive));
-        $filename = $file->url;
-
-        $fileDownload = $contents
-            ->where('type', '=', 'file')
-            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
-            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
-            ->first();
-
-        if (isset($fileDownload)) {
+        $file = getFileOnGoogleDriveServer($id);
+        if (isset($file)) {
             $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => 'Download file successfully']);
-            return Storage::disk('google')->download($fileDownload['path']);
+            return Storage::disk('google')->download($file['path']);
         } else {
             $this->dispatchBrowserEvent('show-toast', ['type' => 'error', 'message' => 'File not found on Google Drive']);
         }
-        // return response($rawData, 200)
-        //     ->header('ContentType', $file['mimetype'])
-        //     ->header('Content-Disposition', "attachment; filename='$filename'");
     }
 }

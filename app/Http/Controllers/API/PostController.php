@@ -144,23 +144,9 @@ class PostController extends Controller
 
     public function download(File $file)
     {
-        // return Storage::disk('google')->download($file->url);
-        $dir = '/';
-        $recursive = false; // Có lấy file trong các thư mục con không?
-        $contents = collect(Storage::disk('google')->listContents($dir, $recursive));
-        $filename = $file->url;
-
-        $fileDownload = $contents
-            ->where('type', '=', 'file')
-            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
-            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
-            ->first();
-
+        $fileDownload = getFileOnGoogleDriveServer($file->id);
         if (isset($fileDownload)) {
             return Storage::disk('google')->download($fileDownload['path']);
-            // return response($rawData, 200)
-            //     ->header('ContentType', $file['mimetype'])
-            //     ->header('Content-Disposition', "attachment; filename='$filename'");
         } else {
             return response()->json([
                 'message' => 'File not found!'
