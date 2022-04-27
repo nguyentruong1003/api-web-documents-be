@@ -182,13 +182,15 @@ if (!function_exists('getFileSize')) {
 
 function getFileOnGoogleDriveServer($id) {
     $file = File::findorfail($id);
+    $filename = $file->url;
     $dir = '/';
     $recursive = false; // Có lấy file trong các thư mục con không?
     $contents = collect(Storage::disk('google')->listContents($dir, $recursive));
-    $filename = $file->url;
-
-    return $contents->where('type', '=', 'file')
+    $data = $contents->where('type', '=', 'file')
             ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
             ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
             ->first();
+    $data['link'] = 'https://drive.google.com/file/d/' . $data['path'] . '/preview';
+
+    return $data;
 }

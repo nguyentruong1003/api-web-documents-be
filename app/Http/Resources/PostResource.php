@@ -12,6 +12,10 @@ class PostResource extends APIResource
      */
     public function toArray($request)
     {
+        $files = [];
+        foreach ($this->files as $file) {
+            $files[] = (object) array_merge($file->toArray(), getFileOnGoogleDriveServer($file->id));
+        }
         return [
             'id' => $this->id,
             'title' => $this->title,
@@ -21,7 +25,7 @@ class PostResource extends APIResource
             'user_id' => $this->user_id,
             'created_at' => $this->created_at,
             'comment' => $this->comments,
-            'files' => $this->files,
+            'files' => $files,
             'likes' => $this->likes,
             'reports' => $this->reports,
         ];
