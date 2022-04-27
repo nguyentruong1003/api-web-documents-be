@@ -24,7 +24,8 @@
         "phpoffice/phpspreadsheet": "^1.17",
         "spatie/crypto": "^2.0",
         "spatie/laravel-permission": "^5.5",
-        "tymon/jwt-auth": "^1.0.2"
+        "tymon/jwt-auth": "^1.0.2",
+        "fakerphp/faker": "^1.9.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

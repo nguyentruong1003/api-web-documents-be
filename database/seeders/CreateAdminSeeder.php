@@ -23,12 +23,17 @@ class CreateAdminSeeder extends Seeder
 
         $admin->assignRole('administrator');
 
-        $user = User::query()->firstOrCreate([
-            'name' => 'Guest',
-            'email' => 'guest@test.com',
+        User::query()->firstOrCreate([
+            'name' => 'Normal User',
+            'email' => 'user@test.com',
             'password' => bcrypt('12345678')
         ]);
 
-        $user->assignRole('guest');
+        User::factory()->times(50)->create();
+
+        $users = User::query()->where('id', '!=', 1)->get();
+        foreach ($users as $user) {
+            $user->assignRole('normal user');
+        }
     }
 }

@@ -79,13 +79,6 @@ php artisan storage:link
 php artisan serve
 ```
 
-## Account Admin
-
-```bash
-Username: admin@test.com
-Password: password
-```
-
 ## Deploy on Heroku
 
 Link: http://nvt-base-api.herokuapp.com/

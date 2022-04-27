@@ -19,8 +19,9 @@ class DatabaseSeeder extends Seeder
             CreateAdminSeeder::class,
             PostTypeSeeder::class,
             PostTypeSlugSeeder::class,
-            PostExampleSeeder::class,
-            PostExample2Seeder::class,
+            PostSeeder::class,
+            // PostExampleSeeder::class,
+            // PostExample2Seeder::class,
         ]);
     }
 }
