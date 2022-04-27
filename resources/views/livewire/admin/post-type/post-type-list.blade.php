@@ -39,8 +39,8 @@
                             <td>{!! boldTextSearch($row->name, $searchTerm) !!}</td>
                             <td>{{ $row->parent->name ?? '' }}</td>
                             <td>
-                                @if (isset($row->childen))
-                                @foreach($row->childen as $value)
+                                @if (isset($row->children))
+                                @foreach($row->children as $value)
                                     <span>{{ $value->name }}</span><br>
                                 @endforeach
                                 @endif

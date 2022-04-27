@@ -21,7 +21,7 @@ class PostType extends Model implements Auditable
         return $this->hasMany(Post::class);
     }
 
-    public function childen(){
+    public function children(){
         return $this->hasMany(PostType::class, 'parent_id', 'id');
     }
     
