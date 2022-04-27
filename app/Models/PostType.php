@@ -15,6 +15,7 @@ class PostType extends Model implements Auditable
     protected $fillable = [
         'name',
         'parent_id',
+        'slug',
     ];
 
     public function posts() {

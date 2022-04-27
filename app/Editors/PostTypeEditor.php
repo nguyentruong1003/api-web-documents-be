@@ -2,6 +2,8 @@
 
 namespace App\Editors;
 
+use App\Helpers\Slug;
+
 class PostTypeEditor extends Editor
 {
 
@@ -9,6 +11,8 @@ class PostTypeEditor extends Editor
     {
         $this->model->fill([
             'name' => $this->data['name'],
+            'parent_id' => $this->data['parent_id'],
+            'slug' => Slug::slugify($this->data['name']),
         ]);
         $this->model->save();
     }

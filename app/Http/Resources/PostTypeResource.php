@@ -16,6 +16,7 @@ class PostTypeResource extends APIResource
             'id' => $this->id,
             'name' => $this->name,
             'children' => $this->children ?? null,
+            'slug' => $this->slug,
         ];
     }
 }

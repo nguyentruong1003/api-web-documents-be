@@ -2,13 +2,21 @@
 
 namespace App\Http\Livewire\Admin\PostType;
 
+use App\Helpers\Slug;
 use App\Http\Livewire\Base\BaseLive;
 use App\Models\PostType;
 use Livewire\Component;
 
 class PostTypeList extends BaseLive
 {
-    public $name, $editId;
+    public $name, $editId, $parent_id;
+    public $postParents = [];
+
+    public function mount()
+    {
+        # code...
+        $this->postParents = PostType::where('parent_id', null)->get();
+    }
 
     public function render()
     {
@@ -33,6 +41,7 @@ class PostTypeList extends BaseLive
         $this->editId = $id;
         $pt = PostType::findorfail($this->editId);
         $this->name = $pt->name;
+        $this->parent_id = $pt->parent_id;
     }
 
     public function save() {
@@ -43,11 +52,15 @@ class PostTypeList extends BaseLive
         ]);
         if ($this->checkEdit) {
             PostType::findorfail($this->editId)->update([
-                'name' => $this->name
+                'name' => $this->name,
+                'parent_id' => $this->parent_id,
+                'slug'=> Slug::slugify($this->name),
             ]);
         } else {
             PostType::create([
-                'name' => $this->name
+                'name' => $this->name,
+                'parent_id' => $this->parent_id,
+                'slug'=> Slug::slugify($this->name),
             ]);
         }
         $this->emit('close-modal');
@@ -59,7 +72,7 @@ class PostTypeList extends BaseLive
     }
 
     public function resetInputFields() {
-        $this->reset(['editId','name']);
+        $this->reset(['editId','name', 'parent_id']);
         $this->resetSearch();
         $this->resetValidation();
     }

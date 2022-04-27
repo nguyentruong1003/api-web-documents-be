@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             PermissionSeeder::class,
             CreateAdminSeeder::class,
             PostTypeSeeder::class,
+            PostTypeSlugSeeder::class,
             PostExampleSeeder::class,
             PostExample2Seeder::class,
         ]);

@@ -86,6 +86,18 @@
                                 @error('name')@include('layouts.partials.text._error')@enderror
                             </div>
                         </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Danh mục cha</label>
+                                <select class="form-control" wire:model.lazy="parent_id">
+                                    <option value=""></option>
+                                    @foreach ($postParents as $item)
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

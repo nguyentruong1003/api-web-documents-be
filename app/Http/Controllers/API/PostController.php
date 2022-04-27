@@ -25,12 +25,12 @@ class PostController extends Controller
     {
         $query = Post::query();
         if (isset($request->title)) {
-            $query->where('title', 'like', '%' . trim(removeStringUtf8($request->name)) . '%');
+            $query->where('title', 'like', '%' . trim(removeStringUtf8($request->title)) . '%');
         }
-        else if (isset($request->type)) {
-            $query->where('post_type_id', 'like', '%' . trim(removeStringUtf8($request->type)) . '%');
+        if (isset($request->type)) {
+                $query->where('post_type_id', $request->type);
         }
-        else if (isset($request->content)) {
+        if (isset($request->content)) {
             $query->where('content', 'like', '%' . trim(removeStringUtf8($request->content)) . '%');
         }
         return PostResource::collection($query->paginate(25));
