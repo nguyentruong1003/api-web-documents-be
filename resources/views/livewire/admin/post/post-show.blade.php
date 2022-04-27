@@ -14,7 +14,7 @@
         </div>
         <div class="card-body p-2">
             <div class="container">
-                @livewire('component.files', ['model_name' => $model_name, 'disabled' => true, 'name' => "File đính kèm"])
+                @livewire('component.files', ['model_name' => $model_name, 'model_id' => $model_id, 'disabled' => true, 'name' => "File đính kèm"])
             </div>
         </div>
         <div class="card-body p-2">
