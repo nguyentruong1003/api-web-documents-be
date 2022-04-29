@@ -191,6 +191,7 @@ function getFileOnGoogleDriveServer($id) {
             ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
             ->first();
     $data['link'] = 'https://drive.google.com/file/d/' . $data['path'] . '/preview';
+    $data['view'] = 'https://drive.google.com/file/d/' . $data['path'] . '/view';
 
     return $data;
 }

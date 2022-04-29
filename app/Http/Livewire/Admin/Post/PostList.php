@@ -96,6 +96,7 @@ class PostList extends BaseLive
 
     public function delete() {
         $user = Post::findOrFail($this->deleteId);
+        $this->emit('delete-file', Post::class, $this->deleteId);
         $user->delete();
         $this->dispatchBrowserEvent('show-toast', ['type' => 'success', 'message' => __('view.notification.success.delete')]);
     }

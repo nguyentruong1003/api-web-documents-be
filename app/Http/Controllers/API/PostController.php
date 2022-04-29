@@ -57,7 +57,7 @@ class PostController extends Controller
             $tmp = File::query()->create([
                 'file_name' => $file->getClientOriginalName(),
                 'size_file' => getFileSize($file),
-                'url' => $file->storeAs('/', $file->getFilename(), 'google'),
+                'url' => $file->storeAs('/', $file->getClientOriginalName(), 'google'),
                 'model_name' => Post::class,
                 'model_id' => $post->id,
                 'admin_id' => auth()->user()->id

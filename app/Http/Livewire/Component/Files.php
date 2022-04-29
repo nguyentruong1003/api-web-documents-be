@@ -32,7 +32,8 @@ class Files extends BaseLive
 
     protected $listeners = [
         'setModelId',
-        'saveFile'
+        'saveFile',
+        'delete-file' => 'emitDeleteFile',
     ];
 
     public function mount()
@@ -73,12 +74,15 @@ class Files extends BaseLive
     {
 
         $this->validate([
-            'file' => 'mimes:pdf',
+            'file' => [
+                'mimes:pdf',
+                'max:' . $this->maximumFileSize * 1024
+            ],
         ], [
             'file.mime' => 'only accept pdf files'
         ]);
         $fileUpload = new File();
-        $fileUpload->url = $this->file->storeAs('/', $this->file->getFilename(), 'google');
+        $fileUpload->url = $this->file->storeAs('/', $this->file->getClientOriginalName(), 'google');
         $fileUpload->size_file = $this->getFileSize($this->file);
         $fileUpload->file_name = $this->file->getClientOriginalName();
         $fileUpload->model_name = $this->model_name;
@@ -145,6 +149,15 @@ class Files extends BaseLive
             return Storage::disk('google')->download($file['path']);
         } else {
             $this->dispatchBrowserEvent('show-toast', ['type' => 'error', 'message' => 'File not found on Google Drive']);
+        }
+    }
+
+    public function emitDeleteFile($model_name, $model_id)
+    {
+        # code...
+        $files = File::where('model_name', $model_name)->where('model_id', $model_id)->get();
+        foreach ($files as $file) {
+            $this->deleteFile($file->id);
         }
     }
 }
