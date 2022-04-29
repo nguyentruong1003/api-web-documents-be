@@ -6,6 +6,7 @@ use App\Models\File;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use DB;
 
 class PostSeeder extends Seeder
 {
@@ -16,8 +17,12 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
-        $this->posts();
+        // Model::unguard();
+        // $this->posts();
+        $sql_1 = file_get_contents(database_path('sql/posts.sql'));
+        $sql_2 = file_get_contents(database_path('sql/files.sql'));
+        DB::unprepared($sql_1);
+        DB::unprepared($sql_2);
     }
 
     public function posts()
