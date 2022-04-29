@@ -45,7 +45,7 @@
 
                         <div class="form-group">
                             <label>File đính kèm</label>
-                            @livewire('component.files', ['model_name' => $model_name])
+                            @livewire('component.files', ['model_name' => $model_name, 'model_id' => $editId ?? null, 'disabled' => false, 'name' => 'Đính kèm file'])
                         </div>
 
                     </div>

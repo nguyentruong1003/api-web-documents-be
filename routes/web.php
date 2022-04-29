@@ -51,4 +51,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => '/post-reports'], function() {
         Route::get('/', [App\Http\Controllers\PostReportController::class, 'index'])->name('admin.post-report.index');
     });
+
+    Route::group(['prefix' => '/files'], function() {
+        Route::get('/', [App\Http\Controllers\FileController::class, 'index'])->name('admin.file.index');
+    });
 });
