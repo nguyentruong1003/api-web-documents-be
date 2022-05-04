@@ -22,7 +22,7 @@ class ReportController extends Controller
         if (isset($request->resolve)) {
             $query->where('resolve', 'like', $request->resolve);
         }
-        return PostReportResource::collection($query->paginate(25));
+        return PostReportResource::collection($query->paginate(15));
     }
 
     /**

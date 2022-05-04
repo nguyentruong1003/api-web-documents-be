@@ -17,6 +17,6 @@ class AuditController extends Controller
      */
     public function index()
     {
-        return AuditResource::collection(Audit::query()->paginate());
+        return AuditResource::collection(Audit::query()->paginate(15));
     }
 }

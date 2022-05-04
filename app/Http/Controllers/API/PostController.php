@@ -10,6 +10,7 @@ use App\Http\Resources\PostResource;
 use App\Models\File;
 use App\Models\Post;
 use App\Models\PostReport;
+use App\Models\PostType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -28,12 +29,20 @@ class PostController extends Controller
             $query->where('title', 'like', '%' . trim(removeStringUtf8($request->title)) . '%');
         }
         if (isset($request->type)) {
-                $query->where('post_type_id', $request->type);
+            $post_type = PostType::where('slug', $request->type)->first();
+            if (isset($post_type)) {
+                if (isset($post_type->children)) {
+                    foreach ($post_type->children as $item) {
+                        $query->orwhere('post_type_id', $item->id);
+                    }
+                } else
+                    $query->where('post_type_id', $post_type->id);
+            }
         }
         if (isset($request->content)) {
             $query->where('content', 'like', '%' . trim(removeStringUtf8($request->content)) . '%');
         }
-        return PostResource::collection($query->paginate(25));
+        return PostResource::collection($query->paginate(15));
     }
 
     /**

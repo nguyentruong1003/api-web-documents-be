@@ -20,7 +20,7 @@ class MasterDataController extends Controller
      */
     public function index()
     {
-        return MasterDataResource::collection(MasterData::query()->paginate());
+        return MasterDataResource::collection(MasterData::query()->paginate(15));
     }
 
     /**

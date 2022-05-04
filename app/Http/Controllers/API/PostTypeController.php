@@ -18,7 +18,7 @@ class PostTypeController extends Controller
      */
     public function index()
     {
-        return PostTypeResource::collection(PostType::query()->where('parent_id', null)->paginate());
+        return PostTypeResource::collection(PostType::query()->where('parent_id', null)->paginate(15));
     }
     
     /**
