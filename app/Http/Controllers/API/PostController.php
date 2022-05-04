@@ -31,11 +31,11 @@ class PostController extends Controller
         if (isset($request->type)) {
             $post_type = PostType::where('slug', $request->type)->first();
             if (isset($post_type)) {
-                if (isset($post_type->children)) {
-                    foreach ($post_type->children as $item) {
-                        $query->orwhere('post_type_id', $item->id);
-                    }
-                } else
+                // if (isset($post_type->children)) {
+                //     foreach ($post_type->children as $item) {
+                //         $query->orwhere('post_type_id', $item->id);
+                //     }
+                // } else
                     $query->where('post_type_id', $post_type->id);
             }
         }
