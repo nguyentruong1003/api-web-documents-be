@@ -101,7 +101,7 @@ class Files extends BaseLive
                 ]);
             }
         }
-        $this->reset();
+        $this->reset(['model_id', 'list']);
     }
 
     public function deleteFile($id)
