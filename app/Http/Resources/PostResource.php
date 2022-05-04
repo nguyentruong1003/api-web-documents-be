@@ -22,6 +22,7 @@ class PostResource extends APIResource
             'description' =>  $this->description,
             'content' => $this->content,
             'post_type_id' => $this->types->name ?? null,
+            'type_slug' => $this->types->slug ?? null,
             'user_id' => $this->user_id,
             'created_at' => $this->created_at,
             'comment' => $this->comments,
