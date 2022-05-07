@@ -57,22 +57,26 @@ class PostController extends Controller
     {
         $files = $request->file('files');
         $allowedfileExtension=['pdf'];
-        foreach ($files as $file) {
-            $extension = $file->getClientOriginalExtension();
-            if (! in_array($extension, $allowedfileExtension)) {
-                return response()->json(['Invalid file format, only accept file pdf'], 422);
+        if (isset($files)) {
+            foreach ($files as $file) {
+                $extension = $file->getClientOriginalExtension();
+                if (! in_array($extension, $allowedfileExtension)) {
+                    return response()->json(['Invalid file format, only accept file pdf'], 422);
+                }
             }
-        }
-        $post = PostEditor::open(new Post())->withDataFromRequest($request)->save();
-        foreach ($files as $file) {
-            $tmp = File::query()->create([
-                'file_name' => $file->getClientOriginalName(),
-                'size_file' => getFileSize($file),
-                'url' => $file->storeAs('/', $file->getClientOriginalName(), 'google'),
-                'model_name' => Post::class,
-                'model_id' => $post->id,
-                'admin_id' => auth()->user()->id
-            ]);
+            $post = PostEditor::open(new Post())->withDataFromRequest($request)->save();
+            foreach ($files as $file) {
+                $tmp = File::query()->create([
+                    'file_name' => $file->getClientOriginalName(),
+                    'size_file' => getFileSize($file),
+                    'url' => $file->storeAs('/', $file->getClientOriginalName(), 'google'),
+                    'model_name' => Post::class,
+                    'model_id' => $post->id,
+                    'admin_id' => auth()->user()->id
+                ]);
+            }
+        } else {
+            $post = PostEditor::open(new Post())->withDataFromRequest($request)->save();
         }
         return (new PostResource($post))->withMessage(__('view.notification.success.create'));
     }
