@@ -27,8 +27,7 @@ class CreatePermissionTables extends Migration
 
         Schema::create($tableNames['permissions'], function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('alias')->nullable()->comment('Tên chức năng');
-            $table->string('code')->nullable()->comment('Mã chức năng');
+            $table->string('module')->nullable()->comment('Tên chức năng');
             $table->string('name');       // For MySQL 8.0 use string('name', 125);
             $table->string('action')->nullable()->comment('Hành động');
             $table->string('guard_name'); // For MySQL 8.0 use string('guard_name', 125);

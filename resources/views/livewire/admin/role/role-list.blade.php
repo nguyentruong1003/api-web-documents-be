@@ -55,7 +55,7 @@
     @include('livewire.common.modal._modalDelete')
 
     <div wire:ignore.self class="modal fade" id="create-update-modal" role="dialog" >
-        <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
@@ -78,53 +78,40 @@
 
                             <div class="form-group">
                                 <label> Danh sách module chức năng </label>
-                                <table class="table table-bordered table-hover dataTable dtr-inline">
-                                    <thead class="">
-                                        <tr class="border-radius">
-                                            <th rowspan="2" scope="col" class="border-radius-left">Chức năng</th>
-                                            <th scope="col" class="text-center"><img src="/images/eye.svg" alt="view"/></th>
-                                            <th scope="col" class="text-center"><img src="/images/add.svg" alt="add"></th>
-                                            <th scope="col" class="text-center"><img src="/images/pent2.svg" alt="edit"/> </th>
-                                            <th scope="col" class="text-center"><img src="/images/trash.svg" alt="delete"></th>
-                                            <th scope="col" class="text-center"><img src="/images/eye.svg" alt="show"/></th>
-                                            <th scope="col" class="text-center"><img src="/images/Upload.svg" alt="upload"/></th>
-                                            <th scope="col" class="text-center"><img src="/images/Download.svg" alt="download"/></th>
-                                        </tr>
-                                        <tr class="border-radius">
-                                            <th scope="col" class="text-center">Danh sách</th>
-                                            <th scope="col" class="text-center">Thêm</th>
-                                            <th scope="col" class="text-center">Sửa</th>
-                                            <th scope="col" class="text-center">Xóa</th>
-                                            <th scope="col" class="text-center">Chi tiết</th>
-                                            <th scope="col" class="text-center">Upload</th>
-                                            <th scope="col" class="text-center">Download</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($permissions as $routeName => $features)
-                                            @foreach ($features as $featureName => $grants)
-                                                <tr id="{{ $routeName }}">
-                                                    <td>
-                                                        {!! $listNameMenu[$featureName] ?? $featureName !!}
-                                                        <div class="text-right">
-                                                            <button class="btn btn-light btn-sm mr-2" type="button" onclick="selectAllInModule('{{ $routeName }}')">Chọn tất cả</button>
-                                                            <button class="btn btn-light btn-sm" type="button" onclick="unselectAllInModule('{{ $routeName }}')">Bỏ chọn tất cả</button>
-                                                        </div>
-                                                    </td>
-                                                    @foreach ($grants as $grant)
-                                                    <td class="text-center" style="display: float-right">
-                                                        
-                                                            <div class="toggle">
-                                                                <input type="checkbox" class="toggle-checkbox grant" id="grant-{{ $grant['id'] ?? 0 }}" value="{{ $grant['id'] ?? 0 }}" @if (in_array($grant['id'] ?? 0, $selectedPermissions)) checked @endif>
-                                                            </div>
-                                                        
-                                                    </td>
-                                                    @endforeach
-                                                </tr>
-                                            @endforeach
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                                <div class="group-permissions">
+                                    @foreach ($permissions as $moduleName => $values)
+                                        <div class="mb-2">
+                                            <div class="bg-light p-2 d-flex align-items-center justify-content-between" style="cursor: pointer" onclick="openModule('{{ $moduleName }}')">
+                                                <span>
+                                                    <div class="toggle">
+                                                        <input type="checkbox" class="toggle-checkbox checkbox-module-name" id="toggle-{{ $moduleName }}">
+                                                        <label class="toggle-label" for="toggle-{{ $moduleName }}" 
+                                                            {{-- data-toggle="collapse" data-target="#{{ $moduleName ?? 'default' }}" --}}
+                                                            ><i class="fas fas fa-angle-right toggle-chevron"></i></label>
+                                                    </div>
+                                                    {!! $listNameMenu[$moduleName] ?? $moduleName !!}
+                                                </span>
+                                            </div>
+                                            <div id="{{ $moduleName }}" class="collapse">
+                                                <table class="table">
+                                                    <tbody>
+                                                        @foreach ($values as $grant)
+                                                            <tr>
+                                                                <td>{{ $listNameGrant[$grant['action']] ?? $grant['action'] }}</td>
+                                                                <td class="w-40">
+                                                                    <label class="switch">
+                                                                        <input type="checkbox" class="toggle-checkbox grant" id="grant-{{ $grant['id'] ?? 0 }}" value="{{ $grant['id'] ?? 0 }}" @if (in_array($grant['id'] ?? 0, $selectedPermissions)) checked @endif>
+                                                                        <span class="slider round"></span>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
 
                         </div>
@@ -141,20 +128,25 @@
     </div>
 
     <script>
+        $("document").ready(() => {
+            $('#create-update-modal').on('show.bs.modal', function(){
+                $('.checkbox-module-name').each(function() {
+                    $(this).prop("checked", false);
+                });
+            });
+        });
         window.livewire.on('close-modal', () => {
             $('#close-modal').click();
         });
 
-        function selectAllInModule(routeName) {
-            $("#" + routeName).find('.toggle-checkbox').each(function() {
-                this.checked = true;
-            });
-        }
-    
-        function unselectAllInModule(routeName) {
-            $("#" + routeName).find('.toggle-checkbox').each(function() {
-                this.checked = false;
-            });
+        function openModule(moduleName) {
+            if ($("#toggle-" + moduleName).is(':checked')) {
+                $("#toggle-" + moduleName).prop("checked", false);
+                $("#" + moduleName).slideUp();
+            } else {
+                $("#toggle-" + moduleName).prop("checked", true);
+                $("#" + moduleName).slideDown();
+            }
         }
     
         function submit() {

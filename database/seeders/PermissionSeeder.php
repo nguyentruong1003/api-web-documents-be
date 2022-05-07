@@ -16,36 +16,36 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
-        $actions = ['index', 'create', 'edit', 'delete', 'show', 'upload', 'download'];
-
-        $routes = Route::getRoutes()->getRoutes();
-
-        foreach ($routes as $route) {
-            if (!isset($route->action['middleware'])) continue;
-            if (isset($route->action['excluded_middleware']) && in_array('check-permission', $route->action['excluded_middleware'])) continue;
-            if (!in_array('log-request', $route->action['middleware'])) continue;
-            
-            $routeName = $route->action['as'] ?? 'route-name';
-            if (strpos($routeName, '.index') > 0) {
-                $arr = explode('.', $routeName);
-                array_pop($arr);
-                foreach ($actions as $action) {
-                    Permission::query()->firstOrCreate([
-                        'alias' => join('-', $arr),
-                        'code' => join('.', $arr) . '.index',
-                        'name' => join('.', $arr) . '.' . $action,
-                        'action' => $action,
-                    ]);
-                }
-            }
-        }
+        $this->seedPermission('user', ['index', 'create', 'edit', 'delete', 'show', 'grant']);
+        $this->seedPermission('role', ['index', 'create', 'edit', 'delete', 'show']);
+        $this->seedPermission('audit', ['index', 'show']);
+        $this->seedPermission('post', ['create', 'edit', 'delete', 'comment', 'editComment', 'deleteComment', 'report', 'like', 'likeComment']);
+        $this->seedPermission('post-type', ['create', 'edit', 'delete']);
+        $this->seedPermission('report', ['index', 'solve']);
 
         $role = Role::findOrCreate('administrator');
-        $permissions = Permission::all();
-
-        $role->syncPermissions($permissions);
+        $role->syncPermissions(Permission::all());
 
         $role2 = Role::findOrCreate('normal user');
-        $role2->syncPermissions(Permission::where('action', 'index')->pluck('id')->toArray());
+        $role2->givePermissionTo([
+            'user.index',
+            'role.index',
+            'post.comment',
+            'post.editComment',
+            'post.deleteComment',
+            'post.report',
+            'post.like',
+            'post.likeComment'
+        ]);
+    }
+
+    public function seedPermission($module, $actions) {
+        foreach ($actions as $action) {
+            Permission::query()->firstOrCreate([
+                'module' => $module,
+                'name' => $module . '.' . $action,
+                'action' => $action,
+            ]);
+        }
     }
 }

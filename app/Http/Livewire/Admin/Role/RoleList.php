@@ -14,22 +14,35 @@ class RoleList extends BaseLive
     public $permissions, $permission;
     public $selectedPermissions = [];
 
-    public static function listNameMenu()
-    {
-        return [
-            'user.index' => 'Quản lý người dùng',
-            'role.index' => 'Quản lý vai trò',
-            'permission.index' => 'Quản lý phân quyền',
-            'master-data.index' => 'Quản lý cấu hình',
-            'audit.index' => 'Audit log',
-        ];
-    }
-
     public function mount() {
-        $this->permissions = Permission::query()->get()->groupBy('alias')->map(function ($item) {
-            return $item->groupBy('code');
-        })->toArray();
-        $this->listNameMenu = $this->listNameMenu();
+        $this->permissions = Permission::query()->get()->groupBy('module')->toArray();
+        
+        $this->listNameMenu = [
+            'user' => 'Quản lý người dùng',
+            'role' => 'Quản lý vai trò',
+            'permission' => 'Quản lý phân quyền',
+            'master-data' => 'Quản lý cấu hình',
+            'audit' => 'Audit log',
+            'post' => 'Quản lý bài viết',
+            'post-type' => 'Quản lý loại bài viết',
+            'report' => 'Quản lý phản hồi',
+        ];
+        
+        $this->listNameGrant = [
+            'index' => 'Danh sách',
+            'create' => 'Thêm mới',
+            'edit' => 'Chỉnh sửa',
+            'delete' => 'Xóa',
+            'show' => 'Chi tiết',
+            'grant' => 'Phân quyền',
+            'comment' => 'Bình luận',
+            'editComment' => 'Chỉnh sửa bình luận',
+            'deleteComment' => 'Xóa bình luận',
+            'report' => 'Báo cáo - Phản hồi',
+            'like' => 'Đánh dấu yêu thích bài viết',
+            'likeComment' => 'Đánh dấu yêu thích bình luận',
+            'solve' => 'Giải quyết phản hồi',
+        ];
     }
 
     public function render() {

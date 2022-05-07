@@ -110,14 +110,14 @@
                 </a>
               </li>
               {{-- @endif --}}
-              {{-- @if (checkPermission('master-data.index')) --}}
+              @if (checkPermission('report.index'))
               <li class="nav-item">
                 <a href="{{ route('admin.post-report.index') }}" class="nav-link {{ setActive('post-reports') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách phản hồi</p>
                 </a>
               </li>
-              {{-- @endif --}}
+              @endif
             </ul>
           </li>
           {{-- @endif --}}

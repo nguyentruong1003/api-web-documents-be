@@ -27,7 +27,7 @@
                         <th>Tên</th>
                         <th>Email</th>
                         <th>Vai trò</th>
-                        @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
+                        @if (checkRoutePermission('edit') || checkRoutePermission('delete') || checkRoutePermission('grant'))
                         <th>Hành động</th>
                         @endif
                     </tr>
@@ -43,9 +43,9 @@
                                     <span>{{ $role->name }}</span><br>
                                 @endforeach
                             </td>
-                            @if (checkRoutePermission('edit') || checkRoutePermission('delete'))
+                            @if (checkRoutePermission('edit') || checkRoutePermission('delete') || checkRoutePermission('grant'))
                             <td>
-                                @if (checkRoutePermission('edit'))
+                                @if (checkRoutePermission('grant'))
                                 <a href="#" data-toggle="modal" data-target="#role-modal" wire:click="edit({{ $row->id }})"
                                     class="btn-sm border-0 bg-transparent">
                                     <img src="/images/Duplicate.svg" alt="Edit" title="Phân quyền">

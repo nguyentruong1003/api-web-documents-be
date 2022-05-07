@@ -2,19 +2,7 @@
     <div class="card">
         <div class="card-body p-2">
             <div class="filter d-flex align-items-center justify-content-between mb-2">
-                {{-- <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group search-expertise">
-                            <div class="search-expertise inline-block">
-                                <input type="text" placeholder="Tìm kiếm" name="search"
-                                    class="form-control" id='input_vn_name' autocomplete="off" wire:model.debounce.1000ms="searchTerm">
-                            </div>
-                        </div>
-                    </div>
-
-                </div> --}}
             </div>
-            {{-- <div wire:loading class="loader"></div> --}}
             <table class="table table-bordered table-hover dataTable dtr-inline">
                 <thead class="">
                     <tr>

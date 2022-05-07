@@ -195,3 +195,11 @@ function getFileOnGoogleDriveServer($id) {
 
     return $data;
 }
+
+function checkAdminOrAuthor($id) {
+    $current_user = Auth::user();
+    if ($current_user->hasAnyRole(['administrator', 'moderator']) || $current_user->id == $id) {
+        return true;
+    }
+    return false;
+}

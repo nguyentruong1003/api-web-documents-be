@@ -89,8 +89,14 @@ class PostController extends Controller
      */
     public function edit(PostRequest $request, Post $post)
     {
-        $post = PostEditor::open($post)->withDataFromRequest($request)->save();
-        return (new PostResource($post))->withMessage(__('view.notification.success.update'));
+        if (checkAdminOrAuthor($post->user_id)) {
+            $post = PostEditor::open($post)->withDataFromRequest($request)->save();
+            return (new PostResource($post))->withMessage(__('view.notification.success.update'));
+        } else {
+            return response()->json([
+                'message' => 'You are not allowed to do this',
+            ], 403);
+        }
     }
 
     /**
@@ -111,10 +117,16 @@ class PostController extends Controller
      */
     public function delete(Post $post)
     {
-        $post->delete();
-        return response()->json([
-            'message' => __('view.notification.success.delete')
-        ]);
+        if (checkAdminOrAuthor($post->user_id)) {
+            $post->delete();
+            return response()->json([
+                'message' => __('view.notification.success.delete')
+            ]);
+        } else {
+            return response()->json([
+                'message' => 'You are not allowed to do this',
+            ], 403);
+        }
     }
 
     /**
@@ -187,24 +199,36 @@ class PostController extends Controller
 
     public function editComment(CommentRequest $request, Post $post, Comment $comment)
     {
-        Comment::findorfail($comment->id)->update([
-            'comment' => $request->comment,
-            'user_id' => auth()->user()->id,
-            'post_id' => $post->id,
-            'parent_id' => $request->parent_id ?? null,
-        ]);
-        
-        return response()->json([
-            'data' => Comment::findorfail($comment->id),
-            'message' => 'Thành công.'
-        ]);
+        if (checkAdminOrAuthor($comment->user_id)) {
+            Comment::findorfail($comment->id)->update([
+                'comment' => $request->comment,
+                'user_id' => auth()->user()->id,
+                'post_id' => $post->id,
+                'parent_id' => $request->parent_id ?? null,
+            ]);
+            
+            return response()->json([
+                'data' => Comment::findorfail($comment->id),
+                'message' => 'Thành công.'
+            ]);
+        } else {
+            return response()->json([
+                'message' => 'You are not allowed to do this',
+            ], 403);
+        }
     }
 
     public function deleteComment(Post $post, Comment $comment)
     {
-        $comment->delete();
-        return response()->json([
-            'message' => __('view.notification.success.delete')
-        ]);
+        if (checkAdminOrAuthor($comment->user_id)) {
+            $comment->delete();
+            return response()->json([
+                'message' => __('view.notification.success.delete')
+            ]);
+        } else {
+            return response()->json([
+                'message' => 'You are not allowed to do this',
+            ], 403);
+        }
     }
 }
