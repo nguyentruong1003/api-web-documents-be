@@ -4,9 +4,11 @@ namespace App\Http\Controllers\api;
 
 use App\Editors\PostEditor;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\API\CommentRequest;
 use App\Http\Requests\API\PostReportRequest;
 use App\Http\Requests\API\PostRequest;
 use App\Http\Resources\PostResource;
+use App\Models\Comment;
 use App\Models\File;
 use App\Models\Post;
 use App\Models\PostReport;
@@ -146,7 +148,7 @@ class PostController extends Controller
         ]);
         
         return response()->json([
-            'data' => $report,
+            'data' => PostReport::findorfail($report->id),
             'message' => 'Phản hồi thành công'
         ]);
     }
@@ -162,5 +164,43 @@ class PostController extends Controller
             ], 404);
         }
         
+    }
+
+    public function comment(CommentRequest $request, Post $post)
+    {
+        $comment = Comment::create([
+            'comment' => $request->comment,
+            'user_id' => auth()->user()->id,
+            'post_id' => $post->id,
+            'parent_id' => $request->parent_id ?? null,
+        ]);
+        
+        return response()->json([
+            'data' => Comment::findorfail($comment->id),
+            'message' => 'Thành công.'
+        ]);
+    }
+
+    public function editComment(CommentRequest $request, Post $post, Comment $comment)
+    {
+        Comment::findorfail($comment->id)->update([
+            'comment' => $request->comment,
+            'user_id' => auth()->user()->id,
+            'post_id' => $post->id,
+            'parent_id' => $request->parent_id ?? null,
+        ]);
+        
+        return response()->json([
+            'data' => Comment::findorfail($comment->id),
+            'message' => 'Thành công.'
+        ]);
+    }
+
+    public function deleteComment(Post $post, Comment $comment)
+    {
+        $comment->delete();
+        return response()->json([
+            'message' => __('view.notification.success.delete')
+        ]);
     }
 }
