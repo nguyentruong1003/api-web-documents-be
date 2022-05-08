@@ -23,6 +23,14 @@ class PostSeeder extends Seeder
         $sql_2 = file_get_contents(database_path('sql/files.sql'));
         DB::unprepared($sql_1);
         DB::unprepared($sql_2);
+
+        $posts = Post::all();
+        foreach ($posts as $post) {
+            $unsign_text = '';
+            $separate = '';
+            $post->unsign_text = $unsign_text . $separate . removeStringUtf8($post->title);
+            $post->save();
+        }
     }
 
     public function posts()

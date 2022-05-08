@@ -26,7 +26,7 @@ class PostList extends BaseLive
         $query = Post::query();
 
         if ($this->searchTerm) {
-            $query->where('title', 'like', '%' . trim($this->searchTerm) . '%')
+            $query->where('unsign_text', 'like', '%' . trim(removeStringUtf8($this->searchTerm)) . '%')
                 ->orwhere('content', 'like', '%' . trim($this->searchTerm) . '%');
         }
 

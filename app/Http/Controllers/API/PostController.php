@@ -28,7 +28,7 @@ class PostController extends Controller
     {
         $query = Post::query();
         if (isset($request->title)) {
-            $query->where('title', 'like', '%' . trim(removeStringUtf8($request->title)) . '%');
+            $query->where('unsign_text', 'like', '%' . strtolower(trim(removeStringUtf8($request->title))) . '%');
         }
         if (isset($request->type)) {
             $post_type = PostType::where('slug', $request->type)->first();

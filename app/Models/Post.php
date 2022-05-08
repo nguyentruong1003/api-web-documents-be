@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
 
-class Post extends Model implements Auditable
+class Post extends UnsignTextSearchModel implements Auditable
 {
     use HasFactory;
     use \OwenIt\Auditing\Auditable;
@@ -18,6 +18,7 @@ class Post extends Model implements Auditable
         'post_type_id',
         'user_id',
         'status',
+        'unsign_text',
     ];
 
     public function comments() {
@@ -38,5 +39,14 @@ class Post extends Model implements Auditable
 
     public function reports() {
         return $this->hasMany(PostReport::class);
+    }
+
+    private static $searchable = [
+        'title',
+    ];
+
+    public static function getListSearchAble()
+    {
+        return self::$searchable;
     }
 }
