@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://127.0.0.1:1003'
+    url: 'http://127.0.0.1:8000'
 paths:
   /api/audits:
     get:
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ujfauejdmum
+                  example: gbyaumdcrlvjsxumtfmulskgqmqxbiolkifnkbhwrzmfpqbudblhqq
                 password:
                   type: string
                   description: ''
-                  example: eveniet
+                  example: id
               required:
                 - email
                 - password
@@ -114,19 +114,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: nfurxbxaebwgrtokbtznfttgmortqxskszwciaspwtbgr
+                  example: rdbhxsv
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: olleylxfkqiajjhqpapzkuhoohhjuafcibjbtcnxshyiupdxyacjypemsnkaimzuacbqwgnwpcjqkggoowwrncewdmaobjcpicoghfjonyrvnhxjeoeilwwohres
+                  example: wwfkhucczzwsjisyeylnzrkvddulvmrrktrrqvtguaigdojjcwjwpxodyspvyoogdftbyrzshwdkbremhzqeslzcfiufokvwqhehuajahnhrbcelvzmvavqxjkpjnqcrnvkpwcolxbginwjdolnfefehoisofpmfeyjejcptwopikrxgncmtcegugaups
                 password:
                   type: string
                   description: 'Must not be greater than 255 characters. Must be at least 6 characters.'
-                  example: aik
+                  example: l
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: velit
+                  example: officia
               required:
                 - name
                 - email
@@ -221,15 +221,15 @@ paths:
                 old_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: vzaunqqkjcotpqhprdhvlyyzvxpfsdqgidknweaj
+                  example: nqyphnxpoccdjs
                 new_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: kggstveooobihyktegaqbofiariehofjolmtcltaizuigwelasiijeqakmvfaflzgwdrhzmndhslqhdqudqygabthttxoslrwqanwttgoivbmsfgtcmorkkzztzvrkwiagpdcwvxuifidjsmvlpjdjhwhyflbpouvdjmupmyryqfcvljpbfajagopfbijjhvlsmumdjxksgipoebqsdorfqzipxqvkiikkwwcahonbqgtb
+                  example: hcrvcybbrlyxyrbhbnampvte
                 new_password_confirmation:
                   type: string
                   description: 'The value and <code>new_password</code> must match.'
-                  example: architecto
+                  example: accusantium
               required:
                 - old_password
                 - new_password
@@ -243,12 +243,12 @@ paths:
           in: query
           name: name
           description: 'Search by name'
-          example: consequatur
+          example: nulla
           required: false
           schema:
             type: string
             description: 'Search by name'
-            example: consequatur
+            example: nulla
         -
           in: header
           name: Content-Type
@@ -309,11 +309,11 @@ paths:
                 v_key:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qqsngdwtsutdgotguzqpuopwgylvsiwtegazgzhsozujbtqsmlntec
+                  example: anvqfnmywlsccdilgsjgtcsmiugrphutazflwhpdlkwvwhjhdivnkaldvhbjyfiiztqgyeyqsuktbkbg
                 v_value:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lcxeuodmkaopytynlirxshopotdbpguqmvhkhpsqktyhboxxuqpwdtgfyqpdmhbivcjqbqtsloiitblu
+                  example: cnjbdpieorwsylbwaqfalbzwciokqrrgabicumhliunewzthxiputauzvnvjxtrmdvuimfanhdklpzwdrjnvyqfnbrbajndetkehutgwxibbunbrpouvqutfjymstlbmmauulqkyhytjabbklewvcgzqbyujddnkzeypgufijurauligvswshdfdzpqakhnhkxdxaednngqhzeoyohnkyxbtgouubsjptmk
                 order_number:
                   type: number
                   description: 'Must be at least 0.'
@@ -321,19 +321,19 @@ paths:
                 type:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: pmujhehhlw
+                  example: ''
                 parent_id:
                   type: number
                   description: ''
-                  example: 346765.254856
+                  example: 46366398.602222
                 v_content:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: ohlrmcadyrnampyvkvxwdnmhzlgncschxtazleppwvwilkczhrncewmmxwjrypdgzfduivarcxlljueaxfzimqeisyuymaotrcgsvsvlzxziocorlxtfadcagryyhdupkobtlqetwcpdpzkstqgebigocimgdudhgicsmqehpwpxsrylkvjsstxdzpdopwatzszgirsvhqdfnvlajqcagfknnotnbnsgxeuclhqmtvptwucps
+                  example: mepbdnqzmwrneedltksilclvunzzjnjhbaqtooxefnvcakfhapduphvdbmrqizqniqimhmxibinejqnwxufausrezalwkiyawlmpnvqtznbrqqeqqzitbdnoukmzupjfmhaentjspukxesepjjltuwuxjogttdlgekwzlblmanmelzbeiyullhwcdloyzadnminiwpyqhlzaufyewmmtgveyarahvodrfensxibpuyfhttxgihlesacypmkcotqrauhydjffgoyiahbvelflniehvsjgxzlmmcuempdyajfmbbxvvbwyijqndamxjzndvkqoqfcvkqsajcfrjowakfwtqcueoqsfwyhiufvytuvsmdzyyeejwacsvhtsylbetkeg
                 note:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: mftdmmygjogbpusbpvcbotsbopfauklcpvszdabjvlksbnrueprdkfycosxm
+                  example: hzgulstrryglkogzfvzwzanqvzuhseihevdyrxwsqezmrvchwhuqkkmhiovwqnyucxawdrewgdzuroahamaqmznmqgiioaizmfkmndhgzhvsjbkosheqxcjsgiwlhwirxdfqxffiglszdejdawqswomvndxxhywrvnufflzrrqrzscdpoptfxhkjakyrfmcdghvjbikqshxdqnovrzmqykihkndadglokupmgmdkewveyouildryejivzifpxiypajrqxaphemom
               required:
                 - v_key
                 - v_value
@@ -404,11 +404,11 @@ paths:
                 v_key:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jvxdnzhr
+                  example: yodoyonxovzdmwmofycvaqqyikfpcggyckqtmaniryrjpwuqppjmsgyxcgkpjsxshmtbzxrpvvahlnjbhbcktmbvdjxvolvioszaunbtvgdmvjkbudpxnzwrxgspvzjhrkqbcnesddfqtgygykhfikmsuvylvveswoqaozsatcldrhnlopjahiwxjqphgtxexnpdbezbznfejkqpwwomoqbwbbvtkrzenxkmcdmmixlyuvqqeoxlptigtloeuqq
                 v_value:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: teaynwgxqoidizwphdcmqhkupvvetrwqboshczqknqerdcfrknyposxmlukdhaqvuloydvpsbecpvmqrdrrmssmfzpmsvdzcdyamuotyvohqabnxktvyryftfympqixktpkabhhqd
+                  example: ilecbuavmdvqfdeigfvzivueblxowerinvhetbxrfjoizcorvtxqzjpofxcyxwhkgjjxeblvdlmtqlqtaavycxxunchdgbuptupulm
                 order_number:
                   type: number
                   description: 'Must be at least 0.'
@@ -416,19 +416,19 @@ paths:
                 type:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: tkhtcy
+                  example: nbyyps
                 parent_id:
                   type: number
                   description: ''
-                  example: 47262.86561869
+                  example: 440488.936
                 v_content:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: gvapzyuevvmbnfyjpshgmwbukqhjyjxwgpyinfeavjxvkomyzbmnzijytwrdziqbsbrqzndjhkxkcjrqzrkgfleabulbgbrkepdztstarpqpksdpekrhdbfhrhaidokvhheqrohagkrjqhnxtoiizgukefzmpdeefwgrseitejatdpyvekpqqqahkhdwcwhwabtdwvguwokuycsulpkovfugzkjzaenvnomxswppxhwoklhodvasovynltrdgzxgbnufqytednhrkukboeewknqtrknysjpdfbtcthhsmelkjkxjezperuiaqmjftjbrzqsgtbsipahjdqcakvqpxbioqfdulkvkfkvnnvyhwomknilyqennrzlqyviuebpzzlsheakllsoymahskzjkuvlaxnxjwaygvvobcswjzgfkiklpzxnvqdpvhxsijmdkvkfjndqirlojquoowm
+                  example: thbwirwfoenlipshcckesfpemrpmkvsldeaxcyfivrhffgrlxmjjvikyqpalifxojvfgrqbiroxtjdpryenrlnatpqtebokaysuviqppfpidkczroowkkwqwqmfabbsufwtsiguvsidljmwddfaziwnxwvmtcpjlglaipegcruacbhvbuasqglznkxydgkpggqkmvdremfhggwkmpxgtjxzeupbrerungotueztlpwmcwcndqajxojusqkgoeqnqruhxhvwmxkskjspserjcnutmtkipczaujyjb
                 note:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: cbsjokvcvwtupszkkotqvhvbdgmvbizpbptwmyzjkvebxfursfrpqtbrwceqifuggldqtogdqrsgxuxovfcrckxfoymthe
+                  example: pxraisxwunvewpflmvgxjfucuxaptiuuftfpwxcplpqkvxnephcgbsrwlaifynzivsjkfimkonzstgnambppraizvhxjbqpvvddafnojfeqtcazwqwkqgtsylyvgatiiueeteqdkohzweuhsswnyletdcahtjwydmtvmpcyaczpnuxrifsdajfzhvtqgiwwviamkecneixoaczaneoflkkczdcjueugscokdfaqjwxcxydpkiotphwuuojvxosiihpxcamytbfypewxjcmhqenaasqdjaeyiobqypcvyfbovdsywkqutixdoqkdewtftlfcfswwmwjmgmjrttul
               required:
                 - v_key
                 - v_value
@@ -460,7 +460,7 @@ paths:
         in: path
         name: masterdata_id
         description: 'The ID of the masterdata.'
-        example: sunt
+        example: repellat
         required: true
         schema:
           type: string
@@ -529,7 +529,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ydldeecmopnalfxjtphuoostmfremarnhglrgtabiwhdjnwdlxlvshhyykqrvxvnogfliuifrxmneqvmkhdtwfywmzw
+                  example: jtkmzamgeozjeemktukspskvhpmjsaxkxvejxidcvoarcxtgmawbyiztfpozfzjsyfmalaorzhcwzeswsizdphmsamwogfrdgfwxfzszvnnfdftvfgdtgrknhxdhassodnrrjtckiiysyehrsamhhpexbxcduvkeesjmgtpm
               required:
                 - name
   '/api/permissions/{permission_id}':
@@ -597,7 +597,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pgmsajtbfarlaexdgdrahxrjcpaxutvxxgopjksdpczkvntzn
+                  example: epontztegaqqgfhinocathkwfhcochqfxcnaqxovsabswlmnppvxmxkcxqraqbttumjrignzxtubeikflnqhjlzxrzqjaqpzhxlpdcitzyyllnjzdeykasasnyifaixfloxulgobpyraapanteaegroireviuvhlazcbnzkyhazchwsixbikllsbyqsgjdswjhvzfulfqbkdxmnmftsdunuvxxqfbtxiqcwixeaeqrufshltfrlxtwqtabuebe
               required:
                 - name
     delete:
@@ -626,7 +626,7 @@ paths:
         in: path
         name: permission_id
         description: 'The ID of the permission.'
-        example: earum
+        example: et
         required: true
         schema:
           type: string
@@ -660,18 +660,506 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    -
+                      id: 1
+                      title: 'Giải tích 1 Giáo trình và 300 bài tập có lời giải'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giải tích 1 Giáo trình và 300 bài tập có lời giải</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:45:49.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 2
+                      title: 'Giáo trình Giáo dục Quốc phòng và An ninh (Tập 1)'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Giáo dục Quốc phòng và An ninh (Tập 1)</h2><h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Mục lục:</h2><h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 1: Đối tượng, phương pháp nghiên cứu môn học giáo dục quốc phòng an ninh</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 2: Quan điểm về chủ nghĩa Mac-Lenin, Tư tưởng Hồ Chí Minh về chiến tranh quân đội và bảo vệ tổ quốc.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 3: Xây dựng nền quốc phòng toàn dân, an ninh nhân dân</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 4: Chiến tranh nhân dân bảo vệ tổ quốc Việt Nam xã hội chủ nghĩa</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 5: Xây dựng lực lượng vũ trang nhân dân Việt Nam</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 6: Kết hợp phát triển kinh tế – xã hội với tăng cường củng cố quốc phòng – an ninh</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 7: Nghệ thuật quân sự Việt Nam</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 8: Phòng chống chiến lược” Diễn biến hòa bình” bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 9: Phòng chống địch tiến công hỏa lực bằng vũ khí công nghệ cao</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 10: Xây dựng lực lượng dân quân tự vệ, lực lượng dự bị động viên và động viên công nghiệp quốc phòng.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 11: Xây dựng và bảo vệ chủ quyền lãnh thổ, biên giới quốc gia.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 12: Một số nội dung cơ bản về dân tộc, tôn giáo và đấu tranh phòng chống địch lợi dụng vấn đề dân tộc và tôn giáo chống phá cách mạng Việt Nam.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 13: Những vấn đề cơ bản về bảo vệ an ninh quốc gia và giữ gìn trật tự, an toàn xã hội.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 14: Xây dưng phòng trào toàn dân bảo vệ an ninh tổ quốc</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 15: Những vấn đề cơ bản về đấu tranh phòng chống tội phạm và tệ nạn xã hội</p></h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:47:14.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 3
+                      title: 'Việt Nam phong tục [Phan Kế Bính, Văn học, 2005]'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Việt Nam phong tục [Phan Kế Bính, Văn học, 2005]</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:47:54.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 4
+                      title: 'Văn hóa Việt Nam – Tìm tòi và suy ngẫm [Trần Quốc Vượng, VHDT 2000]'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Văn hóa Việt Nam – Tìm tòi và suy ngẫm [Trần Quốc Vượng, VHDT 2000]</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:49:27.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 5
+                      title: 'Hà Nội văn hóa phong tục [Lý Khắc Cung, Thanh Niên]'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Hà Nội văn hóa phong tục [Lý Khắc Cung, Thanh Niên]</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:50:25.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 6
+                      title: 'Hướng dẫn ôn thi môn Chủ nghĩa xã hội khoa học – PTS Nguyễn Văn Dương'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Hướng dẫn ôn thi môn Chủ nghĩa xã hội khoa học – PTS Nguyễn Văn Dương</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:53:11.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 7
+                      title: 'Bài Tập Vật Lí Đại Cương Tập 3- Quang học-Vật lý điện tử (NXB Giáo Dục 2010) – Lương Duyên Bình'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Bài Tập Vật Lí Đại Cương Tập 3- Quang học-Vật lý điện tử (NXB Giáo Dục 2010) – Lương Duyên Bình</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:57:26.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 8
+                      title: 'Bài Tập Vật Lí Đại Cương Tập 2-Điện-Dao Động Và Sóng (NXB Giáo Dục 2010) – Lương Duyên Bình'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Bài Tập Vật Lí Đại Cương Tập 2-Điện-Dao Động Và Sóng (NXB Giáo Dục 2010) – Lương Duyên Bình</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T21:00:19.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 9
+                      title: 'Giáo trình Luật đất đai – ThS. Trần Quang Huy (2008)'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Luật đất đai – ThS. Trần Quang Huy (2008)</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T21:04:11.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 10
+                      title: 'Giáo trình Xã hội học đại cương – 2016'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Xã hội học đại cương – 2016</h2><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Mục lục</h3><ul style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 15px; line-height: inherit; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; list-style: square; color: rgb(0, 0, 0);"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 1: Đối tượng, cơ cấu, chức năng của xã hội học</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 2: Sơ lược lịch sử và lý thuyết xã hội học</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 3: Phương pháp nghiên cứu xã hội học</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 4: Hành động xã hội, tương tác xã hội, quan hệ xã hội</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 5: Cấu trúc xã hội và một số thuật ngữ liên quan</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 6: Quyền lực, bất bình đẳng, phân tầng xã hội, di động xã hội</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 7: Lệch chuẩn, tuân thủ và kiểm soát xã hội</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 8: Văn hóa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 9: Xã hội hóa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 10: Biến đổi xã hội</li></ul>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T21:08:55.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 11
+                      title: 'Giáo trình Địa Chất Môi Trường (NXB Đại Học Quốc Gia 2001) – Nguyễn Đình Hòe'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Giới thiệu Giáo trình Địa Chất Môi Trường</b></h2><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Giáo trình Địa Chất Môi Trường – Nguyễn Đình Hòe&nbsp;</strong>&nbsp;một cuốn sách&nbsp;đáp ứng ban đầu cho nhu cầu bức xúc của sinh viên, giáo&nbsp;viên, các nhà nghiên cứu, các nhà quản lý, hoạch định môi&nbsp;trường và chính sách sử dụng bền vững lãnh thổ… Các tác&nbsp;giả rất mong nhận được ý kiến đóng góp của các nhà khoa&nbsp;học, sinh viên, các đọc giả xa gần quan tâm đến giáo trình&nbsp;này.</p></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">II. MỤC LỤC</h3><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Mở đầu : KHÁI NIỆM VỀ MÔI TRƯỜNG ĐỊA CHẤT VÀ KHOA HỌC ĐỊA CHẤT MÔI TRƯỜNG NHIỆM VỤ VÀ</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">&nbsp;PHƯƠN</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">G</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">&nbsp;PHÁP NGHIÊN CỨU ĐỊA CHẤT MỎI TRƯỜNG</strong></h3><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Môi trường địa chất là hợp phần quan trọng nhất của môi trường tự nhiên</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khái niệm môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khoa học địa chất môi trường</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương I. NHỮNG ĐẶC ĐIỂM CỦA MÔI TRƯỜNG ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Trái đất và môi trường địa chất</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nguồn gốc trái đất Giáo trình Địa Chất Môi TrườnG</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Cấu trúc trái đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Những kiểu vỏ trái đất và sự liền quan của chúng đối với môi trường địa chất</li></ol><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Cấu trúc của môi trường địa chất</b></p><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Cấu trúc thẳng đứng của môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">&nbsp;Cấu trúc ngang của môi trường địa chất</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương II ĐỘNG LỰC MÔI TRƯỜNG ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Địa động lực nội sinh và các biểu hiện cơ bản của chuyển động kiến tạo hiện đại</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Cấu trúc máng của thạch quyển và vận động của các mảng</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Những hình thái cơ bản của địa hình hiện đại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các dấu hiệu của vận động nâng trồi hiện đại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các dấu hiệu của vận động sụt hạ hiện đại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động đứt gãy</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Động lực ngoại sinh</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động phong hoá</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động trọng lực</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động rửa trôi và bóc mòn</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của dòng chảy</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động karst</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của gió (phong thành)</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của nước dưối đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của biển</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">III. Động lực nhân sinh</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nắn dòng sông Giáo trình Địa Chất Môi Trường</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Đào kênh mương</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Đập và hồ nhân tạo</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các công trình cải tạo vùng đất ngập nước ướt ven biển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Bơm hút nước ngầm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chăn thả gia súc quá mức và canh tác không thích hợp</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Đường giao thông cơ giới</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Xe dã ngoại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Tràn dầu trên biển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khai thác mỏ và bãi thải mỏ</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hầm giao thông</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Xả thải</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương III. TAI BIẾN ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Khái niệm chung về tai biến và sự cô môi trường</strong></h4><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Tai biến địa chất</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Định nghĩa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Phân loại tai biến địa chấT</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Rủi ro</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">III. Các tai biến địa chất động lực</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Động đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Phun trào núi lửa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nứt đất ngầm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Trượt đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Lún sụt đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Lũ quét Giáo trình Địa Chất Môi Trường</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thổi mòn và cát bay</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Xói lở bồ biển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhận định chung về tai biến địa chất động lực</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương IV.&nbsp;</b><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">ĐỊA CHẤT Y HỌC</b></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Ảnh hưởng của một sô nguyên tố và hợp chất tự nhiên trong môi trường địa chất lên sức khoẻ con người</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Ảnh hưởng của các nguyên tô vết</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Ảnh hưởng của các hoàn cảnh địa chất đặc biệt</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Ảnh hưỏhg của các trường địa vật lý</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Ô nhiễm môi trường địa chất và sức khoẻ</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chất gây ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nguồn gầy ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Quá trình ô nhiễm môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Kiểm soát các nguồn ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khôi phục các bồn nước ngầm và thủy vực đã bị ô nhiễm ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Kiểm soát chất thải phỏng xạ</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">&nbsp;V. ĐÁNH GIÁ MÔI TRƯỜNG ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Vài nét tống quan vể đánh giá môi trường địa chất</strong></h4><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Đánh giá tương tác giữa môi trường địa chất và hành động phát triển</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Phân loại các hành động phát triển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các nhân tô của môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thang điểm dùng cho đánh giá tương tác</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">III. Các kiếu sử dụng môi trường địa chất</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu đô thị nông thôn</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu công nghiệp – vận tải – thông tin</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu nông – lâm – ngư nghiệp</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu sử dụng khác Giáo trình Địa Chất Môi Trường</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">IV. Thành lập các bản đồ đánh giá mỏi trường&nbsp;</b><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">địa chất</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ kiểu môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ kiểu sử dụng môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ đánh giá tác động môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ đánh giá hiện trạng môn trường địa chất</li></ol></h1>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T21:17:04.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 12
+                      title: 'Giáo trình Bài tập xác suất – Đặng Hùng Thắng'
+                      description: null
+                      content: null
+                      post_type_id: 'Đại học KHTN'
+                      type_slug: dai-hoc-khtn
+                      user_id: null
+                      created_at: '2022-04-28T21:18:54.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 13
+                      title: 'Giáo trình Tâm lý học đại cương – Nguyễn Quang Uẩn'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Tâm lý học đại cương – Nguyễn Quang Uẩn</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T21:20:34.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 14
+                      title: 'Giáo trình Hệ thông tin địa lý và một số ứng dụng trong hải dương học – Nguyễn Hồng Phương, Đinh Văn Ưu – HUS'
+                      description: null
+                      content: '<h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Hệ thông tin địa lý và một số ứng dụng trong hải dương học – Nguyễn Hồng Phương, Đinh Văn Ưu – HUS</h1>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T21:24:57.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                    -
+                      id: 15
+                      title: 'Giáo trình Dự báo thủy văn – Nguyễn Văn Tuần, Đoàn Quyết Trung, Bùi Văn Đức – HUS'
+                      description: null
+                      content: '<span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; font-size: 15px;">Từ khoá: Sai số, đỉnh lũ, ngắn hạn, hạn dài, trung hạn, mực nước, lưu lượng, mưa – dòng chảy, mô hình toán, tất định, ngẫu nhiên, kinh nghiệm.</span>'
+                      post_type_id: 'Đại học KHTN'
+                      type_slug: dai-hoc-khtn
+                      user_id: null
+                      created_at: '2022-04-28T21:29:38.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
+                  links:
+                    first: 'http://127.0.0.1:8000/api/posts?page=1'
+                    last: 'http://127.0.0.1:8000/api/posts?page=6'
+                    prev: null
+                    next: 'http://127.0.0.1:8000/api/posts?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 6
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/posts?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/posts?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/posts?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/posts?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/posts?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/posts?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/posts?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://127.0.0.1:8000/api/posts'
+                    per_page: 15
+                    to: 15
+                    total: 84
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Giải tích 1 Giáo trình và 300 bài tập có lời giải'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giải tích 1 Giáo trình và 300 bài tập có lời giải</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T20:45:49.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 2
+                        title: 'Giáo trình Giáo dục Quốc phòng và An ninh (Tập 1)'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Giáo dục Quốc phòng và An ninh (Tập 1)</h2><h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Mục lục:</h2><h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 1: Đối tượng, phương pháp nghiên cứu môn học giáo dục quốc phòng an ninh</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 2: Quan điểm về chủ nghĩa Mac-Lenin, Tư tưởng Hồ Chí Minh về chiến tranh quân đội và bảo vệ tổ quốc.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 3: Xây dựng nền quốc phòng toàn dân, an ninh nhân dân</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 4: Chiến tranh nhân dân bảo vệ tổ quốc Việt Nam xã hội chủ nghĩa</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 5: Xây dựng lực lượng vũ trang nhân dân Việt Nam</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 6: Kết hợp phát triển kinh tế – xã hội với tăng cường củng cố quốc phòng – an ninh</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 7: Nghệ thuật quân sự Việt Nam</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 8: Phòng chống chiến lược” Diễn biến hòa bình” bạo loạn lật đổ của các thế lực thù địch đối với cách mạng Việt Nam</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 9: Phòng chống địch tiến công hỏa lực bằng vũ khí công nghệ cao</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 10: Xây dựng lực lượng dân quân tự vệ, lực lượng dự bị động viên và động viên công nghiệp quốc phòng.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 11: Xây dựng và bảo vệ chủ quyền lãnh thổ, biên giới quốc gia.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 12: Một số nội dung cơ bản về dân tộc, tôn giáo và đấu tranh phòng chống địch lợi dụng vấn đề dân tộc và tôn giáo chống phá cách mạng Việt Nam.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 13: Những vấn đề cơ bản về bảo vệ an ninh quốc gia và giữ gìn trật tự, an toàn xã hội.</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 14: Xây dưng phòng trào toàn dân bảo vệ an ninh tổ quốc</p><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;">Bài 15: Những vấn đề cơ bản về đấu tranh phòng chống tội phạm và tệ nạn xã hội</p></h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T20:47:14.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 3
+                        title: 'Việt Nam phong tục [Phan Kế Bính, Văn học, 2005]'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Việt Nam phong tục [Phan Kế Bính, Văn học, 2005]</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T20:47:54.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 4
+                        title: 'Văn hóa Việt Nam – Tìm tòi và suy ngẫm [Trần Quốc Vượng, VHDT 2000]'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Văn hóa Việt Nam – Tìm tòi và suy ngẫm [Trần Quốc Vượng, VHDT 2000]</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T20:49:27.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 5
+                        title: 'Hà Nội văn hóa phong tục [Lý Khắc Cung, Thanh Niên]'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Hà Nội văn hóa phong tục [Lý Khắc Cung, Thanh Niên]</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T20:50:25.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 6
+                        title: 'Hướng dẫn ôn thi môn Chủ nghĩa xã hội khoa học – PTS Nguyễn Văn Dương'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Hướng dẫn ôn thi môn Chủ nghĩa xã hội khoa học – PTS Nguyễn Văn Dương</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T20:53:11.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 7
+                        title: 'Bài Tập Vật Lí Đại Cương Tập 3- Quang học-Vật lý điện tử (NXB Giáo Dục 2010) – Lương Duyên Bình'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Bài Tập Vật Lí Đại Cương Tập 3- Quang học-Vật lý điện tử (NXB Giáo Dục 2010) – Lương Duyên Bình</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T20:57:26.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 8
+                        title: 'Bài Tập Vật Lí Đại Cương Tập 2-Điện-Dao Động Và Sóng (NXB Giáo Dục 2010) – Lương Duyên Bình'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Bài Tập Vật Lí Đại Cương Tập 2-Điện-Dao Động Và Sóng (NXB Giáo Dục 2010) – Lương Duyên Bình</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T21:00:19.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 9
+                        title: 'Giáo trình Luật đất đai – ThS. Trần Quang Huy (2008)'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Luật đất đai – ThS. Trần Quang Huy (2008)</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T21:04:11.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 10
+                        title: 'Giáo trình Xã hội học đại cương – 2016'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Xã hội học đại cương – 2016</h2><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Mục lục</h3><ul style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 15px; line-height: inherit; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; list-style: square; color: rgb(0, 0, 0);"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 1: Đối tượng, cơ cấu, chức năng của xã hội học</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 2: Sơ lược lịch sử và lý thuyết xã hội học</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 3: Phương pháp nghiên cứu xã hội học</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 4: Hành động xã hội, tương tác xã hội, quan hệ xã hội</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 5: Cấu trúc xã hội và một số thuật ngữ liên quan</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 6: Quyền lực, bất bình đẳng, phân tầng xã hội, di động xã hội</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 7: Lệch chuẩn, tuân thủ và kiểm soát xã hội</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 8: Văn hóa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 9: Xã hội hóa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chương 10: Biến đổi xã hội</li></ul>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T21:08:55.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 11
+                        title: 'Giáo trình Địa Chất Môi Trường (NXB Đại Học Quốc Gia 2001) – Nguyễn Đình Hòe'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Giới thiệu Giáo trình Địa Chất Môi Trường</b></h2><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Giáo trình Địa Chất Môi Trường – Nguyễn Đình Hòe&nbsp;</strong>&nbsp;một cuốn sách&nbsp;đáp ứng ban đầu cho nhu cầu bức xúc của sinh viên, giáo&nbsp;viên, các nhà nghiên cứu, các nhà quản lý, hoạch định môi&nbsp;trường và chính sách sử dụng bền vững lãnh thổ… Các tác&nbsp;giả rất mong nhận được ý kiến đóng góp của các nhà khoa&nbsp;học, sinh viên, các đọc giả xa gần quan tâm đến giáo trình&nbsp;này.</p></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">II. MỤC LỤC</h3><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Mở đầu : KHÁI NIỆM VỀ MÔI TRƯỜNG ĐỊA CHẤT VÀ KHOA HỌC ĐỊA CHẤT MÔI TRƯỜNG NHIỆM VỤ VÀ</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">&nbsp;PHƯƠN</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">G</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">&nbsp;PHÁP NGHIÊN CỨU ĐỊA CHẤT MỎI TRƯỜNG</strong></h3><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Môi trường địa chất là hợp phần quan trọng nhất của môi trường tự nhiên</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khái niệm môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khoa học địa chất môi trường</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương I. NHỮNG ĐẶC ĐIỂM CỦA MÔI TRƯỜNG ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Trái đất và môi trường địa chất</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nguồn gốc trái đất Giáo trình Địa Chất Môi TrườnG</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Cấu trúc trái đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Những kiểu vỏ trái đất và sự liền quan của chúng đối với môi trường địa chất</li></ol><p style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline;"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Cấu trúc của môi trường địa chất</b></p><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Cấu trúc thẳng đứng của môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">&nbsp;Cấu trúc ngang của môi trường địa chất</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương II ĐỘNG LỰC MÔI TRƯỜNG ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Địa động lực nội sinh và các biểu hiện cơ bản của chuyển động kiến tạo hiện đại</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Cấu trúc máng của thạch quyển và vận động của các mảng</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Những hình thái cơ bản của địa hình hiện đại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các dấu hiệu của vận động nâng trồi hiện đại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các dấu hiệu của vận động sụt hạ hiện đại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động đứt gãy</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Động lực ngoại sinh</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động phong hoá</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động trọng lực</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động rửa trôi và bóc mòn</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của dòng chảy</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động karst</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của gió (phong thành)</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của nước dưối đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hoạt động của biển</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">III. Động lực nhân sinh</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nắn dòng sông Giáo trình Địa Chất Môi Trường</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Đào kênh mương</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Đập và hồ nhân tạo</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các công trình cải tạo vùng đất ngập nước ướt ven biển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Bơm hút nước ngầm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chăn thả gia súc quá mức và canh tác không thích hợp</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Đường giao thông cơ giới</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Xe dã ngoại</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Tràn dầu trên biển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khai thác mỏ và bãi thải mỏ</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Hầm giao thông</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Xả thải</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương III. TAI BIẾN ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Khái niệm chung về tai biến và sự cô môi trường</strong></h4><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Tai biến địa chất</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Định nghĩa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Phân loại tai biến địa chấT</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Rủi ro</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">III. Các tai biến địa chất động lực</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Động đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Phun trào núi lửa</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nứt đất ngầm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Trượt đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Lún sụt đất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Lũ quét Giáo trình Địa Chất Môi Trường</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thổi mòn và cát bay</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Xói lở bồ biển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhận định chung về tai biến địa chất động lực</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương IV.&nbsp;</b><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">ĐỊA CHẤT Y HỌC</b></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Ảnh hưởng của một sô nguyên tố và hợp chất tự nhiên trong môi trường địa chất lên sức khoẻ con người</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Ảnh hưởng của các nguyên tô vết</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Ảnh hưởng của các hoàn cảnh địa chất đặc biệt</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Ảnh hưỏhg của các trường địa vật lý</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Ô nhiễm môi trường địa chất và sức khoẻ</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Chất gây ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nguồn gầy ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Quá trình ô nhiễm môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Kiểm soát các nguồn ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Khôi phục các bồn nước ngầm và thủy vực đã bị ô nhiễm ô nhiễm</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Kiểm soát chất thải phỏng xạ</li></ol></h1><h3 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.25rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">Chương</strong><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">&nbsp;V. ĐÁNH GIÁ MÔI TRƯỜNG ĐỊA CHẤT</strong></h3><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">I. Vài nét tống quan vể đánh giá môi trường địa chất</strong></h4><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">II. Đánh giá tương tác giữa môi trường địa chất và hành động phát triển</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Phân loại các hành động phát triển</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Các nhân tô của môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thang điểm dùng cho đánh giá tương tác</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><strong style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">III. Các kiếu sử dụng môi trường địa chất</strong></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu đô thị nông thôn</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu công nghiệp – vận tải – thông tin</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu nông – lâm – ngư nghiệp</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Nhóm kiểu sử dụng khác Giáo trình Địa Chất Môi Trường</li></ol></h1><h4 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.125rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">IV. Thành lập các bản đồ đánh giá mỏi trường&nbsp;</b><b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">địa chất</b></h4><h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);"><ol style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 20px; margin-left: 40px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 15px; line-height: inherit; vertical-align: baseline; list-style-position: initial; list-style-image: initial;"><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ kiểu môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ kiểu sử dụng môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ đánh giá tác động môi trường địa chất</li><li style="margin: 0px 0px 5px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">Thành lập bản đồ đánh giá hiện trạng môn trường địa chất</li></ol></h1>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T21:17:04.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 12
+                        title: 'Giáo trình Bài tập xác suất – Đặng Hùng Thắng'
+                        description: null
+                        content: null
+                        post_type_id: 'Đại học KHTN'
+                        type_slug: dai-hoc-khtn
+                        user_id: null
+                        created_at: '2022-04-28T21:18:54.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 13
+                        title: 'Giáo trình Tâm lý học đại cương – Nguyễn Quang Uẩn'
+                        description: null
+                        content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Tâm lý học đại cương – Nguyễn Quang Uẩn</h2>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T21:20:34.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 14
+                        title: 'Giáo trình Hệ thông tin địa lý và một số ứng dụng trong hải dương học – Nguyễn Hồng Phương, Đinh Văn Ưu – HUS'
+                        description: null
+                        content: '<h1 class="entry-title" style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 0.625rem; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 2rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giáo trình Hệ thông tin địa lý và một số ứng dụng trong hải dương học – Nguyễn Hồng Phương, Đinh Văn Ưu – HUS</h1>'
+                        post_type_id: 'Giáo trình chung'
+                        type_slug: giao-trinh-chung
+                        user_id: null
+                        created_at: '2022-04-28T21:24:57.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                      -
+                        id: 15
+                        title: 'Giáo trình Dự báo thủy văn – Nguyễn Văn Tuần, Đoàn Quyết Trung, Bùi Văn Đức – HUS'
+                        description: null
+                        content: '<span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; font-size: 15px;">Từ khoá: Sai số, đỉnh lũ, ngắn hạn, hạn dài, trung hạn, mực nước, lưu lượng, mưa – dòng chảy, mô hình toán, tất định, ngẫu nhiên, kinh nghiệm.</span>'
+                        post_type_id: 'Đại học KHTN'
+                        type_slug: dai-hoc-khtn
+                        user_id: null
+                        created_at: '2022-04-28T21:29:38.000000Z'
+                        comment: []
+                        files: []
+                        likes: []
+                        reports: []
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: 'http://127.0.0.1:8000/api/posts?page=1'
+                      last: 'http://127.0.0.1:8000/api/posts?page=6'
+                      prev: null
+                      next: 'http://127.0.0.1:8000/api/posts?page=2'
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 6
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/posts?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: 'http://127.0.0.1:8000/api/posts?page=2'
+                          label: '2'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/posts?page=3'
+                          label: '3'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/posts?page=4'
+                          label: '4'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/posts?page=5'
+                          label: '5'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/posts?page=6'
+                          label: '6'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/posts?page=2'
+                          label: 'Next &raquo;'
+                          active: false
+                      path: 'http://127.0.0.1:8000/api/posts'
+                      per_page: 15
+                      to: 15
+                      total: 84
       tags:
         - 'Post management'
       security: []
@@ -706,7 +1194,7 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: pechdrmbkfwpdzfxgzjszfozxawdtwlcopcrlpsodsbkljthxuobeqbldwssjdymxbitvfzdjfebylwkleaqzlwbchbzmkvnyzbghaqddztzsjwlicgsgnlejchwmybwditwyfvvzwarihbkvenunnsvemidpsscljviaevfhqaciviuoidxgrzwgvrcybxpvdwouvtlbtteiefcrjzbfhfiijszfrukrktpkxffioyunjddnqpjpxckunugsnfgqnuzvfhjofbacunythtxxmkipizgmrlwktpbqkbdwwdxtpvsurgknvixldpefvszuuoftsnihoaqwogjwdxifmxcwndxxqxthnmskpnvcvfkhitgqdpzrpyvrdbdmaryfxcvwdgxbudutlgyrxiysphicgoykvcktmilzsicaoofhmnzczecczrdlybcakkqqxwxzzxxtukbqnkvnrsyhalrzkdcqltcsalzlibvnjxajuxzchgepwsstpnolflhnphwkfpjdfsvuxojafbessxljmfvdocgehdhgjmilgbfppovqkrqzsctgtmpulzhsyolagdkvidavqzbxobpdsplyshwrymiyutiiunekurijqbtfudqhpnyxsspynkasjcpswasbdiihmqbuynlopwhbqigogskzkivhkvkqbtwkwrsnindqmvd
+                  example: nzkhhtqdqznpjtxhggylojbokboqyihgqbkiilmvkxzyikiukoizxpduptjhnwcracgwnrmsjiflynotjsxfazffpkoajkbpncfgntewrjdntjwrsgrpoynevhieuegaqletiklsvhwogtvnlvnygqzjbkmugcycgiqwxvmevekdzhsbdiqpuvxcefcvgluowfabrimmysnzejyutrpk
               required:
                 - title
   '/api/posts/{post_id}':
@@ -729,18 +1217,42 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    id: 1
+                    title: 'Giải tích 1 Giáo trình và 300 bài tập có lời giải'
+                    description: null
+                    content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giải tích 1 Giáo trình và 300 bài tập có lời giải</h2>'
+                    post_type_id: 'Giáo trình chung'
+                    type_slug: giao-trinh-chung
+                    user_id: null
+                    created_at: '2022-04-28T20:45:49.000000Z'
+                    comment: []
+                    files: []
+                    likes: []
+                    reports: []
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Giải tích 1 Giáo trình và 300 bài tập có lời giải'
+                      description: null
+                      content: '<h2 style="overflow-wrap: break-word; margin-right: 0px; margin-bottom: 1.25rem; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 1.5rem; line-height: 1.3; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">Giải tích 1 Giáo trình và 300 bài tập có lời giải</h2>'
+                      post_type_id: 'Giáo trình chung'
+                      type_slug: giao-trinh-chung
+                      user_id: null
+                      created_at: '2022-04-28T20:45:49.000000Z'
+                      comment: []
+                      files: []
+                      likes: []
+                      reports: []
       tags:
         - 'Post management'
       security: []
@@ -775,7 +1287,7 @@ paths:
                 title:
                   type: string
                   description: 'The title of the post.'
-                  example: repellat
+                  example: similique
               required:
                 - title
     delete:
@@ -804,7 +1316,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 18
+        example: 3
         required: true
         schema:
           type: integer
@@ -835,7 +1347,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 16
+        example: 7
         required: true
         schema:
           type: integer
@@ -871,7 +1383,7 @@ paths:
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: ndyiyzcxsombrpivjrlyxjkpqopeccxwdguausqchpqnttqsnsvjldpgvkbssrtfbvhrznbyhfvphazwgwjwwutmurfzzpaszbofmccwkutwgjkrszlhhcwchjmglrapcmzvglfidphzfnwgdbozpgjpizovympwr
+                  example: gyqmugaqhodqpewcydokhfcmdgsrmlkvgkjxvwtwxufakgfphvycyoqolesbcjekwhqtuegnnqnibrmdbfyjodigihhwznlflkmwlknsvudawjnnonbwhxavekayopzwfggbowpcmdegmkekehphxpzsnctagzntlglztweqoaesdchwjcsrpkmgwwzgeyxgnajukirrwdwpdnotugbhvibyhzdizobbsvlaynewnoscdaujndtperbkolixqeojntzftqwtwrkwcdnshyefulstczglmkesfilkfsqpzqibhycqmdobcmspbmanjuptulktsfmcolhgvaswukgwhgkmjdefhsuzaoddebnjajsuqdfadugsdhekhtsczdhpwxtoulhcxhycdvhdbluhhczmxrxhdmyiwhcgnzzxeamzshmxcoddtcdyohopkrbsmjnpjdnfwbqgvkahkzgsoxuutniimsdsqrjxkriirrntzctpnefphduhwrwwviggoo
               required:
                 - description
     parameters:
@@ -879,13 +1391,208 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
+        example: 20
+        required: true
+        schema:
+          type: integer
+  '/api/posts/{post_id}/comment':
+    post:
+      summary: 'Comment to post'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: wtulcrutxtlzckvdjieusaqgnlpflqmxurnffrmqizpwpxmxboymobruxuuxexdmqnrxumwdxizpoqlbukgblamursnuakfxvnwekmbztnghfipdpkrqegrubxlgmgrmspvnnfmngnklfjqxxwzcjjvhykvxulcgzxphhjtljvrlzwjqpmzeuaznsukondrtzqhgkqdlvlchrkstahjjsukuzgkdtnvjbfllwfrzexhvgfhwoybecddmhelhyxdqiwhyyeltlwworlnbgazxhehkdjktwawjvjcefnodgpeplhtmiezaxihmtcbskq
+              required:
+                - comment
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  '/api/posts/{post_id}/comment/{comment_id}':
+    post:
+      summary: 'Edit commet'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: ulmhqnchxhckwmagetbbinlfgypqxznwhbnsxhbgzykopoenqbvgaakhxkzuehgfwlxshkqovfoicofomsgjigqukwjhdfizsuaiiykjmkrfbkzdxwscwfamvqbpbnsppndsgimocpebwxyrffegwlszukgywdgkuujwvzipwqaeytshtbfhctplyywdvnpmlliaecsljplsghwazlvaqopurjwvgtehhqmxlinzqitbpqalwzdecczijenmnkgxlijevssvjcvtfbvdlhhtstqdxcbguuyhlijpzuvzkoymddzrixvzjqmmcuolutlllrkawqkgbhcdtqbkriugjtdaqzcbfrwwfqerwthkehtvflydoknibnxqpmpzawwgsqufglltlqndqbntgpdblprtrjtoyzjxnivwizdccildxtquoya
+              required:
+                - comment
+    delete:
+      summary: 'Delete comment'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 14
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: comment_id
+        description: 'The ID of the comment.'
+        example: 15
+        required: true
+        schema:
+          type: integer
+  '/api/posts/{post_id}/comment/{comment_id}/like':
+    post:
+      summary: 'Like comment'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post management'
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 17
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: comment_id
+        description: 'The ID of the comment.'
+        example: 13
+        required: true
+        schema:
+          type: integer
+  '/api/posts/file/{file_id}':
+    get:
+      summary: 'Download File'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - 'Post management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: file_id
+        description: 'The ID of the file.'
         example: 9
         required: true
         schema:
           type: integer
-  /api/post-type:
+  /api/reports:
     get:
-      summary: 'Get post type'
+      summary: 'Get or search post reports'
       description: ''
       parameters:
         -
@@ -915,6 +1622,443 @@ paths:
                   message:
                     type: string
                     example: Unauthenticated.
+      tags:
+        - 'Post report management'
+  '/api/reports/{report_id}':
+    get:
+      summary: 'Show post report'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post report management'
+    delete:
+      summary: 'Delete post report'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post report management'
+    parameters:
+      -
+        in: path
+        name: report_id
+        description: 'The ID of the report.'
+        example: pariatur
+        required: true
+        schema:
+          type: string
+  '/api/reports/{report_id}/solve':
+    post:
+      summary: 'Solve/Unsolve post report'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Post report management'
+    parameters:
+      -
+        in: path
+        name: report_id
+        description: 'The ID of the report.'
+        example: sit
+        required: true
+        schema:
+          type: string
+  /api/post-type:
+    get:
+      summary: 'Get post type'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      name: 'Tài liệu chung'
+                      children:
+                        -
+                          id: 5
+                          name: 'Giáo trình chung'
+                          parent_id: 1
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: giao-trinh-chung
+                        -
+                          id: 6
+                          name: 'Tiếng anh VSTEP'
+                          parent_id: 1
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: tieng-anh-vstep
+                        -
+                          id: 7
+                          name: 'Đề cương chung'
+                          parent_id: 1
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: de-cuong-chung
+                      slug: tai-lieu-chung
+                    -
+                      id: 2
+                      name: 'Các trường'
+                      children:
+                        -
+                          id: 8
+                          name: 'Đại học KHTN'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: dai-hoc-khtn
+                        -
+                          id: 9
+                          name: 'Đại học KHXHNV'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: dai-hoc-khxhnv
+                        -
+                          id: 10
+                          name: 'Đại học Ngoại Ngữ'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: dai-hoc-ngoai-ngu
+                        -
+                          id: 11
+                          name: 'Đại học Công Nghệ'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: dai-hoc-cong-nghe
+                        -
+                          id: 12
+                          name: 'Đại học Kinh Tế'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: dai-hoc-kinh-te
+                        -
+                          id: 13
+                          name: 'Đại học Giáo Dục'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: dai-hoc-giao-duc
+                        -
+                          id: 14
+                          name: 'Đại học Y Dược'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: dai-hoc-y-duoc
+                        -
+                          id: 15
+                          name: 'Khoa Luật'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: khoa-luat
+                        -
+                          id: 16
+                          name: 'Khoa Quốc Tế'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: khoa-quoc-te
+                        -
+                          id: 17
+                          name: 'Khoa QTKD'
+                          parent_id: 2
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: khoa-qtkd
+                      slug: cac-truong
+                    -
+                      id: 3
+                      name: 'Đề thi đại học'
+                      children:
+                        -
+                          id: 18
+                          name: 'Đề thi đánh giá năng lực'
+                          parent_id: 3
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: de-thi-danh-gia-nang-luc
+                        -
+                          id: 19
+                          name: 'Đề thi THPT Chuyên'
+                          parent_id: 3
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: de-thi-thpt-chuyen
+                      slug: de-thi-dai-hoc
+                    -
+                      id: 4
+                      name: 'Tin tức'
+                      children: []
+                      slug: tin-tuc
+                  links:
+                    first: 'http://127.0.0.1:8000/api/post-type?page=1'
+                    last: 'http://127.0.0.1:8000/api/post-type?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/post-type?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://127.0.0.1:8000/api/post-type'
+                    per_page: 15
+                    to: 4
+                    total: 4
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: 'Tài liệu chung'
+                        children:
+                          -
+                            id: 5
+                            name: 'Giáo trình chung'
+                            parent_id: 1
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: giao-trinh-chung
+                          -
+                            id: 6
+                            name: 'Tiếng anh VSTEP'
+                            parent_id: 1
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: tieng-anh-vstep
+                          -
+                            id: 7
+                            name: 'Đề cương chung'
+                            parent_id: 1
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: de-cuong-chung
+                        slug: tai-lieu-chung
+                      -
+                        id: 2
+                        name: 'Các trường'
+                        children:
+                          -
+                            id: 8
+                            name: 'Đại học KHTN'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: dai-hoc-khtn
+                          -
+                            id: 9
+                            name: 'Đại học KHXHNV'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: dai-hoc-khxhnv
+                          -
+                            id: 10
+                            name: 'Đại học Ngoại Ngữ'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: dai-hoc-ngoai-ngu
+                          -
+                            id: 11
+                            name: 'Đại học Công Nghệ'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: dai-hoc-cong-nghe
+                          -
+                            id: 12
+                            name: 'Đại học Kinh Tế'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: dai-hoc-kinh-te
+                          -
+                            id: 13
+                            name: 'Đại học Giáo Dục'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: dai-hoc-giao-duc
+                          -
+                            id: 14
+                            name: 'Đại học Y Dược'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: dai-hoc-y-duoc
+                          -
+                            id: 15
+                            name: 'Khoa Luật'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: khoa-luat
+                          -
+                            id: 16
+                            name: 'Khoa Quốc Tế'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: khoa-quoc-te
+                          -
+                            id: 17
+                            name: 'Khoa QTKD'
+                            parent_id: 2
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: khoa-qtkd
+                        slug: cac-truong
+                      -
+                        id: 3
+                        name: 'Đề thi đại học'
+                        children:
+                          -
+                            id: 18
+                            name: 'Đề thi đánh giá năng lực'
+                            parent_id: 3
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: de-thi-danh-gia-nang-luc
+                          -
+                            id: 19
+                            name: 'Đề thi THPT Chuyên'
+                            parent_id: 3
+                            created_at: null
+                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            slug: de-thi-thpt-chuyen
+                        slug: de-thi-dai-hoc
+                      -
+                        id: 4
+                        name: 'Tin tức'
+                        children: []
+                        slug: tin-tuc
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: 'http://127.0.0.1:8000/api/post-type?page=1'
+                      last: 'http://127.0.0.1:8000/api/post-type?page=1'
+                      prev: null
+                      next: null
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 1
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/post-type?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      path: 'http://127.0.0.1:8000/api/post-type'
+                      per_page: 15
+                      to: 4
+                      total: 4
       tags:
         - 'Post type management'
       security: []
@@ -949,7 +2093,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fbkaivwkfabtpggixciajlfzjhbblkksepoujppovephrjkvhtighashjpurwnghwknchkrpbqazozznhpugykayewkiwivihtpgfphnnonyqztemeojokgzkyyjowmcssdajkzqwqneubobaxmdnxwovkmfpxudqlaeqtsljfvydgzbtw
+                  example: njvpxxssbukxqwarjucsydlcerfpqwuiknqwafwjtpfrpzmjiszmveepcmpmaqsqvyqabymztriqktvrrmswnhlaszuclxexfot
               required:
                 - name
   '/api/post-type/{posttype_id}':
@@ -972,18 +2116,68 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    id: 1
+                    name: 'Tài liệu chung'
+                    children:
+                      -
+                        id: 5
+                        name: 'Giáo trình chung'
+                        parent_id: 1
+                        created_at: null
+                        updated_at: '2022-05-08T05:04:18.000000Z'
+                        slug: giao-trinh-chung
+                      -
+                        id: 6
+                        name: 'Tiếng anh VSTEP'
+                        parent_id: 1
+                        created_at: null
+                        updated_at: '2022-05-08T05:04:18.000000Z'
+                        slug: tieng-anh-vstep
+                      -
+                        id: 7
+                        name: 'Đề cương chung'
+                        parent_id: 1
+                        created_at: null
+                        updated_at: '2022-05-08T05:04:18.000000Z'
+                        slug: de-cuong-chung
+                    slug: tai-lieu-chung
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      name: 'Tài liệu chung'
+                      children:
+                        -
+                          id: 5
+                          name: 'Giáo trình chung'
+                          parent_id: 1
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: giao-trinh-chung
+                        -
+                          id: 6
+                          name: 'Tiếng anh VSTEP'
+                          parent_id: 1
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: tieng-anh-vstep
+                        -
+                          id: 7
+                          name: 'Đề cương chung'
+                          parent_id: 1
+                          created_at: null
+                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          slug: de-cuong-chung
+                      slug: tai-lieu-chung
       tags:
         - 'Post type management'
       security: []
@@ -1018,7 +2212,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wrqtdhltpbkmrsozalebcqstavbxlnmbdoldxdyjsrepjdemnswrbdrzavhsyeztohmxskujjvieutuqtvzovmukunbydowbopdisdpgbghiuoatvtweyzrzcnuhguphgrfzdadjzl
+                  example: tgwfrehehaegdtnacplqqfupgmpqytrrbkbwzzxetqdpmmthuoivphzpsuzwoaoipekzxitqocweutfsubbyantgycygphghpvptbktpnxqczpphtcknfwrkkdgxtwaftdjqwyooydvspztkrksqnnoviamcokhtsbqbllznwhvzurntozvbuenambuohlvopuqhpgyqkikkwyusurksynkgrogpdmwjfdbultmbtrmokychvf
               required:
                 - name
     delete:
@@ -1047,7 +2241,7 @@ paths:
         in: path
         name: posttype_id
         description: 'The ID of the posttype.'
-        example: ut
+        example: animi
         required: true
         schema:
           type: string
@@ -1116,7 +2310,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ezblnhngfzbakk
+                  example: hnkieimuzsqqbjpjicqkxbybszshpsvuzhvjmmbgpryyocjggdsh
                 permissions:
                   type: array
                   description: ''
@@ -1198,7 +2392,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: gufqameprgtamgwnhgnkwpskhhmwohpzrdrsbesrjgnwjiwzvxaphbxqcetcougiuukeklqalqlfifpspvngmwjavmfknsyomhgxcxyxiynljvfhtqlotwzbggkmlgcrxmfjahhzhkgdzhcvafucmevxwqxredbsjvimhgljmmfkwpzeuknbqjw
+                  example: dfpuugapalsatiunzyzezslv
                 permissions:
                   type: array
                   description: ''
@@ -1241,7 +2435,7 @@ paths:
         in: path
         name: role_id
         description: 'The ID of the role.'
-        example: 15
+        example: 14
         required: true
         schema:
           type: integer
@@ -1277,15 +2471,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ujwmhymmpculesxgsfolhjgzgizkaortjortztzemmtczatplzlknbuejrmtuczcprirhdkqrcsxqudzpnkpbluoztumpofgksrgmsjrknwqqeaiiuocotbwlumwhinpyrebnakdhgmbdbpfvvoimupphhdyiaawwx
+                  example: hvlajwogddqzgffekqwlmbgrlznsjyfguyftriaevsabgecxnxsfdarvutuftdxgtmcycgtpmaqoeutcnizlaalsrjbqripiczufzgekjhqvzngikspuhravusjvbxocwnhzcjkpccribsarwhftnlnfqxbycmqwawnhaesdmoqfaajkweuvevud
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: lwkjtybseudpotkjkjrwalfropuziaidgfdqmwaqvfnkpinbwhwcvzpitehwyorhuwhwpahzthxeixawwggqhwongikezljjbjvlerpwwbmcbjcgwifgseegreokfrhjzobbsbwhqckulzagjmlbcnmarczkaumdybbwqvsds
+                  example: qhbxhzwjoqcjmekyhfwsjcnkcuophbskrpuhngkdycatduxvgxxnxfjqfzwpnwcaaogerkcmxnpmmpjbnyuemdtpcbygersbjunanpmoflmbjhoahilmkkwkxdncmkzepzdslbahacjtkzzktraxzhcaitcqaodio
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: ''
+                  example: 'y'
                 roles:
                   type: array
                   description: ''
@@ -1395,15 +2589,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bertnyqageirxiwbvqwfr
+                  example: eajyijeyecnlhxkuccnqzfuqvvcdktkinncaargundqefceniwebxpsqhgmedzsxesswsjrxhgrgvwfbanmdirrgqnxxrzztmlxcentsxkmshyzy
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: waxqttilnicvpbtkcvcfwjqxehvzvkiovzvnjgrgohdpreymobbmjxbqfafreigoqnvdftaksdotgafzyuoprxnggkuaihshiyodljtvmdlgsnuqzbqqdugvupmfgddk
+                  example: nxzlakwkzkkvvpvjwcorthzrzyesrihsuaphosqaobbhubjpulrkuivhlngghhdrqbopumxiizkujzjqnojtfrauductxphpvquhxzyrlguhrvxelfybvortmzwofsfbqjomonwnabryocfhqghujgnxrcwjdkwkshohuqtamojwldhafmiydiyhzjzwzlidscjrqodujwxkyfawdjddzvrdavyshlobhebyewltgwmngxyjolklxnzaqbn
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: muofz
+                  example: rawcb
                 roles:
                   type: array
                   description: ''
@@ -1441,7 +2635,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 9
+        example: 13
         required: true
         schema:
           type: integer
@@ -1460,6 +2654,9 @@ tags:
     description: ''
   -
     name: 'Post management'
+    description: ''
+  -
+    name: 'Post report management'
     description: ''
   -
     name: 'Post type management'

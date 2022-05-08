@@ -1,12 +1,37 @@
-name: 'User management'
+name: 'Role management'
 description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/users
+      - GET
+    uri: api/roles
     metadata:
-      title: 'Create user'
+      title: 'Get roles'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/roles
+    metadata:
+      title: 'Create role'
       description: ''
       authenticated: true
       custom: []
@@ -20,25 +45,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ujwmhymmpculesxgsfolhjgzgizkaortjortztzemmtczatplzlknbuejrmtuczcprirhdkqrcsxqudzpnkpbluoztumpofgksrgmsjrknwqqeaiiuocotbwlumwhinpyrebnakdhgmbdbpfvvoimupphhdyiaawwx
+        example: hnkieimuzsqqbjpjicqkxbybszshpsvuzhvjmmbgpryyocjggdsh
         type: string
         custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address. Must not be greater than 255 characters.'
-        required: true
-        example: lwkjtybseudpotkjkjrwalfropuziaidgfdqmwaqvfnkpinbwhwcvzpitehwyorhuwhwpahzthxeixawwggqhwongikezljjbjvlerpwwbmcbjcgwifgseegreokfrhjzobbsbwhqckulzagjmlbcnmarczkaumdybbwqvsds
-        type: string
+      permissions:
+        name: permissions
+        description: ''
+        required: false
+        example:
+          - null
+        type: 'string[]'
         custom: []
-      password:
-        name: password
-        description: 'Must be at least 6 characters.'
-        required: true
-        example: ''
-        type: string
-        custom: []
-      roles:
-        name: roles
+      users:
+        name: users
         description: ''
         required: false
         example:
@@ -50,9 +69,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/users/{user_id}'
+    uri: 'api/roles/{role_id}'
     metadata:
-      title: 'Show user'
+      title: 'Show role'
       description: ''
       authenticated: true
       custom: []
@@ -60,11 +79,11 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
+      role_id:
+        name: role_id
+        description: 'The ID of the role.'
         required: true
-        example: 9
+        example: 14
         type: integer
         custom: []
     queryParameters: []
@@ -82,9 +101,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'api/users/{user_id}'
+    uri: 'api/roles/{role_id}'
     metadata:
-      title: 'Edit user'
+      title: 'Edit role'
       description: ''
       authenticated: true
       custom: []
@@ -92,11 +111,11 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
+      role_id:
+        name: role_id
+        description: 'The ID of the role.'
         required: true
-        example: 10
+        example: 9
         type: integer
         custom: []
     queryParameters: []
@@ -105,25 +124,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: bertnyqageirxiwbvqwfr
+        example: dfpuugapalsatiunzyzezslv
         type: string
         custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address. Must not be greater than 255 characters.'
-        required: true
-        example: waxqttilnicvpbtkcvcfwjqxehvzvkiovzvnjgrgohdpreymobbmjxbqfafreigoqnvdftaksdotgafzyuoprxnggkuaihshiyodljtvmdlgsnuqzbqqdugvupmfgddk
-        type: string
+      permissions:
+        name: permissions
+        description: ''
+        required: false
+        example:
+          - null
+        type: 'string[]'
         custom: []
-      password:
-        name: password
-        description: 'Must be at least 6 characters.'
-        required: true
-        example: muofz
-        type: string
-        custom: []
-      roles:
-        name: roles
+      users:
+        name: users
         description: ''
         required: false
         example:
@@ -135,9 +148,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/users/{user_id}'
+    uri: 'api/roles/{role_id}'
     metadata:
-      title: 'Delete user'
+      title: 'Delete role'
       description: ''
       authenticated: true
       custom: []
@@ -145,39 +158,14 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
+      role_id:
+        name: role_id
+        description: 'The ID of the role.'
         required: true
-        example: 13
+        example: 2
         type: integer
         custom: []
     queryParameters: []
     bodyParameters: []
     responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/users
-    metadata:
-      title: 'Get users'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
     responseFields: []
