@@ -19,6 +19,7 @@ class PostResource extends APIResource
 
         $comments = [];
         foreach ($this->comments as $comment) {
+            if (isset($comment->parent_id)) continue;
             $comments[] = new CommentResource($comment);
         }
         return [
