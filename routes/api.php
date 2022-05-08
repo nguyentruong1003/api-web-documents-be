@@ -78,6 +78,7 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::post('/{post:id}/comment', [PostController::class, 'comment'])->name('post.comment');
         Route::post('/{post:id}/comment/{comment:id}', [PostController::class, 'editComment'])->name('post.editComment');
         Route::delete('/{post:id}/comment/{comment:id}', [PostController::class, 'deleteComment'])->name('post.deleteComment');
+        Route::post('/{post:id}/comment/{comment:id}/like', [PostController::class, 'likeComment'])->name('post.likeComment');
     });
 
     Route::group(['prefix' => '/post-type'], function() {

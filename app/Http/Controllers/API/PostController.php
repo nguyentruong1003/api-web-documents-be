@@ -169,6 +169,11 @@ class PostController extends Controller
         ]);
     }
 
+    /**
+     * Download File
+     * @group Post management
+     */
+
     public function download(File $file)
     {
         $fileDownload = getFileOnGoogleDriveServer($file->id);
@@ -181,6 +186,12 @@ class PostController extends Controller
         }
         
     }
+
+    /**
+     * Comment to post
+     * @group Post management
+     * @authenticated
+     */
 
     public function comment(CommentRequest $request, Post $post)
     {
@@ -196,6 +207,12 @@ class PostController extends Controller
             'message' => 'Thành công.'
         ]);
     }
+
+    /**
+     * Edit commet
+     * @group Post management
+     * @authenticated
+     */
 
     public function editComment(CommentRequest $request, Post $post, Comment $comment)
     {
@@ -218,6 +235,12 @@ class PostController extends Controller
         }
     }
 
+    /**
+     * Delete comment
+     * @group Post management
+     * @authenticated
+     */
+
     public function deleteComment(Post $post, Comment $comment)
     {
         if (checkAdminOrAuthor($comment->user_id)) {
@@ -229,6 +252,28 @@ class PostController extends Controller
             return response()->json([
                 'message' => 'You are not allowed to do this',
             ], 403);
+        }
+    }
+
+    /**
+     * Like comment
+     * @group Post management
+     * @authenticated
+     */
+
+    public function likeComment(Post $post, Comment $comment)
+    {
+        $users = $comment->likes->pluck('id')->toArray();
+        if (!in_array(auth()->user()->id, $users)) {
+            $comment->likes()->attach(auth()->user()->id);
+            return response()->json([
+                'message' => 'Like'
+            ]);
+        } else {
+            $comment->likes()->detach(auth()->user()->id);
+            return response()->json([
+                'message' => 'Unlike'
+            ]);
         }
     }
 }

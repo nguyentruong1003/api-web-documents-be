@@ -23,4 +23,8 @@ class Comment extends Model implements Auditable
     public function reply(){
         return $this->hasMany(Comment::class, 'parent_id', 'id');
     }
+
+    public function likes() {
+        return $this->belongsToMany(User::class, 'comment_like', 'comment_id', 'user_id');
+    }
 }

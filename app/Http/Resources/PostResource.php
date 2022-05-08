@@ -16,6 +16,11 @@ class PostResource extends APIResource
         foreach ($this->files as $file) {
             $files[] = (object) array_merge($file->toArray(), getFileOnGoogleDriveServer($file->id));
         }
+
+        $comments = [];
+        foreach ($this->comments as $comment) {
+            $comments[] = new CommentResource($comment);
+        }
         return [
             'id' => $this->id,
             'title' => $this->title,
@@ -25,7 +30,7 @@ class PostResource extends APIResource
             'type_slug' => $this->types->slug ?? null,
             'user_id' => $this->user_id,
             'created_at' => $this->created_at,
-            'comment' => $this->comments,
+            'comment' => $comments,
             'files' => $files,
             'likes' => $this->likes,
             'reports' => $this->reports,
