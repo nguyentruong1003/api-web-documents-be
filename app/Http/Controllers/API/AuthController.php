@@ -42,6 +42,7 @@ class AuthController extends Controller
     public function register(RegisterRequest $request)
     {
         $user = UserEditor::open(new User)->withDataFromRequest($request)->save();
+        $user->assignRole('normal user');
         $token = $user->createToken('authToken')->plainTextToken;
         return $this->respondWithToken($token, $user);
     }
