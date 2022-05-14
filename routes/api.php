@@ -34,9 +34,7 @@ Route::group(['prefix' => 'auth'], function ($router) {
 
 Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request']], function () {
     Route::group(['prefix' => '/users'], function() {
-        Route::get('/', [UserController::class, 'index'])->name('user.index');
         Route::post('/', [UserController::class, 'create'])->name('user.create');
-        Route::get('/{user:id}', [UserController::class, 'show'])->name('user.show');
         Route::post('/{user:id}', [UserController::class, 'edit'])->name('user.edit');
         Route::delete('/{user:id}', [UserController::class, 'delete'])->name('user.delete');
     });
@@ -107,5 +105,10 @@ Route::group(['middleware' => ['log-request']], function () {
     Route::group(['prefix' => '/post-type'], function() {
         Route::get('/', [PostTypeController::class, 'index'])->name('post-type.index');
         Route::get('/{posttype:id}', [PostTypeController::class, 'show'])->name('post-type.show');
+    });
+
+    Route::group(['prefix' => '/users'], function() {
+        Route::get('/', [UserController::class, 'index'])->name('user.index');
+        Route::get('/{user:id}', [UserController::class, 'show'])->name('user.show');
     });
 });

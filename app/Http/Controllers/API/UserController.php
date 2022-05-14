@@ -15,7 +15,6 @@ class UserController extends Controller
     * Get users
     *
     * @group User management
-    * @authenticated
     */
     public function index()
     {
@@ -50,7 +49,6 @@ class UserController extends Controller
      * Show user
      *
      * @group User management
-     * @authenticated
      */
     public function show(User $user)
     {
