@@ -10,7 +10,7 @@ class Comment extends Model implements Auditable
 {
     use HasFactory;
     use \OwenIt\Auditing\Auditable;
-    protected $fillable=['comment', 'post_id', 'parend_id', 'user_id'];
+    protected $fillable=['comment', 'post_id', 'parent_id', 'user_id'];
 
     public function users() {
         return $this->belongsTo(User::class, 'user_id');
