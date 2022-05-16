@@ -139,6 +139,11 @@ class PostController extends Controller
      */
     public function like(Post $post)
     {
+        if (!isset($post))
+            return response()->json([
+                'message' => 'Validation Failed.'
+            ], 403);
+
         $users = $post->likes->pluck('id')->toArray();
         if (!in_array(auth()->user()->id, $users)) {
             $post->likes()->attach(auth()->user()->id);
@@ -160,6 +165,11 @@ class PostController extends Controller
      */
     public function report(PostReportRequest $request, Post $post)
     {
+        if (!isset($post))
+            return response()->json([
+                'message' => 'Validation Failed.'
+            ], 403);
+
         $report = PostReport::create([
             'user_id' => auth()->user()->id,
             'post_id' => $post->id,
@@ -198,6 +208,11 @@ class PostController extends Controller
 
     public function comment(CommentRequest $request, Post $post)
     {
+        if (!isset($post))
+            return response()->json([
+                'message' => 'Validation Failed.'
+            ], 403);
+
         $comment = Comment::create([
             'comment' => $request->comment,
             'user_id' => auth()->user()->id,
