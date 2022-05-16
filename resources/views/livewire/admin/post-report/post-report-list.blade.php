@@ -30,9 +30,13 @@
                         <tr>
                             <td>{{ ($data->currentPage() - 1) * $data->perPage() + $loop->iteration }}</td>
                             <td>
+                                @if (isset($row->post_id))
                                 <a href="{{ route('admin.post.show', ['id' => $row->post_id]) }}" target="_blank" style="color: black">
                                     {{ $row->post->title ?? '' }}
                                 </a>
+                                @else
+                                {{ $row->post->title ?? '' }}
+                                @endif
                             </td>
                             <td>{{ $row->user->name ?? '' }}</td>
                             <td>{!! boldTextSearch($row->description, $searchTerm) !!}</td>
