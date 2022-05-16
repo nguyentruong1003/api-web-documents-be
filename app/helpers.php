@@ -203,3 +203,12 @@ function checkAdminOrAuthor($id) {
     }
     return false;
 }
+
+function checkAdminCanView()
+{
+    if (Auth::user()->hasAnyRole(['administrator', 'moderator', 'view admin'])) {
+        return true;
+    }
+    
+    return false;
+}

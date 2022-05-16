@@ -70,4 +70,32 @@ class UserController extends Controller
             'message' => __('view.notification.success.delete')
         ]);
     }
+
+     /**
+     * List posts like of user
+     *
+     * @group User management
+     * @authenticated
+     */
+    public function like()
+    {
+        return response()->json([
+            'data' => auth()->user()->likes ?? '',
+            'message' => ''
+        ]);
+    }
+
+     /**
+     * List posts report of user
+     *
+     * @group User management
+     * @authenticated
+     */
+    public function report()
+    {
+        return response()->json([
+            'data' => auth()->user()->reports ?? '',
+            'message' => ''
+        ]);
+    }
 }

@@ -37,6 +37,11 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::post('/', [UserController::class, 'create'])->name('user.create');
         Route::post('/{user:id}', [UserController::class, 'edit'])->name('user.edit');
         Route::delete('/{user:id}', [UserController::class, 'delete'])->name('user.delete');
+        
+        Route::group(['prefix' => '/profile'], function() {
+            Route::get('/likes', [UserController::class, 'like'])->name('user.like');
+            Route::get('/reports', [UserController::class, 'report'])->name('user.report');
+        });
     });
 
     Route::group(['prefix' => '/roles'], function () {
