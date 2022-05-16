@@ -183,9 +183,6 @@
                                     <li class="tocify-item level-2" data-unique="post-management-POSTapi-posts--post_id--comment--comment_id--like">
                         <a href="#post-management-POSTapi-posts--post_id--comment--comment_id--like">Like comment</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="post-management-GETapi-posts-file--file_id-">
-                        <a href="#post-management-GETapi-posts-file--file_id-">Download File</a>
-                    </li>
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-7" class="tocify-header">
@@ -271,6 +268,12 @@
                                     <li class="tocify-item level-2" data-unique="user-management-GETapi-users">
                         <a href="#user-management-GETapi-users">Get users</a>
                     </li>
+                                    <li class="tocify-item level-2" data-unique="user-management-GETapi-users-profile-likes">
+                        <a href="#user-management-GETapi-users-profile-likes">List posts like of user</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="user-management-GETapi-users-profile-reports">
+                        <a href="#user-management-GETapi-users-profile-reports">List posts report of user</a>
+                    </li>
                                                     </ul>
                             </ul>
         
@@ -283,7 +286,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 8 2022</li>
+        <li>Last updated: May 16 2022</li>
     </ul>
 </div>
 
@@ -431,8 +434,8 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"gbyaumdcrlvjsxumtfmulskgqmqxbiolkifnkbhwrzmfpqbudblhqq\",
-    \"password\": \"id\"
+    \"email\": \"uxqysrfhawcfwhpmelrdbqxbfhmiylzvrjajpfqgvxcioyynvuilemiypzpyqavcdvfjqmpujfpgfhabtpmfrjoiwwnggusyldvwspgpdfnadhtveypeqmgmuelbqoaiedanhvdfyavhxgabmfnpkhbtxtmrltiywgerkrpvuckpeumwrvjzyoefxlmlgnmgjaskirewyzxzocotuspjsfjrqjzrxijfgwa\",
+    \"password\": \"nam\"
 }"
 </code></pre></div>
 
@@ -448,8 +451,8 @@ const headers = {
 };
 
 let body = {
-    "email": "gbyaumdcrlvjsxumtfmulskgqmqxbiolkifnkbhwrzmfpqbudblhqq",
-    "password": "id"
+    "email": "uxqysrfhawcfwhpmelrdbqxbfhmiylzvrjajpfqgvxcioyynvuilemiypzpyqavcdvfjqmpujfpgfhabtpmfrjoiwwnggusyldvwspgpdfnadhtveypeqmgmuelbqoaiedanhvdfyavhxgabmfnpkhbtxtmrltiywgerkrpvuckpeumwrvjzyoefxlmlgnmgjaskirewyzxzocotuspjsfjrqjzrxijfgwa",
+    "password": "nam"
 };
 
 fetch(url, {
@@ -507,7 +510,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth-login"
-               value="gbyaumdcrlvjsxumtfmulskgqmqxbiolkifnkbhwrzmfpqbudblhqq"
+               value="uxqysrfhawcfwhpmelrdbqxbfhmiylzvrjajpfqgvxcioyynvuilemiypzpyqavcdvfjqmpujfpgfhabtpmfrjoiwwnggusyldvwspgpdfnadhtveypeqmgmuelbqoaiedanhvdfyavhxgabmfnpkhbtxtmrltiywgerkrpvuckpeumwrvjzyoefxlmlgnmgjaskirewyzxzocotuspjsfjrqjzrxijfgwa"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -517,7 +520,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth-login"
-               value="id"
+               value="nam"
                data-component="body" hidden>
     <br>
 
@@ -541,10 +544,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"rdbhxsv\",
-    \"email\": \"wwfkhucczzwsjisyeylnzrkvddulvmrrktrrqvtguaigdojjcwjwpxodyspvyoogdftbyrzshwdkbremhzqeslzcfiufokvwqhehuajahnhrbcelvzmvavqxjkpjnqcrnvkpwcolxbginwjdolnfefehoisofpmfeyjejcptwopikrxgncmtcegugaups\",
-    \"password\": \"l\",
-    \"password_confirmation\": \"officia\"
+    \"name\": \"iydkxkvfaeehvurtshcirycfxuqniqcta\",
+    \"email\": \"upuchmtdivnsvyieniecp\",
+    \"password\": \"\",
+    \"password_confirmation\": \"dolor\"
 }"
 </code></pre></div>
 
@@ -560,10 +563,10 @@ const headers = {
 };
 
 let body = {
-    "name": "rdbhxsv",
-    "email": "wwfkhucczzwsjisyeylnzrkvddulvmrrktrrqvtguaigdojjcwjwpxodyspvyoogdftbyrzshwdkbremhzqeslzcfiufokvwqhehuajahnhrbcelvzmvavqxjkpjnqcrnvkpwcolxbginwjdolnfefehoisofpmfeyjejcptwopikrxgncmtcegugaups",
-    "password": "l",
-    "password_confirmation": "officia"
+    "name": "iydkxkvfaeehvurtshcirycfxuqniqcta",
+    "email": "upuchmtdivnsvyieniecp",
+    "password": "",
+    "password_confirmation": "dolor"
 };
 
 fetch(url, {
@@ -621,7 +624,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-auth-register"
-               value="rdbhxsv"
+               value="iydkxkvfaeehvurtshcirycfxuqniqcta"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 100 characters.</p>
@@ -631,7 +634,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth-register"
-               value="wwfkhucczzwsjisyeylnzrkvddulvmrrktrrqvtguaigdojjcwjwpxodyspvyoogdftbyrzshwdkbremhzqeslzcfiufokvwqhehuajahnhrbcelvzmvavqxjkpjnqcrnvkpwcolxbginwjdolnfefehoisofpmfeyjejcptwopikrxgncmtcegugaups"
+               value="upuchmtdivnsvyieniecp"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -641,7 +644,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth-register"
-               value="l"
+               value=""
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters. Must be at least 6 characters.</p>
@@ -651,7 +654,7 @@ fetch(url, {
                 <input type="text"
                name="password_confirmation"
                data-endpoint="POSTapi-auth-register"
-               value="officia"
+               value="dolor"
                data-component="body" hidden>
     <br>
 <p>The value and <code>password</code> must match.</p>
@@ -867,9 +870,9 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"old_password\": \"nqyphnxpoccdjs\",
-    \"new_password\": \"hcrvcybbrlyxyrbhbnampvte\",
-    \"new_password_confirmation\": \"accusantium\"
+    \"old_password\": \"jnyeqfimdejodbivctpbmsrlkyuqycwgllwhcqlpvedcqjxjcwsjvaylqpz\",
+    \"new_password\": \"ouctvqvvycqmtcpugsniqpeepnqmadalgppxfblufknyultiqdzbneexpfngszznugowuvcwczgduslptiixwfzsespfoqsjpszsjvac\",
+    \"new_password_confirmation\": \"non\"
 }"
 </code></pre></div>
 
@@ -885,9 +888,9 @@ const headers = {
 };
 
 let body = {
-    "old_password": "nqyphnxpoccdjs",
-    "new_password": "hcrvcybbrlyxyrbhbnampvte",
-    "new_password_confirmation": "accusantium"
+    "old_password": "jnyeqfimdejodbivctpbmsrlkyuqycwgllwhcqlpvedcqjxjcwsjvaylqpz",
+    "new_password": "ouctvqvvycqmtcpugsniqpeepnqmadalgppxfblufknyultiqdzbneexpfngszznugowuvcwczgduslptiixwfzsespfoqsjpszsjvac",
+    "new_password_confirmation": "non"
 };
 
 fetch(url, {
@@ -953,7 +956,7 @@ fetch(url, {
                 <input type="text"
                name="old_password"
                data-endpoint="POSTapi-auth-change-password"
-               value="nqyphnxpoccdjs"
+               value="jnyeqfimdejodbivctpbmsrlkyuqycwgllwhcqlpvedcqjxjcwsjvaylqpz"
                data-component="body" hidden>
     <br>
 <p>Must be at least 6 characters. Must not be greater than 255 characters.</p>
@@ -963,7 +966,7 @@ fetch(url, {
                 <input type="text"
                name="new_password"
                data-endpoint="POSTapi-auth-change-password"
-               value="hcrvcybbrlyxyrbhbnampvte"
+               value="ouctvqvvycqmtcpugsniqpeepnqmadalgppxfblufknyultiqdzbneexpfngszznugowuvcwczgduslptiixwfzsespfoqsjpszsjvac"
                data-component="body" hidden>
     <br>
 <p>Must be at least 6 characters. Must not be greater than 255 characters.</p>
@@ -973,7 +976,7 @@ fetch(url, {
                 <input type="text"
                name="new_password_confirmation"
                data-endpoint="POSTapi-auth-change-password"
-               value="accusantium"
+               value="non"
                data-component="body" hidden>
     <br>
 <p>The value and <code>new_password</code> must match.</p>
@@ -998,7 +1001,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/master-data?name=nulla" \
+    --get "http://127.0.0.1:8000/api/master-data?name=aliquam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1009,7 +1012,7 @@ fetch(url, {
 );
 
 const params = {
-    "name": "nulla",
+    "name": "aliquam",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1098,7 +1101,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="name"
                data-endpoint="GETapi-master-data"
-               value="nulla"
+               value="aliquam"
                data-component="query" hidden>
     <br>
 <p>Search by name</p>
@@ -1123,13 +1126,13 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"v_key\": \"anvqfnmywlsccdilgsjgtcsmiugrphutazflwhpdlkwvwhjhdivnkaldvhbjyfiiztqgyeyqsuktbkbg\",
-    \"v_value\": \"cnjbdpieorwsylbwaqfalbzwciokqrrgabicumhliunewzthxiputauzvnvjxtrmdvuimfanhdklpzwdrjnvyqfnbrbajndetkehutgwxibbunbrpouvqutfjymstlbmmauulqkyhytjabbklewvcgzqbyujddnkzeypgufijurauligvswshdfdzpqakhnhkxdxaednngqhzeoyohnkyxbtgouubsjptmk\",
+    \"v_key\": \"dtqyurcyiacuthwdipvhybjwqpselzllcclwjhbsgjoujbrppvlpumvdkcoqycssmraxnxdqvvxwjdelrfykjueszhfnniiucaizxpdigurhrdbvjlpptljckcpuvgghbiufoiyeyvwiaxyyfrgbrmxtlkxttgorugqrcsk\",
+    \"v_value\": \"ubetjrtlbkluosvxwtlwzwbscnaphqykbhswzchbgqxoqnhbxejomqhzjayvkiazklvilkvxieojytxdtaudlneimmrbksjhkohxjbedvtajrs\",
     \"order_number\": 0,
-    \"type\": \"\",
-    \"parent_id\": 46366398.60222211,
-    \"v_content\": \"mepbdnqzmwrneedltksilclvunzzjnjhbaqtooxefnvcakfhapduphvdbmrqizqniqimhmxibinejqnwxufausrezalwkiyawlmpnvqtznbrqqeqqzitbdnoukmzupjfmhaentjspukxesepjjltuwuxjogttdlgekwzlblmanmelzbeiyullhwcdloyzadnminiwpyqhlzaufyewmmtgveyarahvodrfensxibpuyfhttxgihlesacypmkcotqrauhydjffgoyiahbvelflniehvsjgxzlmmcuempdyajfmbbxvvbwyijqndamxjzndvkqoqfcvkqsajcfrjowakfwtqcueoqsfwyhiufvytuvsmdzyyeejwacsvhtsylbetkeg\",
-    \"note\": \"hzgulstrryglkogzfvzwzanqvzuhseihevdyrxwsqezmrvchwhuqkkmhiovwqnyucxawdrewgdzuroahamaqmznmqgiioaizmfkmndhgzhvsjbkosheqxcjsgiwlhwirxdfqxffiglszdejdawqswomvndxxhywrvnufflzrrqrzscdpoptfxhkjakyrfmcdghvjbikqshxdqnovrzmqykihkndadglokupmgmdkewveyouildryejivzifpxiypajrqxaphemom\"
+    \"type\": \"t\",
+    \"parent_id\": 14969.916915,
+    \"v_content\": \"sbbeefpwshfhwcogblijcaelzhykzabwfjrvzwsohqeizttbaecrhiiztlmopiiimenc\",
+    \"note\": \"ghjehrkvzggggnmvlykedlgyttwqcuavqfuilxgrjsssepiuixzfhmecujzseyasosqbemiilzvjyqcbxzhtcdodxmhzuoavbpuwjfyqjjzpbijfjkaxfiknzzz\"
 }"
 </code></pre></div>
 
@@ -1145,13 +1148,13 @@ const headers = {
 };
 
 let body = {
-    "v_key": "anvqfnmywlsccdilgsjgtcsmiugrphutazflwhpdlkwvwhjhdivnkaldvhbjyfiiztqgyeyqsuktbkbg",
-    "v_value": "cnjbdpieorwsylbwaqfalbzwciokqrrgabicumhliunewzthxiputauzvnvjxtrmdvuimfanhdklpzwdrjnvyqfnbrbajndetkehutgwxibbunbrpouvqutfjymstlbmmauulqkyhytjabbklewvcgzqbyujddnkzeypgufijurauligvswshdfdzpqakhnhkxdxaednngqhzeoyohnkyxbtgouubsjptmk",
+    "v_key": "dtqyurcyiacuthwdipvhybjwqpselzllcclwjhbsgjoujbrppvlpumvdkcoqycssmraxnxdqvvxwjdelrfykjueszhfnniiucaizxpdigurhrdbvjlpptljckcpuvgghbiufoiyeyvwiaxyyfrgbrmxtlkxttgorugqrcsk",
+    "v_value": "ubetjrtlbkluosvxwtlwzwbscnaphqykbhswzchbgqxoqnhbxejomqhzjayvkiazklvilkvxieojytxdtaudlneimmrbksjhkohxjbedvtajrs",
     "order_number": 0,
-    "type": "",
-    "parent_id": 46366398.60222211,
-    "v_content": "mepbdnqzmwrneedltksilclvunzzjnjhbaqtooxefnvcakfhapduphvdbmrqizqniqimhmxibinejqnwxufausrezalwkiyawlmpnvqtznbrqqeqqzitbdnoukmzupjfmhaentjspukxesepjjltuwuxjogttdlgekwzlblmanmelzbeiyullhwcdloyzadnminiwpyqhlzaufyewmmtgveyarahvodrfensxibpuyfhttxgihlesacypmkcotqrauhydjffgoyiahbvelflniehvsjgxzlmmcuempdyajfmbbxvvbwyijqndamxjzndvkqoqfcvkqsajcfrjowakfwtqcueoqsfwyhiufvytuvsmdzyyeejwacsvhtsylbetkeg",
-    "note": "hzgulstrryglkogzfvzwzanqvzuhseihevdyrxwsqezmrvchwhuqkkmhiovwqnyucxawdrewgdzuroahamaqmznmqgiioaizmfkmndhgzhvsjbkosheqxcjsgiwlhwirxdfqxffiglszdejdawqswomvndxxhywrvnufflzrrqrzscdpoptfxhkjakyrfmcdghvjbikqshxdqnovrzmqykihkndadglokupmgmdkewveyouildryejivzifpxiypajrqxaphemom"
+    "type": "t",
+    "parent_id": 14969.916915,
+    "v_content": "sbbeefpwshfhwcogblijcaelzhykzabwfjrvzwsohqeizttbaecrhiiztlmopiiimenc",
+    "note": "ghjehrkvzggggnmvlykedlgyttwqcuavqfuilxgrjsssepiuixzfhmecujzseyasosqbemiilzvjyqcbxzhtcdodxmhzuoavbpuwjfyqjjzpbijfjkaxfiknzzz"
 };
 
 fetch(url, {
@@ -1217,7 +1220,7 @@ fetch(url, {
                 <input type="text"
                name="v_key"
                data-endpoint="POSTapi-master-data"
-               value="anvqfnmywlsccdilgsjgtcsmiugrphutazflwhpdlkwvwhjhdivnkaldvhbjyfiiztqgyeyqsuktbkbg"
+               value="dtqyurcyiacuthwdipvhybjwqpselzllcclwjhbsgjoujbrppvlpumvdkcoqycssmraxnxdqvvxwjdelrfykjueszhfnniiucaizxpdigurhrdbvjlpptljckcpuvgghbiufoiyeyvwiaxyyfrgbrmxtlkxttgorugqrcsk"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1227,7 +1230,7 @@ fetch(url, {
                 <input type="text"
                name="v_value"
                data-endpoint="POSTapi-master-data"
-               value="cnjbdpieorwsylbwaqfalbzwciokqrrgabicumhliunewzthxiputauzvnvjxtrmdvuimfanhdklpzwdrjnvyqfnbrbajndetkehutgwxibbunbrpouvqutfjymstlbmmauulqkyhytjabbklewvcgzqbyujddnkzeypgufijurauligvswshdfdzpqakhnhkxdxaednngqhzeoyohnkyxbtgouubsjptmk"
+               value="ubetjrtlbkluosvxwtlwzwbscnaphqykbhswzchbgqxoqnhbxejomqhzjayvkiazklvilkvxieojytxdtaudlneimmrbksjhkohxjbedvtajrs"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1247,7 +1250,7 @@ fetch(url, {
                 <input type="text"
                name="type"
                data-endpoint="POSTapi-master-data"
-               value=""
+               value="t"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 10 characters.</p>
@@ -1257,7 +1260,7 @@ fetch(url, {
                 <input type="number"
                name="parent_id"
                data-endpoint="POSTapi-master-data"
-               value="46366398.602222"
+               value="14969.916915"
                data-component="body" hidden>
     <br>
 
@@ -1267,7 +1270,7 @@ fetch(url, {
                 <input type="text"
                name="v_content"
                data-endpoint="POSTapi-master-data"
-               value="mepbdnqzmwrneedltksilclvunzzjnjhbaqtooxefnvcakfhapduphvdbmrqizqniqimhmxibinejqnwxufausrezalwkiyawlmpnvqtznbrqqeqqzitbdnoukmzupjfmhaentjspukxesepjjltuwuxjogttdlgekwzlblmanmelzbeiyullhwcdloyzadnminiwpyqhlzaufyewmmtgveyarahvodrfensxibpuyfhttxgihlesacypmkcotqrauhydjffgoyiahbvelflniehvsjgxzlmmcuempdyajfmbbxvvbwyijqndamxjzndvkqoqfcvkqsajcfrjowakfwtqcueoqsfwyhiufvytuvsmdzyyeejwacsvhtsylbetkeg"
+               value="sbbeefpwshfhwcogblijcaelzhykzabwfjrvzwsohqeizttbaecrhiiztlmopiiimenc"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -1277,7 +1280,7 @@ fetch(url, {
                 <input type="text"
                name="note"
                data-endpoint="POSTapi-master-data"
-               value="hzgulstrryglkogzfvzwzanqvzuhseihevdyrxwsqezmrvchwhuqkkmhiovwqnyucxawdrewgdzuroahamaqmznmqgiioaizmfkmndhgzhvsjbkosheqxcjsgiwlhwirxdfqxffiglszdejdawqswomvndxxhywrvnufflzrrqrzscdpoptfxhkjakyrfmcdghvjbikqshxdqnovrzmqykihkndadglokupmgmdkewveyouildryejivzifpxiypajrqxaphemom"
+               value="ghjehrkvzggggnmvlykedlgyttwqcuavqfuilxgrjsssepiuixzfhmecujzseyasosqbemiilzvjyqcbxzhtcdodxmhzuoavbpuwjfyqjjzpbijfjkaxfiknzzz"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -1298,14 +1301,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/master-data/repellat" \
+    --get "http://127.0.0.1:8000/api/master-data/quasi" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/master-data/repellat"
+    "http://127.0.0.1:8000/api/master-data/quasi"
 );
 
 const headers = {
@@ -1392,7 +1395,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="masterdata_id"
                data-endpoint="GETapi-master-data--masterdata_id-"
-               value="repellat"
+               value="quasi"
                data-component="url" hidden>
     <br>
 <p>The ID of the masterdata.</p>
@@ -1413,24 +1416,24 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/master-data/soluta" \
+    "http://127.0.0.1:8000/api/master-data/consequatur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"v_key\": \"yodoyonxovzdmwmofycvaqqyikfpcggyckqtmaniryrjpwuqppjmsgyxcgkpjsxshmtbzxrpvvahlnjbhbcktmbvdjxvolvioszaunbtvgdmvjkbudpxnzwrxgspvzjhrkqbcnesddfqtgygykhfikmsuvylvveswoqaozsatcldrhnlopjahiwxjqphgtxexnpdbezbznfejkqpwwomoqbwbbvtkrzenxkmcdmmixlyuvqqeoxlptigtloeuqq\",
-    \"v_value\": \"ilecbuavmdvqfdeigfvzivueblxowerinvhetbxrfjoizcorvtxqzjpofxcyxwhkgjjxeblvdlmtqlqtaavycxxunchdgbuptupulm\",
+    \"v_key\": \"pqbsmqqdhfjawlfwuzclcvchzixumwwbkbanknbdfpyazbgqssmgkrzohrylhftmrtzahmulxncjyhsiwxydgazfdpvjmvzwkopwdtraiefplyaxdticimxckyzbrnbocvrqybldebsulqzeqlsnmouqoosgolhrdnxqbiiqvdrxcvbjnshacsnrtjzbrozaatdbbufwitfminbepeyzojzfrtzwbvrpbhbvts\",
+    \"v_value\": \"gwrsramtqovmfrxvdnujtghpbgekkbhvxfic\",
     \"order_number\": 0,
-    \"type\": \"nbyyps\",
-    \"parent_id\": 440488.936,
-    \"v_content\": \"thbwirwfoenlipshcckesfpemrpmkvsldeaxcyfivrhffgrlxmjjvikyqpalifxojvfgrqbiroxtjdpryenrlnatpqtebokaysuviqppfpidkczroowkkwqwqmfabbsufwtsiguvsidljmwddfaziwnxwvmtcpjlglaipegcruacbhvbuasqglznkxydgkpggqkmvdremfhggwkmpxgtjxzeupbrerungotueztlpwmcwcndqajxojusqkgoeqnqruhxhvwmxkskjspserjcnutmtkipczaujyjb\",
-    \"note\": \"pxraisxwunvewpflmvgxjfucuxaptiuuftfpwxcplpqkvxnephcgbsrwlaifynzivsjkfimkonzstgnambppraizvhxjbqpvvddafnojfeqtcazwqwkqgtsylyvgatiiueeteqdkohzweuhsswnyletdcahtjwydmtvmpcyaczpnuxrifsdajfzhvtqgiwwviamkecneixoaczaneoflkkczdcjueugscokdfaqjwxcxydpkiotphwuuojvxosiihpxcamytbfypewxjcmhqenaasqdjaeyiobqypcvyfbovdsywkqutixdoqkdewtftlfcfswwmwjmgmjrttul\"
+    \"type\": \"metkqx\",
+    \"parent_id\": 174995186.5818,
+    \"v_content\": \"snjxztqlklrsjvukfewkdaotvtmbzvkfvqkptzspiusxcrvoixuxxsxntslznaaqgdoqbmazmqomhxseunycqsmgutbtlmdttbickdjbavwogpvbvuqqmlfvcefvpncyqlfsksrtsicxnnkpibzzbtzjzpazrstspkaplxhobricnfapensxtlqmkogins\",
+    \"note\": \"rtevfrhpbpwwxzkkvbciftywkmwyjoroskhjkemdvhwuzsdtoushptrcxakejikjlbmuylwxvxuytehgthxtblrqsrk\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/master-data/soluta"
+    "http://127.0.0.1:8000/api/master-data/consequatur"
 );
 
 const headers = {
@@ -1439,13 +1442,13 @@ const headers = {
 };
 
 let body = {
-    "v_key": "yodoyonxovzdmwmofycvaqqyikfpcggyckqtmaniryrjpwuqppjmsgyxcgkpjsxshmtbzxrpvvahlnjbhbcktmbvdjxvolvioszaunbtvgdmvjkbudpxnzwrxgspvzjhrkqbcnesddfqtgygykhfikmsuvylvveswoqaozsatcldrhnlopjahiwxjqphgtxexnpdbezbznfejkqpwwomoqbwbbvtkrzenxkmcdmmixlyuvqqeoxlptigtloeuqq",
-    "v_value": "ilecbuavmdvqfdeigfvzivueblxowerinvhetbxrfjoizcorvtxqzjpofxcyxwhkgjjxeblvdlmtqlqtaavycxxunchdgbuptupulm",
+    "v_key": "pqbsmqqdhfjawlfwuzclcvchzixumwwbkbanknbdfpyazbgqssmgkrzohrylhftmrtzahmulxncjyhsiwxydgazfdpvjmvzwkopwdtraiefplyaxdticimxckyzbrnbocvrqybldebsulqzeqlsnmouqoosgolhrdnxqbiiqvdrxcvbjnshacsnrtjzbrozaatdbbufwitfminbepeyzojzfrtzwbvrpbhbvts",
+    "v_value": "gwrsramtqovmfrxvdnujtghpbgekkbhvxfic",
     "order_number": 0,
-    "type": "nbyyps",
-    "parent_id": 440488.936,
-    "v_content": "thbwirwfoenlipshcckesfpemrpmkvsldeaxcyfivrhffgrlxmjjvikyqpalifxojvfgrqbiroxtjdpryenrlnatpqtebokaysuviqppfpidkczroowkkwqwqmfabbsufwtsiguvsidljmwddfaziwnxwvmtcpjlglaipegcruacbhvbuasqglznkxydgkpggqkmvdremfhggwkmpxgtjxzeupbrerungotueztlpwmcwcndqajxojusqkgoeqnqruhxhvwmxkskjspserjcnutmtkipczaujyjb",
-    "note": "pxraisxwunvewpflmvgxjfucuxaptiuuftfpwxcplpqkvxnephcgbsrwlaifynzivsjkfimkonzstgnambppraizvhxjbqpvvddafnojfeqtcazwqwkqgtsylyvgatiiueeteqdkohzweuhsswnyletdcahtjwydmtvmpcyaczpnuxrifsdajfzhvtqgiwwviamkecneixoaczaneoflkkczdcjueugscokdfaqjwxcxydpkiotphwuuojvxosiihpxcamytbfypewxjcmhqenaasqdjaeyiobqypcvyfbovdsywkqutixdoqkdewtftlfcfswwmwjmgmjrttul"
+    "type": "metkqx",
+    "parent_id": 174995186.5818,
+    "v_content": "snjxztqlklrsjvukfewkdaotvtmbzvkfvqkptzspiusxcrvoixuxxsxntslznaaqgdoqbmazmqomhxseunycqsmgutbtlmdttbickdjbavwogpvbvuqqmlfvcefvpncyqlfsksrtsicxnnkpibzzbtzjzpazrstspkaplxhobricnfapensxtlqmkogins",
+    "note": "rtevfrhpbpwwxzkkvbciftywkmwyjoroskhjkemdvhwuzsdtoushptrcxakejikjlbmuylwxvxuytehgthxtblrqsrk"
 };
 
 fetch(url, {
@@ -1511,7 +1514,7 @@ fetch(url, {
                 <input type="text"
                name="masterdata_id"
                data-endpoint="POSTapi-master-data--masterdata_id-"
-               value="soluta"
+               value="consequatur"
                data-component="url" hidden>
     <br>
 <p>The ID of the masterdata.</p>
@@ -1522,7 +1525,7 @@ fetch(url, {
                 <input type="text"
                name="v_key"
                data-endpoint="POSTapi-master-data--masterdata_id-"
-               value="yodoyonxovzdmwmofycvaqqyikfpcggyckqtmaniryrjpwuqppjmsgyxcgkpjsxshmtbzxrpvvahlnjbhbcktmbvdjxvolvioszaunbtvgdmvjkbudpxnzwrxgspvzjhrkqbcnesddfqtgygykhfikmsuvylvveswoqaozsatcldrhnlopjahiwxjqphgtxexnpdbezbznfejkqpwwomoqbwbbvtkrzenxkmcdmmixlyuvqqeoxlptigtloeuqq"
+               value="pqbsmqqdhfjawlfwuzclcvchzixumwwbkbanknbdfpyazbgqssmgkrzohrylhftmrtzahmulxncjyhsiwxydgazfdpvjmvzwkopwdtraiefplyaxdticimxckyzbrnbocvrqybldebsulqzeqlsnmouqoosgolhrdnxqbiiqvdrxcvbjnshacsnrtjzbrozaatdbbufwitfminbepeyzojzfrtzwbvrpbhbvts"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1532,7 +1535,7 @@ fetch(url, {
                 <input type="text"
                name="v_value"
                data-endpoint="POSTapi-master-data--masterdata_id-"
-               value="ilecbuavmdvqfdeigfvzivueblxowerinvhetbxrfjoizcorvtxqzjpofxcyxwhkgjjxeblvdlmtqlqtaavycxxunchdgbuptupulm"
+               value="gwrsramtqovmfrxvdnujtghpbgekkbhvxfic"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1552,7 +1555,7 @@ fetch(url, {
                 <input type="text"
                name="type"
                data-endpoint="POSTapi-master-data--masterdata_id-"
-               value="nbyyps"
+               value="metkqx"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 10 characters.</p>
@@ -1562,7 +1565,7 @@ fetch(url, {
                 <input type="number"
                name="parent_id"
                data-endpoint="POSTapi-master-data--masterdata_id-"
-               value="440488.936"
+               value="174995186.5818"
                data-component="body" hidden>
     <br>
 
@@ -1572,7 +1575,7 @@ fetch(url, {
                 <input type="text"
                name="v_content"
                data-endpoint="POSTapi-master-data--masterdata_id-"
-               value="thbwirwfoenlipshcckesfpemrpmkvsldeaxcyfivrhffgrlxmjjvikyqpalifxojvfgrqbiroxtjdpryenrlnatpqtebokaysuviqppfpidkczroowkkwqwqmfabbsufwtsiguvsidljmwddfaziwnxwvmtcpjlglaipegcruacbhvbuasqglznkxydgkpggqkmvdremfhggwkmpxgtjxzeupbrerungotueztlpwmcwcndqajxojusqkgoeqnqruhxhvwmxkskjspserjcnutmtkipczaujyjb"
+               value="snjxztqlklrsjvukfewkdaotvtmbzvkfvqkptzspiusxcrvoixuxxsxntslznaaqgdoqbmazmqomhxseunycqsmgutbtlmdttbickdjbavwogpvbvuqqmlfvcefvpncyqlfsksrtsicxnnkpibzzbtzjzpazrstspkaplxhobricnfapensxtlqmkogins"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -1582,7 +1585,7 @@ fetch(url, {
                 <input type="text"
                name="note"
                data-endpoint="POSTapi-master-data--masterdata_id-"
-               value="pxraisxwunvewpflmvgxjfucuxaptiuuftfpwxcplpqkvxnephcgbsrwlaifynzivsjkfimkonzstgnambppraizvhxjbqpvvddafnojfeqtcazwqwkqgtsylyvgatiiueeteqdkohzweuhsswnyletdcahtjwydmtvmpcyaczpnuxrifsdajfzhvtqgiwwviamkecneixoaczaneoflkkczdcjueugscokdfaqjwxcxydpkiotphwuuojvxosiihpxcamytbfypewxjcmhqenaasqdjaeyiobqypcvyfbovdsywkqutixdoqkdewtftlfcfswwmwjmgmjrttul"
+               value="rtevfrhpbpwwxzkkvbciftywkmwyjoroskhjkemdvhwuzsdtoushptrcxakejikjlbmuylwxvxuytehgthxtblrqsrk"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -1603,14 +1606,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/master-data/debitis" \
+    "http://127.0.0.1:8000/api/master-data/enim" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/master-data/debitis"
+    "http://127.0.0.1:8000/api/master-data/enim"
 );
 
 const headers = {
@@ -1680,7 +1683,7 @@ fetch(url, {
                 <input type="text"
                name="masterdata_id"
                data-endpoint="DELETEapi-master-data--masterdata_id-"
-               value="debitis"
+               value="enim"
                data-component="url" hidden>
     <br>
 <p>The ID of the masterdata.</p>
@@ -1813,7 +1816,7 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"jtkmzamgeozjeemktukspskvhpmjsaxkxvejxidcvoarcxtgmawbyiztfpozfzjsyfmalaorzhcwzeswsizdphmsamwogfrdgfwxfzszvnnfdftvfgdtgrknhxdhassodnrrjtckiiysyehrsamhhpexbxcduvkeesjmgtpm\"
+    \"name\": \"fmwcsqsmbvkyanxpmtmmwophgvaymkphmfrljvysufgdjywuccwlvignoske\"
 }"
 </code></pre></div>
 
@@ -1829,7 +1832,7 @@ const headers = {
 };
 
 let body = {
-    "name": "jtkmzamgeozjeemktukspskvhpmjsaxkxvejxidcvoarcxtgmawbyiztfpozfzjsyfmalaorzhcwzeswsizdphmsamwogfrdgfwxfzszvnnfdftvfgdtgrknhxdhassodnrrjtckiiysyehrsamhhpexbxcduvkeesjmgtpm"
+    "name": "fmwcsqsmbvkyanxpmtmmwophgvaymkphmfrljvysufgdjywuccwlvignoske"
 };
 
 fetch(url, {
@@ -1895,7 +1898,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-permissions"
-               value="jtkmzamgeozjeemktukspskvhpmjsaxkxvejxidcvoarcxtgmawbyiztfpozfzjsyfmalaorzhcwzeswsizdphmsamwogfrdgfwxfzszvnnfdftvfgdtgrknhxdhassodnrrjtckiiysyehrsamhhpexbxcduvkeesjmgtpm"
+               value="fmwcsqsmbvkyanxpmtmmwophgvaymkphmfrljvysufgdjywuccwlvignoske"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1916,14 +1919,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/permissions/et" \
+    --get "http://127.0.0.1:8000/api/permissions/consequuntur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/permissions/et"
+    "http://127.0.0.1:8000/api/permissions/consequuntur"
 );
 
 const headers = {
@@ -2010,7 +2013,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="permission_id"
                data-endpoint="GETapi-permissions--permission_id-"
-               value="et"
+               value="consequuntur"
                data-component="url" hidden>
     <br>
 <p>The ID of the permission.</p>
@@ -2031,18 +2034,18 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/permissions/laudantium" \
+    "http://127.0.0.1:8000/api/permissions/exercitationem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"epontztegaqqgfhinocathkwfhcochqfxcnaqxovsabswlmnppvxmxkcxqraqbttumjrignzxtubeikflnqhjlzxrzqjaqpzhxlpdcitzyyllnjzdeykasasnyifaixfloxulgobpyraapanteaegroireviuvhlazcbnzkyhazchwsixbikllsbyqsgjdswjhvzfulfqbkdxmnmftsdunuvxxqfbtxiqcwixeaeqrufshltfrlxtwqtabuebe\"
+    \"name\": \"yuhzhibgwpnadmwjuizczytallqmfubrxwwhoyalhdyfzhwregycritsbgevcljxjnoctnidwcuadqyi\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/permissions/laudantium"
+    "http://127.0.0.1:8000/api/permissions/exercitationem"
 );
 
 const headers = {
@@ -2051,7 +2054,7 @@ const headers = {
 };
 
 let body = {
-    "name": "epontztegaqqgfhinocathkwfhcochqfxcnaqxovsabswlmnppvxmxkcxqraqbttumjrignzxtubeikflnqhjlzxrzqjaqpzhxlpdcitzyyllnjzdeykasasnyifaixfloxulgobpyraapanteaegroireviuvhlazcbnzkyhazchwsixbikllsbyqsgjdswjhvzfulfqbkdxmnmftsdunuvxxqfbtxiqcwixeaeqrufshltfrlxtwqtabuebe"
+    "name": "yuhzhibgwpnadmwjuizczytallqmfubrxwwhoyalhdyfzhwregycritsbgevcljxjnoctnidwcuadqyi"
 };
 
 fetch(url, {
@@ -2117,7 +2120,7 @@ fetch(url, {
                 <input type="text"
                name="permission_id"
                data-endpoint="POSTapi-permissions--permission_id-"
-               value="laudantium"
+               value="exercitationem"
                data-component="url" hidden>
     <br>
 <p>The ID of the permission.</p>
@@ -2128,7 +2131,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-permissions--permission_id-"
-               value="epontztegaqqgfhinocathkwfhcochqfxcnaqxovsabswlmnppvxmxkcxqraqbttumjrignzxtubeikflnqhjlzxrzqjaqpzhxlpdcitzyyllnjzdeykasasnyifaixfloxulgobpyraapanteaegroireviuvhlazcbnzkyhazchwsixbikllsbyqsgjdswjhvzfulfqbkdxmnmftsdunuvxxqfbtxiqcwixeaeqrufshltfrlxtwqtabuebe"
+               value="yuhzhibgwpnadmwjuizczytallqmfubrxwwhoyalhdyfzhwregycritsbgevcljxjnoctnidwcuadqyi"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -2149,14 +2152,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/permissions/sunt" \
+    "http://127.0.0.1:8000/api/permissions/quia" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/permissions/sunt"
+    "http://127.0.0.1:8000/api/permissions/quia"
 );
 
 const headers = {
@@ -2226,7 +2229,7 @@ fetch(url, {
                 <input type="text"
                name="permission_id"
                data-endpoint="DELETEapi-permissions--permission_id-"
-               value="sunt"
+               value="quia"
                data-component="url" hidden>
     <br>
 <p>The ID of the permission.</p>
@@ -2250,7 +2253,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/posts?name=qui" \
+    --get "http://127.0.0.1:8000/api/posts?name=aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2261,7 +2264,7 @@ fetch(url, {
 );
 
 const params = {
-    "name": "qui",
+    "name": "aut",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2307,7 +2310,20 @@ access-control-allow-origin: *
             &quot;created_at&quot;: &quot;2022-04-28T20:45:49.000000Z&quot;,
             &quot;comment&quot;: [],
             &quot;files&quot;: [],
-            &quot;likes&quot;: [],
+            &quot;likes&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;Admin&quot;,
+                    &quot;email&quot;: &quot;admin@test.com&quot;,
+                    &quot;email_verified_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-05-08T07:02:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:37.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;post_id&quot;: 1,
+                        &quot;user_id&quot;: 1
+                    }
+                }
+            ],
             &quot;reports&quot;: []
         },
         {
@@ -2333,7 +2349,36 @@ access-control-allow-origin: *
             &quot;type_slug&quot;: &quot;giao-trinh-chung&quot;,
             &quot;user_id&quot;: null,
             &quot;created_at&quot;: &quot;2022-04-28T20:47:54.000000Z&quot;,
-            &quot;comment&quot;: [],
+            &quot;comment&quot;: [
+                {
+                    &quot;id&quot;: 4,
+                    &quot;comment&quot;: &quot;Test comment edited test lại lần nữa&quot;,
+                    &quot;post_id&quot;: 3,
+                    &quot;user_id&quot;: 1,
+                    &quot;created_at&quot;: &quot;2022-05-14T18:12:08.000000Z&quot;,
+                    &quot;reply&quot;: [],
+                    &quot;likes&quot;: []
+                },
+                {
+                    &quot;id&quot;: 7,
+                    &quot;comment&quot;: &quot;Test comment edited test lại lần nữa&quot;,
+                    &quot;post_id&quot;: 3,
+                    &quot;user_id&quot;: 1,
+                    &quot;created_at&quot;: &quot;2022-05-14T18:23:38.000000Z&quot;,
+                    &quot;reply&quot;: [
+                        {
+                            &quot;id&quot;: 8,
+                            &quot;comment&quot;: &quot;Test comment edited test lại lần nữa&quot;,
+                            &quot;post_id&quot;: 3,
+                            &quot;user_id&quot;: 1,
+                            &quot;created_at&quot;: &quot;2022-05-14T18:27:30.000000Z&quot;,
+                            &quot;reply&quot;: [],
+                            &quot;likes&quot;: []
+                        }
+                    ],
+                    &quot;likes&quot;: []
+                }
+            ],
             &quot;files&quot;: [],
             &quot;likes&quot;: [],
             &quot;reports&quot;: []
@@ -2562,7 +2607,7 @@ access-control-allow-origin: *
         &quot;path&quot;: &quot;http://127.0.0.1:8000/api/posts&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 15,
-        &quot;total&quot;: 84
+        &quot;total&quot;: 87
     }
 }</code>
  </pre>
@@ -2612,7 +2657,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="name"
                data-endpoint="GETapi-posts"
-               value="qui"
+               value="aut"
                data-component="query" hidden>
     <br>
 <p>Search by title, type, content</p>
@@ -2637,7 +2682,7 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"nzkhhtqdqznpjtxhggylojbokboqyihgqbkiilmvkxzyikiukoizxpduptjhnwcracgwnrmsjiflynotjsxfazffpkoajkbpncfgntewrjdntjwrsgrpoynevhieuegaqletiklsvhwogtvnlvnygqzjbkmugcycgiqwxvmevekdzhsbdiqpuvxcefcvgluowfabrimmysnzejyutrpk\"
+    \"title\": \"etwikukuovqbmcmziaubbhpjnhgepeuithaowosgtzzipcufzbackjpnhvoglpjpqtgruzdfbelalwsldlbjmmksokmtnlnwvwwdolsovjqazrdbfzkyelgtegpiaoicdtwcjgcuetafchtpxqvrtpmihudqnnybkbttmnzomxcfuzxhmkacwrmnniqoojrjawakwanmotibvhuwqrwrbzfyzjxyuayssgwrirpeeigutvkffmrorohkorrjqttxjkhedhdhflnhqejdugxxqdpyvsskimrmbdqqqnpylbqakafctxxgymilednaupczwyzgovlptqnfyjdbxzjabyjclgqaicqjjdohzepxqupklbhetsmijximrwlujvmgfyvykgnwnrxujsfncmtqcboclydchelbpzblrnexddrtsizfzlacjlnerlvflbacigwfgnrbrlobdwdoyjmkeyzotghsfmhoamiuzkwnofstohfivjfofdownwgarllnohzpishzxgcabrcuvfokuyehaogowjvafkvkfsirsxcnperpdnnxznnepttollurttxibczyhjf\"
 }"
 </code></pre></div>
 
@@ -2653,7 +2698,7 @@ const headers = {
 };
 
 let body = {
-    "title": "nzkhhtqdqznpjtxhggylojbokboqyihgqbkiilmvkxzyikiukoizxpduptjhnwcracgwnrmsjiflynotjsxfazffpkoajkbpncfgntewrjdntjwrsgrpoynevhieuegaqletiklsvhwogtvnlvnygqzjbkmugcycgiqwxvmevekdzhsbdiqpuvxcefcvgluowfabrimmysnzejyutrpk"
+    "title": "etwikukuovqbmcmziaubbhpjnhgepeuithaowosgtzzipcufzbackjpnhvoglpjpqtgruzdfbelalwsldlbjmmksokmtnlnwvwwdolsovjqazrdbfzkyelgtegpiaoicdtwcjgcuetafchtpxqvrtpmihudqnnybkbttmnzomxcfuzxhmkacwrmnniqoojrjawakwanmotibvhuwqrwrbzfyzjxyuayssgwrirpeeigutvkffmrorohkorrjqttxjkhedhdhflnhqejdugxxqdpyvsskimrmbdqqqnpylbqakafctxxgymilednaupczwyzgovlptqnfyjdbxzjabyjclgqaicqjjdohzepxqupklbhetsmijximrwlujvmgfyvykgnwnrxujsfncmtqcboclydchelbpzblrnexddrtsizfzlacjlnerlvflbacigwfgnrbrlobdwdoyjmkeyzotghsfmhoamiuzkwnofstohfivjfofdownwgarllnohzpishzxgcabrcuvfokuyehaogowjvafkvkfsirsxcnperpdnnxznnepttollurttxibczyhjf"
 };
 
 fetch(url, {
@@ -2719,7 +2764,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-posts"
-               value="nzkhhtqdqznpjtxhggylojbokboqyihgqbkiilmvkxzyikiukoizxpduptjhnwcracgwnrmsjiflynotjsxfazffpkoajkbpncfgntewrjdntjwrsgrpoynevhieuegaqletiklsvhwogtvnlvnygqzjbkmugcycgiqwxvmevekdzhsbdiqpuvxcefcvgluowfabrimmysnzejyutrpk"
+               value="etwikukuovqbmcmziaubbhpjnhgepeuithaowosgtzzipcufzbackjpnhvoglpjpqtgruzdfbelalwsldlbjmmksokmtnlnwvwwdolsovjqazrdbfzkyelgtegpiaoicdtwcjgcuetafchtpxqvrtpmihudqnnybkbttmnzomxcfuzxhmkacwrmnniqoojrjawakwanmotibvhuwqrwrbzfyzjxyuayssgwrirpeeigutvkffmrorohkorrjqttxjkhedhdhflnhqejdugxxqdpyvsskimrmbdqqqnpylbqakafctxxgymilednaupczwyzgovlptqnfyjdbxzjabyjclgqaicqjjdohzepxqupklbhetsmijximrwlujvmgfyvykgnwnrxujsfncmtqcboclydchelbpzblrnexddrtsizfzlacjlnerlvflbacigwfgnrbrlobdwdoyjmkeyzotghsfmhoamiuzkwnofstohfivjfofdownwgarllnohzpishzxgcabrcuvfokuyehaogowjvafkvkfsirsxcnperpdnnxznnepttollurttxibczyhjf"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -2739,14 +2784,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/posts/3" \
+    --get "http://127.0.0.1:8000/api/posts/17" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/3"
+    "http://127.0.0.1:8000/api/posts/17"
 );
 
 const headers = {
@@ -2789,7 +2834,20 @@ access-control-allow-origin: *
         &quot;created_at&quot;: &quot;2022-04-28T20:45:49.000000Z&quot;,
         &quot;comment&quot;: [],
         &quot;files&quot;: [],
-        &quot;likes&quot;: [],
+        &quot;likes&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@test.com&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-05-08T07:02:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-05-08T07:02:37.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;post_id&quot;: 1,
+                    &quot;user_id&quot;: 1
+                }
+            }
+        ],
         &quot;reports&quot;: []
     }
 }</code>
@@ -2840,7 +2898,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="post_id"
                data-endpoint="GETapi-posts--post_id-"
-               value="3"
+               value="17"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -2861,18 +2919,18 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/posts/6" \
+    "http://127.0.0.1:8000/api/posts/13" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"similique\"
+    \"title\": \"laboriosam\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/6"
+    "http://127.0.0.1:8000/api/posts/13"
 );
 
 const headers = {
@@ -2881,7 +2939,7 @@ const headers = {
 };
 
 let body = {
-    "title": "similique"
+    "title": "laboriosam"
 };
 
 fetch(url, {
@@ -2947,7 +3005,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="POSTapi-posts--post_id-"
-               value="6"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -2958,7 +3016,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-posts--post_id-"
-               value="similique"
+               value="laboriosam"
                data-component="body" hidden>
     <br>
 <p>The title of the post.</p>
@@ -2979,14 +3037,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/posts/16" \
+    "http://127.0.0.1:8000/api/posts/6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/16"
+    "http://127.0.0.1:8000/api/posts/6"
 );
 
 const headers = {
@@ -3056,7 +3114,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="DELETEapi-posts--post_id-"
-               value="16"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -3077,14 +3135,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/posts/7/like" \
+    "http://127.0.0.1:8000/api/posts/8/like" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/7/like"
+    "http://127.0.0.1:8000/api/posts/8/like"
 );
 
 const headers = {
@@ -3154,7 +3212,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="POSTapi-posts--post_id--like"
-               value="7"
+               value="8"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -3175,18 +3233,18 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/posts/20/report" \
+    "http://127.0.0.1:8000/api/posts/19/report" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"description\": \"gyqmugaqhodqpewcydokhfcmdgsrmlkvgkjxvwtwxufakgfphvycyoqolesbcjekwhqtuegnnqnibrmdbfyjodigihhwznlflkmwlknsvudawjnnonbwhxavekayopzwfggbowpcmdegmkekehphxpzsnctagzntlglztweqoaesdchwjcsrpkmgwwzgeyxgnajukirrwdwpdnotugbhvibyhzdizobbsvlaynewnoscdaujndtperbkolixqeojntzftqwtwrkwcdnshyefulstczglmkesfilkfsqpzqibhycqmdobcmspbmanjuptulktsfmcolhgvaswukgwhgkmjdefhsuzaoddebnjajsuqdfadugsdhekhtsczdhpwxtoulhcxhycdvhdbluhhczmxrxhdmyiwhcgnzzxeamzshmxcoddtcdyohopkrbsmjnpjdnfwbqgvkahkzgsoxuutniimsdsqrjxkriirrntzctpnefphduhwrwwviggoo\"
+    \"description\": \"xizjacxczbcwawcffuzspwkkjolekypirpmfohpalrcutvaslvsixcttmsghgigaeltzfcvenwowvbtnitwipwlxlgkcyysvhiljzjphqjphxflgmsolanbnrllosrhkblshfpzasbhjjdxpheistsdktapujeqzfny\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/20/report"
+    "http://127.0.0.1:8000/api/posts/19/report"
 );
 
 const headers = {
@@ -3195,7 +3253,7 @@ const headers = {
 };
 
 let body = {
-    "description": "gyqmugaqhodqpewcydokhfcmdgsrmlkvgkjxvwtwxufakgfphvycyoqolesbcjekwhqtuegnnqnibrmdbfyjodigihhwznlflkmwlknsvudawjnnonbwhxavekayopzwfggbowpcmdegmkekehphxpzsnctagzntlglztweqoaesdchwjcsrpkmgwwzgeyxgnajukirrwdwpdnotugbhvibyhzdizobbsvlaynewnoscdaujndtperbkolixqeojntzftqwtwrkwcdnshyefulstczglmkesfilkfsqpzqibhycqmdobcmspbmanjuptulktsfmcolhgvaswukgwhgkmjdefhsuzaoddebnjajsuqdfadugsdhekhtsczdhpwxtoulhcxhycdvhdbluhhczmxrxhdmyiwhcgnzzxeamzshmxcoddtcdyohopkrbsmjnpjdnfwbqgvkahkzgsoxuutniimsdsqrjxkriirrntzctpnefphduhwrwwviggoo"
+    "description": "xizjacxczbcwawcffuzspwkkjolekypirpmfohpalrcutvaslvsixcttmsghgigaeltzfcvenwowvbtnitwipwlxlgkcyysvhiljzjphqjphxflgmsolanbnrllosrhkblshfpzasbhjjdxpheistsdktapujeqzfny"
 };
 
 fetch(url, {
@@ -3261,7 +3319,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="POSTapi-posts--post_id--report"
-               value="20"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -3272,7 +3330,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-posts--post_id--report"
-               value="gyqmugaqhodqpewcydokhfcmdgsrmlkvgkjxvwtwxufakgfphvycyoqolesbcjekwhqtuegnnqnibrmdbfyjodigihhwznlflkmwlknsvudawjnnonbwhxavekayopzwfggbowpcmdegmkekehphxpzsnctagzntlglztweqoaesdchwjcsrpkmgwwzgeyxgnajukirrwdwpdnotugbhvibyhzdizobbsvlaynewnoscdaujndtperbkolixqeojntzftqwtwrkwcdnshyefulstczglmkesfilkfsqpzqibhycqmdobcmspbmanjuptulktsfmcolhgvaswukgwhgkmjdefhsuzaoddebnjajsuqdfadugsdhekhtsczdhpwxtoulhcxhycdvhdbluhhczmxrxhdmyiwhcgnzzxeamzshmxcoddtcdyohopkrbsmjnpjdnfwbqgvkahkzgsoxuutniimsdsqrjxkriirrntzctpnefphduhwrwwviggoo"
+               value="xizjacxczbcwawcffuzspwkkjolekypirpmfohpalrcutvaslvsixcttmsghgigaeltzfcvenwowvbtnitwipwlxlgkcyysvhiljzjphqjphxflgmsolanbnrllosrhkblshfpzasbhjjdxpheistsdktapujeqzfny"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -3293,18 +3351,18 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/posts/3/comment" \
+    "http://127.0.0.1:8000/api/posts/9/comment" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment\": \"wtulcrutxtlzckvdjieusaqgnlpflqmxurnffrmqizpwpxmxboymobruxuuxexdmqnrxumwdxizpoqlbukgblamursnuakfxvnwekmbztnghfipdpkrqegrubxlgmgrmspvnnfmngnklfjqxxwzcjjvhykvxulcgzxphhjtljvrlzwjqpmzeuaznsukondrtzqhgkqdlvlchrkstahjjsukuzgkdtnvjbfllwfrzexhvgfhwoybecddmhelhyxdqiwhyyeltlwworlnbgazxhehkdjktwawjvjcefnodgpeplhtmiezaxihmtcbskq\"
+    \"comment\": \"ytvatxcsmrxidpwbffijqyrpukpwanykynunvubtzngcpltxvmgusxjvpqxjrpzyoiawdvawweysqslhqpfzpbckyiypdahwpxsldlpzuedakhdayzhdyutllwqouemlpqknjnqinggybmhgdqfuagkazcwipdpsdwjzmgtbcbcamzlioyjtihewjwjgzebimcaqsylqiptrdspvtnzovolyjczcmormpqsjvpasuojpnqhbctcgvqabudfitkdbufwoeifiqnpjdonxnvlomdxxmwwxvhltwhptulskmhsfxvknlkaucnxqsdvlsqdykrbwlyoyeyegbigorcvdpssocuwmswivoozwovprkacifqzuvkvrppjdtxnkqdmyimbzhlzsonmjzdzszrwwedkyqpsuvxcdcikvreavjnswvoju\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/3/comment"
+    "http://127.0.0.1:8000/api/posts/9/comment"
 );
 
 const headers = {
@@ -3313,7 +3371,7 @@ const headers = {
 };
 
 let body = {
-    "comment": "wtulcrutxtlzckvdjieusaqgnlpflqmxurnffrmqizpwpxmxboymobruxuuxexdmqnrxumwdxizpoqlbukgblamursnuakfxvnwekmbztnghfipdpkrqegrubxlgmgrmspvnnfmngnklfjqxxwzcjjvhykvxulcgzxphhjtljvrlzwjqpmzeuaznsukondrtzqhgkqdlvlchrkstahjjsukuzgkdtnvjbfllwfrzexhvgfhwoybecddmhelhyxdqiwhyyeltlwworlnbgazxhehkdjktwawjvjcefnodgpeplhtmiezaxihmtcbskq"
+    "comment": "ytvatxcsmrxidpwbffijqyrpukpwanykynunvubtzngcpltxvmgusxjvpqxjrpzyoiawdvawweysqslhqpfzpbckyiypdahwpxsldlpzuedakhdayzhdyutllwqouemlpqknjnqinggybmhgdqfuagkazcwipdpsdwjzmgtbcbcamzlioyjtihewjwjgzebimcaqsylqiptrdspvtnzovolyjczcmormpqsjvpasuojpnqhbctcgvqabudfitkdbufwoeifiqnpjdonxnvlomdxxmwwxvhltwhptulskmhsfxvknlkaucnxqsdvlsqdykrbwlyoyeyegbigorcvdpssocuwmswivoozwovprkacifqzuvkvrppjdtxnkqdmyimbzhlzsonmjzdzszrwwedkyqpsuvxcdcikvreavjnswvoju"
 };
 
 fetch(url, {
@@ -3379,7 +3437,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="POSTapi-posts--post_id--comment"
-               value="3"
+               value="9"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -3390,7 +3448,7 @@ fetch(url, {
                 <input type="text"
                name="comment"
                data-endpoint="POSTapi-posts--post_id--comment"
-               value="wtulcrutxtlzckvdjieusaqgnlpflqmxurnffrmqizpwpxmxboymobruxuuxexdmqnrxumwdxizpoqlbukgblamursnuakfxvnwekmbztnghfipdpkrqegrubxlgmgrmspvnnfmngnklfjqxxwzcjjvhykvxulcgzxphhjtljvrlzwjqpmzeuaznsukondrtzqhgkqdlvlchrkstahjjsukuzgkdtnvjbfllwfrzexhvgfhwoybecddmhelhyxdqiwhyyeltlwworlnbgazxhehkdjktwawjvjcefnodgpeplhtmiezaxihmtcbskq"
+               value="ytvatxcsmrxidpwbffijqyrpukpwanykynunvubtzngcpltxvmgusxjvpqxjrpzyoiawdvawweysqslhqpfzpbckyiypdahwpxsldlpzuedakhdayzhdyutllwqouemlpqknjnqinggybmhgdqfuagkazcwipdpsdwjzmgtbcbcamzlioyjtihewjwjgzebimcaqsylqiptrdspvtnzovolyjczcmormpqsjvpasuojpnqhbctcgvqabudfitkdbufwoeifiqnpjdonxnvlomdxxmwwxvhltwhptulskmhsfxvknlkaucnxqsdvlsqdykrbwlyoyeyegbigorcvdpssocuwmswivoozwovprkacifqzuvkvrppjdtxnkqdmyimbzhlzsonmjzdzszrwwedkyqpsuvxcdcikvreavjnswvoju"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -3411,18 +3469,18 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/posts/14/comment/15" \
+    "http://127.0.0.1:8000/api/posts/4/comment/6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment\": \"ulmhqnchxhckwmagetbbinlfgypqxznwhbnsxhbgzykopoenqbvgaakhxkzuehgfwlxshkqovfoicofomsgjigqukwjhdfizsuaiiykjmkrfbkzdxwscwfamvqbpbnsppndsgimocpebwxyrffegwlszukgywdgkuujwvzipwqaeytshtbfhctplyywdvnpmlliaecsljplsghwazlvaqopurjwvgtehhqmxlinzqitbpqalwzdecczijenmnkgxlijevssvjcvtfbvdlhhtstqdxcbguuyhlijpzuvzkoymddzrixvzjqmmcuolutlllrkawqkgbhcdtqbkriugjtdaqzcbfrwwfqerwthkehtvflydoknibnxqpmpzawwgsqufglltlqndqbntgpdblprtrjtoyzjxnivwizdccildxtquoya\"
+    \"comment\": \"nddugjijatmenuzjmuwklrnoljbydiqtemmoevsckyuaxfbasoglqcnsbnjyigsfmluyjhiqofgcouoqtmgfxvgzcgqrmcxnplfftnlbnamzoavschvbimbseigqjfjgxwqqndgspiolwrofbsvnzfqqtvnlydtpkvuhhdyqknhxyaugqauiijknlzfauyfostqffrkoujicoemcpfrypnkfzvryetrjqdxkphpfeqtunnavagoqbfkxxcmersphgwjpdxcvbtzmavghahegzddhfopxngtltgdyldhecyeaotaiqjzlqmeuagqhviveoloqmtakjelhwsvgmjiglfysagekzuaxmgvzximmmzrvylpindafwgvivjmyfefqzrhrmeqxxckltuoluomlgrlqdggmfsvakkvrippwbrkssfgtxkkuzbcbciltvgewuqnohfowkqnoqbtirbwdkrougvrromanvpejmcvxhvzaypcbknhkjgcxlvrkxstqagromlwdfydfvjszdjpfjrqvpgnssmwineousrlpgaotytzwreqpobctpjrgohcsgvgibbbyjehgdyhnjsegqozpoonfkzolzkrkgssxzzfleybcgwcukqaydqilhzapbdkzicuegkabaozwenubnhbmmjssyhrrhqdnqyhppwgsvesegakcxcntbrbdvaejgsviwgjpjdsmnslqgjgpnookgmzmyqpkqakqbqusciyuipaxxthyipxbbvwlecqzvaludoxltxdcersiqsfoechirvyrkfpelqzlyafcjkdvvoaznqefvyknqklpfdrbyhqskvkwpnjqnrycgibkmrobqycsboqosgohxedt\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/14/comment/15"
+    "http://127.0.0.1:8000/api/posts/4/comment/6"
 );
 
 const headers = {
@@ -3431,7 +3489,7 @@ const headers = {
 };
 
 let body = {
-    "comment": "ulmhqnchxhckwmagetbbinlfgypqxznwhbnsxhbgzykopoenqbvgaakhxkzuehgfwlxshkqovfoicofomsgjigqukwjhdfizsuaiiykjmkrfbkzdxwscwfamvqbpbnsppndsgimocpebwxyrffegwlszukgywdgkuujwvzipwqaeytshtbfhctplyywdvnpmlliaecsljplsghwazlvaqopurjwvgtehhqmxlinzqitbpqalwzdecczijenmnkgxlijevssvjcvtfbvdlhhtstqdxcbguuyhlijpzuvzkoymddzrixvzjqmmcuolutlllrkawqkgbhcdtqbkriugjtdaqzcbfrwwfqerwthkehtvflydoknibnxqpmpzawwgsqufglltlqndqbntgpdblprtrjtoyzjxnivwizdccildxtquoya"
+    "comment": "nddugjijatmenuzjmuwklrnoljbydiqtemmoevsckyuaxfbasoglqcnsbnjyigsfmluyjhiqofgcouoqtmgfxvgzcgqrmcxnplfftnlbnamzoavschvbimbseigqjfjgxwqqndgspiolwrofbsvnzfqqtvnlydtpkvuhhdyqknhxyaugqauiijknlzfauyfostqffrkoujicoemcpfrypnkfzvryetrjqdxkphpfeqtunnavagoqbfkxxcmersphgwjpdxcvbtzmavghahegzddhfopxngtltgdyldhecyeaotaiqjzlqmeuagqhviveoloqmtakjelhwsvgmjiglfysagekzuaxmgvzximmmzrvylpindafwgvivjmyfefqzrhrmeqxxckltuoluomlgrlqdggmfsvakkvrippwbrkssfgtxkkuzbcbciltvgewuqnohfowkqnoqbtirbwdkrougvrromanvpejmcvxhvzaypcbknhkjgcxlvrkxstqagromlwdfydfvjszdjpfjrqvpgnssmwineousrlpgaotytzwreqpobctpjrgohcsgvgibbbyjehgdyhnjsegqozpoonfkzolzkrkgssxzzfleybcgwcukqaydqilhzapbdkzicuegkabaozwenubnhbmmjssyhrrhqdnqyhppwgsvesegakcxcntbrbdvaejgsviwgjpjdsmnslqgjgpnookgmzmyqpkqakqbqusciyuipaxxthyipxbbvwlecqzvaludoxltxdcersiqsfoechirvyrkfpelqzlyafcjkdvvoaznqefvyknqklpfdrbyhqskvkwpnjqnrycgibkmrobqycsboqosgohxedt"
 };
 
 fetch(url, {
@@ -3497,7 +3555,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="POSTapi-posts--post_id--comment--comment_id-"
-               value="14"
+               value="4"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -3507,7 +3565,7 @@ fetch(url, {
                 <input type="number"
                name="comment_id"
                data-endpoint="POSTapi-posts--post_id--comment--comment_id-"
-               value="15"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>The ID of the comment.</p>
@@ -3518,7 +3576,7 @@ fetch(url, {
                 <input type="text"
                name="comment"
                data-endpoint="POSTapi-posts--post_id--comment--comment_id-"
-               value="ulmhqnchxhckwmagetbbinlfgypqxznwhbnsxhbgzykopoenqbvgaakhxkzuehgfwlxshkqovfoicofomsgjigqukwjhdfizsuaiiykjmkrfbkzdxwscwfamvqbpbnsppndsgimocpebwxyrffegwlszukgywdgkuujwvzipwqaeytshtbfhctplyywdvnpmlliaecsljplsghwazlvaqopurjwvgtehhqmxlinzqitbpqalwzdecczijenmnkgxlijevssvjcvtfbvdlhhtstqdxcbguuyhlijpzuvzkoymddzrixvzjqmmcuolutlllrkawqkgbhcdtqbkriugjtdaqzcbfrwwfqerwthkehtvflydoknibnxqpmpzawwgsqufglltlqndqbntgpdblprtrjtoyzjxnivwizdccildxtquoya"
+               value="nddugjijatmenuzjmuwklrnoljbydiqtemmoevsckyuaxfbasoglqcnsbnjyigsfmluyjhiqofgcouoqtmgfxvgzcgqrmcxnplfftnlbnamzoavschvbimbseigqjfjgxwqqndgspiolwrofbsvnzfqqtvnlydtpkvuhhdyqknhxyaugqauiijknlzfauyfostqffrkoujicoemcpfrypnkfzvryetrjqdxkphpfeqtunnavagoqbfkxxcmersphgwjpdxcvbtzmavghahegzddhfopxngtltgdyldhecyeaotaiqjzlqmeuagqhviveoloqmtakjelhwsvgmjiglfysagekzuaxmgvzximmmzrvylpindafwgvivjmyfefqzrhrmeqxxckltuoluomlgrlqdggmfsvakkvrippwbrkssfgtxkkuzbcbciltvgewuqnohfowkqnoqbtirbwdkrougvrromanvpejmcvxhvzaypcbknhkjgcxlvrkxstqagromlwdfydfvjszdjpfjrqvpgnssmwineousrlpgaotytzwreqpobctpjrgohcsgvgibbbyjehgdyhnjsegqozpoonfkzolzkrkgssxzzfleybcgwcukqaydqilhzapbdkzicuegkabaozwenubnhbmmjssyhrrhqdnqyhppwgsvesegakcxcntbrbdvaejgsviwgjpjdsmnslqgjgpnookgmzmyqpkqakqbqusciyuipaxxthyipxbbvwlecqzvaludoxltxdcersiqsfoechirvyrkfpelqzlyafcjkdvvoaznqefvyknqklpfdrbyhqskvkwpnjqnrycgibkmrobqycsboqosgohxedt"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 1000 characters.</p>
@@ -3539,14 +3597,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/posts/13/comment/5" \
+    "http://127.0.0.1:8000/api/posts/18/comment/15" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/13/comment/5"
+    "http://127.0.0.1:8000/api/posts/18/comment/15"
 );
 
 const headers = {
@@ -3616,7 +3674,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="DELETEapi-posts--post_id--comment--comment_id-"
-               value="13"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -3626,7 +3684,7 @@ fetch(url, {
                 <input type="number"
                name="comment_id"
                data-endpoint="DELETEapi-posts--post_id--comment--comment_id-"
-               value="5"
+               value="15"
                data-component="url" hidden>
     <br>
 <p>The ID of the comment.</p>
@@ -3647,14 +3705,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/posts/17/comment/13/like" \
+    "http://127.0.0.1:8000/api/posts/6/comment/13/like" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/17/comment/13/like"
+    "http://127.0.0.1:8000/api/posts/6/comment/13/like"
 );
 
 const headers = {
@@ -3724,7 +3782,7 @@ fetch(url, {
                 <input type="number"
                name="post_id"
                data-endpoint="POSTapi-posts--post_id--comment--comment_id--like"
-               value="17"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>The ID of the post.</p>
@@ -3738,112 +3796,6 @@ fetch(url, {
                data-component="url" hidden>
     <br>
 <p>The ID of the comment.</p>
-            </p>
-                    </form>
-
-            <h2 id="post-management-GETapi-posts-file--file_id-">Download File</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-posts-file--file_id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/posts/file/9" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/file/9"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-posts-file--file_id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">content-type: text/html; charset=UTF-8
-cache-control: no-cache, private
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json"></code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-posts-file--file_id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-posts-file--file_id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-posts-file--file_id-"></code></pre>
-</span>
-<span id="execution-error-GETapi-posts-file--file_id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-posts-file--file_id-"></code></pre>
-</span>
-<form id="form-GETapi-posts-file--file_id-" data-method="GET"
-      data-path="api/posts/file/{file_id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-file--file_id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-posts-file--file_id-"
-                    onclick="tryItOut('GETapi-posts-file--file_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-posts-file--file_id-"
-                    onclick="cancelTryOut('GETapi-posts-file--file_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-posts-file--file_id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/posts/file/{file_id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>file_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="file_id"
-               data-endpoint="GETapi-posts-file--file_id-"
-               value="9"
-               data-component="url" hidden>
-    <br>
-<p>The ID of the file.</p>
             </p>
                     </form>
 
@@ -3969,14 +3921,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/reports/pariatur" \
+    --get "http://127.0.0.1:8000/api/reports/repudiandae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/reports/pariatur"
+    "http://127.0.0.1:8000/api/reports/repudiandae"
 );
 
 const headers = {
@@ -4063,7 +4015,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="report_id"
                data-endpoint="GETapi-reports--report_id-"
-               value="pariatur"
+               value="repudiandae"
                data-component="url" hidden>
     <br>
 <p>The ID of the report.</p>
@@ -4084,14 +4036,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/reports/sit/solve" \
+    "http://127.0.0.1:8000/api/reports/neque/solve" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/reports/sit/solve"
+    "http://127.0.0.1:8000/api/reports/neque/solve"
 );
 
 const headers = {
@@ -4161,7 +4113,7 @@ fetch(url, {
                 <input type="text"
                name="report_id"
                data-endpoint="POSTapi-reports--report_id--solve"
-               value="sit"
+               value="neque"
                data-component="url" hidden>
     <br>
 <p>The ID of the report.</p>
@@ -4182,14 +4134,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/reports/quaerat" \
+    "http://127.0.0.1:8000/api/reports/fugiat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/reports/quaerat"
+    "http://127.0.0.1:8000/api/reports/fugiat"
 );
 
 const headers = {
@@ -4259,7 +4211,7 @@ fetch(url, {
                 <input type="text"
                name="report_id"
                data-endpoint="DELETEapi-reports--report_id-"
-               value="quaerat"
+               value="fugiat"
                data-component="url" hidden>
     <br>
 <p>The ID of the report.</p>
@@ -4316,7 +4268,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 54
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -4332,7 +4284,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Gi&aacute;o tr&igrave;nh chung&quot;,
                     &quot;parent_id&quot;: 1,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;giao-trinh-chung&quot;
                 },
                 {
@@ -4340,7 +4292,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Tiếng anh VSTEP&quot;,
                     &quot;parent_id&quot;: 1,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;tieng-anh-vstep&quot;
                 },
                 {
@@ -4348,7 +4300,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đề cương chung&quot;,
                     &quot;parent_id&quot;: 1,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;de-cuong-chung&quot;
                 }
             ],
@@ -4363,7 +4315,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đại học KHTN&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;dai-hoc-khtn&quot;
                 },
                 {
@@ -4371,7 +4323,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đại học KHXHNV&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;dai-hoc-khxhnv&quot;
                 },
                 {
@@ -4379,7 +4331,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đại học Ngoại Ngữ&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;dai-hoc-ngoai-ngu&quot;
                 },
                 {
@@ -4387,7 +4339,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đại học C&ocirc;ng Nghệ&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;dai-hoc-cong-nghe&quot;
                 },
                 {
@@ -4395,7 +4347,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đại học Kinh Tế&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;dai-hoc-kinh-te&quot;
                 },
                 {
@@ -4403,7 +4355,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đại học Gi&aacute;o Dục&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;dai-hoc-giao-duc&quot;
                 },
                 {
@@ -4411,7 +4363,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đại học Y Dược&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;dai-hoc-y-duoc&quot;
                 },
                 {
@@ -4419,7 +4371,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Khoa Luật&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;khoa-luat&quot;
                 },
                 {
@@ -4427,7 +4379,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Khoa Quốc Tế&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;khoa-quoc-te&quot;
                 },
                 {
@@ -4435,7 +4387,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Khoa QTKD&quot;,
                     &quot;parent_id&quot;: 2,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;khoa-qtkd&quot;
                 }
             ],
@@ -4450,7 +4402,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đề thi đ&aacute;nh gi&aacute; năng lực&quot;,
                     &quot;parent_id&quot;: 3,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;de-thi-danh-gia-nang-luc&quot;
                 },
                 {
@@ -4458,7 +4410,7 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Đề thi THPT Chuy&ecirc;n&quot;,
                     &quot;parent_id&quot;: 3,
                     &quot;created_at&quot;: null,
-                    &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                     &quot;slug&quot;: &quot;de-thi-thpt-chuyen&quot;
                 }
             ],
@@ -4565,7 +4517,7 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"njvpxxssbukxqwarjucsydlcerfpqwuiknqwafwjtpfrpzmjiszmveepcmpmaqsqvyqabymztriqktvrrmswnhlaszuclxexfot\"
+    \"name\": \"pqmwsraigkdztatnjbxwzgkqiktyhvjmwoxpjdoycrrcaxalqydiodqbpjpecwdowghcfmwkphpkpzzgbetapaaayqlsjpwgybsgrtavdyzxqwydzolhohmjsrnlwdipecw\"
 }"
 </code></pre></div>
 
@@ -4581,7 +4533,7 @@ const headers = {
 };
 
 let body = {
-    "name": "njvpxxssbukxqwarjucsydlcerfpqwuiknqwafwjtpfrpzmjiszmveepcmpmaqsqvyqabymztriqktvrrmswnhlaszuclxexfot"
+    "name": "pqmwsraigkdztatnjbxwzgkqiktyhvjmwoxpjdoycrrcaxalqydiodqbpjpecwdowghcfmwkphpkpzzgbetapaaayqlsjpwgybsgrtavdyzxqwydzolhohmjsrnlwdipecw"
 };
 
 fetch(url, {
@@ -4647,7 +4599,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-post-type"
-               value="njvpxxssbukxqwarjucsydlcerfpqwuiknqwafwjtpfrpzmjiszmveepcmpmaqsqvyqabymztriqktvrrmswnhlaszuclxexfot"
+               value="pqmwsraigkdztatnjbxwzgkqiktyhvjmwoxpjdoycrrcaxalqydiodqbpjpecwdowghcfmwkphpkpzzgbetapaaayqlsjpwgybsgrtavdyzxqwydzolhohmjsrnlwdipecw"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -4667,14 +4619,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/post-type/animi" \
+    --get "http://127.0.0.1:8000/api/post-type/molestiae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/post-type/animi"
+    "http://127.0.0.1:8000/api/post-type/molestiae"
 );
 
 const headers = {
@@ -4700,7 +4652,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
+x-ratelimit-remaining: 53
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -4715,7 +4667,7 @@ access-control-allow-origin: *
                 &quot;name&quot;: &quot;Gi&aacute;o tr&igrave;nh chung&quot;,
                 &quot;parent_id&quot;: 1,
                 &quot;created_at&quot;: null,
-                &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                 &quot;slug&quot;: &quot;giao-trinh-chung&quot;
             },
             {
@@ -4723,7 +4675,7 @@ access-control-allow-origin: *
                 &quot;name&quot;: &quot;Tiếng anh VSTEP&quot;,
                 &quot;parent_id&quot;: 1,
                 &quot;created_at&quot;: null,
-                &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                 &quot;slug&quot;: &quot;tieng-anh-vstep&quot;
             },
             {
@@ -4731,7 +4683,7 @@ access-control-allow-origin: *
                 &quot;name&quot;: &quot;Đề cương chung&quot;,
                 &quot;parent_id&quot;: 1,
                 &quot;created_at&quot;: null,
-                &quot;updated_at&quot;: &quot;2022-05-08T05:04:18.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-05-08T07:02:41.000000Z&quot;,
                 &quot;slug&quot;: &quot;de-cuong-chung&quot;
             }
         ],
@@ -4785,7 +4737,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="posttype_id"
                data-endpoint="GETapi-post-type--posttype_id-"
-               value="animi"
+               value="molestiae"
                data-component="url" hidden>
     <br>
 <p>The ID of the posttype.</p>
@@ -4806,18 +4758,18 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/post-type/veniam" \
+    "http://127.0.0.1:8000/api/post-type/aspernatur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"tgwfrehehaegdtnacplqqfupgmpqytrrbkbwzzxetqdpmmthuoivphzpsuzwoaoipekzxitqocweutfsubbyantgycygphghpvptbktpnxqczpphtcknfwrkkdgxtwaftdjqwyooydvspztkrksqnnoviamcokhtsbqbllznwhvzurntozvbuenambuohlvopuqhpgyqkikkwyusurksynkgrogpdmwjfdbultmbtrmokychvf\"
+    \"name\": \"k\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/post-type/veniam"
+    "http://127.0.0.1:8000/api/post-type/aspernatur"
 );
 
 const headers = {
@@ -4826,7 +4778,7 @@ const headers = {
 };
 
 let body = {
-    "name": "tgwfrehehaegdtnacplqqfupgmpqytrrbkbwzzxetqdpmmthuoivphzpsuzwoaoipekzxitqocweutfsubbyantgycygphghpvptbktpnxqczpphtcknfwrkkdgxtwaftdjqwyooydvspztkrksqnnoviamcokhtsbqbllznwhvzurntozvbuenambuohlvopuqhpgyqkikkwyusurksynkgrogpdmwjfdbultmbtrmokychvf"
+    "name": "k"
 };
 
 fetch(url, {
@@ -4892,7 +4844,7 @@ fetch(url, {
                 <input type="text"
                name="posttype_id"
                data-endpoint="POSTapi-post-type--posttype_id-"
-               value="veniam"
+               value="aspernatur"
                data-component="url" hidden>
     <br>
 <p>The ID of the posttype.</p>
@@ -4903,7 +4855,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-post-type--posttype_id-"
-               value="tgwfrehehaegdtnacplqqfupgmpqytrrbkbwzzxetqdpmmthuoivphzpsuzwoaoipekzxitqocweutfsubbyantgycygphghpvptbktpnxqczpphtcknfwrkkdgxtwaftdjqwyooydvspztkrksqnnoviamcokhtsbqbllznwhvzurntozvbuenambuohlvopuqhpgyqkikkwyusurksynkgrogpdmwjfdbultmbtrmokychvf"
+               value="k"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -4924,14 +4876,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/post-type/quia" \
+    "http://127.0.0.1:8000/api/post-type/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/post-type/quia"
+    "http://127.0.0.1:8000/api/post-type/ut"
 );
 
 const headers = {
@@ -5001,7 +4953,7 @@ fetch(url, {
                 <input type="text"
                name="posttype_id"
                data-endpoint="DELETEapi-post-type--posttype_id-"
-               value="quia"
+               value="ut"
                data-component="url" hidden>
     <br>
 <p>The ID of the posttype.</p>
@@ -5134,7 +5086,7 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"hnkieimuzsqqbjpjicqkxbybszshpsvuzhvjmmbgpryyocjggdsh\",
+    \"name\": \"hivcyqzuvzavoazhvfzhyhejjqgcsuowglt\",
     \"permissions\": [
         null
     ],
@@ -5156,7 +5108,7 @@ const headers = {
 };
 
 let body = {
-    "name": "hnkieimuzsqqbjpjicqkxbybszshpsvuzhvjmmbgpryyocjggdsh",
+    "name": "hivcyqzuvzavoazhvfzhyhejjqgcsuowglt",
     "permissions": [
         null
     ],
@@ -5228,7 +5180,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-roles"
-               value="hnkieimuzsqqbjpjicqkxbybszshpsvuzhvjmmbgpryyocjggdsh"
+               value="hivcyqzuvzavoazhvfzhyhejjqgcsuowglt"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -5275,14 +5227,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/roles/14" \
+    --get "http://127.0.0.1:8000/api/roles/12" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/roles/14"
+    "http://127.0.0.1:8000/api/roles/12"
 );
 
 const headers = {
@@ -5369,7 +5321,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="role_id"
                data-endpoint="GETapi-roles--role_id-"
-               value="14"
+               value="12"
                data-component="url" hidden>
     <br>
 <p>The ID of the role.</p>
@@ -5390,11 +5342,11 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/roles/9" \
+    "http://127.0.0.1:8000/api/roles/19" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"dfpuugapalsatiunzyzezslv\",
+    \"name\": \"nzohblpeptwyyvil\",
     \"permissions\": [
         null
     ],
@@ -5407,7 +5359,7 @@ access-control-allow-origin: *
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/roles/9"
+    "http://127.0.0.1:8000/api/roles/19"
 );
 
 const headers = {
@@ -5416,7 +5368,7 @@ const headers = {
 };
 
 let body = {
-    "name": "dfpuugapalsatiunzyzezslv",
+    "name": "nzohblpeptwyyvil",
     "permissions": [
         null
     ],
@@ -5488,7 +5440,7 @@ fetch(url, {
                 <input type="number"
                name="role_id"
                data-endpoint="POSTapi-roles--role_id-"
-               value="9"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>The ID of the role.</p>
@@ -5499,7 +5451,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-roles--role_id-"
-               value="dfpuugapalsatiunzyzezslv"
+               value="nzohblpeptwyyvil"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -5546,14 +5498,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/roles/2" \
+    "http://127.0.0.1:8000/api/roles/18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/roles/2"
+    "http://127.0.0.1:8000/api/roles/18"
 );
 
 const headers = {
@@ -5623,7 +5575,7 @@ fetch(url, {
                 <input type="number"
                name="role_id"
                data-endpoint="DELETEapi-roles--role_id-"
-               value="2"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>The ID of the role.</p>
@@ -5652,9 +5604,9 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"hvlajwogddqzgffekqwlmbgrlznsjyfguyftriaevsabgecxnxsfdarvutuftdxgtmcycgtpmaqoeutcnizlaalsrjbqripiczufzgekjhqvzngikspuhravusjvbxocwnhzcjkpccribsarwhftnlnfqxbycmqwawnhaesdmoqfaajkweuvevud\",
-    \"email\": \"qhbxhzwjoqcjmekyhfwsjcnkcuophbskrpuhngkdycatduxvgxxnxfjqfzwpnwcaaogerkcmxnpmmpjbnyuemdtpcbygersbjunanpmoflmbjhoahilmkkwkxdncmkzepzdslbahacjtkzzktraxzhcaitcqaodio\",
-    \"password\": \"y\",
+    \"name\": \"gaqjinewhpwvaczpwgbapjihorgqbbisszkcvssqvymtschfoagjjuaoagvqflfrxvupgzgigqubnjvqgjtgzivnkhyxtjvoerlq\",
+    \"email\": \"eleiackgairxavtpfpunswuvmttfbh\",
+    \"password\": \"ojfmj\",
     \"roles\": [
         null
     ]
@@ -5673,9 +5625,9 @@ const headers = {
 };
 
 let body = {
-    "name": "hvlajwogddqzgffekqwlmbgrlznsjyfguyftriaevsabgecxnxsfdarvutuftdxgtmcycgtpmaqoeutcnizlaalsrjbqripiczufzgekjhqvzngikspuhravusjvbxocwnhzcjkpccribsarwhftnlnfqxbycmqwawnhaesdmoqfaajkweuvevud",
-    "email": "qhbxhzwjoqcjmekyhfwsjcnkcuophbskrpuhngkdycatduxvgxxnxfjqfzwpnwcaaogerkcmxnpmmpjbnyuemdtpcbygersbjunanpmoflmbjhoahilmkkwkxdncmkzepzdslbahacjtkzzktraxzhcaitcqaodio",
-    "password": "y",
+    "name": "gaqjinewhpwvaczpwgbapjihorgqbbisszkcvssqvymtschfoagjjuaoagvqflfrxvupgzgigqubnjvqgjtgzivnkhyxtjvoerlq",
+    "email": "eleiackgairxavtpfpunswuvmttfbh",
+    "password": "ojfmj",
     "roles": [
         null
     ]
@@ -5744,7 +5696,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-users"
-               value="hvlajwogddqzgffekqwlmbgrlznsjyfguyftriaevsabgecxnxsfdarvutuftdxgtmcycgtpmaqoeutcnizlaalsrjbqripiczufzgekjhqvzngikspuhravusjvbxocwnhzcjkpccribsarwhftnlnfqxbycmqwawnhaesdmoqfaajkweuvevud"
+               value="gaqjinewhpwvaczpwgbapjihorgqbbisszkcvssqvymtschfoagjjuaoagvqflfrxvupgzgigqubnjvqgjtgzivnkhyxtjvoerlq"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -5754,7 +5706,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-users"
-               value="qhbxhzwjoqcjmekyhfwsjcnkcuophbskrpuhngkdycatduxvgxxnxfjqfzwpnwcaaogerkcmxnpmmpjbnyuemdtpcbygersbjunanpmoflmbjhoahilmkkwkxdncmkzepzdslbahacjtkzzktraxzhcaitcqaodio"
+               value="eleiackgairxavtpfpunswuvmttfbh"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -5764,7 +5716,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-users"
-               value="y"
+               value="ojfmj"
                data-component="body" hidden>
     <br>
 <p>Must be at least 6 characters.</p>
@@ -5787,7 +5739,6 @@ fetch(url, {
             <h2 id="user-management-GETapi-users--user_id-">Show user</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -5798,14 +5749,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/users/13" \
+    --get "http://127.0.0.1:8000/api/users/14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/users/13"
+    "http://127.0.0.1:8000/api/users/14"
 );
 
 const headers = {
@@ -5822,7 +5773,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-users--user_id-">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -5830,12 +5781,18 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 51
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Admin&quot;,
+        &quot;email&quot;: &quot;admin@test.com&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -5851,7 +5808,7 @@ access-control-allow-origin: *
 </span>
 <form id="form-GETapi-users--user_id-" data-method="GET"
       data-path="api/users/{user_id}"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -5878,21 +5835,13 @@ access-control-allow-origin: *
             <small class="badge badge-green">GET</small>
             <b><code>api/users/{user_id}</code></b>
         </p>
-                <p>
-            <label id="auth-GETapi-users--user_id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="GETapi-users--user_id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <p>
                 <b><code>user_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="user_id"
                data-endpoint="GETapi-users--user_id-"
-               value="13"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The ID of the user.</p>
@@ -5913,13 +5862,13 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/users/9" \
+    "http://127.0.0.1:8000/api/users/19" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"eajyijeyecnlhxkuccnqzfuqvvcdktkinncaargundqefceniwebxpsqhgmedzsxesswsjrxhgrgvwfbanmdirrgqnxxrzztmlxcentsxkmshyzy\",
-    \"email\": \"nxzlakwkzkkvvpvjwcorthzrzyesrihsuaphosqaobbhubjpulrkuivhlngghhdrqbopumxiizkujzjqnojtfrauductxphpvquhxzyrlguhrvxelfybvortmzwofsfbqjomonwnabryocfhqghujgnxrcwjdkwkshohuqtamojwldhafmiydiyhzjzwzlidscjrqodujwxkyfawdjddzvrdavyshlobhebyewltgwmngxyjolklxnzaqbn\",
-    \"password\": \"rawcb\",
+    \"name\": \"xfjpofluxjqzldkcy\",
+    \"email\": \"vxuevfzlswdriblgoqrfpefqmbubpd\",
+    \"password\": \"gpwdj\",
     \"roles\": [
         null
     ]
@@ -5929,7 +5878,7 @@ access-control-allow-origin: *
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/users/9"
+    "http://127.0.0.1:8000/api/users/19"
 );
 
 const headers = {
@@ -5938,9 +5887,9 @@ const headers = {
 };
 
 let body = {
-    "name": "eajyijeyecnlhxkuccnqzfuqvvcdktkinncaargundqefceniwebxpsqhgmedzsxesswsjrxhgrgvwfbanmdirrgqnxxrzztmlxcentsxkmshyzy",
-    "email": "nxzlakwkzkkvvpvjwcorthzrzyesrihsuaphosqaobbhubjpulrkuivhlngghhdrqbopumxiizkujzjqnojtfrauductxphpvquhxzyrlguhrvxelfybvortmzwofsfbqjomonwnabryocfhqghujgnxrcwjdkwkshohuqtamojwldhafmiydiyhzjzwzlidscjrqodujwxkyfawdjddzvrdavyshlobhebyewltgwmngxyjolklxnzaqbn",
-    "password": "rawcb",
+    "name": "xfjpofluxjqzldkcy",
+    "email": "vxuevfzlswdriblgoqrfpefqmbubpd",
+    "password": "gpwdj",
     "roles": [
         null
     ]
@@ -6009,7 +5958,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-users--user_id-"
-               value="9"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>The ID of the user.</p>
@@ -6020,7 +5969,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-users--user_id-"
-               value="eajyijeyecnlhxkuccnqzfuqvvcdktkinncaargundqefceniwebxpsqhgmedzsxesswsjrxhgrgvwfbanmdirrgqnxxrzztmlxcentsxkmshyzy"
+               value="xfjpofluxjqzldkcy"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -6030,7 +5979,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-users--user_id-"
-               value="nxzlakwkzkkvvpvjwcorthzrzyesrihsuaphosqaobbhubjpulrkuivhlngghhdrqbopumxiizkujzjqnojtfrauductxphpvquhxzyrlguhrvxelfybvortmzwofsfbqjomonwnabryocfhqghujgnxrcwjdkwkshohuqtamojwldhafmiydiyhzjzwzlidscjrqodujwxkyfawdjddzvrdavyshlobhebyewltgwmngxyjolklxnzaqbn"
+               value="vxuevfzlswdriblgoqrfpefqmbubpd"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -6040,7 +5989,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-users--user_id-"
-               value="rawcb"
+               value="gpwdj"
                data-component="body" hidden>
     <br>
 <p>Must be at least 6 characters.</p>
@@ -6074,14 +6023,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/users/4" \
+    "http://127.0.0.1:8000/api/users/18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/users/4"
+    "http://127.0.0.1:8000/api/users/18"
 );
 
 const headers = {
@@ -6151,7 +6100,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="DELETEapi-users--user_id-"
-               value="4"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>The ID of the user.</p>
@@ -6161,7 +6110,6 @@ fetch(url, {
             <h2 id="user-management-GETapi-users">Get users</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -6196,7 +6144,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-users">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -6204,12 +6152,137 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Admin&quot;,
+            &quot;email&quot;: &quot;admin@test.com&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Normal User&quot;,
+            &quot;email&quot;: &quot;user@test.com&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Evalyn Schmeler&quot;,
+            &quot;email&quot;: &quot;schulist.terrence@example.net&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;Ethan Schneider&quot;,
+            &quot;email&quot;: &quot;santos29@example.org&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;Clinton Jacobson&quot;,
+            &quot;email&quot;: &quot;johathan29@example.net&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;Lucile Jakubowski&quot;,
+            &quot;email&quot;: &quot;reed12@example.org&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;Dillan Wilkinson&quot;,
+            &quot;email&quot;: &quot;beatty.jazmyn@example.org&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;name&quot;: &quot;Halie Lang PhD&quot;,
+            &quot;email&quot;: &quot;tyler.dibbert@example.net&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;name&quot;: &quot;Prof. Shayna Dicki DDS&quot;,
+            &quot;email&quot;: &quot;roy78@example.net&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;name&quot;: &quot;Prof. Coby Dicki&quot;,
+            &quot;email&quot;: &quot;fisher.cyril@example.com&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;name&quot;: &quot;Leif Boyle&quot;,
+            &quot;email&quot;: &quot;sjones@example.com&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;name&quot;: &quot;Mina Becker&quot;,
+            &quot;email&quot;: &quot;robb.kreiger@example.org&quot;
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;name&quot;: &quot;Rashawn Abbott&quot;,
+            &quot;email&quot;: &quot;btorp@example.net&quot;
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;name&quot;: &quot;Talia Hettinger&quot;,
+            &quot;email&quot;: &quot;mcasper@example.com&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;name&quot;: &quot;Dr. Noah O'Keefe&quot;,
+            &quot;email&quot;: &quot;osborne.berge@example.org&quot;
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://127.0.0.1:8000/api/users?page=1&quot;,
+        &quot;last&quot;: &quot;http://127.0.0.1:8000/api/users?page=4&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: &quot;http://127.0.0.1:8000/api/users?page=2&quot;
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 4,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/users?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/users?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/users?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/users?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/users?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://127.0.0.1:8000/api/users&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: 15,
+        &quot;total&quot;: 54
+    }
 }</code>
  </pre>
     </span>
@@ -6225,7 +6298,7 @@ access-control-allow-origin: *
 </span>
 <form id="form-GETapi-users" data-method="GET"
       data-path="api/users"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -6252,12 +6325,212 @@ access-control-allow-origin: *
             <small class="badge badge-green">GET</small>
             <b><code>api/users</code></b>
         </p>
+                    </form>
+
+            <h2 id="user-management-GETapi-users-profile-likes">List posts like of user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-users-profile-likes">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/users/profile/likes" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/users/profile/likes"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-users-profile-likes">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-users-profile-likes" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-users-profile-likes"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users-profile-likes"></code></pre>
+</span>
+<span id="execution-error-GETapi-users-profile-likes" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users-profile-likes"></code></pre>
+</span>
+<form id="form-GETapi-users-profile-likes" data-method="GET"
+      data-path="api/users/profile/likes"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-users-profile-likes', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-users-profile-likes"
+                    onclick="tryItOut('GETapi-users-profile-likes');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-users-profile-likes"
+                    onclick="cancelTryOut('GETapi-users-profile-likes');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-users-profile-likes" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/users/profile/likes</code></b>
+        </p>
                 <p>
-            <label id="auth-GETapi-users" hidden>Authorization header:
+            <label id="auth-GETapi-users-profile-likes" hidden>Authorization header:
                 <b><code>Bearer </code></b><input type="text"
                                                                 name="Authorization"
                                                                 data-prefix="Bearer "
-                                                                data-endpoint="GETapi-users"
+                                                                data-endpoint="GETapi-users-profile-likes"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="user-management-GETapi-users-profile-reports">List posts report of user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-users-profile-reports">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/users/profile/reports" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/users/profile/reports"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-users-profile-reports">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-users-profile-reports" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-users-profile-reports"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users-profile-reports"></code></pre>
+</span>
+<span id="execution-error-GETapi-users-profile-reports" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users-profile-reports"></code></pre>
+</span>
+<form id="form-GETapi-users-profile-reports" data-method="GET"
+      data-path="api/users/profile/reports"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-users-profile-reports', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-users-profile-reports"
+                    onclick="tryItOut('GETapi-users-profile-reports');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-users-profile-reports"
+                    onclick="cancelTryOut('GETapi-users-profile-reports');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-users-profile-reports" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/users/profile/reports</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-users-profile-reports" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-users-profile-reports"
                                                                 data-component="header"></label>
         </p>
                 </form>

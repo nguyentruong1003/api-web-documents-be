@@ -19,12 +19,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"name":"T\u00e0i li\u1ec7u chung","children":[{"id":5,"name":"Gi\u00e1o tr\u00ecnh chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"giao-trinh-chung"},{"id":6,"name":"Ti\u1ebfng anh VSTEP","parent_id":1,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"tieng-anh-vstep"},{"id":7,"name":"\u0110\u1ec1 c\u01b0\u01a1ng chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"de-cuong-chung"}],"slug":"tai-lieu-chung"},{"id":2,"name":"C\u00e1c tr\u01b0\u1eddng","children":[{"id":8,"name":"\u0110\u1ea1i h\u1ecdc KHTN","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"dai-hoc-khtn"},{"id":9,"name":"\u0110\u1ea1i h\u1ecdc KHXHNV","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"dai-hoc-khxhnv"},{"id":10,"name":"\u0110\u1ea1i h\u1ecdc Ngo\u1ea1i Ng\u1eef","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"dai-hoc-ngoai-ngu"},{"id":11,"name":"\u0110\u1ea1i h\u1ecdc C\u00f4ng Ngh\u1ec7","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"dai-hoc-cong-nghe"},{"id":12,"name":"\u0110\u1ea1i h\u1ecdc Kinh T\u1ebf","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"dai-hoc-kinh-te"},{"id":13,"name":"\u0110\u1ea1i h\u1ecdc Gi\u00e1o D\u1ee5c","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"dai-hoc-giao-duc"},{"id":14,"name":"\u0110\u1ea1i h\u1ecdc Y D\u01b0\u1ee3c","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"dai-hoc-y-duoc"},{"id":15,"name":"Khoa Lu\u1eadt","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"khoa-luat"},{"id":16,"name":"Khoa Qu\u1ed1c T\u1ebf","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"khoa-quoc-te"},{"id":17,"name":"Khoa QTKD","parent_id":2,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"khoa-qtkd"}],"slug":"cac-truong"},{"id":3,"name":"\u0110\u1ec1 thi \u0111\u1ea1i h\u1ecdc","children":[{"id":18,"name":"\u0110\u1ec1 thi \u0111\u00e1nh gi\u00e1 n\u0103ng l\u1ef1c","parent_id":3,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"de-thi-danh-gia-nang-luc"},{"id":19,"name":"\u0110\u1ec1 thi THPT Chuy\u00ean","parent_id":3,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"de-thi-thpt-chuyen"}],"slug":"de-thi-dai-hoc"},{"id":4,"name":"Tin t\u1ee9c","children":[],"slug":"tin-tuc"}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/post-type?page=1","last":"http:\/\/127.0.0.1:8000\/api\/post-type?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/post-type?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/post-type","per_page":15,"to":4,"total":4}}'
+        content: '{"data":[{"id":1,"name":"T\u00e0i li\u1ec7u chung","children":[{"id":5,"name":"Gi\u00e1o tr\u00ecnh chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"giao-trinh-chung"},{"id":6,"name":"Ti\u1ebfng anh VSTEP","parent_id":1,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"tieng-anh-vstep"},{"id":7,"name":"\u0110\u1ec1 c\u01b0\u01a1ng chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"de-cuong-chung"}],"slug":"tai-lieu-chung"},{"id":2,"name":"C\u00e1c tr\u01b0\u1eddng","children":[{"id":8,"name":"\u0110\u1ea1i h\u1ecdc KHTN","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"dai-hoc-khtn"},{"id":9,"name":"\u0110\u1ea1i h\u1ecdc KHXHNV","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"dai-hoc-khxhnv"},{"id":10,"name":"\u0110\u1ea1i h\u1ecdc Ngo\u1ea1i Ng\u1eef","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"dai-hoc-ngoai-ngu"},{"id":11,"name":"\u0110\u1ea1i h\u1ecdc C\u00f4ng Ngh\u1ec7","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"dai-hoc-cong-nghe"},{"id":12,"name":"\u0110\u1ea1i h\u1ecdc Kinh T\u1ebf","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"dai-hoc-kinh-te"},{"id":13,"name":"\u0110\u1ea1i h\u1ecdc Gi\u00e1o D\u1ee5c","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"dai-hoc-giao-duc"},{"id":14,"name":"\u0110\u1ea1i h\u1ecdc Y D\u01b0\u1ee3c","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"dai-hoc-y-duoc"},{"id":15,"name":"Khoa Lu\u1eadt","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"khoa-luat"},{"id":16,"name":"Khoa Qu\u1ed1c T\u1ebf","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"khoa-quoc-te"},{"id":17,"name":"Khoa QTKD","parent_id":2,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"khoa-qtkd"}],"slug":"cac-truong"},{"id":3,"name":"\u0110\u1ec1 thi \u0111\u1ea1i h\u1ecdc","children":[{"id":18,"name":"\u0110\u1ec1 thi \u0111\u00e1nh gi\u00e1 n\u0103ng l\u1ef1c","parent_id":3,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"de-thi-danh-gia-nang-luc"},{"id":19,"name":"\u0110\u1ec1 thi THPT Chuy\u00ean","parent_id":3,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"de-thi-thpt-chuyen"}],"slug":"de-thi-dai-hoc"},{"id":4,"name":"Tin t\u1ee9c","children":[],"slug":"tin-tuc"}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/post-type?page=1","last":"http:\/\/127.0.0.1:8000\/api\/post-type?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/post-type?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/post-type","per_page":15,"to":4,"total":4}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
+          x-ratelimit-remaining: '54'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -47,7 +47,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: njvpxxssbukxqwarjucsydlcerfpqwuiknqwafwjtpfrpzmjiszmveepcmpmaqsqvyqabymztriqktvrrmswnhlaszuclxexfot
+        example: pqmwsraigkdztatnjbxwzgkqiktyhvjmwoxpjdoycrrcaxalqydiodqbpjpecwdowghcfmwkphpkpzzgbetapaaayqlsjpwgybsgrtavdyzxqwydzolhohmjsrnlwdipecw
         type: string
         custom: []
     responses: []
@@ -69,7 +69,7 @@ endpoints:
         name: posttype_id
         description: 'The ID of the posttype.'
         required: true
-        example: animi
+        example: molestiae
         type: string
         custom: []
     queryParameters: []
@@ -77,12 +77,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":1,"name":"T\u00e0i li\u1ec7u chung","children":[{"id":5,"name":"Gi\u00e1o tr\u00ecnh chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"giao-trinh-chung"},{"id":6,"name":"Ti\u1ebfng anh VSTEP","parent_id":1,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"tieng-anh-vstep"},{"id":7,"name":"\u0110\u1ec1 c\u01b0\u01a1ng chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T05:04:18.000000Z","slug":"de-cuong-chung"}],"slug":"tai-lieu-chung"}}'
+        content: '{"data":{"id":1,"name":"T\u00e0i li\u1ec7u chung","children":[{"id":5,"name":"Gi\u00e1o tr\u00ecnh chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"giao-trinh-chung"},{"id":6,"name":"Ti\u1ebfng anh VSTEP","parent_id":1,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"tieng-anh-vstep"},{"id":7,"name":"\u0110\u1ec1 c\u01b0\u01a1ng chung","parent_id":1,"created_at":null,"updated_at":"2022-05-08T07:02:41.000000Z","slug":"de-cuong-chung"}],"slug":"tai-lieu-chung"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
+          x-ratelimit-remaining: '53'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -103,7 +103,7 @@ endpoints:
         name: posttype_id
         description: 'The ID of the posttype.'
         required: true
-        example: veniam
+        example: aspernatur
         type: string
         custom: []
     queryParameters: []
@@ -112,7 +112,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: tgwfrehehaegdtnacplqqfupgmpqytrrbkbwzzxetqdpmmthuoivphzpsuzwoaoipekzxitqocweutfsubbyantgycygphghpvptbktpnxqczpphtcknfwrkkdgxtwaftdjqwyooydvspztkrksqnnoviamcokhtsbqbllznwhvzurntozvbuenambuohlvopuqhpgyqkikkwyusurksynkgrogpdmwjfdbultmbtrmokychvf
+        example: k
         type: string
         custom: []
     responses: []
@@ -134,7 +134,7 @@ endpoints:
         name: posttype_id
         description: 'The ID of the posttype.'
         required: true
-        example: quia
+        example: ut
         type: string
         custom: []
     queryParameters: []

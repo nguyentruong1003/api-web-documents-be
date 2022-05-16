@@ -45,7 +45,7 @@ endpoints:
         name: report_id
         description: 'The ID of the report.'
         required: true
-        example: pariatur
+        example: repudiandae
         type: string
         custom: []
     queryParameters: []
@@ -77,7 +77,7 @@ endpoints:
         name: report_id
         description: 'The ID of the report.'
         required: true
-        example: sit
+        example: neque
         type: string
         custom: []
     queryParameters: []
@@ -101,7 +101,7 @@ endpoints:
         name: report_id
         description: 'The ID of the report.'
         required: true
-        example: quaerat
+        example: fugiat
         type: string
         custom: []
     queryParameters: []

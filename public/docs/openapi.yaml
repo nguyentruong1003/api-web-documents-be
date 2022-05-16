@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: gbyaumdcrlvjsxumtfmulskgqmqxbiolkifnkbhwrzmfpqbudblhqq
+                  example: uxqysrfhawcfwhpmelrdbqxbfhmiylzvrjajpfqgvxcioyynvuilemiypzpyqavcdvfjqmpujfpgfhabtpmfrjoiwwnggusyldvwspgpdfnadhtveypeqmgmuelbqoaiedanhvdfyavhxgabmfnpkhbtxtmrltiywgerkrpvuckpeumwrvjzyoefxlmlgnmgjaskirewyzxzocotuspjsfjrqjzrxijfgwa
                 password:
                   type: string
                   description: ''
-                  example: id
+                  example: nam
               required:
                 - email
                 - password
@@ -114,19 +114,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: rdbhxsv
+                  example: iydkxkvfaeehvurtshcirycfxuqniqcta
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: wwfkhucczzwsjisyeylnzrkvddulvmrrktrrqvtguaigdojjcwjwpxodyspvyoogdftbyrzshwdkbremhzqeslzcfiufokvwqhehuajahnhrbcelvzmvavqxjkpjnqcrnvkpwcolxbginwjdolnfefehoisofpmfeyjejcptwopikrxgncmtcegugaups
+                  example: upuchmtdivnsvyieniecp
                 password:
                   type: string
                   description: 'Must not be greater than 255 characters. Must be at least 6 characters.'
-                  example: l
+                  example: ''
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: officia
+                  example: dolor
               required:
                 - name
                 - email
@@ -221,15 +221,15 @@ paths:
                 old_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: nqyphnxpoccdjs
+                  example: jnyeqfimdejodbivctpbmsrlkyuqycwgllwhcqlpvedcqjxjcwsjvaylqpz
                 new_password:
                   type: string
                   description: 'Must be at least 6 characters. Must not be greater than 255 characters.'
-                  example: hcrvcybbrlyxyrbhbnampvte
+                  example: ouctvqvvycqmtcpugsniqpeepnqmadalgppxfblufknyultiqdzbneexpfngszznugowuvcwczgduslptiixwfzsespfoqsjpszsjvac
                 new_password_confirmation:
                   type: string
                   description: 'The value and <code>new_password</code> must match.'
-                  example: accusantium
+                  example: non
               required:
                 - old_password
                 - new_password
@@ -243,12 +243,12 @@ paths:
           in: query
           name: name
           description: 'Search by name'
-          example: nulla
+          example: aliquam
           required: false
           schema:
             type: string
             description: 'Search by name'
-            example: nulla
+            example: aliquam
         -
           in: header
           name: Content-Type
@@ -309,11 +309,11 @@ paths:
                 v_key:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: anvqfnmywlsccdilgsjgtcsmiugrphutazflwhpdlkwvwhjhdivnkaldvhbjyfiiztqgyeyqsuktbkbg
+                  example: dtqyurcyiacuthwdipvhybjwqpselzllcclwjhbsgjoujbrppvlpumvdkcoqycssmraxnxdqvvxwjdelrfykjueszhfnniiucaizxpdigurhrdbvjlpptljckcpuvgghbiufoiyeyvwiaxyyfrgbrmxtlkxttgorugqrcsk
                 v_value:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: cnjbdpieorwsylbwaqfalbzwciokqrrgabicumhliunewzthxiputauzvnvjxtrmdvuimfanhdklpzwdrjnvyqfnbrbajndetkehutgwxibbunbrpouvqutfjymstlbmmauulqkyhytjabbklewvcgzqbyujddnkzeypgufijurauligvswshdfdzpqakhnhkxdxaednngqhzeoyohnkyxbtgouubsjptmk
+                  example: ubetjrtlbkluosvxwtlwzwbscnaphqykbhswzchbgqxoqnhbxejomqhzjayvkiazklvilkvxieojytxdtaudlneimmrbksjhkohxjbedvtajrs
                 order_number:
                   type: number
                   description: 'Must be at least 0.'
@@ -321,19 +321,19 @@ paths:
                 type:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: ''
+                  example: t
                 parent_id:
                   type: number
                   description: ''
-                  example: 46366398.602222
+                  example: 14969.916915
                 v_content:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: mepbdnqzmwrneedltksilclvunzzjnjhbaqtooxefnvcakfhapduphvdbmrqizqniqimhmxibinejqnwxufausrezalwkiyawlmpnvqtznbrqqeqqzitbdnoukmzupjfmhaentjspukxesepjjltuwuxjogttdlgekwzlblmanmelzbeiyullhwcdloyzadnminiwpyqhlzaufyewmmtgveyarahvodrfensxibpuyfhttxgihlesacypmkcotqrauhydjffgoyiahbvelflniehvsjgxzlmmcuempdyajfmbbxvvbwyijqndamxjzndvkqoqfcvkqsajcfrjowakfwtqcueoqsfwyhiufvytuvsmdzyyeejwacsvhtsylbetkeg
+                  example: sbbeefpwshfhwcogblijcaelzhykzabwfjrvzwsohqeizttbaecrhiiztlmopiiimenc
                 note:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: hzgulstrryglkogzfvzwzanqvzuhseihevdyrxwsqezmrvchwhuqkkmhiovwqnyucxawdrewgdzuroahamaqmznmqgiioaizmfkmndhgzhvsjbkosheqxcjsgiwlhwirxdfqxffiglszdejdawqswomvndxxhywrvnufflzrrqrzscdpoptfxhkjakyrfmcdghvjbikqshxdqnovrzmqykihkndadglokupmgmdkewveyouildryejivzifpxiypajrqxaphemom
+                  example: ghjehrkvzggggnmvlykedlgyttwqcuavqfuilxgrjsssepiuixzfhmecujzseyasosqbemiilzvjyqcbxzhtcdodxmhzuoavbpuwjfyqjjzpbijfjkaxfiknzzz
               required:
                 - v_key
                 - v_value
@@ -404,11 +404,11 @@ paths:
                 v_key:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yodoyonxovzdmwmofycvaqqyikfpcggyckqtmaniryrjpwuqppjmsgyxcgkpjsxshmtbzxrpvvahlnjbhbcktmbvdjxvolvioszaunbtvgdmvjkbudpxnzwrxgspvzjhrkqbcnesddfqtgygykhfikmsuvylvveswoqaozsatcldrhnlopjahiwxjqphgtxexnpdbezbznfejkqpwwomoqbwbbvtkrzenxkmcdmmixlyuvqqeoxlptigtloeuqq
+                  example: pqbsmqqdhfjawlfwuzclcvchzixumwwbkbanknbdfpyazbgqssmgkrzohrylhftmrtzahmulxncjyhsiwxydgazfdpvjmvzwkopwdtraiefplyaxdticimxckyzbrnbocvrqybldebsulqzeqlsnmouqoosgolhrdnxqbiiqvdrxcvbjnshacsnrtjzbrozaatdbbufwitfminbepeyzojzfrtzwbvrpbhbvts
                 v_value:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ilecbuavmdvqfdeigfvzivueblxowerinvhetbxrfjoizcorvtxqzjpofxcyxwhkgjjxeblvdlmtqlqtaavycxxunchdgbuptupulm
+                  example: gwrsramtqovmfrxvdnujtghpbgekkbhvxfic
                 order_number:
                   type: number
                   description: 'Must be at least 0.'
@@ -416,19 +416,19 @@ paths:
                 type:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: nbyyps
+                  example: metkqx
                 parent_id:
                   type: number
                   description: ''
-                  example: 440488.936
+                  example: 174995186.5818
                 v_content:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: thbwirwfoenlipshcckesfpemrpmkvsldeaxcyfivrhffgrlxmjjvikyqpalifxojvfgrqbiroxtjdpryenrlnatpqtebokaysuviqppfpidkczroowkkwqwqmfabbsufwtsiguvsidljmwddfaziwnxwvmtcpjlglaipegcruacbhvbuasqglznkxydgkpggqkmvdremfhggwkmpxgtjxzeupbrerungotueztlpwmcwcndqajxojusqkgoeqnqruhxhvwmxkskjspserjcnutmtkipczaujyjb
+                  example: snjxztqlklrsjvukfewkdaotvtmbzvkfvqkptzspiusxcrvoixuxxsxntslznaaqgdoqbmazmqomhxseunycqsmgutbtlmdttbickdjbavwogpvbvuqqmlfvcefvpncyqlfsksrtsicxnnkpibzzbtzjzpazrstspkaplxhobricnfapensxtlqmkogins
                 note:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: pxraisxwunvewpflmvgxjfucuxaptiuuftfpwxcplpqkvxnephcgbsrwlaifynzivsjkfimkonzstgnambppraizvhxjbqpvvddafnojfeqtcazwqwkqgtsylyvgatiiueeteqdkohzweuhsswnyletdcahtjwydmtvmpcyaczpnuxrifsdajfzhvtqgiwwviamkecneixoaczaneoflkkczdcjueugscokdfaqjwxcxydpkiotphwuuojvxosiihpxcamytbfypewxjcmhqenaasqdjaeyiobqypcvyfbovdsywkqutixdoqkdewtftlfcfswwmwjmgmjrttul
+                  example: rtevfrhpbpwwxzkkvbciftywkmwyjoroskhjkemdvhwuzsdtoushptrcxakejikjlbmuylwxvxuytehgthxtblrqsrk
               required:
                 - v_key
                 - v_value
@@ -460,7 +460,7 @@ paths:
         in: path
         name: masterdata_id
         description: 'The ID of the masterdata.'
-        example: repellat
+        example: quasi
         required: true
         schema:
           type: string
@@ -529,7 +529,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jtkmzamgeozjeemktukspskvhpmjsaxkxvejxidcvoarcxtgmawbyiztfpozfzjsyfmalaorzhcwzeswsizdphmsamwogfrdgfwxfzszvnnfdftvfgdtgrknhxdhassodnrrjtckiiysyehrsamhhpexbxcduvkeesjmgtpm
+                  example: fmwcsqsmbvkyanxpmtmmwophgvaymkphmfrljvysufgdjywuccwlvignoske
               required:
                 - name
   '/api/permissions/{permission_id}':
@@ -597,7 +597,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: epontztegaqqgfhinocathkwfhcochqfxcnaqxovsabswlmnppvxmxkcxqraqbttumjrignzxtubeikflnqhjlzxrzqjaqpzhxlpdcitzyyllnjzdeykasasnyifaixfloxulgobpyraapanteaegroireviuvhlazcbnzkyhazchwsixbikllsbyqsgjdswjhvzfulfqbkdxmnmftsdunuvxxqfbtxiqcwixeaeqrufshltfrlxtwqtabuebe
+                  example: yuhzhibgwpnadmwjuizczytallqmfubrxwwhoyalhdyfzhwregycritsbgevcljxjnoctnidwcuadqyi
               required:
                 - name
     delete:
@@ -626,7 +626,7 @@ paths:
         in: path
         name: permission_id
         description: 'The ID of the permission.'
-        example: et
+        example: consequuntur
         required: true
         schema:
           type: string
@@ -639,12 +639,12 @@ paths:
           in: query
           name: name
           description: 'Search by title, type, content'
-          example: qui
+          example: aut
           required: false
           schema:
             type: string
             description: 'Search by title, type, content'
-            example: qui
+            example: aut
         -
           in: header
           name: Content-Type
@@ -679,7 +679,17 @@ paths:
                       created_at: '2022-04-28T20:45:49.000000Z'
                       comment: []
                       files: []
-                      likes: []
+                      likes:
+                        -
+                          id: 1
+                          name: Admin
+                          email: admin@test.com
+                          email_verified_at: null
+                          created_at: '2022-05-08T07:02:37.000000Z'
+                          updated_at: '2022-05-08T07:02:37.000000Z'
+                          pivot:
+                            post_id: 1
+                            user_id: 1
                       reports: []
                     -
                       id: 2
@@ -703,7 +713,31 @@ paths:
                       type_slug: giao-trinh-chung
                       user_id: null
                       created_at: '2022-04-28T20:47:54.000000Z'
-                      comment: []
+                      comment:
+                        -
+                          id: 4
+                          comment: 'Test comment edited test lại lần nữa'
+                          post_id: 3
+                          user_id: 1
+                          created_at: '2022-05-14T18:12:08.000000Z'
+                          reply: []
+                          likes: []
+                        -
+                          id: 7
+                          comment: 'Test comment edited test lại lần nữa'
+                          post_id: 3
+                          user_id: 1
+                          created_at: '2022-05-14T18:23:38.000000Z'
+                          reply:
+                            -
+                              id: 8
+                              comment: 'Test comment edited test lại lần nữa'
+                              post_id: 3
+                              user_id: 1
+                              created_at: '2022-05-14T18:27:30.000000Z'
+                              reply: []
+                              likes: []
+                          likes: []
                       files: []
                       likes: []
                       reports: []
@@ -908,7 +942,7 @@ paths:
                     path: 'http://127.0.0.1:8000/api/posts'
                     per_page: 15
                     to: 15
-                    total: 84
+                    total: 87
                 properties:
                   data:
                     type: array
@@ -924,7 +958,17 @@ paths:
                         created_at: '2022-04-28T20:45:49.000000Z'
                         comment: []
                         files: []
-                        likes: []
+                        likes:
+                          -
+                            id: 1
+                            name: Admin
+                            email: admin@test.com
+                            email_verified_at: null
+                            created_at: '2022-05-08T07:02:37.000000Z'
+                            updated_at: '2022-05-08T07:02:37.000000Z'
+                            pivot:
+                              post_id: 1
+                              user_id: 1
                         reports: []
                       -
                         id: 2
@@ -948,7 +992,31 @@ paths:
                         type_slug: giao-trinh-chung
                         user_id: null
                         created_at: '2022-04-28T20:47:54.000000Z'
-                        comment: []
+                        comment:
+                          -
+                            id: 4
+                            comment: 'Test comment edited test lại lần nữa'
+                            post_id: 3
+                            user_id: 1
+                            created_at: '2022-05-14T18:12:08.000000Z'
+                            reply: []
+                            likes: []
+                          -
+                            id: 7
+                            comment: 'Test comment edited test lại lần nữa'
+                            post_id: 3
+                            user_id: 1
+                            created_at: '2022-05-14T18:23:38.000000Z'
+                            reply:
+                              -
+                                id: 8
+                                comment: 'Test comment edited test lại lần nữa'
+                                post_id: 3
+                                user_id: 1
+                                created_at: '2022-05-14T18:27:30.000000Z'
+                                reply: []
+                                likes: []
+                            likes: []
                         files: []
                         likes: []
                         reports: []
@@ -1159,7 +1227,7 @@ paths:
                       path: 'http://127.0.0.1:8000/api/posts'
                       per_page: 15
                       to: 15
-                      total: 84
+                      total: 87
       tags:
         - 'Post management'
       security: []
@@ -1194,7 +1262,7 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: nzkhhtqdqznpjtxhggylojbokboqyihgqbkiilmvkxzyikiukoizxpduptjhnwcracgwnrmsjiflynotjsxfazffpkoajkbpncfgntewrjdntjwrsgrpoynevhieuegaqletiklsvhwogtvnlvnygqzjbkmugcycgiqwxvmevekdzhsbdiqpuvxcefcvgluowfabrimmysnzejyutrpk
+                  example: etwikukuovqbmcmziaubbhpjnhgepeuithaowosgtzzipcufzbackjpnhvoglpjpqtgruzdfbelalwsldlbjmmksokmtnlnwvwwdolsovjqazrdbfzkyelgtegpiaoicdtwcjgcuetafchtpxqvrtpmihudqnnybkbttmnzomxcfuzxhmkacwrmnniqoojrjawakwanmotibvhuwqrwrbzfyzjxyuayssgwrirpeeigutvkffmrorohkorrjqttxjkhedhdhflnhqejdugxxqdpyvsskimrmbdqqqnpylbqakafctxxgymilednaupczwyzgovlptqnfyjdbxzjabyjclgqaicqjjdohzepxqupklbhetsmijximrwlujvmgfyvykgnwnrxujsfncmtqcboclydchelbpzblrnexddrtsizfzlacjlnerlvflbacigwfgnrbrlobdwdoyjmkeyzotghsfmhoamiuzkwnofstohfivjfofdownwgarllnohzpishzxgcabrcuvfokuyehaogowjvafkvkfsirsxcnperpdnnxznnepttollurttxibczyhjf
               required:
                 - title
   '/api/posts/{post_id}':
@@ -1235,7 +1303,17 @@ paths:
                     created_at: '2022-04-28T20:45:49.000000Z'
                     comment: []
                     files: []
-                    likes: []
+                    likes:
+                      -
+                        id: 1
+                        name: Admin
+                        email: admin@test.com
+                        email_verified_at: null
+                        created_at: '2022-05-08T07:02:37.000000Z'
+                        updated_at: '2022-05-08T07:02:37.000000Z'
+                        pivot:
+                          post_id: 1
+                          user_id: 1
                     reports: []
                 properties:
                   data:
@@ -1251,7 +1329,17 @@ paths:
                       created_at: '2022-04-28T20:45:49.000000Z'
                       comment: []
                       files: []
-                      likes: []
+                      likes:
+                        -
+                          id: 1
+                          name: Admin
+                          email: admin@test.com
+                          email_verified_at: null
+                          created_at: '2022-05-08T07:02:37.000000Z'
+                          updated_at: '2022-05-08T07:02:37.000000Z'
+                          pivot:
+                            post_id: 1
+                            user_id: 1
                       reports: []
       tags:
         - 'Post management'
@@ -1287,7 +1375,7 @@ paths:
                 title:
                   type: string
                   description: 'The title of the post.'
-                  example: similique
+                  example: laboriosam
               required:
                 - title
     delete:
@@ -1316,7 +1404,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 3
+        example: 17
         required: true
         schema:
           type: integer
@@ -1347,7 +1435,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 7
+        example: 8
         required: true
         schema:
           type: integer
@@ -1383,7 +1471,7 @@ paths:
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: gyqmugaqhodqpewcydokhfcmdgsrmlkvgkjxvwtwxufakgfphvycyoqolesbcjekwhqtuegnnqnibrmdbfyjodigihhwznlflkmwlknsvudawjnnonbwhxavekayopzwfggbowpcmdegmkekehphxpzsnctagzntlglztweqoaesdchwjcsrpkmgwwzgeyxgnajukirrwdwpdnotugbhvibyhzdizobbsvlaynewnoscdaujndtperbkolixqeojntzftqwtwrkwcdnshyefulstczglmkesfilkfsqpzqibhycqmdobcmspbmanjuptulktsfmcolhgvaswukgwhgkmjdefhsuzaoddebnjajsuqdfadugsdhekhtsczdhpwxtoulhcxhycdvhdbluhhczmxrxhdmyiwhcgnzzxeamzshmxcoddtcdyohopkrbsmjnpjdnfwbqgvkahkzgsoxuutniimsdsqrjxkriirrntzctpnefphduhwrwwviggoo
+                  example: xizjacxczbcwawcffuzspwkkjolekypirpmfohpalrcutvaslvsixcttmsghgigaeltzfcvenwowvbtnitwipwlxlgkcyysvhiljzjphqjphxflgmsolanbnrllosrhkblshfpzasbhjjdxpheistsdktapujeqzfny
               required:
                 - description
     parameters:
@@ -1391,7 +1479,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 20
+        example: 19
         required: true
         schema:
           type: integer
@@ -1427,7 +1515,7 @@ paths:
                 comment:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: wtulcrutxtlzckvdjieusaqgnlpflqmxurnffrmqizpwpxmxboymobruxuuxexdmqnrxumwdxizpoqlbukgblamursnuakfxvnwekmbztnghfipdpkrqegrubxlgmgrmspvnnfmngnklfjqxxwzcjjvhykvxulcgzxphhjtljvrlzwjqpmzeuaznsukondrtzqhgkqdlvlchrkstahjjsukuzgkdtnvjbfllwfrzexhvgfhwoybecddmhelhyxdqiwhyyeltlwworlnbgazxhehkdjktwawjvjcefnodgpeplhtmiezaxihmtcbskq
+                  example: ytvatxcsmrxidpwbffijqyrpukpwanykynunvubtzngcpltxvmgusxjvpqxjrpzyoiawdvawweysqslhqpfzpbckyiypdahwpxsldlpzuedakhdayzhdyutllwqouemlpqknjnqinggybmhgdqfuagkazcwipdpsdwjzmgtbcbcamzlioyjtihewjwjgzebimcaqsylqiptrdspvtnzovolyjczcmormpqsjvpasuojpnqhbctcgvqabudfitkdbufwoeifiqnpjdonxnvlomdxxmwwxvhltwhptulskmhsfxvknlkaucnxqsdvlsqdykrbwlyoyeyegbigorcvdpssocuwmswivoozwovprkacifqzuvkvrppjdtxnkqdmyimbzhlzsonmjzdzszrwwedkyqpsuvxcdcikvreavjnswvoju
               required:
                 - comment
     parameters:
@@ -1435,7 +1523,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 3
+        example: 9
         required: true
         schema:
           type: integer
@@ -1471,7 +1559,7 @@ paths:
                 comment:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: ulmhqnchxhckwmagetbbinlfgypqxznwhbnsxhbgzykopoenqbvgaakhxkzuehgfwlxshkqovfoicofomsgjigqukwjhdfizsuaiiykjmkrfbkzdxwscwfamvqbpbnsppndsgimocpebwxyrffegwlszukgywdgkuujwvzipwqaeytshtbfhctplyywdvnpmlliaecsljplsghwazlvaqopurjwvgtehhqmxlinzqitbpqalwzdecczijenmnkgxlijevssvjcvtfbvdlhhtstqdxcbguuyhlijpzuvzkoymddzrixvzjqmmcuolutlllrkawqkgbhcdtqbkriugjtdaqzcbfrwwfqerwthkehtvflydoknibnxqpmpzawwgsqufglltlqndqbntgpdblprtrjtoyzjxnivwizdccildxtquoya
+                  example: nddugjijatmenuzjmuwklrnoljbydiqtemmoevsckyuaxfbasoglqcnsbnjyigsfmluyjhiqofgcouoqtmgfxvgzcgqrmcxnplfftnlbnamzoavschvbimbseigqjfjgxwqqndgspiolwrofbsvnzfqqtvnlydtpkvuhhdyqknhxyaugqauiijknlzfauyfostqffrkoujicoemcpfrypnkfzvryetrjqdxkphpfeqtunnavagoqbfkxxcmersphgwjpdxcvbtzmavghahegzddhfopxngtltgdyldhecyeaotaiqjzlqmeuagqhviveoloqmtakjelhwsvgmjiglfysagekzuaxmgvzximmmzrvylpindafwgvivjmyfefqzrhrmeqxxckltuoluomlgrlqdggmfsvakkvrippwbrkssfgtxkkuzbcbciltvgewuqnohfowkqnoqbtirbwdkrougvrromanvpejmcvxhvzaypcbknhkjgcxlvrkxstqagromlwdfydfvjszdjpfjrqvpgnssmwineousrlpgaotytzwreqpobctpjrgohcsgvgibbbyjehgdyhnjsegqozpoonfkzolzkrkgssxzzfleybcgwcukqaydqilhzapbdkzicuegkabaozwenubnhbmmjssyhrrhqdnqyhppwgsvesegakcxcntbrbdvaejgsviwgjpjdsmnslqgjgpnookgmzmyqpkqakqbqusciyuipaxxthyipxbbvwlecqzvaludoxltxdcersiqsfoechirvyrkfpelqzlyafcjkdvvoaznqefvyknqklpfdrbyhqskvkwpnjqnrycgibkmrobqycsboqosgohxedt
               required:
                 - comment
     delete:
@@ -1500,7 +1588,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 14
+        example: 4
         required: true
         schema:
           type: integer
@@ -1508,7 +1596,7 @@ paths:
         in: path
         name: comment_id
         description: 'The ID of the comment.'
-        example: 15
+        example: 6
         required: true
         schema:
           type: integer
@@ -1539,7 +1627,7 @@ paths:
         in: path
         name: post_id
         description: 'The ID of the post.'
-        example: 17
+        example: 6
         required: true
         schema:
           type: integer
@@ -1548,45 +1636,6 @@ paths:
         name: comment_id
         description: 'The ID of the comment.'
         example: 13
-        required: true
-        schema:
-          type: integer
-  '/api/posts/file/{file_id}':
-    get:
-      summary: 'Download File'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: ''
-      tags:
-        - 'Post management'
-      security: []
-    parameters:
-      -
-        in: path
-        name: file_id
-        description: 'The ID of the file.'
-        example: 9
         required: true
         schema:
           type: integer
@@ -1684,7 +1733,7 @@ paths:
         in: path
         name: report_id
         description: 'The ID of the report.'
-        example: pariatur
+        example: repudiandae
         required: true
         schema:
           type: string
@@ -1715,7 +1764,7 @@ paths:
         in: path
         name: report_id
         description: 'The ID of the report.'
-        example: sit
+        example: neque
         required: true
         schema:
           type: string
@@ -1756,21 +1805,21 @@ paths:
                           name: 'Giáo trình chung'
                           parent_id: 1
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: giao-trinh-chung
                         -
                           id: 6
                           name: 'Tiếng anh VSTEP'
                           parent_id: 1
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: tieng-anh-vstep
                         -
                           id: 7
                           name: 'Đề cương chung'
                           parent_id: 1
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: de-cuong-chung
                       slug: tai-lieu-chung
                     -
@@ -1782,70 +1831,70 @@ paths:
                           name: 'Đại học KHTN'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: dai-hoc-khtn
                         -
                           id: 9
                           name: 'Đại học KHXHNV'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: dai-hoc-khxhnv
                         -
                           id: 10
                           name: 'Đại học Ngoại Ngữ'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: dai-hoc-ngoai-ngu
                         -
                           id: 11
                           name: 'Đại học Công Nghệ'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: dai-hoc-cong-nghe
                         -
                           id: 12
                           name: 'Đại học Kinh Tế'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: dai-hoc-kinh-te
                         -
                           id: 13
                           name: 'Đại học Giáo Dục'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: dai-hoc-giao-duc
                         -
                           id: 14
                           name: 'Đại học Y Dược'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: dai-hoc-y-duoc
                         -
                           id: 15
                           name: 'Khoa Luật'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: khoa-luat
                         -
                           id: 16
                           name: 'Khoa Quốc Tế'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: khoa-quoc-te
                         -
                           id: 17
                           name: 'Khoa QTKD'
                           parent_id: 2
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: khoa-qtkd
                       slug: cac-truong
                     -
@@ -1857,14 +1906,14 @@ paths:
                           name: 'Đề thi đánh giá năng lực'
                           parent_id: 3
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: de-thi-danh-gia-nang-luc
                         -
                           id: 19
                           name: 'Đề thi THPT Chuyên'
                           parent_id: 3
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: de-thi-thpt-chuyen
                       slug: de-thi-dai-hoc
                     -
@@ -1911,21 +1960,21 @@ paths:
                             name: 'Giáo trình chung'
                             parent_id: 1
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: giao-trinh-chung
                           -
                             id: 6
                             name: 'Tiếng anh VSTEP'
                             parent_id: 1
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: tieng-anh-vstep
                           -
                             id: 7
                             name: 'Đề cương chung'
                             parent_id: 1
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: de-cuong-chung
                         slug: tai-lieu-chung
                       -
@@ -1937,70 +1986,70 @@ paths:
                             name: 'Đại học KHTN'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: dai-hoc-khtn
                           -
                             id: 9
                             name: 'Đại học KHXHNV'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: dai-hoc-khxhnv
                           -
                             id: 10
                             name: 'Đại học Ngoại Ngữ'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: dai-hoc-ngoai-ngu
                           -
                             id: 11
                             name: 'Đại học Công Nghệ'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: dai-hoc-cong-nghe
                           -
                             id: 12
                             name: 'Đại học Kinh Tế'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: dai-hoc-kinh-te
                           -
                             id: 13
                             name: 'Đại học Giáo Dục'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: dai-hoc-giao-duc
                           -
                             id: 14
                             name: 'Đại học Y Dược'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: dai-hoc-y-duoc
                           -
                             id: 15
                             name: 'Khoa Luật'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: khoa-luat
                           -
                             id: 16
                             name: 'Khoa Quốc Tế'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: khoa-quoc-te
                           -
                             id: 17
                             name: 'Khoa QTKD'
                             parent_id: 2
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: khoa-qtkd
                         slug: cac-truong
                       -
@@ -2012,14 +2061,14 @@ paths:
                             name: 'Đề thi đánh giá năng lực'
                             parent_id: 3
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: de-thi-danh-gia-nang-luc
                           -
                             id: 19
                             name: 'Đề thi THPT Chuyên'
                             parent_id: 3
                             created_at: null
-                            updated_at: '2022-05-08T05:04:18.000000Z'
+                            updated_at: '2022-05-08T07:02:41.000000Z'
                             slug: de-thi-thpt-chuyen
                         slug: de-thi-dai-hoc
                       -
@@ -2093,7 +2142,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: njvpxxssbukxqwarjucsydlcerfpqwuiknqwafwjtpfrpzmjiszmveepcmpmaqsqvyqabymztriqktvrrmswnhlaszuclxexfot
+                  example: pqmwsraigkdztatnjbxwzgkqiktyhvjmwoxpjdoycrrcaxalqydiodqbpjpecwdowghcfmwkphpkpzzgbetapaaayqlsjpwgybsgrtavdyzxqwydzolhohmjsrnlwdipecw
               required:
                 - name
   '/api/post-type/{posttype_id}':
@@ -2132,21 +2181,21 @@ paths:
                         name: 'Giáo trình chung'
                         parent_id: 1
                         created_at: null
-                        updated_at: '2022-05-08T05:04:18.000000Z'
+                        updated_at: '2022-05-08T07:02:41.000000Z'
                         slug: giao-trinh-chung
                       -
                         id: 6
                         name: 'Tiếng anh VSTEP'
                         parent_id: 1
                         created_at: null
-                        updated_at: '2022-05-08T05:04:18.000000Z'
+                        updated_at: '2022-05-08T07:02:41.000000Z'
                         slug: tieng-anh-vstep
                       -
                         id: 7
                         name: 'Đề cương chung'
                         parent_id: 1
                         created_at: null
-                        updated_at: '2022-05-08T05:04:18.000000Z'
+                        updated_at: '2022-05-08T07:02:41.000000Z'
                         slug: de-cuong-chung
                     slug: tai-lieu-chung
                 properties:
@@ -2161,21 +2210,21 @@ paths:
                           name: 'Giáo trình chung'
                           parent_id: 1
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: giao-trinh-chung
                         -
                           id: 6
                           name: 'Tiếng anh VSTEP'
                           parent_id: 1
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: tieng-anh-vstep
                         -
                           id: 7
                           name: 'Đề cương chung'
                           parent_id: 1
                           created_at: null
-                          updated_at: '2022-05-08T05:04:18.000000Z'
+                          updated_at: '2022-05-08T07:02:41.000000Z'
                           slug: de-cuong-chung
                       slug: tai-lieu-chung
       tags:
@@ -2212,7 +2261,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tgwfrehehaegdtnacplqqfupgmpqytrrbkbwzzxetqdpmmthuoivphzpsuzwoaoipekzxitqocweutfsubbyantgycygphghpvptbktpnxqczpphtcknfwrkkdgxtwaftdjqwyooydvspztkrksqnnoviamcokhtsbqbllznwhvzurntozvbuenambuohlvopuqhpgyqkikkwyusurksynkgrogpdmwjfdbultmbtrmokychvf
+                  example: k
               required:
                 - name
     delete:
@@ -2241,7 +2290,7 @@ paths:
         in: path
         name: posttype_id
         description: 'The ID of the posttype.'
-        example: animi
+        example: molestiae
         required: true
         schema:
           type: string
@@ -2310,7 +2359,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hnkieimuzsqqbjpjicqkxbybszshpsvuzhvjmmbgpryyocjggdsh
+                  example: hivcyqzuvzavoazhvfzhyhejjqgcsuowglt
                 permissions:
                   type: array
                   description: ''
@@ -2392,7 +2441,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dfpuugapalsatiunzyzezslv
+                  example: nzohblpeptwyyvil
                 permissions:
                   type: array
                   description: ''
@@ -2435,7 +2484,7 @@ paths:
         in: path
         name: role_id
         description: 'The ID of the role.'
-        example: 14
+        example: 12
         required: true
         schema:
           type: integer
@@ -2471,15 +2520,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hvlajwogddqzgffekqwlmbgrlznsjyfguyftriaevsabgecxnxsfdarvutuftdxgtmcycgtpmaqoeutcnizlaalsrjbqripiczufzgekjhqvzngikspuhravusjvbxocwnhzcjkpccribsarwhftnlnfqxbycmqwawnhaesdmoqfaajkweuvevud
+                  example: gaqjinewhpwvaczpwgbapjihorgqbbisszkcvssqvymtschfoagjjuaoagvqflfrxvupgzgigqubnjvqgjtgzivnkhyxtjvoerlq
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: qhbxhzwjoqcjmekyhfwsjcnkcuophbskrpuhngkdycatduxvgxxnxfjqfzwpnwcaaogerkcmxnpmmpjbnyuemdtpcbygersbjunanpmoflmbjhoahilmkkwkxdncmkzepzdslbahacjtkzzktraxzhcaitcqaodio
+                  example: eleiackgairxavtpfpunswuvmttfbh
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: 'y'
+                  example: ojfmj
                 roles:
                   type: array
                   description: ''
@@ -2510,20 +2559,223 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    -
+                      id: 1
+                      name: Admin
+                      email: admin@test.com
+                    -
+                      id: 2
+                      name: 'Normal User'
+                      email: user@test.com
+                    -
+                      id: 3
+                      name: 'Evalyn Schmeler'
+                      email: schulist.terrence@example.net
+                    -
+                      id: 4
+                      name: 'Ethan Schneider'
+                      email: santos29@example.org
+                    -
+                      id: 5
+                      name: 'Clinton Jacobson'
+                      email: johathan29@example.net
+                    -
+                      id: 6
+                      name: 'Lucile Jakubowski'
+                      email: reed12@example.org
+                    -
+                      id: 7
+                      name: 'Dillan Wilkinson'
+                      email: beatty.jazmyn@example.org
+                    -
+                      id: 8
+                      name: 'Halie Lang PhD'
+                      email: tyler.dibbert@example.net
+                    -
+                      id: 9
+                      name: 'Prof. Shayna Dicki DDS'
+                      email: roy78@example.net
+                    -
+                      id: 10
+                      name: 'Prof. Coby Dicki'
+                      email: fisher.cyril@example.com
+                    -
+                      id: 11
+                      name: 'Leif Boyle'
+                      email: sjones@example.com
+                    -
+                      id: 12
+                      name: 'Mina Becker'
+                      email: robb.kreiger@example.org
+                    -
+                      id: 13
+                      name: 'Rashawn Abbott'
+                      email: btorp@example.net
+                    -
+                      id: 14
+                      name: 'Talia Hettinger'
+                      email: mcasper@example.com
+                    -
+                      id: 15
+                      name: 'Dr. Noah O''Keefe'
+                      email: osborne.berge@example.org
+                  links:
+                    first: 'http://127.0.0.1:8000/api/users?page=1'
+                    last: 'http://127.0.0.1:8000/api/users?page=4'
+                    prev: null
+                    next: 'http://127.0.0.1:8000/api/users?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 4
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/users?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/users?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/users?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/users?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/users?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://127.0.0.1:8000/api/users'
+                    per_page: 15
+                    to: 15
+                    total: 54
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: Admin
+                        email: admin@test.com
+                      -
+                        id: 2
+                        name: 'Normal User'
+                        email: user@test.com
+                      -
+                        id: 3
+                        name: 'Evalyn Schmeler'
+                        email: schulist.terrence@example.net
+                      -
+                        id: 4
+                        name: 'Ethan Schneider'
+                        email: santos29@example.org
+                      -
+                        id: 5
+                        name: 'Clinton Jacobson'
+                        email: johathan29@example.net
+                      -
+                        id: 6
+                        name: 'Lucile Jakubowski'
+                        email: reed12@example.org
+                      -
+                        id: 7
+                        name: 'Dillan Wilkinson'
+                        email: beatty.jazmyn@example.org
+                      -
+                        id: 8
+                        name: 'Halie Lang PhD'
+                        email: tyler.dibbert@example.net
+                      -
+                        id: 9
+                        name: 'Prof. Shayna Dicki DDS'
+                        email: roy78@example.net
+                      -
+                        id: 10
+                        name: 'Prof. Coby Dicki'
+                        email: fisher.cyril@example.com
+                      -
+                        id: 11
+                        name: 'Leif Boyle'
+                        email: sjones@example.com
+                      -
+                        id: 12
+                        name: 'Mina Becker'
+                        email: robb.kreiger@example.org
+                      -
+                        id: 13
+                        name: 'Rashawn Abbott'
+                        email: btorp@example.net
+                      -
+                        id: 14
+                        name: 'Talia Hettinger'
+                        email: mcasper@example.com
+                      -
+                        id: 15
+                        name: 'Dr. Noah O''Keefe'
+                        email: osborne.berge@example.org
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: 'http://127.0.0.1:8000/api/users?page=1'
+                      last: 'http://127.0.0.1:8000/api/users?page=4'
+                      prev: null
+                      next: 'http://127.0.0.1:8000/api/users?page=2'
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 4
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/users?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: 'http://127.0.0.1:8000/api/users?page=2'
+                          label: '2'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/users?page=3'
+                          label: '3'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/users?page=4'
+                          label: '4'
+                          active: false
+                        -
+                          url: 'http://127.0.0.1:8000/api/users?page=2'
+                          label: 'Next &raquo;'
+                          active: false
+                      path: 'http://127.0.0.1:8000/api/users'
+                      per_page: 15
+                      to: 15
+                      total: 54
       tags:
         - 'User management'
+      security: []
   '/api/users/{user_id}':
     get:
       summary: 'Show user'
@@ -2544,20 +2796,27 @@ paths:
           schema:
             type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    id: 1
+                    name: Admin
+                    email: admin@test.com
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      name: Admin
+                      email: admin@test.com
       tags:
         - 'User management'
+      security: []
     post:
       summary: 'Edit user'
       description: ''
@@ -2589,15 +2848,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: eajyijeyecnlhxkuccnqzfuqvvcdktkinncaargundqefceniwebxpsqhgmedzsxesswsjrxhgrgvwfbanmdirrgqnxxrzztmlxcentsxkmshyzy
+                  example: xfjpofluxjqzldkcy
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: nxzlakwkzkkvvpvjwcorthzrzyesrihsuaphosqaobbhubjpulrkuivhlngghhdrqbopumxiizkujzjqnojtfrauductxphpvquhxzyrlguhrvxelfybvortmzwofsfbqjomonwnabryocfhqghujgnxrcwjdkwkshohuqtamojwldhafmiydiyhzjzwzlidscjrqodujwxkyfawdjddzvrdavyshlobhebyewltgwmngxyjolklxnzaqbn
+                  example: vxuevfzlswdriblgoqrfpefqmbubpd
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: rawcb
+                  example: gpwdj
                 roles:
                   type: array
                   description: ''
@@ -2635,10 +2894,78 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 13
+        example: 14
         required: true
         schema:
           type: integer
+  /api/users/profile/likes:
+    get:
+      summary: 'List posts like of user'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User management'
+  /api/users/profile/reports:
+    get:
+      summary: 'List posts report of user'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User management'
 tags:
   -
     name: 'Audit management'
