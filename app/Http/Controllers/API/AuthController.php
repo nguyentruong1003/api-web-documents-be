@@ -10,6 +10,7 @@ use App\Http\Requests\API\Auth\RegisterRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -65,11 +66,18 @@ class AuthController extends Controller
     public function changePassword(ChangePasswordRequest $request)
     {
         $user = auth()->user();
-        $user->update([
-            'password' => bcrypt($request->input('new_password'))
+        if (Hash::check($request->old_password, $user->password, [])) {
+            $user->update([
+                'password' => bcrypt($request->input('new_password'))
+            ]);
+    
+            return (new UserResource($user))->withMessage(__('auth.changed_password'));
+        }
+        
+        return response()->json([
+            'errors' => 'The old password is incorrect',
+            'message' => 'Failed validation'
         ]);
-
-        return (new UserResource($user))->withMessage(__('auth.changed_password'));
     }
 
     private function respondWithToken($token, $user = null)
