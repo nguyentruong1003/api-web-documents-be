@@ -239,7 +239,6 @@ class PostController extends Controller
                 'comment' => $request->comment,
                 'user_id' => auth()->user()->id,
                 'post_id' => $post->id,
-                'parent_id' => $request->parent_id ?? null,
             ]);
             
             return response()->json([
