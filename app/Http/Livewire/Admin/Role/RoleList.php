@@ -42,6 +42,8 @@ class RoleList extends BaseLive
             'like' => 'Đánh dấu yêu thích bài viết',
             'likeComment' => 'Đánh dấu yêu thích bình luận',
             'solve' => 'Giải quyết phản hồi',
+            'get-likes' => 'Lấy danh sách yêu thích',
+            'get-reports' => 'Lấy danh sách báo cáo',
         ];
     }
 
