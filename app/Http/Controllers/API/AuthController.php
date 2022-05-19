@@ -77,7 +77,7 @@ class AuthController extends Controller
         return response()->json([
             'errors' => 'The old password is incorrect',
             'message' => 'Failed validation'
-        ]);
+        ], 400);
     }
 
     private function respondWithToken($token, $user = null)
