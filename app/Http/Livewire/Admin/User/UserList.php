@@ -20,7 +20,7 @@ class UserList extends BaseLive
         $query = User::query();
 
         if ($this->searchTerm) {
-            $query->where('name', 'like', '%' . trim($this->searchTerm) . '%');
+            $query->where('unsign_text', 'like', '%' . strtolower(trim(removeStringUtf8($this->searchTerm))) . '%');
         }
 
         $data = $query->orderBy('created_at','asc')->paginate($this->perPage);

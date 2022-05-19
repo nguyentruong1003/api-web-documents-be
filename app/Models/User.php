@@ -2,23 +2,30 @@
 
 namespace App\Models;
 
+use Illuminate\Auth\MustVerifyEmail;
+use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\Access\Authorizable;
 use Spatie\Permission\Traits\HasRoles;
 use OwenIt\Auditing\Contracts\Auditable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Authenticatable implements Auditable
+class User extends UnsignTextSearchModel implements
+AuthenticatableContract,
+AuthorizableContract,
+CanResetPasswordContract,
+Auditable
 {
+    use Authenticatable, Authorizable, CanResetPassword, MustVerifyEmail;
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     use \OwenIt\Auditing\Auditable;
     protected $guard_name = 'api';
-    protected $searchable = [
-        'name' => 'like',
-        'email' => 'equal'
-    ];
 
     /**
      * The attributes that are mass assignable.
@@ -29,6 +36,7 @@ class User extends Authenticatable implements Auditable
         'name',
         'email',
         'password',
+        'unsign_text',
     ];
 
     /**
@@ -87,5 +95,14 @@ class User extends Authenticatable implements Auditable
 
     public function likes() {
         return $this->belongsToMany(Post::class, 'post_like', 'user_id', 'post_id');
+    }
+
+    private static $searchable = [
+        'name'
+    ];
+
+    public static function getListSearchAble()
+    {
+        return self::$searchable;
     }
 }

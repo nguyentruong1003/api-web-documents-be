@@ -15,7 +15,7 @@ class PostReportList extends BaseLive
         $query = PostReport::query();
 
         if ($this->searchTerm) {
-            $query->where('description', 'like', '%' . trim($this->searchTerm) . '%');
+            $query->where('unsign_text', 'like', '%' . strtolower(trim(removeStringUtf8($this->searchTerm))) . '%');
         }
 
         $data = $query->orderBy('created_at','desc')->paginate($this->perPage);

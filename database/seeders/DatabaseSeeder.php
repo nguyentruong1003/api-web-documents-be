@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             // PostTypeSeeder::class,
             // PostTypeSlugSeeder::class,
             // PostSeeder::class,
-            Permission2Seeder::class,
+            // Permission2Seeder::class,
+            UnsignTextSearchSeeder::class,
         ]);
     }
 }
