@@ -17,12 +17,12 @@ class Permission2Seeder extends Seeder
     {
         //
         {
-            $this->seedPermission('user', ['get-likes', 'get-reports']);
+            $this->seedPermission('user', ['get-posts', 'get-files']);
     
             $role2 = Role::where('name', 'normal user')->first();
             $role2->givePermissionTo([
-                'user.get-likes',
-                'user.get-reports',
+                'user.get-posts',
+                'user.get-files',
             ]);
         }
     }

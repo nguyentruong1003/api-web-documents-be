@@ -98,4 +98,34 @@ class UserController extends Controller
             'message' => ''
         ]);
     }
+
+     /**
+     * List posts of user
+     *
+     * @group User management
+     * @authenticated
+     */
+
+    public function post()
+    {
+        return response()->json([
+            'data' => auth()->user()->posts ?? '',
+            'message' => ''
+        ]);
+    }
+
+     /**
+     * List files of user
+     *
+     * @group User management
+     * @authenticated
+     */
+
+    public function file()
+    {
+        return response()->json([
+            'data' => auth()->user()->files ?? '',
+            'message' => ''
+        ]);
+    }
 }

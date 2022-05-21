@@ -85,6 +85,10 @@ Auditable
         return $this->hasMany(Post::class);
     }
 
+    public function files() {
+        return $this->hasMany(File::class, 'admin_id', 'id');
+    }
+
     public function comments() {
         return $this->hasMany(Comment::class);
     }
