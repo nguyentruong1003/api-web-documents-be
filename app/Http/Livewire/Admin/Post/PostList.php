@@ -74,8 +74,15 @@ class PostList extends BaseLive
         $item->description = $this->description;
         $item->content = $this->content;
         $item->post_type_id = $this->post_type_id;
+        $item->user_id = auth()->user()->id;
         // $item->link_pdf = ($this->file) ? $this->file->store('public') : null;
         $item->save();
+        if (count($item->files) > 0) {
+            if (count(getFileOnGoogleDriveServer($item->files[0]->id)) > 0) {
+                $item->link_pdf = getFileOnGoogleDriveServer($item->files[0]->id)['link'];
+                $item->save();
+            }
+        }
         $this->emit('saveFile', $item->id);
         $this->emit('close-modal');
         if ($this->checkEdit) {

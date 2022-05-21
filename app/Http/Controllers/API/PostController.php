@@ -78,6 +78,12 @@ class PostController extends Controller
                     'admin_id' => auth()->user()->id
                 ]);
             }
+            if (count($post->files) > 0) {
+                if (count(getFileOnGoogleDriveServer($post->files[0]->id)) > 0) {
+                    $post->link_pdf = getFileOnGoogleDriveServer($post->files[0]->id)['link'];
+                    $post->save();
+                }
+            }
         } else {
             $post = PostEditor::open(new Post())->withDataFromRequest($request)->save();
         }

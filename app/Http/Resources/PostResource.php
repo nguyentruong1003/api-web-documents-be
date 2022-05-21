@@ -12,10 +12,10 @@ class PostResource extends APIResource
      */
     public function toArray($request)
     {
-        $files = [];
-        foreach ($this->files as $file) {
-            $files[] = (object) array_merge($file->toArray(), getFileOnGoogleDriveServer($file->id));
-        }
+        // $files = [];
+        // foreach ($this->files as $file) {
+        //     $files[] = (object) array_merge($file->toArray(), getFileOnGoogleDriveServer($file->id));
+        // }
 
         $comments = [];
         foreach ($this->comments as $comment) {
@@ -32,7 +32,8 @@ class PostResource extends APIResource
             'user_id' => $this->user_id,
             'created_at' => $this->created_at,
             'comment' => $comments,
-            'files' => $files,
+            // 'files' => $files,
+            'link_pdf' => $this->link_pdf,
             'likes' => $this->likes,
             'reports' => $this->reports,
         ];

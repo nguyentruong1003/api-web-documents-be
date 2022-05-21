@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             // PostTypeSlugSeeder::class,
             // PostSeeder::class,
             // Permission2Seeder::class,
-            UnsignTextSearchSeeder::class,
+            // UnsignTextSearchSeeder::class,
+            PostLinkPDFSeeder::class,
         ]);
     }
 }
