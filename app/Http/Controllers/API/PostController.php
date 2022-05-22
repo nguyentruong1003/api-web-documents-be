@@ -47,6 +47,9 @@ class PostController extends Controller
         if (isset($request->content)) {
             $query->where('content', 'like', '%' . trim(removeStringUtf8($request->content)) . '%');
         }
+        if (isset($request->user_id)) {
+            $query->where('user_id', $request->user_id);
+        }
         return PostResource::collection($query->paginate(15));
     }
 
@@ -58,26 +61,25 @@ class PostController extends Controller
      */
     public function create(PostRequest $request)
     {
-        $files = $request->file('files');
+        $file = $request->file('file');
         $allowedfileExtension=['pdf'];
-        if (isset($files)) {
-            foreach ($files as $file) {
-                $extension = $file->getClientOriginalExtension();
-                if (! in_array($extension, $allowedfileExtension)) {
-                    return response()->json(['Invalid file format, only accept file pdf'], 422);
-                }
+        if (isset($file)) {
+            $extension = $file->getClientOriginalExtension();
+            if (! in_array($extension, $allowedfileExtension)) {
+                return response()->json(['Invalid file format, only accept file pdf'], 422);
             }
+
             $post = PostEditor::open(new Post())->withDataFromRequest($request)->save();
-            foreach ($files as $file) {
-                $tmp = File::query()->create([
-                    'file_name' => $file->getClientOriginalName(),
-                    'size_file' => getFileSize($file),
-                    'url' => $file->storeAs('/', $file->getClientOriginalName(), 'google'),
-                    'model_name' => Post::class,
-                    'model_id' => $post->id,
-                    'admin_id' => auth()->user()->id
-                ]);
-            }
+
+            $tmp = File::query()->create([
+                'file_name' => $file->getClientOriginalName(),
+                'size_file' => getFileSize($file),
+                'url' => $file->storeAs('/', $file->getClientOriginalName(), 'google'),
+                'model_name' => Post::class,
+                'model_id' => $post->id,
+                'admin_id' => auth()->user()->id
+            ]);
+
             if (count($post->files) > 0) {
                 if (count(getFileOnGoogleDriveServer($post->files[0]->id)) > 0) {
                     $post->link_pdf = getFileOnGoogleDriveServer($post->files[0]->id)['link'];
