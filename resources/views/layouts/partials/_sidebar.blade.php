@@ -54,7 +54,7 @@
             </ul>
           </li>
           @endif
-          @if (checkPermission('master-data.index') || checkPermission('audit.index'))
+          {{-- @if (checkPermission('master-data.index') || checkPermission('audit.index'))
           <li class="nav-item {{ setOpen('master-data') }} {{ setOpen('audits') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-file"></i>
@@ -82,10 +82,10 @@
               @endif
             </ul>
           </li>
-          @endif
+          @endif --}}
 
           {{-- @if (checkPermission('master-data.index') || checkPermission('audit.index')) --}}
-          <li class="nav-item {{ setOpen('posts') }} {{ setOpen('post-types') }} {{ setOpen('post-reports') }}">
+          <li class="nav-item {{ setOpen('posts') }} {{ setOpen('post-types') }} {{ setOpen('post-reports') }} {{ setOpen('pending') }}">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-file"></i>
               <p>
@@ -118,6 +118,14 @@
                 </a>
               </li>
               @endif
+              {{-- @if (checkPermission('master-data.index')) --}}
+              <li class="nav-item">
+                <a href="{{ route('admin.post.pending') }}" class="nav-link {{ setActive('pending') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách bài viết đang chờ phê duyệt</p>
+                </a>
+              </li>
+              {{-- @endif --}}
             </ul>
           </li>
           {{-- @endif --}}

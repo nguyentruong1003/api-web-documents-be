@@ -47,6 +47,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::group(['prefix' => '/files'], function() {
             Route::get('/', [App\Http\Controllers\FileController::class, 'index'])->name('admin.file.index');
         });
+
+        Route::get('/pending', [App\Http\Controllers\PostController::class, 'pending'])->name('admin.post.pending');
     });
 
     Route::group(['prefix' => '/post-types'], function() {

@@ -26,7 +26,7 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $query = Post::query();
+        $query = Post::query()->where('status', 1);
         if (isset($request->title)) {
             $query->where('unsign_text', 'like', '%' . strtolower(trim(removeStringUtf8($request->title))) . '%');
         }
@@ -50,7 +50,7 @@ class PostController extends Controller
         if (isset($request->user_id)) {
             $query->where('user_id', $request->user_id);
         }
-        return PostResource::collection($query->paginate(15));
+        return PostResource::collection($query->orderBy('created_at', 'desc')->paginate(15));
     }
 
     /**

@@ -18,4 +18,9 @@ class PostController extends Controller
         $data = Post::findorfail($id);
         return view('admin.post.show', ['data' => $data]);
     }
+
+    public function pending()
+    {
+        return view('admin.post.pending');
+    }
 }

@@ -23,7 +23,7 @@ class PostList extends BaseLive
     }
 
     public function render() {
-        $query = Post::query();
+        $query = Post::query()->where('status', 1);
 
         if ($this->searchTerm) {
             $query->where('unsign_text', 'like', '%' . trim(removeStringUtf8($this->searchTerm)) . '%')

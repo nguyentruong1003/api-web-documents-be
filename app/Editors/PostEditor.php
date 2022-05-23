@@ -16,6 +16,7 @@ class PostEditor extends Editor
             // 'post_type_id' => PostType::query()->where('name', ($this->data['post_type_id'] ?? null) )->id ?? null,
             'post_type_id' => $this->data['post_type_id'] ?? null,
             'user_id' => auth()->user()->id,
+            'status' => (auth()->user()->hasAnyRole(['administrator', 'moderator'])) ? 1 : 2, // 1 => public, 2 => pending approval
         ]);
         $this->model->save();
     }
