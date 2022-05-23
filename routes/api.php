@@ -41,8 +41,8 @@ Route::group(['middleware' => ['auth:sanctum', 'check-permission', 'log-request'
         Route::group(['prefix' => '/profile'], function() {
             Route::get('/likes', [UserController::class, 'like'])->name('user.get-likes');
             Route::get('/reports', [UserController::class, 'report'])->name('user.get-reports');
-            Route::get('/posts', [UserController::class, 'post'])->name('user.get-post');
-            Route::get('/files', [UserController::class, 'file'])->name('user.get-file');
+            Route::get('/posts', [UserController::class, 'post'])->name('user.get-posts');
+            Route::get('/files', [UserController::class, 'file'])->name('user.get-files');
         });
     });
 
