@@ -24,7 +24,7 @@
                 <thead class="">
                     <tr>
                         <th>STT</th>
-                        <th>Tên</th>
+                        <th>Họ và tên</th>
                         <th>Email</th>
                         <th>Vai trò</th>
                         @if (checkRoutePermission('edit') || checkRoutePermission('delete') || checkRoutePermission('grant'))
@@ -85,7 +85,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Tên<span class="text-danger"> *</span></label>
+                                <label>Họ và tên<span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" wire:model.lazy="name">
                                 @error('name')@include('layouts.partials.text._error')@enderror
                             </div>
@@ -126,7 +126,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Phân quyền
+                        Gán vai trò
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true close-btn">×</span>
@@ -136,7 +136,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Tên</label>
+                                <label>Tên tài khoản</label>
                                 <input type="text" class="form-control" wire:model.lazy="name" disabled>
                             </div>
 
