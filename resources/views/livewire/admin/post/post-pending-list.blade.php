@@ -61,11 +61,19 @@
                             <td>{{ ReFormatDate($row->created_at,'d-m-Y') }}</td>
                             <td>{{ $row->status == 0 ? 'Từ chối' : 'Chờ duyệt' }}</td>
                             <td>
+                                @if ($row->status == 2)
                                 <button type="button" class="btn-sm border-0 bg-transparent"
                                     data-toggle="modal" data-target="#confirmModal"
-                                    wire:click="check({{$row->id}})">
+                                    wire:click="check({{$row->id}})" title="Xác nhận">
                                     <i class="fas fas fa-check"></i>
                                 </button>
+                                @endif
+                                @if ($row->status == 0)
+                                <button type="button" class="btn-sm border-0 bg-transparent"
+                                    wire:click="undo({{$row->id}})" title="Hoàn tác">
+                                    <i class="fas fa-undo"></i>
+                                </button>
+                                @endif
                             </td>
                         </tr>
                     @empty

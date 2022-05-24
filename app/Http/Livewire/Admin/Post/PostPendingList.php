@@ -61,4 +61,13 @@ class PostPendingList extends BaseLive
         $this->dispatchBrowserEvent('show-toast', ["type" => "success", "message" => 'Từ chối thành công'] );
         $this->emit('close-modal');
     }
+
+    public function undo($id)
+    {
+        # code...
+        $pr = Post::findorfail($id);
+        $pr->status = 2;
+        $pr->save();
+        $this->dispatchBrowserEvent('show-toast', ["type" => "success", "message" => 'Hoàn tác thao tác từ chối.'] );
+    }
 }
