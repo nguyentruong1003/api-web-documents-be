@@ -20,6 +20,8 @@ class CreatePostReportTable extends Migration
             $table->string('description')->nullable();
             $table->tinyInteger('resolve')->default(1)->comment('1 => open, 2 => close');
             $table->timestamps();
+            $table->string('unsign_text')->nullable()->comment('luu tim kiem khong dau');
+            $table->index(['unsign_text']);
         });
     }
 

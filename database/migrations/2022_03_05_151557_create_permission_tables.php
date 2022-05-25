@@ -50,6 +50,9 @@ class CreatePermissionTables extends Migration
             } else {
                 $table->unique(['name', 'guard_name']);
             }
+
+            $table->string('unsign_text')->nullable()->comment('luu tim kiem khong dau');
+            $table->index(['unsign_text']);
         });
 
         Schema::create($tableNames['model_has_permissions'], function (Blueprint $table) use ($tableNames, $columnNames, $teams) {

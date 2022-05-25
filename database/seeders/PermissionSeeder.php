@@ -16,7 +16,7 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
-        $this->seedPermission('user', ['index', 'create', 'edit', 'delete', 'show', 'grant', 'get-likes', 'get-reports']);
+        $this->seedPermission('user', ['index', 'create', 'edit', 'delete', 'show', 'grant', 'get-likes', 'get-reports', 'get-posts', 'get-files']);
         $this->seedPermission('role', ['index', 'create', 'edit', 'delete', 'show']);
         $this->seedPermission('audit', ['index', 'show']);
         $this->seedPermission('post', ['create', 'edit', 'delete', 'comment', 'editComment', 'deleteComment', 'report', 'like', 'likeComment']);
@@ -38,6 +38,8 @@ class PermissionSeeder extends Seeder
             'post.likeComment',
             'user.get-likes',
             'user.get-reports',
+            'user.get-posts',
+            'user.get-files',
         ]);
     }
 

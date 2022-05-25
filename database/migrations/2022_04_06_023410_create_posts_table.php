@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
             $table->foreignId('user_id')->nullable()->comment('Người đăng')->constrained('users')->onDelete('set null');
             $table->timestamps();
 
-            $table->string('unsign_text', 1000)->nullable()->comment('luu tim kiem khong dau');
+            $table->string('unsign_text')->nullable()->comment('luu tim kiem khong dau');
             $table->index(['unsign_text']);
         });
     }

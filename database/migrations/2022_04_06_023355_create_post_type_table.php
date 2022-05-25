@@ -16,6 +16,8 @@ class CreatePostTypeTable extends Migration
         Schema::create('post_type', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
+            $table->foreignId('parent_id')->nullable()->constrained('post_type')->onDelete('cascade')->comment('Danh muc cha neu co');
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }
