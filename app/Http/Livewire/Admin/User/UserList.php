@@ -46,7 +46,7 @@ class UserList extends BaseLive
     public function save() {
         $this->validate([
             'name' => 'required',
-            'email' => 'required|unique:users,email',
+            'email' => 'required|unique:users,email,'.$this->Id,
             'password' => 'required',
             'password_confirmation' => 'required_with:password|same:password',
         ], [], []);
