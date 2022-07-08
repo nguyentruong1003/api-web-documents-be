@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
+            
             $table->string('unsign_text')->nullable()->comment('luu tim kiem khong dau');
             $table->index(['unsign_text']);
         });

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UnsignTextSearchModel extends Model
+class BaseModel extends Model
 {
     protected static function boot()
     {

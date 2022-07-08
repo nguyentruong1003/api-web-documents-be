@@ -4,16 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use OwenIt\Auditing\Contracts\Auditable;
 
-class PostReport extends UnsignTextSearchModel implements Auditable
+class PostReport extends BaseModel implements Auditable
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
     use \OwenIt\Auditing\Auditable;
-    protected $table = 'post_report';
+    protected $table = 'post_reports';
 
     protected $fillable = [
-        'description', 'post_id', 'user_id', 'resolve', 'unsign_text'
+        'content', 'post_id', 'user_id', 'resolve', 'unsign_text'
     ];
 
     public function user() {
@@ -25,7 +26,7 @@ class PostReport extends UnsignTextSearchModel implements Auditable
     }
 
     private static $searchable = [
-        'description',
+        'content',
     ];
 
     public static function getListSearchAble()

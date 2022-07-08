@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostReportTable extends Migration
+class CreatePostCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreatePostReportTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_report', function (Blueprint $table) {
+        Schema::create('post_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('post_id')->nullable()->comment('Map voi posts')->constrained('posts')->onDelete('set null');
-            $table->foreignId('user_id')->nullable()->comment('Map voi users')->constrained('users')->onDelete('set null');
-            $table->string('description')->nullable();
-            $table->tinyInteger('resolve')->default(1)->comment('1 => open, 2 => close');
+            $table->string('name')->nullable();
+            $table->foreignId('parent_id')->nullable()->constrained('post_categories')->onDelete('cascade')->comment('Danh muc cha neu co');
+            $table->string('path')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
             $table->string('unsign_text')->nullable()->comment('luu tim kiem khong dau');
             $table->index(['unsign_text']);
         });
@@ -32,6 +34,6 @@ class CreatePostReportTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_report');
+        Schema::dropIfExists('post_categories');
     }
 }
