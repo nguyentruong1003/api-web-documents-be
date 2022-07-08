@@ -17,12 +17,15 @@ class CreateFilesTable extends Migration
             $table->bigIncrements('id')->comment('luu tru dia chi file');
             $table->string('url', 255)->nullable()->comment('luu tru dia chi file');
             $table->string('file_name', 255)->nullable()->comment('Ten file');
-            $table->string('model_name')->nullable()->comment();
+            $table->string('model_type')->nullable()->comment();
             $table->bigInteger('model_id')->nullable()->comment('map voi id bang');
             $table->string('size_file', 255)->nullable();
             $table->bigInteger('admin_id')->nullable()->comment('Nguoi tao');
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->string('unsign_text')->nullable()->comment('luu tim kiem khong dau');
+            $table->index(['unsign_text']);
         });
     }
 

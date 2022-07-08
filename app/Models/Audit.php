@@ -22,7 +22,6 @@ class Audit extends Model
         'ip_address',
         'user_agent',
         'tags',
-        'note',
 
     ];
 

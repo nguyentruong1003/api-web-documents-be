@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCommentsTable extends Migration
+class CreatePostReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('post_reports', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->longText('comment');
-            $table->foreignId('post_id')->nullable()->constrained('posts')->onDelete('cascade');
-            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
-            $table->foreignId('parent_id')->nullable()->constrained('comments')->onDelete('cascade');
-            $table->string('path')->nullable();
+            $table->foreignId('post_id')->nullable()->comment('Map voi posts')->constrained('posts')->onDelete('set null');
+            $table->foreignId('user_id')->nullable()->comment('Map voi users')->constrained('users')->onDelete('set null');
+            $table->longText('content')->nullable();
+            $table->tinyInteger('resolve')->default(1)->comment('1 => open, 2 => close');
             $table->timestamps();
             $table->softDeletes();
 
@@ -35,6 +34,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('post_report');
     }
 }

@@ -4,21 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use OwenIt\Auditing\Contracts\Auditable;
 
-class Post extends UnsignTextSearchModel implements Auditable
+class Post extends BaseModel implements Auditable
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
     use \OwenIt\Auditing\Auditable;
 
     protected $fillable = [
         'title',
         'description',
         'content',
-        'post_type_id',
+        'post_categories_id',
         'user_id',
         'status',
         'unsign_text',
+        'slug',
     ];
 
     public function comments() {

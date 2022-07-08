@@ -15,13 +15,13 @@ class DatabaseSeeder extends Seeder
     {
         //
         $this->call([
-            PermissionSeeder::class,
+            // PermissionSeeder::class,
             CreateAdminSeeder::class,
-            PostTypeSeeder::class,
-            PostTypeSlugSeeder::class,
-            PostSeeder::class,
-            UnsignTextSearchSeeder::class,
-            PostLinkPDFSeeder::class,
+            // PostTypeSeeder::class,
+            // PostTypeSlugSeeder::class,
+            // PostSeeder::class,
+            // UnsignTextSearchSeeder::class,
+            // PostLinkPDFSeeder::class,
         ]);
     }
 }

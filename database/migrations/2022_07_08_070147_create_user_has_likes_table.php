@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostLikeTable extends Migration
+class CreateUserHasLikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreatePostLikeTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_like', function (Blueprint $table) {
-            $table->foreignId('post_id')->constrained('posts')->onDelete('cascade');
+        Schema::create('user_has_likes', function (Blueprint $table) {
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->string('model_type')->nullable()->comment();
+            $table->bigInteger('model_id')->nullable()->comment('Map voi id bang');
         });
     }
 
@@ -26,6 +27,6 @@ class CreatePostLikeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_like');
+        Schema::dropIfExists('user_has_likes');
     }
 }

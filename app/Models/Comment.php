@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use OwenIt\Auditing\Contracts\Auditable;
 
-class Comment extends UnsignTextSearchModel implements Auditable
+class Comment extends BaseModel implements Auditable
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
     use \OwenIt\Auditing\Auditable;
-    protected $fillable=['comment', 'post_id', 'parent_id', 'user_id', 'unsign_text'];
+    protected $fillable=['comment', 'post_id', 'parent_id', 'user_id', 'path', 'unsign_text'];
 
     public function users() {
         return $this->belongsTo(User::class, 'user_id');
