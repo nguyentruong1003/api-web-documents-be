@@ -1,3 +1,8 @@
+## Personal Project
+```
+End course! From now, this branch is a personal project.
+```
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -78,7 +83,3 @@ php artisan storage:link
 ```bash
 php artisan serve
 ```
-
-## Deploy on Heroku
-
-Link: http://nvt-base-api.herokuapp.com/
