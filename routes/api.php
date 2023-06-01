@@ -23,7 +23,7 @@ use App\Http\Controllers\API\PostTypeController;
 */
 
 Route::group(['prefix' => 'auth'], function ($router) {
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/loginz', [AuthController::class, 'login'])->name('login');
     Route::post('/register', [AuthController::class, 'register'])->name('register');
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/logout', [AuthController::class, 'logout']);
